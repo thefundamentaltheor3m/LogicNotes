@@ -1,0 +1,108 @@
+\section{Propositional Formulae}
+
+\subsection{Propositions and Connectives}
+
+We begin by defining the notion of a proposition.
+
+\begin{boxdefinition}[Proposition]
+    A \textbf{proposition} is a statement that is either true or false.
+\end{boxdefinition}
+
+\begin{boxconvention}
+    We will denote the state of being \textbf{true} by $\T$ and that of being \textbf{false} by $\F$.
+\end{boxconvention}
+
+Propositions can be connected to each other using tools known as \textbf{connectives}. These can be thought of as \textbf{truth table rules}.
+
+\begin{boxconvention}
+    Before we define the actual connectives we shall use, we list them down, along with notation.
+    \begin{enumerate}[noitemsep]
+        \item Conjunction ($\land$)
+        \item Disjunction ($\lor$)
+        \item Negation ($\neg$)
+        \item Implication ($\to$)
+        \item The Biconditional ($\lr$)
+    \end{enumerate}
+    In particular, we will only use the $\implies$ and $\iff$ symbols when reasoning \textbf{informally}. For \textbf{formal} use, we will stick to the $\to$ and $\lr$ symbols.
+\end{boxconvention}
+
+We define them exhaustively as follows.
+\begin{boxdefinition}[Connectives]\label{Ch1:Def:Connective}
+    Let $p$ and $q$ be true/false variables. We define each of the connectives listed above to take on truth values depending on those of $p$ and $q$ as follows.
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{cc|cccccc}
+             $p$ & $q$ & $\parenth{\neg p}$ & $\parenth{\neg q}$ & $\parenth{p \land q}$ & $\parenth{p \lor q}$ & $\parenth{p \to q}$ & $\parenth{p \lr q}$ \\
+             \hline
+             $\T$ & $\T$ & $\F$ & $\F$ & $\T$ & $\T$ & $\T$ & $\T$ \\
+             $\T$ & $\F$ & $\F$ & $\T$ & $\F$ & $\T$ & $\F$ & $\F$ \\
+             $\F$ & $\T$ & $\T$ & $\F$ & $\F$ & $\T$ & $\T$ & $\F$ \\
+             $\F$ & $\F$ & $\T$ & $\T$ & $\F$ & $\F$ & $\T$ & $\T$
+        \end{tabular}
+        \label{tab:my_label}
+    \end{table}
+\end{boxdefinition}
+
+We are now ready to define the main object of study in this section: propositional formulae.
+
+\begin{boxdefinition}[Propositional Formula]\label{Ch1:Def:PropFormula}
+    A \textbf{propositional formula} is obtained from propositional variables and connectives via the following rules:
+    \begin{enumerate}[label=\normalfont (\roman*), noitemsep]
+        \item Any propositional variable is a propositional formula.
+        \item If $\phi$ and $\psi$ are formulae, then so are $\parenth{\neg \phi}$, $\parenth{\neg \psi}$, $\parenth{\phi \land \psi}$, $\parenth{\phi \lor \psi}$, $\parenth{\phi \to \psi}$, $\parenth{\psi \to \phi}$, and $\parenth{\phi \lr \psi}$.
+        \item Any formula arises in this manner after a finite number of steps.
+    \end{enumerate}
+\end{boxdefinition}
+
+What this means is that a propositional formula is a string of symbols consisting of
+\begin{enumerate}[noitemsep]
+    \item variables that take on true/false values,
+    \item connectors that express the relationship between these variables, and
+    \item parentheses/brackets that separate formulae within formulae and specify the order in which they must be evaluated when the constituent variables are assigned specific values.
+\end{enumerate}
+In particular, every propositional formula is either a propositional variable or is built from `shorter' formulae, where by `shorter' we mean consisting of fewer symbols.
+
+\begin{boxconvention}
+    Throughout this module, we will adopt two important conventions when dealing with propositional formulae.
+    \begin{enumerate}[noitemsep]
+        \item All propositional formulae, barring those consisting of a single variable, shall be enclosed in parentheses.
+        \item When we want to denote a propositional formula by a certain symbol, we will use the notation ``$\text{symobol} : \text{formula}$''.
+    \end{enumerate}
+\end{boxconvention}
+
+As a concluding remark on the nature of propositional formulae, we will note that just as we use trees to evaluate expressions on the computer when performing arithmetic, we can use them to express and evaluate propositional formulae as well. We will not usually do this, however, as it takes up a lot of space. In any event, we would first need to make precise the notion of \textit{evaluating} a propositional formula. For this, we will turn to the concept of a truth function.
+
+\subsection{Truth Functions}
+
+Any assignment of truth values to the propositional variables in a formula $\phi$ determines the truth value for $\phi$ in a \textbf{unique} manner, using the exhaustive definitions of the connectives given in \Cref{Ch1:Def:Connective}. We often express all possible values of a propositional formula in a \textbf{truth table}, much like we did in \Cref{Ch1:Def:Connective} when defining the connectives.
+
+\begin{boxexample}
+    Consider the formula $\phi : \parenth{\parenth{p \to \parenth{\neg q}} \to p}$, where $p$ and $q$ are propositional variables. We construct a truth table as follows.
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{cc|cc|c}
+        $p$ & q & $\parenth{\neg q}$ & $\parenth{p \to \parenth{\neg q}}$ & $\parenth{\parenth{p \to \parenth{\neg q}} \to p}$ \\ \hline
+        $\T$ & $\T$ & $\F$ & $\F$ & $\T$ \\
+        $\T$ & $\F$ & $\T$ & $\T$ & $\T$ \\
+        $\F$ & $\T$ & $\F$ & $\T$ & $\F$ \\
+        $\F$ & $\F$ & $\F$ & $\T$ & $\F$
+        \end{tabular}
+    \end{table}
+\end{boxexample}
+
+From this table, it is clear that the truth value of $\phi$ depends on the truth values of $p$ and $q$ in some manner (to be perfectly precise, it only depends on the truth value of $p$, and is, in fact, biconditionally equivalent to $p$). We would like to have a formal notion of navigating this dependence to `compute a value for $\phi$ given values of $p$ and $q$'.
+
+Throughout this subsection, $n$ will denote an arbitrary natural number.
+
+\begin{boxdefinition}[Truth Function]
+    A \textbf{truth function} of $n$ variables is a function
+    \begin{align*}
+        f : \set{\T, \F}^n \to \set{\T, \F}
+    \end{align*}
+\end{boxdefinition}
+
+These are very directly related to propositional formulae.
+
+\begin{boxdefinition}[Truth Function of a Propositional Formula]
+    Let $\phi$ be a propositional formula whose variables are $p_1, \ldots, p_n$. We can associate to $\phi$ a truth function whose truth value at any $\parenth{x_1, \ldots, x_n} \in \set{\T, \F}^n$ corresponds to the truth value of $\phi$ that arises from setting $p_i$ to $x_i$ for all $1 \leq i \leq n$. We define this truth function to be the \textbf{truth function of $\phi$}, denoted $F_{\phi}$.
+\end{boxdefinition}
