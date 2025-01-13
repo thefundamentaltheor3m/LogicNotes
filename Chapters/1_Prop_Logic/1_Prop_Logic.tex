@@ -1,0 +1,26 @@
+%% WEEK 1
+
+\chapter{Propositional Logic}\label{Ch1:CH}
+\thispagestyle{empty}
+
+Propositional logic is the logic of reasoning and proof. Before we get started with anything formal, here's a motivating example.
+
+Consider the following statement:
+\begin{quote}
+    If Mr Jones is happy, then Mrs Jones is unhappy, and if Mrs Jones is unhappy, then Mr Jones is unhappy. Therefore, Mr Jones is unhappy.
+\end{quote}
+One can ask ourselves whether it is logically valid to conclude that Mr Jones is unhappy based on the relationship between the happiness of Mr Jones and that of Mrs Jones expressed in the sentence preceding it.
+
+Putting this into symbols, let $P$ denote the statement that Mr Jones is happy, and let $Q$ denote the statement that Mrs Jones is unhappy. We can express the statement as follows:
+\begin{align}
+    \parenth{\parenth{P \implies Q} \land \parenth{Q \implies  \neg P}} \implies \parenth{\neg P}
+    \label{Ch1:eq:JonesExample}
+\end{align}
+This disambiguation, by removing any question of marital harmony from what is otherwise a purely logical question, we can manually check whether~\eqref{Ch1:eq:JonesExample} is a valid statement by constructing a \textbf{truth table}.
+
+We will begin by developing some machinery to reason about these sorts of statements more formally.
+
+\input{Chapters/1_Prop_Logic/1_1_Prop_Formulae.tex}
+% \input{Chapters/1_Intro/1_2_Small_Dim.tex}
+% \input{Chapters/1_Intro/1_3_Solvability.tex}
+% \input{Chapters/1_Intro/1_4_Subalgebras_of_gl.tex}
