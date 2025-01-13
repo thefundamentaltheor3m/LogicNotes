@@ -1,0 +1,106 @@
+\section{The Representation Theory of $\sl{2}$}\label{Ch2:Sec:sl2}
+
+It is said that an understanding of the representation theory of $\sl{2}$ is commensurate with an understanding of representation theory. We will move forward under this assumption.
+
+\subsection{Generators and Relations}
+
+We begin by describing the generators and relations for $\sl{2}$. We will fix the notation in this subsection for the entirety of the section.
+
+Define
+\begin{align}
+    e :=
+    \begin{bmatrix}
+        0 & 1 \\ 0 & 0
+    \end{bmatrix}
+    \qquad\qquad
+    f :=
+    \begin{bmatrix}
+        0 & 0 \\ 1 & 0
+    \end{bmatrix}
+    \qquad\qquad
+    h :=
+    \begin{bmatrix}
+        1 & 0 \\ 0 & -1
+    \end{bmatrix}
+\end{align}
+
+\begin{boxproposition}[Generators of $\sl{2}$]
+    $\set{e, f, h}$ is generates $\sl{2}$. That is, their linear span consists of all elements of $\sl{2}$.
+\end{boxproposition}
+\begin{proof}
+    \sorry
+\end{proof}
+
+We can now describe the relations between $e, f, h$.
+
+\begin{boxproposition}[Relations between the Generators of $\sl{2}$]
+    We have the following relations between $f, g, h$:
+    \begin{align}
+        \brac{e, f} &= h \\
+        \brac{h, f} &= -2f \\
+        \brac{h, e} &= 2e
+    \end{align}
+\end{boxproposition}
+\begin{proof}
+    \sorry
+\end{proof}
+
+\subsection{Representations in Terms of Homogeneous Polynomials}
+
+Fix $d \in \N$. Consider the vector space
+\begin{align*}
+    V_d := \Span{\set{X^d, X^{d-1}Y, X^{d-2}Y^2, \ldots, X^2Y^{d-2}, XY^{d-1}, Y^d}}
+\end{align*}
+of homogeneous polynomials of degree $d$ over $\C$. Define the maps
+\begin{align}
+    e' := X \frac{\partial}{\partial Y}
+    \qquad\qquad
+    f' := Y \frac{\partial}{\partial X}
+    \qquad\qquad
+    h' := X \frac{\partial}{\partial X} - Y \frac{\partial}{\partial Y}
+\end{align}
+that all lie in $\gl{V_d}$. We will fix the above notation for the rest of the section.
+
+\begin{boxproposition}\label{Ch2:Prop:UniqueRepinVdOfsl2}
+    There exists a unique representation $\phi_d : \sl{2} \to \gl{V_d}$ such that $\phi_d(e) = e'$, $\phi_d(f) = f'$, and $\phi_d(h) := h'$.
+\end{boxproposition}
+\begin{proof}
+    
+\end{proof}
+
+The way that \Cref{Ch2:Prop:UniqueRepinVdOfsl2} should be read is that ``for every $d \in \N$, there is a unique representation $\phi_d$'' of the given nature.
+
+We can say even more about the representations $\phi_d$.
+
+\begin{boxtheorem}\label{Ch2:Thm:IrredRepVdOfsl2}
+    Each representation $\phi_d$ is irreducible.
+\end{boxtheorem}
+\begin{proof}
+    
+\end{proof}
+
+\subsection{Classifying All Representations of $\sl{2}$}
+
+It will turn out that every representation of $\sl{2}$ is isomorphic to some $\phi_d$, with the specific $d$ having to do with the dimension of the chosen representation.
+
+First, note the following fact (which we won't bother to prove).
+
+\begin{lemma}
+    $\pdim{V_d} = d + 1$.
+\end{lemma}
+
+We will now state a few intermediate lemmas about the eigenvectors of $e'$, $f'$ and $h'$.
+
+\begin{lemma}
+    Let $v$ be a non-zero eigenvector of $h'$ with eigenvalue $\lambda$, so that $h'v = \lambda v$. Then,
+    \begin{enumerate}[label = \normalfont \arabic*., noitemsep]
+        \item $e'v$ is an eigenvector of $h'$ with eigenvalue $\lambda + 2$.
+        \item $f'v$ is an eigenvector of $h'$ with eigenvalue $\lambda - 2$.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    \sorry % Direct computation
+\end{proof}
+\begin{lemma}
+    There exists a non-zero eigenvector of $h'$ such that $e' v = 0$.
+\end{lemma}

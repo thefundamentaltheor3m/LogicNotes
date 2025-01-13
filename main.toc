@@ -1,0 +1,6 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Propositional Logic}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Propositional Formulae}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Propositions and Connectives}{3}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Truth Functions}{5}{subsection.1.1.2}%
+\contentsline {chapter}{Bibliography}{6}{theorem.1.1.6}%

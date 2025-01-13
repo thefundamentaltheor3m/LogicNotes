@@ -1,0 +1,191 @@
+\section{Cartan Subalgebras}
+
+Throughout this section, let $L$ denote a semi-simple Lie algebra. We begin by defining and studying semi-simple elements of $L$.
+
+\subsection{Semi-Simple Elements}
+
+\begin{boxdefinition}[Semi-Simplicity of Elements]
+    An element $x \in L$ is \textbf{semi-simple} if it is equal to the diagonal part of its Jordan Decomposition, as in~\eqref{Ch2:Eq:GenJordanDecomp}.
+\end{boxdefinition}
+
+\begin{lemma}\label{Ch3:Lemma:ExistsNeZeroSemiSimple}
+    $L$ admits a non-zero semi-simple element.
+\end{lemma}
+\begin{proof}
+    Assume, for contradiction, that non non-zero element of $L$ is semi-simple. Then, by \Cref{Ch2:Thm:GenJordanDecomp}, for all $x \in L$, $\pad{x}$ is nilpotent. Engel's Theorem then tells us that $L$ is nilpotent, which is a contradiction because $L$ is semi-simple. % WHY?
+\end{proof}
+
+We can now define what a Cartan Subalgebra of $L$ is.
+
+\begin{boxdefinition}[Cartan Subalgebra]
+    A \textbf{Cartan subalgebra} of $L$ is a Lie subalgebra $H \leq L$ such that
+    \begin{enumerate}[label = \normalfont\arabic*., noitemsep]
+        \item Every element of $H$ is semi-simple.
+        \item $H$ is abelian.
+        \item $H$ is the maximal subalgebra of $L$ (with respect to inclusion) that satisfies the above two properties.
+    \end{enumerate}
+\end{boxdefinition}
+
+We will prove important properties of Cartan subalgebras in the next subsection.
+
+\subsection{Properties of Cartan Subalgebras}
+
+First of all, we need to make sure what we are doing is sensible.
+
+\begin{lemma}
+    $L$ admits a Cartan subalgebra.
+\end{lemma}
+\begin{proof}
+    The zero subalgebra satisfies the necessary properties. % The unieuqeness follows from the  maximality condition.
+\end{proof}
+
+Now, we show that what we are studying is non-trivial.
+
+\begin{boxproposition}
+    Let $H$ be the Cartan subalgebra of $L$. Then, $H \neq 0$.
+\end{boxproposition}
+\begin{proof}
+    By \Cref{Ch3:Lemma:ExistsNeZeroSemiSimple}, $L$ admits a non-zero semi-simple element. Then, $\Span{x}$ is abelian. Furthermore, any element of it is semi-simple, as $\ad$ is linear. Therefore, \sorry
+\end{proof}
+
+\subsection{Centralisers and the Cartan Decomposition}
+
+Recall the definition of a centraliser. % Copy from CW 1. Also include centraliser of element.
+
+\begin{boxdefinition}[Centraliser of a Lie Subalgebra]
+    For a Lie subalgebra $H \leq L$, we define the \textbf{centraliser} of $H$ in $L$ to be
+    \begin{align*}
+        C_L(H) := \setst{x \in L}{\forall y \in L, \ \brac{x, y} = 0}
+    \end{align*}
+\end{boxdefinition}
+
+We can also define the centraliser of an element.
+
+\begin{boxdefinition}[Centraliser of an Element]
+    For some $h \in L$, we define the centraliser of $h$ in $L$ to be
+    \begin{align*}
+        C_L(h) := \setst{x \in L}{\brac{x, h} = 0}
+    \end{align*}
+\end{boxdefinition}
+
+
+\begin{lemma}
+    For any $h \in L$, we have that $C_L(h) = C_L\!\parenth{\Span{h}}$.
+\end{lemma}
+
+
+\begin{lemma}\label{Ch3:Lemma:Eq_Centraliser_Implies_Cartan}
+    Let $H$ be a Lie subalgebra of $L$ such that all of its elements are semi-simple. If $H = C_L(H)$, then $H$ is a Cartan subalgebra of $L$.
+\end{lemma}
+\begin{proof}
+    We know that elements of $C_L(H)$ commute with all elements of $H$. Since $H = C_L(H)$, it follows that $H$ is abelian. We also have the assumption that all elements of $H$ are semi-simple. Therefore, the only thing we need to show is maximality.
+    
+    If $K$ is an abelian subalgebra with semi-simple elements that contains $H$, then elements of $K$ will commute with all elements of $K$, including elements of $H$, meaning that $K \subseteq C_L(H)$. But, by assumption, $C_L(H) = H$. Therefore, we have $H \neq K \subseteq C_L(H) = H$, a contradiction. Hence, no such $K$ can exist, making $H$ maximal.
+\end{proof}
+
+What's interesting is that the converse is also true: any Cartan subalgebra is equal to its centraliser. Proving this, though, is significantly more difficult. It motivates us to develop a lot of machinery, which is where we will first encounter the notion of the Cartan Decomposition and the roots of a Lie algebra.
+
+\begin{lemma}
+    Commuting diagonalisable linear maps from any vector space to itself are simultaneously diagonalisable.
+\end{lemma}
+\begin{proof}
+    This is an easy generalisation of the two-dimensional case. \sorry % No need to prove tbh
+\end{proof}
+
+For the remainder of this subsection, let $H$ be an abelian Lie subalgebra of $L$ consisting of semi-simple elements. Write $H = \Span{a_1, \ldots, a_n}$, where $h_i$ are linearly independent. Since $H$ is abelian, we can simultaneously diagonalise elements of its basis.
+
+\begin{boxproposition}\label{Ch3:Prop:CartanDecompExists}
+    $L$ admits a decomposition
+    \begin{align}
+        L = L_0 \+ \bigoplus_{\alpha \in \Phi} L_{\alpha}
+        \label{Ch3:Eq:CartanDecomp}
+    \end{align}
+    where $L_\beta$ denotes the weight space for the action on $L$ of $\ad\vert_{H}$, the adjoint map restricted to $H$, with weight $\beta$. $\Phi$ here denotes the set of all $\alpha \in H^*$ such that $L_{\alpha} \neq 0$.
+\end{boxproposition}
+\begin{proof}
+    \sorry
+\end{proof}
+
+Observe that in the context of the above Proposition, $L_0 = \setst{v \in L}{\brac{v, \cdot} = 0}$. This is nothing but the centraliser of $H$ in $L$.
+
+The terms of this decomposition are immensely significant, and have special names.
+
+\begin{boxdefinition}[The Cartan Decomposition]
+    The decomposition of $L$ given in~\eqref{Ch3:Eq:CartanDecomp} is called the \textbf{Cartan decomposition} of $L$.
+\end{boxdefinition}
+
+For the remainder of this subsection, we will adopt the notation used in \Cref{Ch3:Prop:CartanDecompExists}.
+
+\begin{boxdefinition}[Roots]
+    The elements of $\Phi$ are called the \textbf{roots} of $L$.
+\end{boxdefinition}
+
+We can say something about weights.
+
+\begin{boxlemma}[Behaviour of Weights]\label{Ch3:Lemma:BehaviourOfWeights}
+    Fix $\alpha, \beta \in H^*$. Then,
+    \begin{enumerate}[label = \normalfont \arabic*., noitemsep]
+        \item $\brac{L_{\alpha}, L_{\beta}} \subseteq L_{\alpha + \beta}$.
+        \item $\alpha + \beta \neq 0 \implies \kof{L_{\alpha}, L_{\beta}} = 0$.
+        \item $\kappa_{L_0 \times L_0}$ is non-degenerate.\footnote{This relies on the assumption that $L$ is semi-simple.}
+    \end{enumerate}
+\end{boxlemma}
+\begin{proof}
+    Fix $x \in L_{\alpha}$ and $y \in L_{\beta}$.
+    \begin{enumerate}
+        \item For all $h \in H$, we have
+        \begin{align*}
+            \pad{h}\!\parenth{\brac{x, y}} = 
+        \end{align*}
+        \sorry
+
+        \item Assume that $\alpha + \beta \neq 0$. Then, there exists $h \in H$ such that $\alpha(h) + \beta(h) \neq 0$. Consider the action of $\pad{h}$ on $L_{\alpha}$ and $L_{\beta}$. \sorry
+        
+        \item \sorry % Use Cartan's 2nd criterion and the Cartan decomposition (L is semi-simple)
+    \end{enumerate}
+\end{proof}
+
+\begin{corollary}
+    If $\alpha$ is a non-zero weight, then every $x \in L_{\alpha}$ is nilpotent as an element of $L$.
+\end{corollary}
+\begin{proof}
+    Fix $x \in L_{\alpha}$. Because of the existence of the Cartan decomposition, it suffices to show that $\pad{x}^n\!\parenth{L_{\beta}} = 0$ for all weights $\beta$ (zero or non-zero). Indeed, observe that
+    \begin{align*}
+        \pad{x}\!\parenth{L_{\beta}} \in \brac{L_{\alpha}, L_{\beta}} \subseteq L_{\alpha + \beta}
+    \end{align*}
+    where the last inclusion follows from the first point in \Cref{Ch3:Lemma:BehaviourOfWeights}. We can do something similar with $\pad{x}^2$, $\pad{x}^3$, and so on. \sorry % Finish: apply \pad{x}^i to L_{previous}
+\end{proof}
+
+We are now ready to prove the coveted converse of \Cref{Ch3:Lemma:Eq_Centraliser_Implies_Cartan}.
+
+\begin{boxtheorem}
+    If $H \subseteq L$ is a Cartan subalgebra, then $H = C_L(H)$.
+\end{boxtheorem}
+\begin{proof}
+    Since $H$ is a Cartan subalgebra, we know that $H$ is abelian. In particular, that means that $H$ is contained in its centraliser. Therefore, it suffices to show that $H$ \emph{contains} its centraliser. We do this in four steps.
+    \begin{enumerate}
+        \item\underline{There exists $h \in H$ such that $C_L(h)$ is minimal with respect to inclusion.}
+        
+        The idea is that we can express $C_L(H)$ in the following manner:
+        \begin{align*}
+            C_L(H) = \bigcap_{h \in H} C_L(h)
+        \end{align*}
+        Therefore, for the right choice $h, h' \in H$, we have the inclusions
+        \begin{cd*}
+            & C_L(H) \arrow[d, "{\rotatebox[origin=c]{270}{$\subset$}}", phantom] & \\
+            & C_L(h) \cap C_L(h') \arrow[ld, "{\rotatebox[origin=c]{45}{$\supsetneq$}}", phantom] \arrow[rd, "{\rotatebox[origin=c]{315}{$\subsetneq$}}", phantom] & \\
+            C_L(h) \hspace{-1.5em} \arrow[rd, "{\rotatebox[origin=c]{135}{$\supset$}}", phantom] &[0.1em] &[0.1em] \hspace{-1.5em} C_L(h') \arrow[ld, "{\rotatebox[origin=c]{45}{$\supset$}}", phantom] \\
+            & L &
+        \end{cd*}
+        where what makes the choices `right' is that the inclusions of the intersection of their centralisers into their respective centralisers are \textit{proper}.
+
+        \sorry
+
+        \item\underline{$C_L(h) = C_L(H)$.}
+
+        \item\underline{$C_L(h) = C_L(H)$ is nilpotent.}
+
+        \item\underline{$C_L(H)$ is contained in $H$ as a subalgebra.}
+    \end{enumerate}
+\end{proof}
+

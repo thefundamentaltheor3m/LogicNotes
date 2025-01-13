@@ -1,0 +1,54 @@
+\documentclass[a4paper, 12pt, openany, oneside]{book}
+
+\input{TeX_Setup/packages.tex}
+
+\input{TeX_Setup/format.tex}
+
+\input{TeX_Setup/environments.tex}
+
+\input{TeX_Setup/shortcuts.tex}
+
+\title{\vspace{-2em}MATH70132: Mathematical Logic}
+\author{Lecturer: David Evans \\ Scribe: Sidharth Hariharan}
+\date{Imperial College London - Spring 2025}
+
+\begin{document}
+
+\setlength{\abovedisplayskip}{7.5pt}  % Space above an align environment
+\setlength{\belowdisplayskip}{7.5pt}  % Space below an align environment
+\setlength{\abovedisplayshortskip}{2pt}
+\setlength{\belowdisplayshortskip}{2pt}
+
+\maketitle
+\thispagestyle{empty}
+
+\tableofcontents
+\thispagestyle{empty}
+
+\newpage
+
+\nocite{*}
+
+\input{Chapters/1_Prop_Logic/1_Prop_Logic.tex}
+% \input{Chapters/2_Rep/2_Rep.tex}
+% \input{Chapters/3_Root/3_Root.tex}
+
+% \input{Chapters/Appendices/Appendices.tex}
+
+\newpage
+
+% \chapter*{References}
+% \addcontentsline{toc}{chapter}{References}
+% \thispagestyle{empty}
+
+% These lecture notes are based heavily on the following references:~\cite{ErdmannWildon}
+
+\defbibnote{mybibnote}{These lecture notes are based heavily on the following references:}
+
+\printbibliography[prenote=mybibnote]
+\addcontentsline{toc}{chapter}{Bibliography}
+\thispagestyle{empty}
+
+For the latest version of these notes, visit~\url{https://github.com/thefundamentaltheor3m/LieAlgebrasNotes}. For any suggestions or corrections, please feel free to fork and make a pull request to my repository.
+
+\end{document}
