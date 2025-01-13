@@ -45,6 +45,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+
+      # Caches texlive-full
+      - name: Cache texlive-full
+        uses: actions/cache@v2
+        id: cache-texlive-full
+        with:
+          path: ~/texlive
+          key: ${{ runner.os }}-texlive-${{ secrets.TEXLIVE_FULL_VERSION }}
+          restore-keys: |
+            ${{ runner.os }}-texlive-
       
       # Compiles 
       - name: Build Latex PDF and HTML
