@@ -74,15 +74,6 @@ jobs:
         with:
           tag_name: Current
           files: public/main.pdf
-      
-      # Publishes the PDF to GitHub Pages
-      - name: Publish PDF to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        # if: startsWith(github.ref, 'refs/tags/')
-        with:
-          tag_name: Current
-          # files: public/main.pdf
-          publish_dir: ./public
           
       # Publish HTML to GitHub Pages
       - name: Publish HTML to GitHub Pages
