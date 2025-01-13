@@ -1,0 +1,109 @@
+\section{Lie Algebras of Dimension $\leq 3$}
+
+It turns out that we do not need any particularly sophisticated machinery to classify \underline{all} Lie algebras of dimension less than or equal to $3$.
+
+\subsection{Abelian Lie Algebras and Lie Algebras of Dimension $1$}
+
+We begin with a simple observation about abelian Lie algebras.
+
+\begin{boxproposition}\label{Ch1:Prop:Abelian_Lie_Algebras_Iso}
+    Fix $n \in \N$. Then, any abelian Lie algebra of dimension $n$ is isomorphic to $\C^n$ with the zero bracket.
+\end{boxproposition}
+\begin{proof}
+    Let $L$ be a Lie algebra of dimension $n$. We know there exists a $\C$-linear isomorphism $\phi : L \to \C^n$. It follows immediately that for any $x, y \in L$,
+    \begin{align*}
+        \phiof{\brac{x, y}} = \phiof{0} = 0 = \brac{\phiof{x}, \phiof{y}}
+    \end{align*}
+    A similar argument will show that $\phi\inv : \C^n \to L$, viewed as a linear map, is a Lie algebra homomorphism as well, proving that $L \cong \C^n$.
+\end{proof}
+
+The classification of Lie algebras in $1$ dimension is then straightforward. We will begin by a rather strong but straightforward result on one-dimensional subspaces of Lie algebras.
+
+\begin{proposition}\label{Ch1:Prop:1D_Lie_Subalgebras}
+    Let $L$ be a Lie algebra. Any $1$-dimensional subspace of $L$ is an abelian Lie subalgebra.
+\end{proposition}
+\begin{proof}
+    Let $K$ be a sub-vector space of dimension $1$. We know any $\C$-basis of $K$ consists of a single, nonzero element. Consider such a basis element $x$. For any $y_1, y_2 \in L$, there exist $\lambda_1, \lambda_2 \in \C$ such that $y_1 = \lambda_1 x$ and $y_2 = \lambda_2 x$. Then,
+    \begin{align*}
+        \brac{y_1, y_2} = \brac{\lambda_1 x_1, \lambda_1 x_2} = \lambda_1 \lambda_2 \brac{x, x} = 0
+    \end{align*}
+    proving that $\liebrac = 0$. Since $K$ is a subspace, $0 \in K$, proving that $K$ is a Lie subalgebra.
+\end{proof}
+
+The classification of Lie algebras of dimension $1$ is then immediate.
+
+\begin{boxcorollary}\label{Ch1:Cor:1D_Lie_Algebra_Classification}
+    Any Lie algebra of dimension $1$ is abelian, isomorphic to $\C$ equipped with the zero bracket.
+\end{boxcorollary}
+\begin{proof}
+    Let $L$ be a Lie algebra of dimension $1$. That $L$ is abelian follows from applying \Cref{Ch1:Prop:1D_Lie_Subalgebras} to $L$ viewed as a subspace of itself. The isomorphism then follows immediately from \Cref{Ch1:Prop:Abelian_Lie_Algebras_Iso}.
+\end{proof}
+
+We can now turn our attention to the slightly more non-trivial problem of classifying non-abelian Lie algebras of dimension $2$ and $3$.
+
+\subsection{Lie Algebras of Dimension $2$}
+
+From \Cref{Ch1:Prop:Abelian_Lie_Algebras_Iso}, we already know that there is only one abelian Lie algebra of dimension $2$. The question remains, how many non-abelian Lie algebras of dimension $2$ are there?
+
+We begin by giving an example.
+
+\begin{boxexample}[A Two-Dimensional Non-Abelian Lie Algebra]\label{Ch1:Eg:2D_NonAbelian_Lie_Algebra}
+    Consider the set
+    \begin{align*}
+        \r_2 := \setst{
+            \begin{bmatrix}
+                a & b \\ 0 & 0
+            \end{bmatrix}
+        }{a, b \in \C}
+        = \Span{\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}, \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}}
+        \subseteq \gl{2}
+    \end{align*}
+    Clearly, $\r_2$ is a linear subspace of $\gl{2}$. Furthermore, One can show that
+    \begin{align*}
+        \brac{
+            \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}, \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}
+        } = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}
+    \end{align*}
+    proving that $\r_2$ is closed under the commutator bracket. It follows that $\r_2$ is a Lie subalgebra of $\gl{2}$, and therefore, a $2$-dimensional Lie algebra in its own right.
+\end{boxexample}
+
+% The \r_2 notation comes from French literature: the \r stands for resoluble (solvable), and it is clear that the above Lie algebra is solvable.
+
+The reason we are interested in the above example will become clear, and we will reserve the notation $\r_2$ for this particular Lie algebra. For the remainder of this section, denote by $L$ an arbitrary non-abelian Lie subalgebra of dimension $2$.
+
+We will begin by describing the derived subalgebra $L'$ (cf. \Cref{Ch1:Def:DerivedSubalg}) of $L$.
+
+\begin{lemma}
+    For any $\C$-basis $\set{u, v}$ of $L$, we have that $L' = \Span{\brac{u, v}}$.
+\end{lemma}
+\begin{proof}
+    Let $\set{u, v}$ be a basis of $L$. Define $x := \brac{u, v}$. Since $L$ is non-abelian, $x \neq 0$, making $X := \Span{x}$ a $1$-dimensional subspace of $L$. Seeing as $L' = \brac{L, L} = \Span{\setst{\brac{x, y}}{x, y \in L}}$, it is clear that $L' \supseteq X$. It remains to show that $L' \subseteq X$.
+
+    It suffices to show that $\setst{\brac{x, y}}{x, y \in L} \subseteq X$. To that end, fix $a, b \in L$. We know there exist $\lambda_1, \mu_1, \lambda_2, \mu_2 \in \C$ such that $a = \lambda_1 u + \mu_1 v$ and $b = \lambda_2 u + \mu_2 v$. Then,
+    \begin{align*}
+        \brac{a, b}
+        &= \brac{\lambda_1 u + \mu_1 v, \lambda_2 u + \mu_2 v} \\
+        &= \lambda_1 \lambda_2 \underbrace{\brac{u, u}}_{= 0} + \lambda_1 \mu_2 \brac{u, v} + \mu_1 \lambda_2 \brac{v, u} + \mu_1 \mu_2 \underbrace{\brac{v, v}}_{= 0} \\
+        &= \parenth{\lambda_1 \mu_2 - \mu_1 \lambda_2} \brac{u, v} \in X
+    \end{align*}
+    as required.
+\end{proof}
+
+This tells us, in particular, that the span of the commutator of any basis of $L$ is an ideal. We now have everything we need to describe $L$.
+
+\begin{boxproposition}
+    $L$ is isomorphic to $\r_2$.
+\end{boxproposition}
+\begin{proof}
+    It suffices to show that $L$ admits a basis $\set{x, y}$ such that $\brac{x, y} = y$, as this will readily yield the right structure constants.\footnote{Alternatively, if we can show that $\brac{x, y} = y$, it will follow immediately that the linear isomorphism sending $x$ to $\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ and $y$ to $\begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$ is, indeed, a Lie algebra isomorphism.}
+    
+    Let $\set{u, v}$ be an arbitrary $\C$-basis of $L$. Let $y := \brac{u, v}$. Since $L$ is non-abelian, $y \neq 0$. Therefore, there exists some $z \in L \setminus \set{0}$ that is linearly independent of $y$. Since $\Span{y} = L' \nsg L$, we know that $\brac{z, y} \in L'$. In particular, $\exists \lambda \in \C$ such that $\brac{z, y} = \lambda y$. Furthermore, since $y$ and $z$ are linearly independent and $L$ is non-abelian, $\lambda \neq 0$. So, define $x := \lambda\inv z$. Then, $x$ is still linearly independent of $y$, making $\set{x, y}$ a basis of $L$, and $\brac{x, y} = y$, as required.
+\end{proof}
+
+Yes, it's true! Up to isomorphism, there is \underline{only one} non-abelian Lie algebra of dimension $2$. Therefore, there are \underline{only two} Lie algebras of dimension $2$: one non-abelian one and one abelian one.
+
+We can now turn our attention to the classification of Lie algebras in dimension $3$.
+
+\subsection{Lie Algebras of Dimension $3$}
+
+\sorry

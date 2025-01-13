@@ -1,0 +1,117 @@
+\section{Important Definitions and First Examples}
+
+\subsection{Representations and Modules}
+
+\begin{boxdefinition}[Representation]\label{Ch2:Def:Representation}
+    A \textbf{representation} of $L$ is a Lie algebra homomorpshism $\rho : L \to \gl{V}$ for some finite-dimensional $\C$-vector space $V$.
+\end{boxdefinition}
+
+\begin{boxexample}[The Adjoint Representation]
+    The adjoint map $\ad : L \to \gl{L}$ is a representation: \Cref{Ch1:Prop:AdjointLieAlgHom} tells us it is a Lie algebra homomorphism.
+\end{boxexample}
+
+If $\rho : L \to \gl{V}$ is a representation, then we can define a map $\parenth{\ell, v} \mapsto \rho(\ell)(v) : L \times V \to V$. We can use this to define a Lie algebra module, similar to the concept of group modules when defining complex representations thereof.
+
+\begin{boxdefinition}[Lie Module]\label{Ch2:Def:LieAlgModule}
+    A \textbf{Lie module}, or \textbf{$L$-module}, is a finite-dimensional vector space $V$ with a pairing $\rho : L \times V \to V$ such that
+    \begin{enumerate}
+        \item $\rho$ is $\C$-bilinear.
+        \item $\rho(\brac{a, b}, v) = \rho(a, \rho(b, v)) - \rho(b, \rho(a, v))$.
+    \end{enumerate}
+\end{boxdefinition}
+
+Indeed, one can show that any representation $\rho : L \to V$ satisfies the above properties with respect to the pairing $\parenth{\ell, v} \mapsto \rho(\ell)(v)$ and that any Lie algebra module $V$ with pairing $\rho$ admits a uniquely defined representation $\ell \mapsto \rhoof{\ell, \cdot} : L \to \gl{V}$. Thus, the two concepts are equivalent.
+
+\begin{boxconvention}
+    We will abuse notation and not distinguish the notions of representations and modules. Similarly, we will not split hairs about the notation for the two: $\rhoof{\cdot, \cdot}$ should be interpreted as meaning the same thing as $\rho(\cdot)(\cdot)$.
+\end{boxconvention}
+
+Indeed, as with representations of groups and group modules, we have an equivalence of categories between the category of representations of $L$ and that of $L$-modules. One would need to argue a bit more rigorously, by defining the morphisms in each one, but we will not do this and take this as an implicit fact.
+
+\subsection{Homomorphisms, Submodules and Quotient Modules}
+
+Throughout this subsection, we denote by $M$ an $L$-module of finite $\C$-dimension.
+
+\begin{boxdefinition}[Lie Submodule]
+    An \textbf{$L$-submodule} of $M$ is a sub-vector space $N \leq M$ that is invariant under the action of $L$, ie,
+    \begin{align*}
+        \forall l \in L, x \in N, \ l \cdot x \in N
+    \end{align*}
+\end{boxdefinition}
+
+
+
+\sorry % Defs of the 3 things above
+
+\subsection{Simple or Irreducibile $L$-Modules}
+
+Throughout this subsection, we denote by $M$ an $L$-module of finite $\C$-dimension.
+
+\begin{boxdefinition}[Irreducibility]\label{Ch2:Def:IrreducibleModule}
+    $M$ is \textbf{irreducible} if it has no proper, non-zero submodules.
+\end{boxdefinition}
+\begin{remark}
+    We can define a similar notion of irreducibility of representations, which we can show to be equivalent to the irreducibility of the corresponding module. This is why we choose to call a module that is \textbf{simple}, ie, that satisfies \Cref{Ch2:Def:IrreducibleModule}, `irreducible'.
+\end{remark}
+Nevertheless, we use the following convention.
+\begin{boxconvention}
+    We will use the terms `simple' and `irreducible' interchangeably.
+\end{boxconvention}
+
+There exist a large number of irreducible modules of any Lie algebra.
+
+\begin{boxexample}\label{Ch2:Eg:1DModuleIrred}
+    Any one-dimensional $L$-module is irreducible.
+\end{boxexample}
+
+We remind the reader of the famed Jordan-Hölder Theorem from commutative algebra. We will mention that all Lie algebra modules admit composition series. We will combine this existence result with the standard formulation of the Jordan-Hölder Theorem into the following theorem.
+
+\begin{boxtheorem}[Jordan-Hölder]\label{Ch2:Thm:JordanHolder}
+    If $M \neq 0$, then there exists a sequence
+    \begin{align}
+        0 = M_0 \subset M_1 \subset \ldots \subset M_n = M
+    \end{align}
+    of submodules of $M$ such that $\quotient{M_i}{M_{i-1}}$ is irreducible for all $i$. Furthermore, each $\quotient{M_i}{M_{i-1}}$ is unique up to permutation and isomorphism---that is, they do not depend on the sequence itself, but only on the isomorphism class of $M$.
+\end{boxtheorem}
+
+Finally, we mention some useful results on irreducible representations of nilpotent and solvable Lie algebras that follow from Engel's Theorema and Lie's Theorem respectively.
+
+\begin{boxproposition}
+    Let $L$ be solvbale. Then, every irreducible $L$-module is one-dimensional over $\C$.
+\end{boxproposition}
+\begin{proof}
+    \sorry 
+\end{proof}
+
+
+
+\subsection{Semi-Simple $L$-Modules}
+
+We have yet more parallels with the representation theory of finite groups.
+
+\begin{boxdefinition}[Direct Sum]\label{Ch2:Def:ModuleDirectSum}
+    The \textbf{direct sum} of two $L$-modules $M$ and $N$ is the $L$-module $M \oplus N$ with the action defined by
+    \begin{align}
+        \rho(\ell)(m, n) = \parenth{\rho(\ell)(m), \rho(\ell)(n)}
+    \end{align}
+\end{boxdefinition}
+
+We then have a notion of semi-simplicity for $L$-modules, which is essentially the same as that of any module.
+
+\begin{boxdefinition}[Semi-Simplicity]\label{Ch2:Def:SemiSimpleModule}
+    An $L$-module $M$ is \textbf{semi-simple} if it is a direct sum of simple (irreducible) $L$-modules.
+\end{boxdefinition}
+
+The following theorem, which is quite hard to prove, explains the reason we define semi-simplicity of Lie algberas the way we do in \Cref{Ch1:Def:SemiSimple}.
+
+\begin{boxtheorem}\label{Ch2:Thm:SemiSimpleLieToModule}
+    If $L$ is semi-simple, then every finite-dimensional $L$-module is semi-simple.
+\end{boxtheorem}
+
+We do not prove this theorem here, but we will take it for granted going forward.
+
+\begin{boxexample}
+    Let $L$ be solvable. \Cref{Ch1:Thm:Lie} (Lie's Theorem) tells us that \sorry % Look at recording of lecture from Oct 24
+\end{boxexample}
+
+

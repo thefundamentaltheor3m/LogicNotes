@@ -1,0 +1,140 @@
+\section{The Adjoint Representation and the Killing Form}
+
+In this section, we will explore some of the properties of the adjoint representation, which is closely related to the killing form, a bilinear form on $L$ that will help us better understand its structure.
+
+\subsection{Properties of the Adjoint Representation}
+
+We begin with a result on the Jordan decomposition of the adjoint representation.
+
+Recall that the Jordan decomposition of a linear map $T$ (from some $\C$-vector space to itself) involves expressing $T$ as $d + n$, where $d$ is diagonalisable, $n$ is nilpotent and $dn = nd$. In particular, $d$ and $n$ are simultaneously triangularisable\footnote{That all commuting linear maps are simultaneously triangularisable is a well-known fact from linear algebra, and we do not prove it here.}, meaning that there exists some basis, known as a Jordan basis of $T$, with respect to whichthe matrix of $T$ is upper-triangular, with all of its diagonal entries being its eigenvalues (given by $d$) and its super-diagonal entries being either $0$ or $1$ in a nilpotent manner (given by $n$).
+
+We can show that the adjoint representation of a Lie algebra respects this decomposition. To that end, we show that it respects diagonalisability, nilpotency and commutativity.
+
+We begin with diagonalisability.
+
+\begin{boxlemma}\label{Ch2:Lemma:adDiagofDiag}
+    Let $d \in \gl{n}$ be diagonal with respect to some basis. Then, $\ad{d}$ is diagonalisable.
+\end{boxlemma}
+\begin{proof}
+    \sorry
+\end{proof}
+
+Recall that \Cref{Ch1:Lemma:adNilpotnetOfNilpotent} tells us precisely that the adjoint representation respects nilpotency. Finally, we can use the fact that the adjoint representation is a Lie algebra homomorphsim to show that it respects commutativity.
+
+\begin{lemma}
+    If $x, y \in \gl{n}$ are such that $xy = yx$, then $\pad{x} \pad{y} = \pad{y} \pad{x}$.
+\end{lemma}
+\begin{proof}
+    Observe that $xy = yx \iff \brac{x, y} = 0$. By \Cref{Ch1:Prop:AdjointLieAlgHom}, we have that
+    \begin{align*}
+        \brac{\pad{x}, \pad{y}} = \pad{\brac{x, y}}
+    \end{align*}
+    Since $\ad$ is linear and $\brac{x, y} = 0$, we have that $\brac{\pad{x}, \pad{y}} = 0$, or, equivalently, that $\pad{x} \pad{y} = \pad{y} \pad{x}$.
+\end{proof}
+
+Finally, we end with a discussion on how the adjoint representation looks in terms of commutative diagrams.
+
+\begin{boxproposition}
+    Let $K$ be another Lie Algebra. Then,
+    \begin{cd}
+        L \+ K \arrow[r, "\ad_{L \+ K}"] \arrow[rd, "\ad_{L} \+ \ad_{K}"'] & \gl{L \+ K} \\
+        & \gl{L} \+ \gl{K} \arrow[u, hook]
+        \label{Ch2:cd:DirSumgl}
+    \end{cd}
+\end{boxproposition}
+\begin{proof}
+    \sorry
+\end{proof}
+
+In particular,~\eqref{Ch2:cd:DirSumgl} gives us the following relationship between the traces of the adjoints: \sorry
+
+\subsection{The Killing Form}
+
+We are now ready to define the killing form on $L$.
+
+\begin{boxdefinition}[The Killing Form]
+    The \textbf{killing form} on $L$ is the map $\kappa : L \times L \to \C$ defined by
+    \begin{align}
+        \kappa(x, y) = \Tr{\pad{x} \cdot \pad{y}}
+    \end{align}
+    where $\ad : L \to \gl{L}$ denotes the adjoint representation of $L$.
+\end{boxdefinition}
+
+\begin{boxconvention}
+    For the remainder of this chapter, we will denote the killing form on $L$ by $\kappa$.
+\end{boxconvention}
+
+The basic properties of the killing form come from the following.
+
+\begin{boxproposition}
+    $\kappa$ is a symmetric, bilinear form on $L$.
+\end{boxproposition}
+
+We will not prove this proposition, as it involves checking basic facts from linear algebra. We will take it for granted going forward.
+
+\begin{comment}
+Recall that we can assocate to any symmetric, bilinear form a symmetric matrix of it applied to any basis of a vector space. Denote
+\begin{align}
+    B := \begin{bmatrix}
+        \kof{e_1, e_1} & \cdots & \kof{e_1, e_n} \\
+        \vdots & \ddots & \vdots \\
+        \kof{e_n, e_1} & \cdots & \kof{e_n, e_n}
+    \end{bmatrix}
+\end{align}
+where $\set{e_1, \ldots, e_n}$ is a basis of $L$ and $n$ is its $\C$-dimension. Indeed, we can diagonalise $B$ by orthogonalising $\set{e_1, \ldots, e_n}$ with respect to $\kappa$ using the Gram-Schmidt process. Therefore, we may assume, without loss of generality, that $B$ is diagonal.
+\end{comment}
+
+We will now prove some identities about the killing form. We will begin by stating a basic identity involving the trace.
+
+\begin{lemma}\label{Ch2:Lemma:TraceAssoc}
+    For all $A, B, C \in \gl{L}$, we have that
+    \begin{align}
+        \Tr{\brac{A, B}, C} = \Tr{A, \brac{B, C}}
+        \label{Ch2:Eq:TraceAssoc}
+    \end{align}
+\end{lemma}
+\begin{proof}
+    The proof is a simple consequence of two facts: first, that matrix multiplication is associative, and second, that the trace of a product of two matrices is invariant under swapping them. We will leave the details to the reader.
+\end{proof}
+
+This gives us a similar identity for the killing form.
+\begin{boxcorollary}\label{Ch2:Cor:KillingAssoc}
+    For any $A, B, C \in L$, we have that
+    \begin{align}
+        \kof{\brac{A, B}, C} = \kof{A, \brac{B, C}}
+        \label{Ch2:Eq:KillingAssoc}
+    \end{align}
+\end{boxcorollary}
+\begin{proof}
+
+    \sorry  % See iPad (read bottom board before top board)
+\end{proof}
+
+\subsection{The Killing Form on Ideals and Subalgebras}
+
+Seeing as there is a Killing Form defined on any Lie algebra, and seeing as ideals and subalgebras are also Lie algebras in their own right, we can define Killing Forms on them as well. A natural question to ask is whether these are related to the Killing Form on the Lie algebra in which they live. We will show that this is indeed the case for ideals, but not necessarily for subalgebras.
+
+For the remainder of this subsection, for any Lie algebra $\mathfrak{L}$, we will denote the Killing Form on it by $\kappa_{\mathfrak{L}}$.
+
+\begin{boxproposition}\label{Ch2:Prop:KillingIdeal}
+    Let $I \nsg L$. Then,
+    \begin{enumerate}[label = \normalfont \arabic*.]
+        \item $\kappa_L\vert_{I \times I} = \kappa_{I}$, ie, the restriction of the Killing Form on $L$ to inputs in $I$ is equal to the Killing Form on $I$.
+        \item The orthogonal complement of $I$ with respect to $\kappa_L$ is also an ideal of $L$.
+    \end{enumerate}
+\end{boxproposition}
+
+We can show that the results of \Cref{Ch2:Prop:KillingIdeal} fail for subalgebras that are not ideals.
+
+\begin{boxcexample}
+    Let $h = \diag{-1, 1} \in \gl{2}$, and let $H = \Span{h}$ be the Lie subalgebra generated by $h$. We know that $H$ is abelian, meaning that the Killing Form $\kappa_H$ is identically zero. However, we can show that $\kappa_L(h, h) \neq 0$, proving that $\kappa_L\vert_{H \times H} \neq \kappa_H$.
+\end{boxcexample}
+
+Finally, we can say something about the Killing Form on the direct sum of two Lie Algebras.
+
+\begin{boxproposition}
+    The Killing Form of the direct sum of two Lie Algebras is the sum of their Killing Forms, applied coordinate-wise.
+\end{boxproposition}
+\begin{proof}
+    \sorry
+\end{proof}
