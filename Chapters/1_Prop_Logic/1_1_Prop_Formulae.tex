@@ -106,3 +106,147 @@ These are very directly related to propositional formulae.
 \begin{boxdefinition}[Truth Function of a Propositional Formula]
     Let $\phi$ be a propositional formula whose variables are $p_1, \ldots, p_n$. We can associate to $\phi$ a truth function whose truth value at any $\parenth{x_1, \ldots, x_n} \in \set{\T, \F}^n$ corresponds to the truth value of $\phi$ that arises from setting $p_i$ to $x_i$ for all $1 \leq i \leq n$. We define this truth function to be the \textbf{truth function of $\phi$}, denoted $F_{\phi}$.
 \end{boxdefinition}
+
+We can now construct a truth function for the example we saw at the very beginning involving Mr and Mrs Jones (cf.~\eqref{Ch1:eq:JonesExample}).
+
+\begin{boxexample}
+    \sorry % Jones example
+\end{boxexample}
+
+We see something quite remarkable here: the truth function of the propositional formula defined in~\eqref{Ch1:eq:JonesExample} maps every possible input to $\T$! We have a special term for this.
+
+\begin{boxdefinition}[Tautology]
+    A propositional formula $\phi$ is a \textbf{tautology} if its truth function $F_{\phi}$ maps every possible input to $\T$.
+\end{boxdefinition}
+
+We can also be more precise about what the biconditional connective actually tells us.
+
+\begin{boxdefinition}[Logical Equivalence]
+    The propositional formulae $\psi$ and $\chi$ are \textbf{logically equivalent} if the truth function $F_{\psi \lr \chi}$ of their biconditional is a tautology.
+\end{boxdefinition}
+
+We have a fairly basic result about logical equivalence.
+
+\begin{lemma}
+    Let $p_1, \ldots, p_n$ be propositional variables and let $\psi$ and $\chi$ be formulae in $p_1, \ldots, p_n$. Then, $\psi$ and $\chi$ are logically equivalent if and only if $F_{\psi} = F_{\chi}$.
+\end{lemma}
+
+We omit the proof of this result as it merely involves checking things manually. A computer should be able to do this almost instantaneously.
+
+We can also say something about composing formulae together.
+
+\begin{lemma}
+    Suppose that $\phi$ is a propositional formula with variables $p_1, \ldots, p_n$. Let $\phi_1, \ldots, \phi_n$ be propositional formulae. Denote by $\vartheta$ the result of substituting each $p_i$ with $\phi_i$ in $\phi$. Then,
+    \begin{enumerate}[label = \normalfont (\roman*), noitemsep]
+        \item $\vartheta$ is a propositional formula.
+        \item if $\phi$ is a tautology, so is $\vartheta$.
+        \item the truth function of $\vartheta$ is the result of composing the truth function of $\phi$ with the Cartesian product of the truth functions of $\phi_1, \ldots, \phi_n$.
+    \end{enumerate}
+\end{lemma}
+
+We do not prove this result either, as it merely involves manual verification.
+
+\begin{boxexample}
+    For propositional variables $p_1, p_2$, the statement $\parenth{\parenth{\parenth{\neg p_2} \to \parenth{\neg p_1}} \to \parenth{p_1 \to p_2}}$ is a tautology. Therefore, if $\phi_1$ and $\phi_2$ are propositional formulae, then $\parenth{\parenth{\parenth{\neg \phi_2} \to \parenth{\neg \phi_1}} \to \parenth{\phi_1 \to \phi_2}}$ is a tautology as well.
+\end{boxexample}
+
+We will also mention that a composition being a tautology does not mean the outermost proposition of the composition is a tautology.
+
+\begin{boxnexample}
+    Let $p$ be a propositional variable. The formula $\phi : \parenth{p \to \parenth{\neg p}}$ is not a tautology. However, we can find a propositional formula $\phi'$ such that $\parenth{\phi_1 \to \parenth{\neg \phi_1}}$ is a tautology: for example, we can define $\phi'$ to be identically $\F$.
+\end{boxnexample}
+
+There are numerous propositional formulae that we know to be logically equivalent. Here is a (non-exhaustive) list.
+
+\begin{boxexample}[Logically Equivalent Formulae]
+    Let $p_1, p_2, p_3$ be logically equivalent formulae. Then, the following equivalences hold.
+    \begin{enumerate}[noitemsep]
+        \item $\parenth{p_1 \land \parenth{p_2 \land p_3}}$ is logically equivalent to $\parenth{\parenth{p_1 \land p_2} \land p_3}$.
+        
+        \item $\parenth{p_1 \lor \parenth{p_2 \lor p_3}}$ is logically equivalent to $\parenth{\parenth{p_1 \lor p_2} \lor p_3}$.
+
+        \item $\parenth{p_1 \lor \parenth{p_2 \land p_3}}$ is logically equivalent to $\parenth{\parenth{p_1 \lor p_2} \land \parenth{p_1 \land p_3}}$.
+
+        \item $\parenth{\neg \parenth{\neg p_1}}$ is logically equivalent to $p_1$.
+
+        \item $\parenth{\neg \parenth{p_1 \land p_2}}$ is logically equivalent to $\parenth{\parenth{\neg p_1} \lor \parenth{\neg p_2}}$.
+
+        \item $\parenth{\neg \parenth{p_1 \lor p_2}}$ is logically equivalent to $\parenth{\parenth{\neg p_1} \land \parenth{\neg p_2}}$.
+    \end{enumerate}
+\end{boxexample}
+
+Upon inspection, one can find algebraic patterns in the above logical equivalences. There are similarities to the axioms of a \textbf{boolean algebra}. % TODO: READ UP ON THIS
+We will not explore this further in this module, but we will adopt the convention used in algebra where parentheses are dropped when dealing with associative operations.
+
+\begin{boxconvention}
+    We will denote both $\parenth{p_1 \land \parenth{p_2 \land p_3}}$ and $\parenth{\parenth{p_1 \land p_2} \land p_3}$ by $\parenth{p_1 \land p_2 \land p_3}$. Similarly, we will denote both $\parenth{p_1 \lor \parenth{p_2 \lor p_3}}$ and $\parenth{\parenth{p_1 \lor p_2} \lor p_3}$ by $\parenth{p_1 \lor p_2 \lor p_3}$.
+\end{boxconvention}
+
+We will end with a combinatorial fact about truth functions.
+
+\begin{lemma}
+    There are $2^{2^n}$ possible truth functions on $n$ variables.
+\end{lemma}
+\begin{proof}
+    A truth function is any function from a the set $\set{\T, \F}^n$ to the set $\set{\T, \F}$, with no further restrictions. The former set has $2^n$ elements and the latter set has $2$ elements. Therefore, there are $2^{2^n}$ possible truth functions.
+\end{proof}
+
+\subsection{More about Connectives}
+
+We have defined several connectives so far, but we have yet to say anything about whether we will be defining any more connectives going forward. To begin, we will state an important definition.
+
+\begin{boxdefinition}[Adequacy]
+    We say that a set $S$ of connectives is \textbf{adequate} if for every $n \geq 1$, every truth function on $n$ variables can be expressed as the truth function as a propositional formula which only involves connectives from $S$ (and $n$ propositional variables).
+\end{boxdefinition}
+
+We now have the first theorem of this module.
+
+\begin{boxtheorem}\label{Ch1:Thm:DNFConnectivesAdequate}
+    The set $\set{\neg, \land, \lor}$ is adequate.
+\end{boxtheorem}
+\begin{proof}
+    Fix some $n \geq 1$, and let $G : \set{\T, \F}^n \to \set{\T, \F}$ be a truth function. We have two cases.
+
+    \begin{description}
+        \item[\textbf{\underline{Case 1.}}] Assume that $G$ is identically $\F$. Then, define the propositional formula $\phi : \parenth{p_1 \land \parenth{\neg p_1}}$. Even defining it as a formula on $n$ variables, it is clear to see that its truth function $F_{\phi}$ is identically $\F$. Therefore, $G = F_{\phi}$.\footnote{Admittedly, we are using the Axiom of Extensionality here to define what it means for the two functions to be equal. We will ignore this technicality for now.}
+        
+        \item[\textbf{\underline{Case 2.}}] Assume the contrary. Then, list all $v \in \set{\T, \F}^n$ such that $G(v) = \T$. Since $\set{\T, \F}^n$ is a finite set, this list is finite, and we can number these $v_1, \ldots, v_r$. For each $1 \leq i \leq r$, denote
+        \begin{align*}
+            v_i = \parenth{v_{i1}, \ldots, v_{ir}}
+        \end{align*}
+        where $v_{ij} \in \set{\T, \F}$ is the $j$th component of $v_i$. Let $p_1, \ldots, p_n$ be propositional variables. Define the propositional formulae \sorry % Finish using David Ang's notes
+    \end{description}
+\end{proof}
+
+Here, we make an important definition.
+
+\begin{boxdefinition}[Disjunctive Normal Form]
+    When a propositional formula is expressed only in terms of propositional variables and the set $\set{\neg, \land, \lor}$ of connectives, it is said to be in \textbf{disjunctive normal form}, which we abbreviate to \textbf{DNF}.
+\end{boxdefinition}
+
+The point of \Cref{Ch1:Thm:DNFConnectivesAdequate} is the following.
+
+\begin{boxcorollary}
+    Every propositional formula is expressible in DNF.
+\end{boxcorollary}
+\begin{proof}
+    We know that every propositional formula admits a truth function. For any propositional formula, we can apply \Cref{Ch1:Thm:DNFConnectivesAdequate} to its truth function. Then, unfolding the definition of adequacy yields the desired result.
+\end{proof}
+
+\begin{boxexample}
+    Let $p_1$ and $p_2$ be propositional variables. Consider the propositional formula $\chi : \parenth{\parenth{p_1 \to p_2} \to \parenth{\neg p_2}}$. We can see that $F_{\chi}(v) = \T$ only if $v = \parenth{\T, \F}$ or $v = \parenth{\F, \F}$. Therefore, the DNF of $\chi$ is
+    \begin{align*}
+        \parenth{\parenth{p_1 \land \parenth{\neg p_2}} \lor \parenth{\parenth{\neg p_1} \land \parenth{\neg p_2}}}
+    \end{align*}
+\end{boxexample}
+
+Despite the result about DNF, it turns out there are other sets of connectives that are adequate.
+
+\begin{boxlemma}
+    The following sets of connectives are adequate.
+    \begin{enumerate}[noitemsep]
+        \item $\set{\neg, \lor}$
+        \item $\set{\neg, \land}$
+        \item $\set{\neg, \to}$
+    \end{enumerate}
+\end{boxlemma}
