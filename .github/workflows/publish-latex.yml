@@ -55,6 +55,15 @@ jobs:
           key: ${{ runner.os }}-texlive-${{ secrets.TEXLIVE_FULL_VERSION }}
           restore-keys: |
             ${{ runner.os }}-texlive-
+
+      # Caches apt packages
+      - name: Cache apt packages
+        uses: actions/cache@v2
+        with:
+          path: /var/cache/apt
+          key: ${{ runner.os }}-apt-${{ hashFiles('**/apt.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-apt-
       
       # Compiles 
       - name: Build Latex PDF and HTML
