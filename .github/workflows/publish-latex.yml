@@ -68,6 +68,13 @@ jobs:
       # Compiles 
       - name: Build Latex PDF and HTML
         run: |
+          if [ -f /var/cache/apt/pkgcache.bin ]; then
+            echo "Restoring apt packages from cache."
+            sudo cp -r /var/cache/apt/* /var/lib/apt/lists/
+          else
+            echo "Updating apt packages."
+            sudo apt update
+          fi
           sudo apt update
           if [ -d ~/texlive ]; then
           echo "Texlive directory exists."
