@@ -60,7 +60,19 @@ jobs:
       - name: Build Latex PDF and HTML
         run: |
           sudo apt update
+          if [ -d ~/texlive ]; then
+          echo "Texlive directory exists."
+          if ! ~/texlive/bin/x86_64-linux/tlmgr --version | grep -q "${{ secrets.TEXLIVE_FULL_VERSION }}"; then
+            echo "Texlive version does not match. Reinstalling..."
+            sudo rm -rf ~/texlive
+            sudo apt install texlive-full
+          else
+            echo "Texlive version matches. Using cached version."
+          fi
+          else
+          echo "Texlive directory does not exist. Installing..."
           sudo apt install texlive-full
+          fi
           mkdir ./public
           cp TeX_Outputs/main.pdf public/LastLocallyCompiled.pdf
           cp *.tex public/
