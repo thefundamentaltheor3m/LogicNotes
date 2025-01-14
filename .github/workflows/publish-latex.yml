@@ -75,7 +75,6 @@ jobs:
             echo "Updating apt packages."
             sudo apt update
           fi
-          sudo apt update
           if [ -d ~/texlive ]; then
           echo "Texlive directory exists."
             if ! ~/texlive/bin/x86_64-linux/tlmgr --version | grep -q "${{ secrets.TEXLIVE_FULL_VERSION }}"; then
