@@ -5,3 +5,5 @@
 These notes are primarily based on the content covered in lectures, with some portions based on the lecture notes and other resources (see the bibliography in the notes).
 
 These notes were compiled by Sidharth Hariharan (who also owns this repository on GitHub). Sidharth took MATH70132 in his final year at Imperial College London.
+
+For more information about Sidharth Hariharan and his work, visit his [personal website](https://thefundamentaltheor3m.github.io).
