@@ -14,6 +14,32 @@ htfcss: ecss  font-family: sans-serif;
 htfcss: ecff  font-family: fantasy;
 htfcss: ecti  font-style: italic;
 htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: cmss   font-family: sans-serif;
+htfcss: cmssbx  font-family: sans-serif; font-weight: bold;
+htfcss: cmssbxo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: cmssdc  font-family: sans-serif;
+htfcss: cmssi  font-family: sans-serif; font-style: oblique;
+htfcss: cmss   font-family: sans-serif;
+htfcss: cmssbx  font-family: sans-serif; font-weight: bold;
+htfcss: cmssbxo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: cmssdc  font-family: sans-serif;
+htfcss: cmssi  font-family: sans-serif; font-style: oblique;
 htfcss: cmss   font-family: sans-serif;
 htfcss: cmssbx  font-family: sans-serif; font-weight: bold;
 htfcss: cmssbxo  font-family: sans-serif; font-style: oblique; font-weight: bold;
@@ -64,6 +90,7 @@ htfcss: ectt  font-family: monospace,monospace;
 File: main.html
 File: main.css
 File: main.tmp
+File: main2.html
 Css: p{margin-top:0;margin-bottom:0}
 Css: p.indent{text-indent:0;}
 Css: p + p{margin-top:1em;}
@@ -324,6 +351,86 @@ Css: #tcolobox-9 .tcolorbox-content{color: #000000; background-color: #E5FFFF; b
 Css: #tcolobox-9 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
 --- needs --- main.idv[31] ==> main23x.svg ---
 --- needs --- main.idv[32] ==> main24x.svg ---
+Css: #tcolobox-10 .tcolorbox-title{color: #FFFFFF; background-color: #004D00;}
+Css: #tcolobox-10 .tcolorbox-content{color: #000000; background-color: #F2F2F2; border: 1px solid #004D00;}
+Css: #tcolobox-10 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
+Css: span#textcolor1{color:#FF0000}
+Css: #tcolobox-11 .tcolorbox-title{color: #FFFFFF; background-color: #00B2B2;}
+Css: #tcolobox-11 .tcolorbox-content{color: #000000; background-color: #E5FFFF; border: 1px solid #00B2B2;}
+Css: #tcolobox-11 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
+Css: #tcolobox-12 .tcolorbox-title{color: #FFFFFF; background-color: #00B2B2;}
+Css: #tcolobox-12 .tcolorbox-content{color: #000000; background-color: #E5FFFF; border: 1px solid #00B2B2;}
+Css: #tcolobox-12 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
+Css: #tcolobox-13 .tcolorbox-title{color: #FFFFFF; background-color: #004D00;}
+Css: #tcolobox-13 .tcolorbox-content{color: #000000; background-color: #F2F2F2; border: 1px solid #004D00;}
+Css: #tcolobox-13 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
+--- needs --- main.idv[34] ==> main25x.svg ---
+--- needs --- main.idv[35] ==> main26x.svg ---
+Css: #tcolobox-14 .tcolorbox-title{color: #FFFFFF; background-color: #800000;}
+Css: #tcolobox-14 .tcolorbox-content{color: #000000; background-color: #F2F2F2; border: 1px solid #800000;}
+Css: #tcolobox-14 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
+--- needs --- main.idv[37] ==> main27x.svg ---
+--- needs --- main.idv[38] ==> main28x.svg ---
+Css: #tcolobox-15 .tcolorbox-title{color: #FFFFFF; background-color: #004D00;}
+Css: #tcolobox-15 .tcolorbox-content{color: #000000; background-color: #F2F2F2; border: 1px solid #004D00;}
+Css: #tcolobox-15 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
+--- needs --- main.idv[40] ==> main29x.svg ---
+--- needs --- main.idv[41] ==> main30x.svg ---
+--- needs --- main.idv[42] ==> main31x.svg ---
+--- needs --- main.idv[43] ==> main32x.svg ---
+--- needs --- main.idv[44] ==> main33x.svg ---
+--- needs --- main.idv[45] ==> main34x.svg ---
+--- needs --- main.idv[46] ==> main35x.svg ---
+--- needs --- main.idv[47] ==> main36x.svg ---
+--- needs --- main.idv[48] ==> main37x.svg ---
+--- needs --- main.idv[49] ==> main38x.svg ---
+--- needs --- main.idv[50] ==> main39x.svg ---
+Css: #tcolobox-16 .tcolorbox-title{color: #FFFFFF; background-color: #B200B2;}
+Css: #tcolobox-16 .tcolorbox-content{color: #000000; background-color: #FFF7FF; border: 1px solid #B200B2;}
+Css: #tcolobox-16 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
+--- needs --- main.idv[52] ==> main40x.svg ---
+--- needs --- main.idv[53] ==> main41x.svg ---
+--- needs --- main.idv[54] ==> main42x.svg ---
+--- needs --- main.idv[55] ==> main43x.svg ---
+--- needs --- main.idv[56] ==> main44x.svg ---
+--- needs --- main.idv[57] ==> main45x.svg ---
+--- needs --- main.idv[59] ==> main46x.svg ---
+--- needs --- main.idv[60] ==> main47x.svg ---
+Css: #tcolobox-17 .tcolorbox-title{color: #FFFFFF; background-color: #00B2B2;}
+Css: #tcolobox-17 .tcolorbox-content{color: #000000; background-color: #E5FFFF; border: 1px solid #00B2B2;}
+Css: #tcolobox-17 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
+Css: #tcolobox-18 .tcolorbox-title{color: #FFFFFF; background-color: #FF8000;}
+Css: #tcolobox-18 .tcolorbox-content{color: #000000; background-color: #FFFFD9; border: 1px solid #FF8000;}
+Css: #tcolobox-18 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
+--- needs --- main.idv[62] ==> main48x.svg ---
+--- needs --- main.idv[64] ==> main49x.svg ---
+--- needs --- main.idv[65] ==> main50x.svg ---
+--- needs --- main.idv[66] ==> main51x.svg ---
+--- needs --- main.idv[67] ==> main52x.svg ---
+--- needs --- main.idv[68] ==> main53x.svg ---
+--- needs --- main.idv[70] ==> main54x.svg ---
+--- needs --- main.idv[71] ==> main55x.svg ---
+Css: span#textcolor2{color:#FF0000}
+Css: #tcolobox-19 .tcolorbox-title{color: #FFFFFF; background-color: #00B2B2;}
+Css: #tcolobox-19 .tcolorbox-content{color: #000000; background-color: #E5FFFF; border: 1px solid #00B2B2;}
+Css: #tcolobox-19 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
+--- needs --- main.idv[73] ==> main56x.svg ---
+Css: #tcolobox-20 .tcolorbox-title{color: #FFFFFF; background-color: #FF8000;}
+Css: #tcolobox-20 .tcolorbox-content{color: #000000; background-color: #FFFFD9; border: 1px solid #FF8000;}
+Css: #tcolobox-20 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
+Css: #tcolobox-21 .tcolorbox-title{color: #FFFFFF; background-color: #004D00;}
+Css: #tcolobox-21 .tcolorbox-content{color: #000000; background-color: #F2F2F2; border: 1px solid #004D00;}
+Css: #tcolobox-21 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
+--- needs --- main.idv[75] ==> main57x.svg ---
+--- needs --- main.idv[76] ==> main58x.svg ---
+--- needs --- main.idv[77] ==> main59x.svg ---
+--- needs --- main.idv[78] ==> main60x.svg ---
+Css: #tcolobox-22 .tcolorbox-title{color: #FFFFFF; background-color: #FF8000;}
+Css: #tcolobox-22 .tcolorbox-content{color: #000000; background-color: #FFFFD9; border: 1px solid #FF8000;}
+Css: #tcolobox-22 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
+--- needs --- main.idv[80] ==> main61x.svg ---
+--- needs --- main.idv[81] ==> main62x.svg ---
+--- needs --- main.idv[82] ==> main63x.svg ---
 tex4ht.c error: 21
 --- characters ---
 Font("ecss","1200","12","100")
@@ -334,7 +441,11 @@ Font("cmsmf","12","12","100")
 Font("cmsmf","8","8","100")
 Font("cmssmi","10","10","120")
 Font("cmssmi","8","8","100")
+Font("cmssmi","6","6","100")
 Font("cmsssy","10","10","120")
+Font("cmsssy","8","8","100")
 Font("ecsx","1200","12","100")
 Font("cmsmfbx","12","12","100")
 Font("ecsi","1200","12","100")
+Font("ecss","1095","10","100")
+Font("ecss","1000","10","100")

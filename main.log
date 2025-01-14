@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=latex 2025.1.14)  14 JAN 2025 01:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=latex 2025.1.14)  14 JAN 2025 16:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -58,9 +58,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language50). Reported on input line 105.
+(babel)             (\language45). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language50). Reported on input line 108.
+(babel)             (\language45). Reported on input line 108.
 )) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
@@ -2610,11 +2610,60 @@ l. 101 Writing main.idv[22] (main21x.svg)
 l. 101 Writing main.idv[23] (main22x.svg)
 l. 107 Writing main.idv[24] (main23x.svg)
 l. 107 Writing main.idv[25] (main24x.svg)
-)) [10] [11]
+[10] [11] [12]
+l. 150 Writing main.idv[26] (main25x.svg)
+l. 150 Writing main.idv[27] (main26x.svg)
+[13]
+l. 156 Writing main.idv[28] (main27x.svg)
+l. 156 Writing main.idv[29] (main28x.svg)
+l. 164 Writing main.idv[30] (main29x.svg)
+l. 164 Writing main.idv[31] (main30x.svg)
+l. 166 Writing main.idv[32] (main31x.svg)
+l. 166 Writing main.idv[33] (main32x.svg)
+l. 168 Writing main.idv[34] (main33x.svg)
+l. 168 Writing main.idv[35] (main34x.svg)
+l. 170 Writing main.idv[36] (main35x.svg)
+l. 172 Writing main.idv[37] (main36x.svg)
+l. 172 Writing main.idv[38] (main37x.svg)
+l. 174 Writing main.idv[39] (main38x.svg)
+l. 174 Writing main.idv[40] (main39x.svg)
+[14]
+l. 182 Writing main.idv[41] (main40x.svg)
+l. 182 Writing main.idv[42] (main41x.svg)
+l. 182 Writing main.idv[43] (main42x.svg)
+l. 182 Writing main.idv[44] (main43x.svg)
+l. 182 Writing main.idv[45] (main44x.svg)
+l. 182 Writing main.idv[46] (main45x.svg)
+[15]
+l. 191 Writing main.idv[47] (main46x.svg)
+l. 191 Writing main.idv[48] (main47x.svg)
+[16]
+l. 205 Writing main.idv[49] (main48x.svg)
+[17]
+l. 208 Writing main.idv[50] (main49x.svg)
+l. 208 Writing main.idv[51] (main50x.svg)
+l. 211 Writing main.idv[52] (main51x.svg)
+--- file main2.html ---
+l. 213 Writing main.idv[53] (main52x.svg)
+l. 213 Writing main.idv[54] (main53x.svg)
+[18]
+l. 216 Writing main.idv[55] (main54x.svg)
+l. 217 Writing main.idv[56] (main55x.svg)
+l. 224 Writing main.idv[57] (main56x.svg)
+[19]
+l. 237 Writing main.idv[58] (main57x.svg)
+l. 237 Writing main.idv[59] (main58x.svg)
+l. 237 Writing main.idv[60] (main59x.svg)
+l. 240 Writing main.idv[61] (main60x.svg)
+[20]
+l. 248 Writing main.idv[62] (main61x.svg)
+l. 249 Writing main.idv[63] (main62x.svg)
+l. 250 Writing main.idv[64] (main63x.svg)
+)) [21] [22]
 
 LaTeX Warning: Empty bibliography on input line 48.
 
-[12] 
+[23] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -2634,12 +2683,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 61402 strings out of 474223
- 1363862 string characters out of 5748759
- 2436814 words of memory out of 5000000
- 82182 multiletter control sequences out of 15000+600000
- 577208 words of font info for 85 fonts, out of 8000000 for 9000
+ 61516 strings out of 474223
+ 1365351 string characters out of 5748759
+ 2437094 words of memory out of 5000000
+ 82294 multiletter control sequences out of 15000+600000
+ 578742 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  112i,12n,134p,1243b,1790s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (15 pages, 84492 bytes).
+Output written on main.dvi (26 pages, 124072 bytes).
