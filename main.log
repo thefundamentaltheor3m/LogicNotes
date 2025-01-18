@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=latex 2025.1.14)  14 JAN 2025 16:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=latex 2025.1.18)  18 JAN 2025 19:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -58,9 +58,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language45). Reported on input line 105.
+(babel)             (\language72). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language45). Reported on input line 108.
+(babel)             (\language72). Reported on input line 108.
 )) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
@@ -2586,84 +2586,122 @@ LaTeX Font Warning: Font shape `T1/xcmss/b/n' in size <14.4> not available
 
 [5]
 l. 26 Writing main.idv[4] (main3x.svg)
-l. 35 Writing main.idv[5] (main4x.svg)
+l. 26 Writing main.idv[5] (main4x.svg)
+[6]
 l. 35 Writing main.idv[6] (main5x.svg)
 l. 35 Writing main.idv[7] (main6x.svg)
 l. 35 Writing main.idv[8] (main7x.svg)
 l. 35 Writing main.idv[9] (main8x.svg)
 l. 35 Writing main.idv[10] (main9x.svg)
-[6]
-l. 52 Writing main.idv[11] (main10x.svg)
+l. 35 Writing main.idv[11] (main10x.svg)
+[7]
 l. 52 Writing main.idv[12] (main11x.svg)
 l. 52 Writing main.idv[13] (main12x.svg)
 l. 52 Writing main.idv[14] (main13x.svg)
 l. 52 Writing main.idv[15] (main14x.svg)
 l. 52 Writing main.idv[16] (main15x.svg)
 l. 52 Writing main.idv[17] (main16x.svg)
-[7] [8]
-l. 80 Writing main.idv[18] (main17x.svg)
-l. 84 Writing main.idv[19] (main18x.svg)
+l. 52 Writing main.idv[18] (main17x.svg)
+[8] [9]
+l. 80 Writing main.idv[19] (main18x.svg)
 l. 84 Writing main.idv[20] (main19x.svg)
 l. 84 Writing main.idv[21] (main20x.svg)
-[9]
-l. 101 Writing main.idv[22] (main21x.svg)
+l. 84 Writing main.idv[22] (main21x.svg)
+[10]
 l. 101 Writing main.idv[23] (main22x.svg)
-l. 107 Writing main.idv[24] (main23x.svg)
-l. 107 Writing main.idv[25] (main24x.svg)
-[10] [11] [12]
-l. 150 Writing main.idv[26] (main25x.svg)
-l. 150 Writing main.idv[27] (main26x.svg)
-[13]
-l. 156 Writing main.idv[28] (main27x.svg)
-l. 156 Writing main.idv[29] (main28x.svg)
-l. 164 Writing main.idv[30] (main29x.svg)
-l. 164 Writing main.idv[31] (main30x.svg)
-l. 166 Writing main.idv[32] (main31x.svg)
-l. 166 Writing main.idv[33] (main32x.svg)
-l. 168 Writing main.idv[34] (main33x.svg)
-l. 168 Writing main.idv[35] (main34x.svg)
-l. 170 Writing main.idv[36] (main35x.svg)
-l. 172 Writing main.idv[37] (main36x.svg)
-l. 172 Writing main.idv[38] (main37x.svg)
-l. 174 Writing main.idv[39] (main38x.svg)
-l. 174 Writing main.idv[40] (main39x.svg)
-[14]
-l. 182 Writing main.idv[41] (main40x.svg)
-l. 182 Writing main.idv[42] (main41x.svg)
-l. 182 Writing main.idv[43] (main42x.svg)
-l. 182 Writing main.idv[44] (main43x.svg)
-l. 182 Writing main.idv[45] (main44x.svg)
-l. 182 Writing main.idv[46] (main45x.svg)
-[15]
-l. 191 Writing main.idv[47] (main46x.svg)
-l. 191 Writing main.idv[48] (main47x.svg)
+l. 101 Writing main.idv[24] (main23x.svg)
+[11]
+l. 116 Writing main.idv[25] (main24x.svg)
+l. 116 Writing main.idv[26] (main25x.svg)
+[12] [13] [14] [15]
+l. 159 Writing main.idv[27] (main26x.svg)
+l. 159 Writing main.idv[28] (main27x.svg)
+l. 165 Writing main.idv[29] (main28x.svg)
+l. 165 Writing main.idv[30] (main29x.svg)
+l. 173 Writing main.idv[31] (main30x.svg)
+l. 173 Writing main.idv[32] (main31x.svg)
+l. 175 Writing main.idv[33] (main32x.svg)
+l. 175 Writing main.idv[34] (main33x.svg)
+l. 177 Writing main.idv[35] (main34x.svg)
+l. 177 Writing main.idv[36] (main35x.svg)
+l. 179 Writing main.idv[37] (main36x.svg)
+l. 181 Writing main.idv[38] (main37x.svg)
+l. 181 Writing main.idv[39] (main38x.svg)
+l. 183 Writing main.idv[40] (main39x.svg)
+l. 183 Writing main.idv[41] (main40x.svg)
 [16]
-l. 205 Writing main.idv[49] (main48x.svg)
+l. 191 Writing main.idv[42] (main41x.svg)
+l. 191 Writing main.idv[43] (main42x.svg)
+l. 191 Writing main.idv[44] (main43x.svg)
+l. 191 Writing main.idv[45] (main44x.svg)
+l. 191 Writing main.idv[46] (main45x.svg)
+l. 191 Writing main.idv[47] (main46x.svg)
 [17]
-l. 208 Writing main.idv[50] (main49x.svg)
-l. 208 Writing main.idv[51] (main50x.svg)
-l. 211 Writing main.idv[52] (main51x.svg)
---- file main2.html ---
-l. 213 Writing main.idv[53] (main52x.svg)
-l. 213 Writing main.idv[54] (main53x.svg)
+l. 200 Writing main.idv[48] (main47x.svg)
+l. 200 Writing main.idv[49] (main48x.svg)
 [18]
-l. 216 Writing main.idv[55] (main54x.svg)
-l. 217 Writing main.idv[56] (main55x.svg)
-l. 224 Writing main.idv[57] (main56x.svg)
+l. 216 Writing main.idv[50] (main49x.svg)
 [19]
-l. 237 Writing main.idv[58] (main57x.svg)
-l. 237 Writing main.idv[59] (main58x.svg)
-l. 237 Writing main.idv[60] (main59x.svg)
-l. 240 Writing main.idv[61] (main60x.svg)
+l. 219 Writing main.idv[51] (main50x.svg)
+l. 219 Writing main.idv[52] (main51x.svg)
+l. 222 Writing main.idv[53] (main52x.svg)
+l. 224 Writing main.idv[54] (main53x.svg)
+--- file main2.html ---
 [20]
-l. 248 Writing main.idv[62] (main61x.svg)
-l. 249 Writing main.idv[63] (main62x.svg)
-l. 250 Writing main.idv[64] (main63x.svg)
-)) [21] [22]
+l. 226 Writing main.idv[55] (main54x.svg)
+l. 228 Writing main.idv[56] (main55x.svg)
+l. 228 Writing main.idv[57] (main56x.svg)
+l. 231 Writing main.idv[58] (main57x.svg)
+l. 232 Writing main.idv[59] (main58x.svg)
+l. 232 Writing main.idv[60] (main59x.svg)
+l. 238 Writing main.idv[61] (main60x.svg)
+[21]
+l. 239 Writing main.idv[62] (main61x.svg)
+l. 241 Writing main.idv[63] (main62x.svg)
+l. 241 Writing main.idv[64] (main63x.svg)
+l. 244 Writing main.idv[65] (main64x.svg)
+l. 245 Writing main.idv[66] (main65x.svg)
+[22]
+l. 258 Writing main.idv[67] (main66x.svg)
+l. 260 Writing main.idv[68] (main67x.svg)
+[23]
+l. 268 Writing main.idv[69] (main68x.svg)
+l. 274 Writing main.idv[70] (main69x.svg)
+[24]
+l. 287 Writing main.idv[71] (main70x.svg)
+l. 287 Writing main.idv[72] (main71x.svg)
+l. 287 Writing main.idv[73] (main72x.svg)
+l. 290 Writing main.idv[74] (main73x.svg)
+[25]
+l. 293 Writing main.idv[75] (main74x.svg)
+l. 298 Writing main.idv[76] (main75x.svg)
+l. 299 Writing main.idv[77] (main76x.svg)
+l. 300 Writing main.idv[78] (main77x.svg)
+l. 307 Writing main.idv[79] (main78x.svg)
+l. 307 Writing main.idv[80] (main79x.svg)
+l. 312 Writing main.idv[81] (main80x.svg)
+l. 312 Writing main.idv[82] (main81x.svg)
+l. 317 Writing main.idv[83] (main82x.svg)
+l. 317 Writing main.idv[84] (main83x.svg)
+[26] [27]
+l. 326 Writing main.idv[85] (main84x.svg)
+l. 327 Writing main.idv[86] (main85x.svg)
+l. 344 Writing main.idv[87] (main86x.svg)
+[28]
+l. 357 Writing main.idv[88] (main87x.svg)
+l. 357 Writing main.idv[89] (main88x.svg)
+l. 357 Writing main.idv[90] (main89x.svg)
+l. 357 Writing main.idv[91] (main90x.svg)
+l. 362 Writing main.idv[92] (main91x.svg)
+l. 364 Writing main.idv[93] (main92x.svg)
+l. 364 Writing main.idv[94] (main93x.svg)
+l. 365 Writing main.idv[95] (main94x.svg)
+l. 365 Writing main.idv[96] (main95x.svg)
+)) [29] [30]
 
 LaTeX Warning: Empty bibliography on input line 48.
 
-[23] 
+[31] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -2683,12 +2721,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 61516 strings out of 474223
- 1365351 string characters out of 5748759
- 2437094 words of memory out of 5000000
- 82294 multiletter control sequences out of 15000+600000
- 578742 words of font info for 87 fonts, out of 8000000 for 9000
+ 61581 strings out of 474223
+ 1366271 string characters out of 5748759
+ 2437936 words of memory out of 5000000
+ 82357 multiletter control sequences out of 15000+600000
+ 580273 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 112i,12n,134p,1243b,1790s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 112i,17n,134p,1272b,1790s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (26 pages, 124072 bytes).
+Output written on main.dvi (34 pages, 156696 bytes).

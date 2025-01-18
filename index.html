@@ -1,13 +1,14 @@
 <!DOCTYPE html> 
-<html lang='en' xml:lang='en'> 
+<html lang="en" xml:lang="en" > 
 <head><title>MATH70132: Mathematical Logic</title> 
-<meta charset='utf-8' /> 
-<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
-<meta content='width=device-width,initial-scale=1' name='viewport' /> 
-<link href='main.css' rel='stylesheet' type='text/css' /> 
-<meta content='main.tex' name='src' /> 
-</head><body>
-<div class='maketitle'>
+<meta  charset="utf-8" /> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)" /> 
+<meta name="viewport" content="width=device-width,initial-scale=1" /> 
+<link rel="stylesheet" type="text/css" href="main.css" /> 
+<meta name="src" content="main.tex" /> 
+</head><body 
+>
+<div class="maketitle">
                                                                                            
 
                                                                                            
@@ -15,10 +16,13 @@
 
                                                                                            
 
-<h2 class='titleHead'>MATH70132: Mathematical Logic</h2>
-<div class='author'><span class='ecss-1440'>Lecturer: David Evans</span><br />
-<span class='ecss-1440'>Scribe: Sidharth Hariharan</span></div>
-<div class='date'><span class='ecss-1440'>Imperial College London - Spring 2025</span></div>
+<h2 class="titleHead">MATH70132: Mathematical Logic</h2>
+<div class="author" ><span 
+class="ecss-1440">Lecturer: David Evans</span><br />
+<span 
+class="ecss-1440">Scribe: Sidharth Hariharan</span></div>
+<div class="date" ><span 
+class="ecss-1440">Imperial College London - Spring 2025</span></div>
                                                                                            
 
                                                                                            
@@ -26,16 +30,23 @@
                                                                                            
 
                                                                                            
-<h2 class='likechapterHead' id='contents'><a id='x1-1000'></a>Contents</h2>
-<div class='tableofcontents'>
-<span class='chapterToc'>1 <a href='#propositional-logic' id='QQ2-1-2'>Propositional Logic</a></span>
-<br /><span class='sectionToc'>1.1 <a href='#propositional-formulae' id='QQ2-1-3'>Propositional Formulae</a></span>
-<br /><span class='subsectionToc'>1.1.1 <a href='#propositions-and-connectives' id='QQ2-1-4'>Propositions and Connectives</a></span>
-<br /><span class='subsectionToc'>1.1.2 <a href='#truth-functions' id='QQ2-1-5'>Truth Functions</a></span>
-<br /><span class='subsectionToc'>1.1.3 <a href='#more-about-connectives' id='QQ2-1-6'>More about Connectives</a></span>
-<br /><span class='chapterToc'> <a href='#bibliography'>Bibliography</a></span>
+<h2 class="likechapterHead"><a 
+ id="x1-1000"></a>Contents</h2>
+<div class="tableofcontents">
+<span class="chapterToc" >1 <a 
+href="#x1-20001" id="QQ2-1-2">Propositional Logic</a></span>
+<br /><span class="sectionToc" >1.1 <a 
+href="#x1-30001.1" id="QQ2-1-3">Propositional Formulae</a></span>
+<br /><span class="subsectionToc" >1.1.1 <a 
+href="#x1-40001.1.1" id="QQ2-1-4">Propositions and Connectives</a></span>
+<br /><span class="subsectionToc" >1.1.2 <a 
+href="#x1-50001.1.2" id="QQ2-1-5">Truth Functions</a></span>
+<br /><span class="subsectionToc" >1.1.3 <a 
+href="#x1-60001.1.3" id="QQ2-1-6">Adequacy</a></span>
+<br /><span class="chapterToc" > <a 
+href="#Q1-1-7">Bibliography</a></span>
 </div>
-<!-- l. 28 --><p class='noindent'>
+<!--l. 28--><p class="noindent" >
                                                                                            
 
                                                                                            
@@ -43,578 +54,1759 @@
 
                                                                                            
 </p>
-<h2 class='chapterHead' id='propositional-logic'><span class='titlemark'>Chapter 1</span><br /><a id='x1-20001'></a>Propositional Logic</h2>
-<!-- l. 6 --><p class='noindent'>Propositional logic is the logic of reasoning and proof. Before we get started with anything formal, here’s
+<h2 class="chapterHead"><span class="titlemark">Chapter 1</span><br /><a 
+ id="x1-20001"></a>Propositional Logic</h2>
+<!--l. 6--><p class="noindent" >Propositional logic is the logic of reasoning and proof. Before we get started with anything formal, here’s
 a motivating example.
-</p><!-- l. 8 --><p class='noindent'>Consider the following statement:
-      </p><blockquote class='quote'>
-      <!-- l. 10 --><p class='noindent'>If Mr Jones is happy, then Mrs Jones is unhappy, and if Mrs Jones is unhappy, then
+</p><!--l. 8--><p class="noindent" >Consider the following statement:
+      </p><blockquote class="quote">
+      <!--l. 10--><p class="noindent" >If Mr Jones is happy, then Mrs Jones is unhappy, and if Mrs Jones is unhappy, then
       Mr Jones is unhappy. Therefore, Mr Jones is unhappy.</p></blockquote>
-<!-- l. 12 --><p class='noindent'>One can ask ourselves whether it is logically valid to conclude that Mr Jones is unhappy based on the
+<!--l. 12--><p class="noindent" >One can ask ourselves whether it is logically valid to conclude that Mr Jones is unhappy based on the
 relationship between the happiness of Mr Jones and that of Mrs Jones expressed in the sentence
 preceding it.
-</p><!-- l. 14 --><p class='noindent'>Putting this into symbols, let <span class='cmssmi-10x-x-120'>P </span>denote the statement that Mr Jones is happy, and let <span class='cmssmi-10x-x-120'>Q </span>denote the
+</p><!--l. 14--><p class="noindent" >Putting this into symbols, let <span 
+class="cmssmi-10x-x-120">P </span>denote the statement that Mr Jones is happy, and let <span 
+class="cmssmi-10x-x-120">Q </span>denote the
 statement that Mrs Jones is unhappy. We can express the statement as follows:
-</p><table class='align'>
-                          <tr><td class='align-odd'><img align='middle' alt='((P  =)   Q) ˆ (Q  =)   :P ))' class='left' src='main0x.svg' /> <img alt='= )' class='Longrightarrow' src='main1x.svg' /><img align='middle' alt='(:P )' class='left' src='main2x.svg' /></td>                          <td class='align-even'></td>                          <td class='align-label'><a id='x1-2001r1'></a>(1.0.1)                          </td></tr></table>
-<!-- l. 19 --><p class='noindent'>This disambiguation, by removing any question of marital harmony from what is otherwise a purely logical
-question, allows us to manually check whether (<a href='#x1-2001r1'>1.0.1<!-- tex4ht:ref: Ch1:eq:JonesExample  --></a>) is a valid statement by constructing a <span class='ecsx-1200'>truth
+</p><table 
+class="align">
+                          <tr><td 
+class="align-odd"><img 
+src="main0x.svg" alt="((P  =)   Q) ˆ (Q  =)   :P ))"  class="left" align="middle" /> <img 
+src="main1x.svg" alt="= )"  class="Longrightarrow"  /><img 
+src="main2x.svg" alt="(:P )"  class="left" align="middle" /></td>                          <td 
+class="align-even"></td>                          <td 
+class="align-label"><a 
+ id="x1-2001r1"></a>(1.0.1)                          </td></tr></table>
+<!--l. 19--><p class="noindent" >This disambiguation, by removing any question of marital harmony from what is otherwise a purely logical
+question, allows us to manually check whether (<a 
+href="#x1-2001r1">1.0.1<!--tex4ht:ref: Ch1:eq:JonesExample --></a>) is a valid statement by constructing a <span 
+class="ecsx-1200">truth</span>
                                                                                            
 
                                                                                            
-table</span>.
-</p><!-- l. 21 --><p class='noindent'>We will begin by developing some machinery to reason about these sorts of statements more
+<span 
+class="ecsx-1200">table</span>.
+</p><!--l. 21--><p class="noindent" >We will begin by developing some machinery to reason about these sorts of statements more
 formally.
 </p>
-<h3 class='sectionHead' id='propositional-formulae'><span class='titlemark'>1.1   </span> <a id='x1-30001.1'></a>Propositional Formulae</h3>
-<!-- l. 3 --><p class='noindent'>
+<h3 class="sectionHead"><span class="titlemark">1.1   </span> <a 
+ id="x1-30001.1"></a>Propositional Formulae</h3>
+<!--l. 3--><p class="noindent" >
 </p>
-<h4 class='subsectionHead' id='propositions-and-connectives'><span class='titlemark'>1.1.1   </span> <a id='x1-40001.1.1'></a>Propositions and Connectives</h4>
-<!-- l. 5 --><p class='noindent'>We begin by defining the notion of a proposition.
+<h4 class="subsectionHead"><span class="titlemark">1.1.1   </span> <a 
+ id="x1-40001.1.1"></a>Propositions and Connectives</h4>
+<!--l. 5--><p class="noindent" >We begin by defining the notion of a proposition.
 </p>
-<div class='tcolorbox tcolorbox' id='tcolobox-1'>     
-<div class='tcolorbox-title'>
+<div class="tcolorbox tcolorbox" id="tcolobox-1">     
+<div class="tcolorbox-title">
 </div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 7 --><p class='noindent'><span class='head'>
-<a id='x1-4001r1'></a>
-<span class='ecsx-1200'>Definition 1.1.1 </span>(Proposition)<span class='ecsx-1200'>.</span>  </span>A <span class='ecsx-1200'>proposition </span>is a statement that is either true or false.
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 7--><p class="noindent" ><span class="head">
+<a 
+ id="x1-4001r1"></a>
+<span 
+class="ecsx-1200">Definition 1.1.1 </span>(Proposition)<span 
+class="ecsx-1200">.</span>  </span>A <span 
+class="ecsx-1200">proposition </span>is a statement that is either true or false.
 </p>
 </div>
-<!-- l. 9 --><p class='noindent'></p> 
+<!--l. 9--><p class="noindent" ></p> 
 </div> 
 </div>
-<div class='tcolorbox tcolorbox' id='tcolobox-2'>     
-<div class='tcolorbox-title'>
+<div class="tcolorbox tcolorbox" id="tcolobox-2">     
+<div class="tcolorbox-title">
                                                                                            
 
                                                                                            
 </div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 11 --><p class='noindent'><span class='head'>
-<span class='ecsx-1200'>Convention.</span>  </span>We will denote the state of being <span class='ecsx-1200'>true </span>by <span class='cmsmfbx-12'>T</span> and that of being <span class='ecsx-1200'>false </span>by <span class='cmsmfbx-12'>F</span>.
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 11--><p class="noindent" ><span class="head">
+<span 
+class="ecsx-1200">Convention.</span>  </span>We will denote the state of being <span 
+class="ecsx-1200">true </span>by <span 
+class="cmsmfbx-12">T</span> and that of being <span 
+class="ecsx-1200">false </span>by <span 
+class="cmsmfbx-12">F</span>.
 </p>
 </div>
-<!-- l. 13 --><p class='noindent'></p> 
+<!--l. 13--><p class="noindent" ></p> 
 </div> 
 </div>
-<!-- l. 15 --><p class='noindent'>Propositions can be connected to each other using tools known as <span class='ecsx-1200'>connectives</span>. These can be thought of
-as <span class='ecsx-1200'>truth table rules</span>.
+<!--l. 15--><p class="noindent" >Propositions can be connected to each other using tools known as <span 
+class="ecsx-1200">connectives</span>. These can be thought of
+as <span 
+class="ecsx-1200">truth table rules</span>.
 </p>
-<div class='tcolorbox tcolorbox' id='tcolobox-3'>     
-<div class='tcolorbox-title'>
+<div class="tcolorbox tcolorbox" id="tcolobox-3">     
+<div class="tcolorbox-title">
+                                                                                           
+
+                                                                                           
 </div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 17 --><p class='noindent'><span class='head'>
-<span class='ecsx-1200'>Convention.</span>  </span>Before we define the actual connectives we shall use, we list them down, along with
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 17--><p class="noindent" ><span class="head">
+<span 
+class="ecsx-1200">Convention.</span>  </span>Before we define the actual connectives we shall use, we list them down, along with
 notation.
-      </p><dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
-   1. </dt><dd class='enumerate-enumitem'>Conjunction (<span class='cmsssy-10x-x-120'>ˆ</span>)
-      </dd><dt class='enumerate-enumitem'>
-   2. </dt><dd class='enumerate-enumitem'>Disjunction (<span class='cmsssy-10x-x-120'>˙</span>)
-      </dd><dt class='enumerate-enumitem'>
-   3. </dt><dd class='enumerate-enumitem'>Negation (<span class='cmsssy-10x-x-120'>:</span>)
-      </dd><dt class='enumerate-enumitem'>
-   4. </dt><dd class='enumerate-enumitem'>Implication (<span class='cmsssy-10x-x-120'>!</span>)
-      </dd><dt class='enumerate-enumitem'>
-   5. </dt><dd class='enumerate-enumitem'>The Biconditional (<span class='cmsssy-10x-x-120'>$</span>)</dd></dl>
-<!-- l. 26 --><p class='noindent'>In particular, we will only use the  <img alt='=)' class='Longrightarrow' src='main3x.svg' /> and  <span class='cmssmi-10x-x-120'>⟺</span>  symbols when reasoning <span class='ecsx-1200'>informally</span>. For <span class='ecsx-1200'>formal</span>
-use, we will stick to the <span class='cmsssy-10x-x-120'>! </span>and <span class='cmsssy-10x-x-120'>$ </span>symbols.
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+   1. </dt><dd 
+class="enumerate-enumitem">Conjunction (<span 
+class="cmsssy-10x-x-120">ˆ</span>)
+      </dd><dt class="enumerate-enumitem">
+   2. </dt><dd 
+class="enumerate-enumitem">Disjunction (<span 
+class="cmsssy-10x-x-120">˙</span>)
+      </dd><dt class="enumerate-enumitem">
+   3. </dt><dd 
+class="enumerate-enumitem">Negation (<span 
+class="cmsssy-10x-x-120">:</span>)
+      </dd><dt class="enumerate-enumitem">
+   4. </dt><dd 
+class="enumerate-enumitem">Implication (<span 
+class="cmsssy-10x-x-120">!</span>)
+      </dd><dt class="enumerate-enumitem">
+   5. </dt><dd 
+class="enumerate-enumitem">The Biconditional (<span 
+class="cmsssy-10x-x-120">$</span>)</dd></dl>
+<!--l. 26--><p class="noindent" >In particular, we will only use the  <img 
+src="main3x.svg" alt="=)"  class="Longrightarrow"  /> and  <span 
+class="cmssmi-10x-x-120">⟺</span>  symbols when reasoning <span 
+class="ecsx-1200">informally</span>. For <span 
+class="ecsx-1200">formal</span>
+use, we will stick to the <span 
+class="cmsssy-10x-x-120">! </span>and <span 
+class="cmsssy-10x-x-120">$ </span>symbols. In more precise terms, we will use  <img 
+src="main4x.svg" alt="=)"  class="Longrightarrow"  /> and  <span 
+class="cmssmi-10x-x-120">⟺</span>  when
+reasoning <span 
+class="ecsx-1200">about </span>the language we are constructing, whereas we will use <span 
+class="cmsssy-10x-x-120">! </span>and <span 
+class="cmsssy-10x-x-120">$ </span>when reasoning
+<span 
+class="ecsx-1200">within </span>the language. As we shall see, it will be of paramount importance to distinguish between
+these two modes of reasoning.
 </p>
 </div>
-<!-- l. 27 --><p class='noindent'></p> 
+<!--l. 27--><p class="noindent" ></p> 
 </div> 
 </div>
+<!--l. 29--><p class="noindent" >We define them exhaustively as follows.  </p> <div class="tcolorbox tcolorbox" id="tcolobox-4">     
+<div class="tcolorbox-title">
                                                                                            
 
                                                                                            
-<!-- l. 29 --><p class='noindent'>We define them exhaustively as follows.  </p> <div class='tcolorbox tcolorbox' id='tcolobox-4'>     
-<div class='tcolorbox-title'>
 </div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 30 --><p class='noindent'><span class='head'>
-<a id='x1-4007r2'></a>
-<span class='ecsx-1200'>Definition 1.1.2 </span>(Connectives)<span class='ecsx-1200'>.</span>  </span> Let <span class='cmssmi-10x-x-120'>p </span>and <span class='cmssmi-10x-x-120'>q </span>be true/false variables. We define each of the
-connectives listed above to take on truth values depending on those of <span class='cmssmi-10x-x-120'>p </span>and <span class='cmssmi-10x-x-120'>q </span>as follows.
-</p><div class='table'>
-<!-- l. 32 --><p class='noindent'></p><figure class='float'> <!-- tex4ht:inline --><div class='tabular'> <table class='tabular' id='TBL-1'><colgroup id='TBL-1-1g'><col id='TBL-1-1' /><col id='TBL-1-2' /></colgroup><colgroup id='TBL-1-3g'><col id='TBL-1-3' /><col id='TBL-1-4' /><col id='TBL-1-5' /><col id='TBL-1-6' /><col id='TBL-1-7' /><col id='TBL-1-8' /></colgroup><tr id='TBL-1-1-' style='vertical-align:baseline;'><td class='td11' id='TBL-1-1-1' style='white-space:nowrap; text-align:center;'> <span class='cmssmi-10x-x-120'>p </span></td><td class='td11' id='TBL-1-1-2' style='white-space:nowrap; text-align:center;'> <span class='cmssmi-10x-x-120'>q  </span></td><td class='td11' id='TBL-1-1-3' style='white-space:nowrap; text-align:center;'> <img align='middle' alt='(:p)' class='left' src='main4x.svg' />  </td><td class='td11' id='TBL-1-1-4' style='white-space:nowrap; text-align:center;'> <img align='middle' alt='(:q)' class='left' src='main5x.svg' />  </td><td class='td11' id='TBL-1-1-5' style='white-space:nowrap; text-align:center;'> <img align='middle' alt='(p ˆ q)' class='left' src='main6x.svg' />  </td><td class='td11' id='TBL-1-1-6' style='white-space:nowrap; text-align:center;'> <img align='middle' alt='(p ˙ q)' class='left' src='main7x.svg' />  </td><td class='td11' id='TBL-1-1-7' style='white-space:nowrap; text-align:center;'> <img align='middle' alt='(p ! q)' class='left' src='main8x.svg' />  </td><td class='td11' id='TBL-1-1-8' style='white-space:nowrap; text-align:center;'> <img align='middle' alt='(p $  q)' class='left' src='main9x.svg' />  </td>
-</tr><tr class='hline'><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr id='TBL-1-2-' style='vertical-align:baseline;'><td class='td11' id='TBL-1-2-1' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>T  </span></td><td class='td11' id='TBL-1-2-2' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>T </span></td><td class='td11' id='TBL-1-2-3' style='white-space:nowrap; text-align:center;'>  <span class='cmsmfbx-12'>F   </span></td><td class='td11' id='TBL-1-2-4' style='white-space:nowrap; text-align:center;'>  <span class='cmsmfbx-12'>F   </span></td><td class='td11' id='TBL-1-2-5' style='white-space:nowrap; text-align:center;'>   <span class='cmsmfbx-12'>T     </span></td><td class='td11' id='TBL-1-2-6' style='white-space:nowrap; text-align:center;'>   <span class='cmsmfbx-12'>T     </span></td><td class='td11' id='TBL-1-2-7' style='white-space:nowrap; text-align:center;'>    <span class='cmsmfbx-12'>T     </span></td><td class='td11' id='TBL-1-2-8' style='white-space:nowrap; text-align:center;'>    <span class='cmsmfbx-12'>T     </span></td></tr><tr id='TBL-1-3-' style='vertical-align:baseline;'><td class='td11' id='TBL-1-3-1' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>T </span></td> <td class='td11' id='TBL-1-3-2' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>F </span></td> <td class='td11' id='TBL-1-3-3' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>F </span></td> <td class='td11' id='TBL-1-3-4' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>T </span></td> <td class='td11' id='TBL-1-3-5' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>F </span></td> <td class='td11' id='TBL-1-3-6' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>T </span></td> <td class='td11' id='TBL-1-3-7' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>F </span></td> <td class='td11' id='TBL-1-3-8' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>F</span></td>
-</tr><tr id='TBL-1-4-' style='vertical-align:baseline;'><td class='td11' id='TBL-1-4-1' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>F  </span></td><td class='td11' id='TBL-1-4-2' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>T </span></td><td class='td11' id='TBL-1-4-3' style='white-space:nowrap; text-align:center;'>  <span class='cmsmfbx-12'>T   </span></td><td class='td11' id='TBL-1-4-4' style='white-space:nowrap; text-align:center;'>  <span class='cmsmfbx-12'>F   </span></td><td class='td11' id='TBL-1-4-5' style='white-space:nowrap; text-align:center;'>   <span class='cmsmfbx-12'>F     </span></td><td class='td11' id='TBL-1-4-6' style='white-space:nowrap; text-align:center;'>   <span class='cmsmfbx-12'>T     </span></td><td class='td11' id='TBL-1-4-7' style='white-space:nowrap; text-align:center;'>    <span class='cmsmfbx-12'>T     </span></td><td class='td11' id='TBL-1-4-8' style='white-space:nowrap; text-align:center;'>    <span class='cmsmfbx-12'>F     </span></td></tr><tr id='TBL-1-5-' style='vertical-align:baseline;'><td class='td11' id='TBL-1-5-1' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>F </span></td> <td class='td11' id='TBL-1-5-2' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>F </span></td> <td class='td11' id='TBL-1-5-3' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>T </span></td> <td class='td11' id='TBL-1-5-4' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>T </span></td> <td class='td11' id='TBL-1-5-5' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>F </span></td> <td class='td11' id='TBL-1-5-6' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>F </span></td> <td class='td11' id='TBL-1-5-7' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>T </span></td> <td class='td11' id='TBL-1-5-8' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>T</span></td></tr></table>    </div>
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 30--><p class="noindent" ><span class="head">
+<a 
+ id="x1-4007r2"></a>
+<span 
+class="ecsx-1200">Definition 1.1.2 </span>(Connectives)<span 
+class="ecsx-1200">.</span>  </span> Let <span 
+class="cmssmi-10x-x-120">p </span>and <span 
+class="cmssmi-10x-x-120">q </span>be true/false variables. We define each of the
+connectives listed above to take on truth values depending on those of <span 
+class="cmssmi-10x-x-120">p </span>and <span 
+class="cmssmi-10x-x-120">q </span>as follows.
+</p><div class="table">
+<!--l. 32--><p class="noindent" ></p><figure class="float" 
+> <!--tex4ht:inline--><div class="tabular"> <table id="TBL-1" class="tabular" 
+ 
+><colgroup id="TBL-1-1g"><col 
+id="TBL-1-1" /><col 
+id="TBL-1-2" /></colgroup><colgroup id="TBL-1-3g"><col 
+id="TBL-1-3" /><col 
+id="TBL-1-4" /><col 
+id="TBL-1-5" /><col 
+id="TBL-1-6" /><col 
+id="TBL-1-7" /><col 
+id="TBL-1-8" /></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-1-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-1"  
+class="td11"> <span 
+class="cmssmi-10x-x-120">p </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-2"  
+class="td11"> <span 
+class="cmssmi-10x-x-120">q  </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-3"  
+class="td11"> <img 
+src="main5x.svg" alt="(:p)"  class="left" align="middle" />  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-4"  
+class="td11"> <img 
+src="main6x.svg" alt="(:q)"  class="left" align="middle" />  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-5"  
+class="td11"> <img 
+src="main7x.svg" alt="(p ˆ q)"  class="left" align="middle" />  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-6"  
+class="td11"> <img 
+src="main8x.svg" alt="(p ˙ q)"  class="left" align="middle" />  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-7"  
+class="td11"> <img 
+src="main9x.svg" alt="(p ! q)"  class="left" align="middle" />  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-8"  
+class="td11"> <img 
+src="main10x.svg" alt="(p $  q)"  class="left" align="middle" />  </td>
+</tr><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-1"  
+class="td11"> <span 
+class="cmsmfbx-12">T  </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-2"  
+class="td11"> <span 
+class="cmsmfbx-12">T </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-3"  
+class="td11">  <span 
+class="cmsmfbx-12">F   </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-4"  
+class="td11">  <span 
+class="cmsmfbx-12">F   </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-5"  
+class="td11">   <span 
+class="cmsmfbx-12">T     </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-6"  
+class="td11">   <span 
+class="cmsmfbx-12">T     </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-7"  
+class="td11">    <span 
+class="cmsmfbx-12">T     </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-8"  
+class="td11">    <span 
+class="cmsmfbx-12">T     </span></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-1"  
+class="td11"> <span 
+class="cmsmfbx-12">T </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-2"  
+class="td11"> <span 
+class="cmsmfbx-12">F </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-3"  
+class="td11"> <span 
+class="cmsmfbx-12">F </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-4"  
+class="td11"> <span 
+class="cmsmfbx-12">T </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-5"  
+class="td11"> <span 
+class="cmsmfbx-12">F </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-6"  
+class="td11"> <span 
+class="cmsmfbx-12">T </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-7"  
+class="td11"> <span 
+class="cmsmfbx-12">F </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-8"  
+class="td11"> <span 
+class="cmsmfbx-12">F</span></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-4-1"  
+class="td11"> <span 
+class="cmsmfbx-12">F  </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-4-2"  
+class="td11"> <span 
+class="cmsmfbx-12">T </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-4-3"  
+class="td11">  <span 
+class="cmsmfbx-12">T   </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-4-4"  
+class="td11">  <span 
+class="cmsmfbx-12">F   </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-4-5"  
+class="td11">   <span 
+class="cmsmfbx-12">F     </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-4-6"  
+class="td11">   <span 
+class="cmsmfbx-12">T     </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-4-7"  
+class="td11">    <span 
+class="cmsmfbx-12">T     </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-4-8"  
+class="td11">    <span 
+class="cmsmfbx-12">F     </span></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-5-1"  
+class="td11"> <span 
+class="cmsmfbx-12">F </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-1-5-2"  
+class="td11"> <span 
+class="cmsmfbx-12">F </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-1-5-3"  
+class="td11"> <span 
+class="cmsmfbx-12">T </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-1-5-4"  
+class="td11"> <span 
+class="cmsmfbx-12">T </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-1-5-5"  
+class="td11"> <span 
+class="cmsmfbx-12">F </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-1-5-6"  
+class="td11"> <span 
+class="cmsmfbx-12">F </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-1-5-7"  
+class="td11"> <span 
+class="cmsmfbx-12">T </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-1-5-8"  
+class="td11"> <span 
+class="cmsmfbx-12">T</span></td></tr></table>    </div>
 </figure>
 </div>
 </div>
-<!-- l. 44 --><p class='noindent'></p> 
+<!--l. 44--><p class="noindent" ></p> 
 </div> 
 </div>
-<!-- l. 46 --><p class='noindent'>We are now ready to define the main object of study in this section: propositional formulae.
+<!--l. 46--><p class="noindent" >We are now ready to define the main object of study in this section: propositional formulae.
 </p>
-<div class='tcolorbox tcolorbox' id='tcolobox-5'>     
-<div class='tcolorbox-title'>
+<div class="tcolorbox tcolorbox" id="tcolobox-5">     
+<div class="tcolorbox-title">
 </div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 48 --><p class='noindent'><span class='head'>
-<a id='x1-4008r3'></a>
-<span class='ecsx-1200'>Definition 1.1.3 </span>(Propositional Formula)<span class='ecsx-1200'>.</span>  </span> A <span class='ecsx-1200'>propositional formula </span>is obtained from
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 48--><p class="noindent" ><span class="head">
+<a 
+ id="x1-4008r3"></a>
+<span 
+class="ecsx-1200">Definition 1.1.3 </span>(Propositional Formula)<span 
+class="ecsx-1200">.</span>  </span> A <span 
+class="ecsx-1200">propositional formula </span>is obtained from
 propositional variables and connectives via the following rules:
-      </p><dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
-  (i) </dt><dd class='enumerate-enumitem'>Any propositional variable is a propositional formula.
-      </dd><dt class='enumerate-enumitem'>
-  (ii) </dt><dd class='enumerate-enumitem'>If <span class='cmssmi-10x-x-120'>Œ </span>and <span class='cmssmi-10x-x-120'> </span>are formulae, then so are <img align='middle' alt='(:Œ)' class='left' src='main10x.svg' />, <img align='middle' alt='(:   )' class='left' src='main11x.svg' />, <img align='middle' alt='(Œ ˆ   )' class='left' src='main12x.svg' />, <img align='middle' alt='(Œ ˙  )' class='left' src='main13x.svg' />, <img align='middle' alt='(Œ !    )' class='left' src='main14x.svg' />,
-      <img align='middle' alt='(  !  Œ)' class='left' src='main15x.svg' />, and <img align='middle' alt='(Œ $    )' class='left' src='main16x.svg' />.
-      </dd><dt class='enumerate-enumitem'>
- (iii) </dt><dd class='enumerate-enumitem'>Any formula arises in this manner after a finite number of steps.</dd></dl>
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+  (i) </dt><dd 
+class="enumerate-enumitem">Any propositional variable is a propositional formula.
+      </dd><dt class="enumerate-enumitem">
+  (ii) </dt><dd 
+class="enumerate-enumitem">If <span 
+class="cmssmi-10x-x-120">Œ </span>and <span 
+class="cmssmi-10x-x-120"> </span>are formulae, then so are <img 
+src="main11x.svg" alt="(:Œ)"  class="left" align="middle" />, <img 
+src="main12x.svg" alt="(:   )"  class="left" align="middle" />, <img 
+src="main13x.svg" alt="(Œ ˆ   )"  class="left" align="middle" />, <img 
+src="main14x.svg" alt="(Œ ˙  )"  class="left" align="middle" />, <img 
+src="main15x.svg" alt="(Œ !    )"  class="left" align="middle" />,
+      <img 
+src="main16x.svg" alt="(  !  Œ)"  class="left" align="middle" />, and <img 
+src="main17x.svg" alt="(Œ $    )"  class="left" align="middle" />.
+      </dd><dt class="enumerate-enumitem">
+ (iii) </dt><dd 
+class="enumerate-enumitem">Any formula arises in this manner after a finite number of steps.</dd></dl>
 </div>
-<!-- l. 55 --><p class='noindent'></p> 
+<!--l. 55--><p class="noindent" ></p> 
 </div> 
 </div>
                                                                                            
 
                                                                                            
-<!-- l. 57 --><p class='noindent'>What this means is that a propositional formula is a string of symbols consisting of
-      </p><dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
-   1. </dt><dd class='enumerate-enumitem'>variables that take on true/false values,
-      </dd><dt class='enumerate-enumitem'>
-   2. </dt><dd class='enumerate-enumitem'>connectors that express the relationship between these variables, and
-      </dd><dt class='enumerate-enumitem'>
-   3. </dt><dd class='enumerate-enumitem'>parentheses/brackets that separate formulae within formulae and specify the order in which
+<!--l. 57--><p class="noindent" >What this means is that a propositional formula is a string of symbols consisting of
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+   1. </dt><dd 
+class="enumerate-enumitem">variables that take on true/false values,
+      </dd><dt class="enumerate-enumitem">
+   2. </dt><dd 
+class="enumerate-enumitem">connectors that express the relationship between these variables, and
+      </dd><dt class="enumerate-enumitem">
+   3. </dt><dd 
+class="enumerate-enumitem">parentheses/brackets that separate formulae within formulae and specify the order in which
       they must be evaluated when the constituent variables are assigned specific values.</dd></dl>
-<!-- l. 63 --><p class='noindent'>In particular, every propositional formula is either a propositional variable or is built from ‘shorter’
+<!--l. 63--><p class="noindent" >In particular, every propositional formula is either a propositional variable or is built from ‘shorter’
 formulae, where by ‘shorter’ we mean consisting of fewer symbols.
 </p>
-<div class='tcolorbox tcolorbox' id='tcolobox-6'>     
-<div class='tcolorbox-title'>
+<div class="tcolorbox tcolorbox" id="tcolobox-6">     
+<div class="tcolorbox-title">
 </div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 65 --><p class='noindent'><span class='head'>
-<span class='ecsx-1200'>Convention.</span>  </span>Throughout this module, we will adopt two important conventions when dealing
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 65--><p class="noindent" ><span class="head">
+<span 
+class="ecsx-1200">Convention.</span>  </span>Throughout this module, we will adopt two important conventions when dealing
 with propositional formulae.
-      </p><dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
-   1. </dt><dd class='enumerate-enumitem'>All  propositional  formulae,  barring  those  consisting  of  a  single  variable,  shall  be
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+   1. </dt><dd 
+class="enumerate-enumitem">All  propositional  formulae,  barring  those  consisting  of  a  single  variable,  shall  be
       enclosed in parentheses.
-      </dd><dt class='enumerate-enumitem'>
-   2. </dt><dd class='enumerate-enumitem'>When we want to denote a propositional formula by a certain symbol, we will use the
-      notation “symobol <span class='cmsmf-12'>:</span> formula”.</dd></dl>
+      </dd><dt class="enumerate-enumitem">
+   2. </dt><dd 
+class="enumerate-enumitem">When we want to denote a propositional formula by a certain symbol, we will use the
+      notation “symobol <span 
+class="cmsmf-12">:</span> formula”.</dd></dl>
 </div>
-<!-- l. 71 --><p class='noindent'></p> 
+<!--l. 71--><p class="noindent" ></p> 
 </div> 
 </div>
-<!-- l. 73 --><p class='noindent'>As a concluding remark on the nature of propositional formulae, we will note that just as we
+<!--l. 73--><p class="noindent" >As a concluding remark on the nature of propositional formulae, we will note that just as we
 use trees to evaluate expressions on the computer when performing arithmetic, we can use
 them to express and evaluate propositional formulae as well. We will not usually do this,
 however, as it takes up a lot of space. In any event, we would first need to make precise the
                                                                                            
 
                                                                                            
-notion of <span class='ecsi-1200'>evaluating </span>a propositional formula. For this, we will turn to the concept of a truth
+notion of <span 
+class="ecsi-1200">evaluating </span>a propositional formula. For this, we will turn to the concept of a truth
 function.
-</p><!-- l. 75 --><p class='noindent'>
+</p><!--l. 75--><p class="noindent" >
 </p>
-<h4 class='subsectionHead' id='truth-functions'><span class='titlemark'>1.1.2   </span> <a id='x1-50001.1.2'></a>Truth Functions</h4>
-<!-- l. 77 --><p class='noindent'>Any assignment of truth values to the propositional variables in a formula <span class='cmssmi-10x-x-120'>Œ </span>determines the truth value
-for <span class='cmssmi-10x-x-120'>Œ </span>in a <span class='ecsx-1200'>unique </span>manner, using the exhaustive definitions of the connectives given in Definition <a href='#x1-4007r2'>1.1.2</a>.
-We often express all possible values of a propositional formula in a <span class='ecsx-1200'>truth table</span>, much like we did in
-Definition <a href='#x1-4007r2'>1.1.2</a> when defining the connectives.
+<h4 class="subsectionHead"><span class="titlemark">1.1.2   </span> <a 
+ id="x1-50001.1.2"></a>Truth Functions</h4>
+<!--l. 77--><p class="noindent" >Any assignment of truth values to the propositional variables in a formula <span 
+class="cmssmi-10x-x-120">Œ </span>determines the truth value
+for <span 
+class="cmssmi-10x-x-120">Œ </span>in a <span 
+class="ecsx-1200">unique </span>manner, using the exhaustive definitions of the connectives given in Definition <a 
+href="#x1-4007r2">1.1.2</a>.
+We often express all possible values of a propositional formula in a <span 
+class="ecsx-1200">truth table</span>, much like we did in
+Definition <a 
+href="#x1-4007r2">1.1.2</a> when defining the connectives.
 </p>
-<div class='tcolorbox tcolorbox' id='tcolobox-7'>     
-<div class='tcolorbox-title'>
+<div class="tcolorbox tcolorbox" id="tcolobox-7">     
+<div class="tcolorbox-title">
 </div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 79 --><p class='noindent'><span class='head'>
-<a id='x1-5001r4'></a>
-<span class='ecsx-1200'>Example 1.1.4.</span>  </span>Consider the formula <span class='cmssmi-10x-x-120'>Œ </span><span class='cmsmf-12'>: </span><img align='middle' alt='((p ! (:q)) !  p)' class='left' src='main17x.svg' />, where <span class='cmssmi-10x-x-120'>p </span>and <span class='cmssmi-10x-x-120'>q </span>are propositional
-variables. We construct a truth table as follows. </p><div class='table'>
-<!-- l. 81 --><p class='noindent'></p><figure class='float'> <!-- tex4ht:inline --><div class='tabular'> <table class='tabular' id='TBL-2'><colgroup id='TBL-2-1g'><col id='TBL-2-1' /><col id='TBL-2-2' /></colgroup><colgroup id='TBL-2-3g'><col id='TBL-2-3' /><col id='TBL-2-4' /></colgroup><colgroup id='TBL-2-5g'><col id='TBL-2-5' /></colgroup><tr id='TBL-2-1-' style='vertical-align:baseline;'><td class='td11' id='TBL-2-1-1' style='white-space:nowrap; text-align:center;'> <span class='cmssmi-10x-x-120'>p </span></td><td class='td11' id='TBL-2-1-2' style='white-space:nowrap; text-align:center;'> q  </td><td class='td11' id='TBL-2-1-3' style='white-space:nowrap; text-align:center;'> <img align='middle' alt='(:q)' class='left' src='main18x.svg' />  </td><td class='td11' id='TBL-2-1-4' style='white-space:nowrap; text-align:center;'> <img align='middle' alt='(p !  (:q))' class='left' src='main19x.svg' />  </td><td class='td11' id='TBL-2-1-5' style='white-space:nowrap; text-align:center;'> <img align='middle' alt='((p !  (:q)) !  p)' class='left' src='main20x.svg' />  </td>
-</tr><tr class='hline'><td></td><td></td><td></td><td></td><td></td></tr><tr id='TBL-2-2-' style='vertical-align:baseline;'><td class='td11' id='TBL-2-2-1' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>T  </span></td><td class='td11' id='TBL-2-2-2' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>T </span></td><td class='td11' id='TBL-2-2-3' style='white-space:nowrap; text-align:center;'>  <span class='cmsmfbx-12'>F   </span></td><td class='td11' id='TBL-2-2-4' style='white-space:nowrap; text-align:center;'>     <span class='cmsmfbx-12'>F       </span></td><td class='td11' id='TBL-2-2-5' style='white-space:nowrap; text-align:center;'>        <span class='cmsmfbx-12'>T           </span></td></tr><tr id='TBL-2-3-' style='vertical-align:baseline;'><td class='td11' id='TBL-2-3-1' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>T </span></td> <td class='td11' id='TBL-2-3-2' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>F </span></td> <td class='td11' id='TBL-2-3-3' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>T </span></td> <td class='td11' id='TBL-2-3-4' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>T </span></td> <td class='td11' id='TBL-2-3-5' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>T</span></td>
-</tr><tr id='TBL-2-4-' style='vertical-align:baseline;'><td class='td11' id='TBL-2-4-1' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>F  </span></td><td class='td11' id='TBL-2-4-2' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>T </span></td><td class='td11' id='TBL-2-4-3' style='white-space:nowrap; text-align:center;'>  <span class='cmsmfbx-12'>F   </span></td><td class='td11' id='TBL-2-4-4' style='white-space:nowrap; text-align:center;'>     <span class='cmsmfbx-12'>T       </span></td><td class='td11' id='TBL-2-4-5' style='white-space:nowrap; text-align:center;'>        <span class='cmsmfbx-12'>F           </span></td></tr><tr id='TBL-2-5-' style='vertical-align:baseline;'><td class='td11' id='TBL-2-5-1' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>F </span></td> <td class='td11' id='TBL-2-5-2' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>F </span></td> <td class='td11' id='TBL-2-5-3' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>F </span></td> <td class='td11' id='TBL-2-5-4' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>T </span></td> <td class='td11' id='TBL-2-5-5' style='white-space:nowrap; text-align:center;'> <span class='cmsmfbx-12'>F</span></td></tr></table>                            </div>
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 79--><p class="noindent" ><span class="head">
+<a 
+ id="x1-5001r4"></a>
+<span 
+class="ecsx-1200">Example 1.1.4.</span>  </span>Consider the formula <span 
+class="cmssmi-10x-x-120">Œ </span><span 
+class="cmsmf-12">: </span><img 
+src="main18x.svg" alt="((p ! (:q)) !  p)"  class="left" align="middle" />, where <span 
+class="cmssmi-10x-x-120">p </span>and <span 
+class="cmssmi-10x-x-120">q </span>are propositional
+variables. We construct a truth table as follows. </p><div class="table">
+<!--l. 81--><p class="noindent" ></p><figure class="float" 
+> <!--tex4ht:inline--><div class="tabular"> <table id="TBL-2" class="tabular" 
+ 
+><colgroup id="TBL-2-1g"><col 
+id="TBL-2-1" /><col 
+id="TBL-2-2" /></colgroup><colgroup id="TBL-2-3g"><col 
+id="TBL-2-3" /><col 
+id="TBL-2-4" /></colgroup><colgroup id="TBL-2-5g"><col 
+id="TBL-2-5" /></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-2-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-1"  
+class="td11"> <span 
+class="cmssmi-10x-x-120">p </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-2"  
+class="td11"> q  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-3"  
+class="td11"> <img 
+src="main19x.svg" alt="(:q)"  class="left" align="middle" />  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-4"  
+class="td11"> <img 
+src="main20x.svg" alt="(p !  (:q))"  class="left" align="middle" />  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-5"  
+class="td11"> <img 
+src="main21x.svg" alt="((p !  (:q)) !  p)"  class="left" align="middle" />  </td>
+</tr><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-1"  
+class="td11"> <span 
+class="cmsmfbx-12">T  </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-2"  
+class="td11"> <span 
+class="cmsmfbx-12">T </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-3"  
+class="td11">  <span 
+class="cmsmfbx-12">F   </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-4"  
+class="td11">     <span 
+class="cmsmfbx-12">F       </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-5"  
+class="td11">        <span 
+class="cmsmfbx-12">T           </span></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-1"  
+class="td11"> <span 
+class="cmsmfbx-12">T </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-2"  
+class="td11"> <span 
+class="cmsmfbx-12">F </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-3"  
+class="td11"> <span 
+class="cmsmfbx-12">T </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-4"  
+class="td11"> <span 
+class="cmsmfbx-12">T </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-5"  
+class="td11"> <span 
+class="cmsmfbx-12">T</span></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-1"  
+class="td11"> <span 
+class="cmsmfbx-12">F  </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-2"  
+class="td11"> <span 
+class="cmsmfbx-12">T </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-3"  
+class="td11">  <span 
+class="cmsmfbx-12">F   </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-4"  
+class="td11">     <span 
+class="cmsmfbx-12">T       </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-5"  
+class="td11">        <span 
+class="cmsmfbx-12">F           </span></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-1"  
+class="td11"> <span 
+class="cmsmfbx-12">F </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-2"  
+class="td11"> <span 
+class="cmsmfbx-12">F </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-3"  
+class="td11"> <span 
+class="cmsmfbx-12">F </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-4"  
+class="td11"> <span 
+class="cmsmfbx-12">T </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-5"  
+class="td11"> <span 
+class="cmsmfbx-12">F</span></td></tr></table>                            </div>
 </figure>
 </div>
 </div>
-<!-- l. 91 --><p class='noindent'></p> 
+<!--l. 91--><p class="noindent" ></p> 
 </div> 
 </div>
-<!-- l. 93 --><p class='noindent'>From this table, it is clear that the truth value of <span class='cmssmi-10x-x-120'>Œ </span>depends on the truth values of <span class='cmssmi-10x-x-120'>p </span>and <span class='cmssmi-10x-x-120'>q </span>in some
-manner (to be perfectly precise, it only depends on the truth value of <span class='cmssmi-10x-x-120'>p</span>, and is, in fact, biconditionally
-equivalent to <span class='cmssmi-10x-x-120'>p</span>). We would like to have a formal notion of navigating this dependence to ‘compute a
-value for <span class='cmssmi-10x-x-120'>Œ </span>given values of <span class='cmssmi-10x-x-120'>p </span>and <span class='cmssmi-10x-x-120'>q</span>’.
+<!--l. 93--><p class="noindent" >From this table, it is clear that the truth value of <span 
+class="cmssmi-10x-x-120">Œ </span>depends on the truth values of <span 
+class="cmssmi-10x-x-120">p </span>and <span 
+class="cmssmi-10x-x-120">q </span>in some
+manner (to be perfectly precise, it only depends on the truth value of <span 
+class="cmssmi-10x-x-120">p</span>, and is, in fact, biconditionally
+equivalent to <span 
+class="cmssmi-10x-x-120">p</span>). We would like to have a formal notion of navigating this dependence to ‘compute a
+value for <span 
+class="cmssmi-10x-x-120">Œ </span>given values of <span 
+class="cmssmi-10x-x-120">p </span>and <span 
+class="cmssmi-10x-x-120">q</span>’.
                                                                                            
 
                                                                                            
-</p><!-- l. 95 --><p class='noindent'>Throughout this subsection, <span class='cmssmi-10x-x-120'>n </span>will denote an arbitrary natural number.
+</p><!--l. 95--><p class="noindent" >Throughout this subsection, <span 
+class="cmssmi-10x-x-120">n </span>will denote an arbitrary natural number.
 </p>
-<div class='tcolorbox tcolorbox' id='tcolobox-8'>     
-<div class='tcolorbox-title'>
+<div class="tcolorbox tcolorbox" id="tcolobox-8">     
+<div class="tcolorbox-title">
 </div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 97 --><p class='noindent'><span class='head'>
-<a id='x1-5002r5'></a>
-<span class='ecsx-1200'>Definition 1.1.5 </span>(Truth Function)<span class='ecsx-1200'>.</span>  </span>A <span class='ecsx-1200'>truth function </span>of <span class='cmssmi-10x-x-120'>n </span>variables is a function
-</p><table class='align-star'>
-                                <tr><td class='align-odd'><span class='cmssmi-10x-x-120'>f </span><span class='cmsmf-12'>: </span><img align='middle' alt='fT; Fg' class='left' src='main21x.svg' /><sup><span class='cmssmi-8'>n</span></sup> <span class='cmsssy-10x-x-120'>!</span><img align='middle' alt='fT;Fg' class='left' src='main22x.svg' /></td>                                <td class='align-even'></td>                                <td class='align-label'></td></tr></table>
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 97--><p class="noindent" ><span class="head">
+<a 
+ id="x1-5002r5"></a>
+<span 
+class="ecsx-1200">Definition 1.1.5 </span>(Truth Function)<span 
+class="ecsx-1200">.</span>  </span>A <span 
+class="ecsx-1200">truth function </span>of <span 
+class="cmssmi-10x-x-120">n </span>variables is a function
+</p><table 
+class="align-star">
+                                <tr><td 
+class="align-odd"><span 
+class="cmssmi-10x-x-120">f </span><span 
+class="cmsmf-12">: </span><img 
+src="main22x.svg" alt="fT; Fg"  class="left" align="middle" /><sup><span 
+class="cmssmi-8">n</span></sup> <span 
+class="cmsssy-10x-x-120">!</span><img 
+src="main23x.svg" alt="fT;Fg"  class="left" align="middle" /></td>                                <td 
+class="align-even"></td>                                <td 
+class="align-label"></td></tr></table>
 </div>
-<!-- l. 102 --><p class='noindent'></p> 
-</div> 
-</div>
-<!-- l. 104 --><p class='noindent'>These are very directly related to propositional formulae.
-</p>
-<div class='tcolorbox tcolorbox' id='tcolobox-9'>     
-<div class='tcolorbox-title'>
-                                                                                           
-
-                                                                                           
-</div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 106 --><p class='noindent'><span class='head'>
-<a id='x1-5003r6'></a>
-<span class='ecsx-1200'>Definition 1.1.6 </span>(Truth Function of a Propositional Formula)<span class='ecsx-1200'>.</span>  </span>Let  <span class='cmssmi-10x-x-120'>Œ </span>be  a  propositional
-formula whose variables are <span class='cmssmi-10x-x-120'>p</span><sub><span class='cmsmf-8'>1</span></sub><span class='cmssmi-10x-x-120'>;…;p</span><sub><span class='cmssmi-8'>n</span></sub>. We can associate to <span class='cmssmi-10x-x-120'>Œ </span>a truth function whose truth
-value at any <img align='middle' alt='(x1;:::;xn)' class='left' src='main23x.svg' /> <span class='cmsssy-10x-x-120'>2</span><img align='middle' alt='fT; Fg' class='left' src='main24x.svg' /><sup><span class='cmssmi-8'>n</span></sup> corresponds to the truth value of <span class='cmssmi-10x-x-120'>Œ </span>that arises from
-setting <span class='cmssmi-10x-x-120'>p</span><sub><span class='cmssmi-8'>i</span></sub> to <span class='cmssmi-10x-x-120'>x</span><sub><span class='cmssmi-8'>i</span></sub> for all <span class='cmsmf-12'>1 </span><span class='cmsssy-10x-x-120'>ˇ </span><span class='cmssmi-10x-x-120'>i </span><span class='cmsssy-10x-x-120'>ˇ </span><span class='cmssmi-10x-x-120'>n</span>. We define this truth function to be the <span class='ecsx-1200'>truth function
-of </span><span class='cmssmi-10x-x-120'>Œ</span>, denoted <span class='cmssmi-10x-x-120'>F</span><sub><span class='cmssmi-8'>Œ</span></sub>.
-</p>
-</div>
-<!-- l. 108 --><p class='noindent'></p> 
+<!--l. 102--><p class="noindent" ></p> 
 </div> 
 </div>
-<!-- l. 110 --><p class='noindent'>We can now construct a truth function for the example we saw at the very beginning involving Mr and
-Mrs Jones (cf. (<a href='#x1-2001r1'>1.0.1<!-- tex4ht:ref: Ch1:eq:JonesExample  --></a>)).
+<!--l. 104--><p class="noindent" >Before discussing the relevance of truth functions, we will mention a very natural fact.
 </p>
-<div class='tcolorbox tcolorbox' id='tcolobox-10'>     
-<div class='tcolorbox-title'>
-</div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 112 --><p class='noindent'><span class='head'>
-<a id='x1-5004r7'></a>
-<span class='ecsx-1200'>Example 1.1.7.</span>  </span><span id='textcolor1'><span class='ectt-1200'>sorry</span></span>
-</p>
-</div>
-<!-- l. 114 --><p class='noindent'></p> 
-</div> 
-</div>
-<!-- l. 116 --><p class='noindent'>We see something quite remarkable here: the truth function of the propositional formula defined
-in (<a href='#x1-2001r1'>1.0.1<!-- tex4ht:ref: Ch1:eq:JonesExample  --></a>) maps every possible input to <span class='cmsmfbx-12'>T</span>! We have a special term for this.
-</p>
-<div class='tcolorbox tcolorbox' id='tcolobox-11'>     
-<div class='tcolorbox-title'>
+<div class="tcolorbox tcolorbox" id="tcolobox-9">     
+<div class="tcolorbox-title">
                                                                                            
 
                                                                                            
 </div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 118 --><p class='noindent'><span class='head'>
-<a id='x1-5005r8'></a>
-<span class='ecsx-1200'>Definition 1.1.8 </span>(Tautology)<span class='ecsx-1200'>.</span>  </span>A  propositional  formula  <span class='cmssmi-10x-x-120'>Œ  </span>is  a  <span class='ecsx-1200'>tautology  </span>if  its  truth
-function <span class='cmssmi-10x-x-120'>F</span><sub><span class='cmssmi-8'>Œ</span></sub> maps every possible input to <span class='cmsmfbx-12'>T</span>.
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 106--><p class="noindent" ><span class="head">
+<a 
+ id="x1-5003r6"></a>
+<span 
+class="ecsx-1200">Lemma 1.1.6.</span>  </span> <span 
+class="ecsi-1200">To show two truth functions are equal, it suffices that they take the value</span>
+<span 
+class="cmsmfbx-12">T </span><span 
+class="ecsi-1200">on precisely the same inputs or that they take the value </span><span 
+class="cmsmfbx-12">F </span><span 
+class="ecsi-1200">on precisely the same inputs.</span>
 </p>
 </div>
-<!-- l. 120 --><p class='noindent'></p> 
+<!--l. 108--><p class="noindent" ></p> 
 </div> 
 </div>
-<!-- l. 122 --><p class='noindent'>We can also be more precise about what the biconditional connective actually tells us.
-</p>
-<div class='tcolorbox tcolorbox' id='tcolobox-12'>     
-<div class='tcolorbox-title'>
-</div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 124 --><p class='noindent'><span class='head'>
-<a id='x1-5006r9'></a>
-<span class='ecsx-1200'>Definition 1.1.9 </span>(Logical Equivalence)<span class='ecsx-1200'>.</span>  </span>The propositional formulae <span class='cmssmi-10x-x-120'> </span>and <span class='cmssmi-10x-x-120'>Ø </span>are <span class='ecsx-1200'>logically
-equivalent </span>if the truth function <span class='cmssmi-10x-x-120'>F</span><sub><span class='cmssmi-8'></span><span class='cmsssy-8'>$</span><span class='cmssmi-8'>Ø</span></sub> of their biconditional is a tautology.
+<div class="proof">
+<!--l. 110--><p class="noindent" ><span class="head">
+<span 
+class="ecsi-1200">Proof.</span> </span>This is obvious, because any truth function can only take one of two values. If they take
+one value on precisely the same inputs, they must take the other value on the other inputs. This
+precisely corresponds to what it means for functions to be equal by extensionality.                  □
 </p>
 </div>
-<!-- l. 126 --><p class='noindent'></p> 
-</div> 
-</div>
-<!-- l. 128 --><p class='noindent'>We have a fairly basic result about logical equivalence.
+<!--l. 113--><p class="noindent" >These are very directly related to propositional formulae.
 </p>
-<div class='newtheorem'>
-<!-- l. 130 --><p class='noindent'><span class='head'>
-<a id='x1-5007r10'></a>
-<span class='ecsx-1200'>Lemma 1.1.10.</span>  </span><span class='ecsi-1200'>Let </span><span class='cmssmi-10x-x-120'>p</span><sub><span class='cmsmf-8'>1</span></sub><span class='cmssmi-10x-x-120'>;…;p</span><sub><span class='cmssmi-8'>n</span></sub> <span class='ecsi-1200'>be propositional variables and let </span><span class='cmssmi-10x-x-120'> </span><span class='ecsi-1200'>and </span><span class='cmssmi-10x-x-120'>Ø </span><span class='ecsi-1200'>be formulae in </span><span class='cmssmi-10x-x-120'>p</span><sub><span class='cmsmf-8'>1</span></sub><span class='cmssmi-10x-x-120'>;…;p</span><sub><span class='cmssmi-8'>n</span></sub><span class='ecsi-1200'>.
-Then, </span><span class='cmssmi-10x-x-120'> </span><span class='ecsi-1200'>and </span><span class='cmssmi-10x-x-120'>Ø </span><span class='ecsi-1200'>are logically equivalent if and only if </span><span class='cmssmi-10x-x-120'>F</span><sub><span class='cmssmi-8'></span></sub> <span class='cmsmf-12'>= </span><span class='cmssmi-10x-x-120'>F</span><sub><span class='cmssmi-8'>Ø</span></sub><span class='ecsi-1200'>.</span>
+<div class="tcolorbox tcolorbox" id="tcolobox-10">     
+<div class="tcolorbox-title">
                                                                                            
 
                                                                                            
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 115--><p class="noindent" ><span class="head">
+<a 
+ id="x1-5004r7"></a>
+<span 
+class="ecsx-1200">Definition 1.1.7 </span>(Truth Function of a Propositional Formula)<span 
+class="ecsx-1200">.</span>  </span>Let  <span 
+class="cmssmi-10x-x-120">Œ </span>be  a  propositional
+formula whose variables are <span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmssmi-10x-x-120">…</span><span 
+class="cmssmi-10x-x-120">;p</span><sub><span 
+class="cmssmi-8">n</span></sub>. We can associate to <span 
+class="cmssmi-10x-x-120">Œ </span>a truth function whose truth
+value at any <img 
+src="main24x.svg" alt="(x1;:::;xn)"  class="left" align="middle" /> <span 
+class="cmsssy-10x-x-120">2</span><img 
+src="main25x.svg" alt="fT; Fg"  class="left" align="middle" /><sup><span 
+class="cmssmi-8">n</span></sup> corresponds to the truth value of <span 
+class="cmssmi-10x-x-120">Œ </span>that arises from
+setting <span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmssmi-8">i</span></sub> to <span 
+class="cmssmi-10x-x-120">x</span><sub><span 
+class="cmssmi-8">i</span></sub> for all <span 
+class="cmsmf-12">1 </span><span 
+class="cmsssy-10x-x-120">ˇ </span><span 
+class="cmssmi-10x-x-120">i </span><span 
+class="cmsssy-10x-x-120">ˇ </span><span 
+class="cmssmi-10x-x-120">n</span>. We define this truth function to be the <span 
+class="ecsx-1200">truth function</span>
+<span 
+class="ecsx-1200">of </span><span 
+class="cmssmi-10x-x-120">Œ</span>, denoted <span 
+class="cmssmi-10x-x-120">F</span><sub><span 
+class="cmssmi-8">Œ</span></sub>.
 </p>
 </div>
-<!-- l. 132 --><p class='noindent'>
-</p><!-- l. 134 --><p class='noindent'>We omit the proof of this result as it merely involves checking things manually. A computer should be
+<!--l. 117--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 119--><p class="noindent" >We can now construct a truth function for the example we saw at the very beginning involving Mr and
+Mrs Jones (cf. (<a 
+href="#x1-2001r1">1.0.1<!--tex4ht:ref: Ch1:eq:JonesExample --></a>)).
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-11">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 121--><p class="noindent" ><span class="head">
+<a 
+ id="x1-5005r8"></a>
+<span 
+class="ecsx-1200">Example 1.1.8.</span>  </span><span id="textcolor1"><span 
+class="ectt-1200">sorry</span></span>
+</p>
+</div>
+<!--l. 123--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 125--><p class="noindent" >We see something quite remarkable here: the truth function of the propositional formula defined
+in (<a 
+href="#x1-2001r1">1.0.1<!--tex4ht:ref: Ch1:eq:JonesExample --></a>) maps every possible input to <span 
+class="cmsmfbx-12">T</span>! We have a special term for this.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-12">     
+<div class="tcolorbox-title">
+                                                                                           
+
+                                                                                           
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 127--><p class="noindent" ><span class="head">
+<a 
+ id="x1-5006r9"></a>
+<span 
+class="ecsx-1200">Definition 1.1.9 </span>(Tautology)<span 
+class="ecsx-1200">.</span>  </span>A  propositional  formula  <span 
+class="cmssmi-10x-x-120">Œ  </span>is  a  <span 
+class="ecsx-1200">tautology  </span>if  its  truth
+function <span 
+class="cmssmi-10x-x-120">F</span><sub><span 
+class="cmssmi-8">Œ</span></sub> maps every possible input to <span 
+class="cmsmfbx-12">T</span>.
+</p>
+</div>
+<!--l. 129--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 131--><p class="noindent" >We can also be more precise about what the biconditional connective actually tells us.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-13">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 133--><p class="noindent" ><span class="head">
+<a 
+ id="x1-5007r10"></a>
+<span 
+class="ecsx-1200">Definition 1.1.10 </span>(Logical Equivalence)<span 
+class="ecsx-1200">.</span>  </span>  The  propositional  formulae  <span 
+class="cmssmi-10x-x-120">  </span>and  <span 
+class="cmssmi-10x-x-120">Ø  </span>are
+<span 
+class="ecsx-1200">logically equivalent </span>if the truth function <span 
+class="cmssmi-10x-x-120">F</span><sub><span 
+class="cmssmi-8"></span><span 
+class="cmsssy-8">$</span><span 
+class="cmssmi-8">Ø</span></sub> of their biconditional is a tautology.
+</p>
+</div>
+<!--l. 135--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 137--><p class="noindent" >We have a fairly basic result about logical equivalence.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-14">     
+<div class="tcolorbox-title">
+                                                                                           
+
+                                                                                           
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 139--><p class="noindent" ><span class="head">
+<a 
+ id="x1-5008r11"></a>
+<span 
+class="ecsx-1200">Lemma 1.1.11.</span>  </span><span 
+class="ecsi-1200">Let </span><span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmssmi-10x-x-120">…</span><span 
+class="cmssmi-10x-x-120">;p</span><sub><span 
+class="cmssmi-8">n</span></sub>  <span 
+class="ecsi-1200">be propositional variables and let </span><span 
+class="cmssmi-10x-x-120"> </span><span 
+class="ecsi-1200">and </span><span 
+class="cmssmi-10x-x-120">Ø </span><span 
+class="ecsi-1200">be formulae in</span>
+<span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmssmi-10x-x-120">…</span><span 
+class="cmssmi-10x-x-120">;p</span><sub><span 
+class="cmssmi-8">n</span></sub><span 
+class="ecsi-1200">. Then, </span><span 
+class="cmssmi-10x-x-120"> </span><span 
+class="ecsi-1200">and </span><span 
+class="cmssmi-10x-x-120">Ø </span><span 
+class="ecsi-1200">are logically equivalent if and only if </span><span 
+class="cmssmi-10x-x-120">F</span><sub><span 
+class="cmssmi-8"></span></sub> <span 
+class="cmsmf-12">= </span><span 
+class="cmssmi-10x-x-120">F</span><sub><span 
+class="cmssmi-8">Ø</span></sub><span 
+class="ecsi-1200">.</span>
+</p>
+</div>
+<!--l. 141--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 143--><p class="noindent" >We omit the proof of this result as it merely involves checking things manually. A computer should be
 able to do this almost instantaneously.
-</p><!-- l. 136 --><p class='noindent'>We can also say something about composing formulae together.
+</p><!--l. 145--><p class="noindent" >We can also say something about composing formulae together.
 </p>
-<div class='newtheorem'>
-<!-- l. 138 --><p class='noindent'><span class='head'>
-<a id='x1-5008r11'></a>
-<span class='ecsx-1200'>Lemma 1.1.11.</span>  </span><span class='ecsi-1200'>Suppose that </span><span class='cmssmi-10x-x-120'>Œ </span><span class='ecsi-1200'>is a propositional formula with variables </span><span class='cmssmi-10x-x-120'>p</span><sub><span class='cmsmf-8'>1</span></sub><span class='cmssmi-10x-x-120'>;…;p</span><sub><span class='cmssmi-8'>n</span></sub><span class='ecsi-1200'>. Let </span><span class='cmssmi-10x-x-120'>Œ</span><sub><span class='cmsmf-8'>1</span></sub><span class='cmssmi-10x-x-120'>;…;Œ</span><sub><span class='cmssmi-8'>n</span></sub> <span class='ecsi-1200'>be
-propositional formulae. Denote by </span><span class='cmssmi-10x-x-120'># </span><span class='ecsi-1200'>the result of substituting each </span><span class='cmssmi-10x-x-120'>p</span><sub><span class='cmssmi-8'>i</span></sub> <span class='ecsi-1200'>with </span><span class='cmssmi-10x-x-120'>Œ</span><sub><span class='cmssmi-8'>i</span></sub> <span class='ecsi-1200'>in </span><span class='cmssmi-10x-x-120'>Œ</span><span class='ecsi-1200'>. Then,</span>
-      </p><dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
-  (i) </dt><dd class='enumerate-enumitem'><span class='cmssmi-10x-x-120'># </span><span class='ecsi-1200'>is a propositional formula.</span>
-      </dd><dt class='enumerate-enumitem'>
-  (ii) </dt><dd class='enumerate-enumitem'><span class='ecsi-1200'>if </span><span class='cmssmi-10x-x-120'>Œ </span><span class='ecsi-1200'>is a tautology, so is </span><span class='cmssmi-10x-x-120'>#</span><span class='ecsi-1200'>.</span>
-      </dd><dt class='enumerate-enumitem'>
- (iii) </dt><dd class='enumerate-enumitem'><span class='ecsi-1200'>the truth function of </span><span class='cmssmi-10x-x-120'># </span><span class='ecsi-1200'>is the result of composing the truth function of </span><span class='cmssmi-10x-x-120'>Œ </span><span class='ecsi-1200'>with the Cartesian
-      product of the truth functions of </span><span class='cmssmi-10x-x-120'>Œ</span><sub><span class='cmsmf-8'>1</span></sub><span class='cmssmi-10x-x-120'>;…;Œ</span><sub><span class='cmssmi-8'>n</span></sub><span class='ecsi-1200'>.</span></dd></dl>
+<div class="tcolorbox tcolorbox" id="tcolobox-15">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 147--><p class="noindent" ><span class="head">
+<a 
+ id="x1-5009r12"></a>
+<span 
+class="ecsx-1200">Lemma 1.1.12.</span>  </span><span 
+class="ecsi-1200">Suppose that </span><span 
+class="cmssmi-10x-x-120">Œ </span><span 
+class="ecsi-1200">is a propositional formula with variables </span><span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmssmi-10x-x-120">…</span><span 
+class="cmssmi-10x-x-120">;p</span><sub><span 
+class="cmssmi-8">n</span></sub><span 
+class="ecsi-1200">. Let </span><span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmssmi-10x-x-120">…</span><span 
+class="cmssmi-10x-x-120">;Œ</span><sub><span 
+class="cmssmi-8">n</span></sub>
+<span 
+class="ecsi-1200">be propositional formulae. Denote by </span><span 
+class="cmssmi-10x-x-120"># </span><span 
+class="ecsi-1200">the result of substituting each </span><span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmssmi-8">i</span></sub> <span 
+class="ecsi-1200">with </span><span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmssmi-8">i</span></sub> <span 
+class="ecsi-1200">in </span><span 
+class="cmssmi-10x-x-120">Œ</span><span 
+class="ecsi-1200">.</span>
+<span 
+class="ecsi-1200">Then,</span>
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+  (i) </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmssmi-10x-x-120"># </span><span 
+class="ecsi-1200">is a propositional formula.</span>
+      </dd><dt class="enumerate-enumitem">
+  (ii) </dt><dd 
+class="enumerate-enumitem"><span 
+class="ecsi-1200">if </span><span 
+class="cmssmi-10x-x-120">Œ </span><span 
+class="ecsi-1200">is a tautology, so is </span><span 
+class="cmssmi-10x-x-120">#</span><span 
+class="ecsi-1200">.</span>
+      </dd><dt class="enumerate-enumitem">
+ (iii) </dt><dd 
+class="enumerate-enumitem"><span 
+class="ecsi-1200">the truth function of </span><span 
+class="cmssmi-10x-x-120"># </span><span 
+class="ecsi-1200">is the result of composing the truth function of </span><span 
+class="cmssmi-10x-x-120">Œ </span><span 
+class="ecsi-1200">with the</span>
+      <span 
+class="ecsi-1200">Cartesian product of the truth functions of </span><span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmssmi-10x-x-120">…</span><span 
+class="cmssmi-10x-x-120">;Œ</span><sub><span 
+class="cmssmi-8">n</span></sub><span 
+class="ecsi-1200">.</span></dd></dl>
 </div>
-<!-- l. 145 --><p class='noindent'>
-</p><!-- l. 147 --><p class='noindent'>We do not prove this result either, as it merely involves manual verification.
-</p>
-<div class='tcolorbox tcolorbox' id='tcolobox-13'>     
-<div class='tcolorbox-title'>
+<!--l. 154--><p class="noindent" ></p> 
+</div> 
+</div>
                                                                                            
 
                                                                                            
+<!--l. 156--><p class="noindent" >We do not prove this result either, as it merely involves manual verification.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-16">     
+<div class="tcolorbox-title">
 </div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 149 --><p class='noindent'><span class='head'>
-<a id='x1-5012r12'></a>
-<span class='ecsx-1200'>Example 1.1.12.</span>  </span>For                 propositional                 variables                 <span class='cmssmi-10x-x-120'>p</span><sub><span class='cmsmf-8'>1</span></sub><span class='cmssmi-10x-x-120'>;p</span><sub><span class='cmsmf-8'>2</span></sub>,
-the statement <img align='middle' alt='(((:p2) !  (:p1)) !  (p1 ! p2))' class='left' src='main25x.svg' /> is a tautology. Therefore, if <span class='cmssmi-10x-x-120'>Œ</span><sub><span class='cmsmf-8'>1</span></sub> and <span class='cmssmi-10x-x-120'>Œ</span><sub><span class='cmsmf-8'>2</span></sub> are
-propositional formulae, then <img align='middle' alt='(((: Œ2) ! (: Œ1)) ! (Œ1 !  Œ2))' class='left' src='main26x.svg' /> is a tautology as well.
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 158--><p class="noindent" ><span class="head">
+<a 
+ id="x1-5013r13"></a>
+<span 
+class="ecsx-1200">Example 1.1.13.</span>  </span>For                 propositional                 variables                 <span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;p</span><sub><span 
+class="cmsmf-8">2</span></sub>,
+the statement <img 
+src="main26x.svg" alt="(((:p2) !  (:p1)) !  (p1 ! p2))"  class="left" align="middle" /> is a tautology. Therefore, if <span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmsmf-8">1</span></sub> and <span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmsmf-8">2</span></sub> are
+propositional formulae, then <img 
+src="main27x.svg" alt="(((: Œ2) ! (: Œ1)) ! (Œ1 !  Œ2))"  class="left" align="middle" /> is a tautology as well.
 </p>
 </div>
-<!-- l. 151 --><p class='noindent'></p> 
+<!--l. 160--><p class="noindent" ></p> 
 </div> 
 </div>
-<!-- l. 153 --><p class='noindent'>We will also mention that a composition being a tautology does not mean the outermost proposition of
+<!--l. 162--><p class="noindent" >We will also mention that a composition being a tautology does not mean the outermost proposition of
 the composition is a tautology.
 </p>
-<div class='tcolorbox tcolorbox' id='tcolobox-14'>     
-<div class='tcolorbox-title'>
+<div class="tcolorbox tcolorbox" id="tcolobox-17">     
+<div class="tcolorbox-title">
 </div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 155 --><p class='noindent'><span class='head'>
-<a id='x1-5013r13'></a>
-<span class='ecsx-1200'>Non-Example 1.1.13.</span>  </span>Let <span class='cmssmi-10x-x-120'>p </span>be a propositional variable. The formula <span class='cmssmi-10x-x-120'>Œ </span><span class='cmsmf-12'>: </span><img align='middle' alt='(p !  (:p))' class='left' src='main27x.svg' /> is
-not a tautology. However, we can find a propositional formula <span class='cmssmi-10x-x-120'>Œ</span><span class='cmsssy-10x-x-120'>0 </span>such that <img align='middle' alt='(Œ1 !  (:Œ1))' class='left' src='main28x.svg' />
-is a tautology: for example, we can define <span class='cmssmi-10x-x-120'>Œ</span><span class='cmsssy-10x-x-120'>0 </span>to be identically <span class='cmsmfbx-12'>F</span>.
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 164--><p class="noindent" ><span class="head">
+<a 
+ id="x1-5014r14"></a>
+<span 
+class="ecsx-1200">Non-Example 1.1.14.</span>  </span>Let <span 
+class="cmssmi-10x-x-120">p </span>be a propositional variable. The formula <span 
+class="cmssmi-10x-x-120">Œ </span><span 
+class="cmsmf-12">: </span><img 
+src="main28x.svg" alt="(p !  (:p))"  class="left" align="middle" /> is
+not a tautology. However, we can find a propositional formula <span 
+class="cmssmi-10x-x-120">Œ</span><span 
+class="cmsssy-10x-x-120">0 </span>such that <img 
+src="main29x.svg" alt="(Œ1 !  (:Œ1))"  class="left" align="middle" />
+is a tautology: for example, we can define <span 
+class="cmssmi-10x-x-120">Œ</span><span 
+class="cmsssy-10x-x-120">0 </span>to be identically <span 
+class="cmsmfbx-12">F</span>.
 </p>
 </div>
-<!-- l. 157 --><p class='noindent'></p> 
+<!--l. 166--><p class="noindent" ></p> 
 </div> 
 </div>
-<!-- l. 159 --><p class='noindent'>There are numerous propositional formulae that we know to be logically equivalent. Here is a
+<!--l. 168--><p class="noindent" >There are numerous propositional formulae that we know to be logically equivalent. Here is a
 (non-exhaustive) list.
 </p>
-<div class='tcolorbox tcolorbox' id='tcolobox-15'>     
-<div class='tcolorbox-title'>
                                                                                            
 
                                                                                            
+<div class="tcolorbox tcolorbox" id="tcolobox-18">     
+<div class="tcolorbox-title">
 </div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 161 --><p class='noindent'><span class='head'>
-<a id='x1-5014r14'></a>
-<span class='ecsx-1200'>Example 1.1.14 </span>(Logically Equivalent Formulae)<span class='ecsx-1200'>.</span>  </span>Let <span class='cmssmi-10x-x-120'>p</span><sub><span class='cmsmf-8'>1</span></sub><span class='cmssmi-10x-x-120'>;p</span><sub><span class='cmsmf-8'>2</span></sub><span class='cmssmi-10x-x-120'>;p</span><sub><span class='cmsmf-8'>3</span></sub> be logically equivalent formulae.
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 170--><p class="noindent" ><span class="head">
+<a 
+ id="x1-5015r15"></a>
+<span 
+class="ecsx-1200">Example 1.1.15 </span>(Logically Equivalent Formulae)<span 
+class="ecsx-1200">.</span>  </span>Let <span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;p</span><sub><span 
+class="cmsmf-8">2</span></sub><span 
+class="cmssmi-10x-x-120">;p</span><sub><span 
+class="cmsmf-8">3</span></sub> be logically equivalent formulae.
 Then, the following equivalences hold.
-      </p><dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
-   1. </dt><dd class='enumerate-enumitem'><img align='middle' alt='(p1 ˆ (p2 ˆ p3))' class='left' src='main29x.svg' /> is logically equivalent to <img align='middle' alt='((p1 ˆ p2) ˆ p3)' class='left' src='main30x.svg' />.
-      </dd><dt class='enumerate-enumitem'>
-   2. </dt><dd class='enumerate-enumitem'><img align='middle' alt='(p  ˙ (p ˙ p ))
-  1     2   3' class='left' src='main31x.svg' /> is logically equivalent to <img align='middle' alt='((p  ˙ p ) ˙ p )
-   1    2    3' class='left' src='main32x.svg' />.
-      </dd><dt class='enumerate-enumitem'>
-   3. </dt><dd class='enumerate-enumitem'><img align='middle' alt='(p1 ˙ (p2 ˆ p3))' class='left' src='main33x.svg' /> is logically equivalent to <img align='middle' alt='((p1 ˙ p2) ˆ (p1 ˆ p3))' class='left' src='main34x.svg' />.
-      </dd><dt class='enumerate-enumitem'>
-   4. </dt><dd class='enumerate-enumitem'><img align='middle' alt='(: (:p1))' class='left' src='main35x.svg' /> is logically equivalent to <span class='cmssmi-10x-x-120'>p</span><sub><span class='cmsmf-8'>1</span></sub>.
-      </dd><dt class='enumerate-enumitem'>
-   5. </dt><dd class='enumerate-enumitem'><img align='middle' alt='(: (p1 ˆ p2))' class='left' src='main36x.svg' /> is logically equivalent to <img align='middle' alt='((:p1) ˙ (:p2))' class='left' src='main37x.svg' />.
-      </dd><dt class='enumerate-enumitem'>
-   6. </dt><dd class='enumerate-enumitem'><img align='middle' alt='(: (p1 ˙ p2))' class='left' src='main38x.svg' /> is logically equivalent to <img align='middle' alt='((:p1) ˆ (:p2))' class='left' src='main39x.svg' />.</dd></dl>
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+   1. </dt><dd 
+class="enumerate-enumitem"><img 
+src="main30x.svg" alt="(p1 ˆ (p2 ˆ p3))"  class="left" align="middle" /> is logically equivalent to <img 
+src="main31x.svg" alt="((p1 ˆ p2) ˆ p3)"  class="left" align="middle" />.
+      </dd><dt class="enumerate-enumitem">
+   2. </dt><dd 
+class="enumerate-enumitem"><img 
+src="main32x.svg" alt="(p1 ˙ (p2 ˙ p3))"  class="left" align="middle" /> is logically equivalent to <img 
+src="main33x.svg" alt="((p1 ˙ p2) ˙ p3)"  class="left" align="middle" />.
+      </dd><dt class="enumerate-enumitem">
+   3. </dt><dd 
+class="enumerate-enumitem"><img 
+src="main34x.svg" alt="(p1 ˙ (p2 ˆ p3))"  class="left" align="middle" /> is logically equivalent to <img 
+src="main35x.svg" alt="((p1 ˙ p2) ˆ (p1 ˆ p3))"  class="left" align="middle" />.
+      </dd><dt class="enumerate-enumitem">
+   4. </dt><dd 
+class="enumerate-enumitem"><img 
+src="main36x.svg" alt="(: (:p1))"  class="left" align="middle" /> is logically equivalent to <span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">1</span></sub>.
+      </dd><dt class="enumerate-enumitem">
+   5. </dt><dd 
+class="enumerate-enumitem"><img 
+src="main37x.svg" alt="(: (p ˆ p  ))
+     1    2"  class="left" align="middle" /> is logically equivalent to <img 
+src="main38x.svg" alt="((:p  ) ˙ (:p ))
+    1       2"  class="left" align="middle" />.
+      </dd><dt class="enumerate-enumitem">
+   6. </dt><dd 
+class="enumerate-enumitem"><img 
+src="main39x.svg" alt="(: (p1 ˙ p2))"  class="left" align="middle" /> is logically equivalent to <img 
+src="main40x.svg" alt="((:p1) ˆ (:p2))"  class="left" align="middle" />.</dd></dl>
 </div>
-<!-- l. 176 --><p class='noindent'></p> 
+<!--l. 185--><p class="noindent" ></p> 
 </div> 
 </div>
-<!-- l. 178 --><p class='noindent'>Upon inspection, one can find algebraic patterns in the above logical equivalences. There are similarities
-to the axioms of a <span class='ecsx-1200'>boolean algebra</span>. We will not explore this further in this module, but we will adopt
+<!--l. 187--><p class="noindent" >Upon inspection, one can find algebraic patterns in the above logical equivalences. There are similarities
+to the axioms of a <span 
+class="ecsx-1200">boolean algebra</span>. We will not explore this further in this module, but we will adopt
 the convention used in algebra where parentheses are dropped when dealing with associative
 operations.
 </p>
-<div class='tcolorbox tcolorbox' id='tcolobox-16'>     
-<div class='tcolorbox-title'>
+<div class="tcolorbox tcolorbox" id="tcolobox-19">     
+<div class="tcolorbox-title">
                                                                                            
 
                                                                                            
 </div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 181 --><p class='noindent'><span class='head'>
-<span class='ecsx-1200'>Convention.</span>  </span>We will denote both <img align='middle' alt='(p1 ˆ (p2 ˆ p3))' class='left' src='main40x.svg' /> and <img align='middle' alt='((p1 ˆ p2) ˆ p3)' class='left' src='main41x.svg' /> by <img align='middle' alt='(p1 ˆ p2 ˆ p3)' class='left' src='main42x.svg' />.
-Similarly, we will denote both <img align='middle' alt='(p ˙ (p  ˙ p ))
-  1    2    3' class='left' src='main43x.svg' /> and <img align='middle' alt='((p ˙ p ) ˙ p )
-   1   2     3' class='left' src='main44x.svg' /> by <img align='middle' alt='(p  ˙ p  ˙ p )
-  1   2    3' class='left' src='main45x.svg' />.
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 190--><p class="noindent" ><span class="head">
+<span 
+class="ecsx-1200">Convention.</span>  </span>We will denote both <img 
+src="main41x.svg" alt="(p1 ˆ (p2 ˆ p3))"  class="left" align="middle" /> and <img 
+src="main42x.svg" alt="((p1 ˆ p2) ˆ p3)"  class="left" align="middle" /> by <img 
+src="main43x.svg" alt="(p1 ˆ p2 ˆ p3)"  class="left" align="middle" />.
+Similarly, we will denote both <img 
+src="main44x.svg" alt="(p ˙ (p  ˙ p ))
+  1    2    3"  class="left" align="middle" /> and <img 
+src="main45x.svg" alt="((p ˙ p ) ˙ p )
+   1   2     3"  class="left" align="middle" /> by <img 
+src="main46x.svg" alt="(p  ˙ p  ˙ p )
+  1   2    3"  class="left" align="middle" />.
 </p>
 </div>
-<!-- l. 183 --><p class='noindent'></p> 
+<!--l. 192--><p class="noindent" ></p> 
 </div> 
 </div>
-<!-- l. 185 --><p class='noindent'>We will end with a combinatorial fact about truth functions.
+<!--l. 194--><p class="noindent" >We will end with a combinatorial fact about truth functions.
 </p>
-<div class='newtheorem'>
-<!-- l. 187 --><p class='noindent'><span class='head'>
-<a id='x1-5021r15'></a>
-<span class='ecsx-1200'>Lemma 1.1.15.</span>  </span><span class='ecsi-1200'>There are </span><span class='cmsmf-12'>2</span><sup><span class='cmsmf-8'>2</span><sup><span class='cmssmi-6'>n</span></sup></sup>  <span class='ecsi-1200'>possible truth functions on </span><span class='cmssmi-10x-x-120'>n </span><span class='ecsi-1200'>variables.</span>
+<div class="tcolorbox tcolorbox" id="tcolobox-20">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 196--><p class="noindent" ><span class="head">
+<a 
+ id="x1-5022r16"></a>
+<span 
+class="ecsx-1200">Lemma 1.1.16.</span>  </span><span 
+class="ecsi-1200">There are </span><span 
+class="cmsmf-12">2</span><sup><span 
+class="cmsmf-8">2</span><sup><span 
+class="cmssmi-6">n</span></sup></sup>  <span 
+class="ecsi-1200">possible truth functions on </span><span 
+class="cmssmi-10x-x-120">n </span><span 
+class="ecsi-1200">variables.</span>
 </p>
 </div>
-<!-- l. 189 --><p class='noindent'>
+<!--l. 198--><p class="noindent" ></p> 
+</div> 
+</div>
+<div class="proof">
+<!--l. 200--><p class="noindent" ><span class="head">
+<span 
+class="ecsi-1200">Proof.</span> </span>A truth function is any function from a the set <img 
+src="main47x.svg" alt="fT; Fg"  class="left" align="middle" /><sup><span 
+class="cmssmi-8">n</span></sup> to the set <img 
+src="main48x.svg" alt="fT;Fg"  class="left" align="middle" />, with no further
+restrictions. The former set has <span 
+class="cmsmf-12">2</span><sup><span 
+class="cmssmi-8">n</span></sup> elements and the latter set has <span 
+class="cmsmf-12">2 </span>elements. Therefore, there are
+<span 
+class="cmsmf-12">2</span><sup><span 
+class="cmsmf-8">2</span><sup><span 
+class="cmssmi-6">n</span></sup></sup>  possible truth functions.                                                                                      □
 </p>
-<div class='proof'>
-<!-- l. 191 --><p class='noindent'><span class='head'>
-<span class='ecsi-1200'>Proof.</span> </span>A truth function is any function from a the set <img align='middle' alt='fT; Fg' class='left' src='main46x.svg' /><sup><span class='cmssmi-8'>n</span></sup> to the set <img align='middle' alt='fT;Fg' class='left' src='main47x.svg' />, with no further
-restrictions. The former set has <span class='cmsmf-12'>2</span><sup><span class='cmssmi-8'>n</span></sup> elements and the latter set has <span class='cmsmf-12'>2 </span>elements. Therefore, there are
-<span class='cmsmf-12'>2</span><sup><span class='cmsmf-8'>2</span><sup><span class='cmssmi-6'>n</span></sup></sup>  possible truth functions.                                                                                      □
+</div>
                                                                                            
 
                                                                                            
+<!--l. 203--><p class="noindent" >
 </p>
-</div>
-<!-- l. 194 --><p class='noindent'>
-</p>
-<h4 class='subsectionHead' id='more-about-connectives'><span class='titlemark'>1.1.3   </span> <a id='x1-60001.1.3'></a>More about Connectives</h4>
-<!-- l. 196 --><p class='noindent'>We have defined several connectives so far, but we have yet to say anything about whether we
+<h4 class="subsectionHead"><span class="titlemark">1.1.3   </span> <a 
+ id="x1-60001.1.3"></a>Adequacy</h4>
+<!--l. 205--><p class="noindent" >We have defined several connectives so far, but we have yet to say anything about whether we
 will be defining any more connectives going forward. To begin, we will state an important
 definition.
 </p>
-<div class='tcolorbox tcolorbox' id='tcolobox-17'>     
-<div class='tcolorbox-title'>
+<div class="tcolorbox tcolorbox" id="tcolobox-21">     
+<div class="tcolorbox-title">
 </div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 198 --><p class='noindent'><span class='head'>
-<a id='x1-6001r16'></a>
-<span class='ecsx-1200'>Definition 1.1.16 </span>(Adequacy)<span class='ecsx-1200'>.</span>  </span>We say that a set <span class='cmssmi-10x-x-120'>S </span>of connectives is <span class='ecsx-1200'>adequate </span>if for every
-<span class='cmssmi-10x-x-120'>n </span><span class='cmsssy-10x-x-120'>˘ </span><span class='cmsmf-12'>1</span>, every truth function on <span class='cmssmi-10x-x-120'>n </span>variables can be expressed as the truth function as a
-propositional formula which only involves connectives from <span class='cmssmi-10x-x-120'>S </span>(and <span class='cmssmi-10x-x-120'>n </span>propositional variables).
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 207--><p class="noindent" ><span class="head">
+<a 
+ id="x1-6001r17"></a>
+<span 
+class="ecsx-1200">Definition 1.1.17 </span>(Adequacy)<span 
+class="ecsx-1200">.</span>  </span> We say that a set <span 
+class="cmssmi-10x-x-120">S </span>of connectives is <span 
+class="ecsx-1200">adequate </span>if for
+every <span 
+class="cmssmi-10x-x-120">n </span><span 
+class="cmsssy-10x-x-120">˘ </span><span 
+class="cmsmf-12">1</span>, every truth function on <span 
+class="cmssmi-10x-x-120">n </span>variables can be expressed as the truth function as a
+propositional formula which only involves connectives from <span 
+class="cmssmi-10x-x-120">S </span>(and <span 
+class="cmssmi-10x-x-120">n </span>propositional variables).
 </p>
 </div>
-<!-- l. 200 --><p class='noindent'></p> 
+<!--l. 209--><p class="noindent" ></p> 
 </div> 
 </div>
-<!-- l. 202 --><p class='noindent'>We now have the first theorem of this module.
+<!--l. 211--><p class="noindent" >The idea that this definition seeks to express is that a set is adequate if and only if for evern <span 
+class="cmssmi-10x-x-120">n</span>, every
+propositional formula in <span 
+class="cmssmi-10x-x-120">n </span>variables is logically equivalent to a propositional formula that only contains
+those <span 
+class="cmssmi-10x-x-120">n </span>variables and connectives from the set in question. In other words, every propositional formula
+should admit an equivalent expression that does not contain any connectives apart from those in the set
+in question. The reason this is expressed in terms of truth functions is that that is how logical equivalence
+is <span 
+class="ecsi-1200">defined </span>(cf. Definition <a 
+href="#x1-5007r10">1.1.10</a>).
+</p><!--l. 213--><p class="noindent" >We now have the first theorem of this module.
 </p>
-<div class='tcolorbox tcolorbox' id='tcolobox-18'>     
-<div class='tcolorbox-title'>
                                                                                            
 
                                                                                            
+<div class="tcolorbox tcolorbox" id="tcolobox-22">     
+<div class="tcolorbox-title">
 </div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 204 --><p class='noindent'><span class='head'>
-<a id='x1-6002r17'></a>
-<span class='ecsx-1200'>Theorem 1.1.17.</span>  </span> <span class='ecsi-1200'>The set </span><img align='middle' alt='f:; ˆ;˙g' class='left' src='main48x.svg' /><span class='ecsi-1200'>is adequate.</span>
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 215--><p class="noindent" ><span class="head">
+<a 
+ id="x1-6002r18"></a>
+<span 
+class="ecsx-1200">Theorem 1.1.18.</span>  </span> <span 
+class="ecsi-1200">The set </span><img 
+src="main49x.svg" alt="f:; ˆ;˙g"  class="left" align="middle" /><span 
+class="ecsi-1200">is adequate.</span>
 </p>
 </div>
-<!-- l. 206 --><p class='noindent'></p> 
+<!--l. 217--><p class="noindent" ></p> 
 </div> 
 </div>
-<div class='proof'>
-<!-- l. 208 --><p class='noindent'><span class='head'>
-<span class='ecsi-1200'>Proof.</span> </span>Fix some <span class='cmssmi-10x-x-120'>n </span><span class='cmsssy-10x-x-120'>˘ </span><span class='cmsmf-12'>1</span>, and let <span class='cmssmi-10x-x-120'>G </span><span class='cmsmf-12'>: </span><img align='middle' alt='fT; Fg' class='left' src='main49x.svg' /><sup><span class='cmssmi-8'>n</span></sup> <span class='cmsssy-10x-x-120'>!</span><img align='middle' alt='fT; Fg' class='left' src='main50x.svg' /> be a truth function. We have two cases.
-      </p><dl class='description'><dt class='description'>
-<span class='underline'><span class='ecsx-1200'>Case 1.</span></span> </dt><dd class='description'>
-      <!-- l. 211 --><p class='noindent'> Assume that <span class='cmssmi-10x-x-120'>G </span>is identically <span class='cmsmfbx-12'>F</span>. Then, define the propositional formula <span class='cmssmi-10x-x-120'>Œ </span><span class='cmsmf-12'>: </span><img align='middle' alt='(p1 ˆ (:p1))' class='left' src='main51x.svg' />. Even
-      defining it as a formula on <span class='cmssmi-10x-x-120'>n </span>variables, it is clear to see that its truth function <span class='cmssmi-10x-x-120'>F</span><sub><span class='cmssmi-8'>Œ</span></sub> is identically
-      <span class='cmsmfbx-12'>F</span>. Therefore, <span class='cmssmi-10x-x-120'>G </span><span class='cmsmf-12'>= </span><span class='cmssmi-10x-x-120'>F</span><sub><span class='cmssmi-8'>Œ</span></sub>.<span class='footnote-mark'><a href='main2.html#fn1x2'><sup class='textsuperscript'>1</sup></a></span><a id='x1-6003f1'></a> 
-      </p></dd><dt class='description'>
-<span class='underline'><span class='ecsx-1200'>Case 2.</span></span> </dt><dd class='description'>
-      <!-- l. 213 --><p class='noindent'> Assume the contrary. Then, list all <span class='cmssmi-10x-x-120'>v </span><span class='cmsssy-10x-x-120'>2</span><img align='middle' alt='fT; Fg' class='left' src='main52x.svg' /><sup><span class='cmssmi-8'>n</span></sup> such that <span class='cmssmi-10x-x-120'>G</span><span class='cmsmf-12'>(</span><span class='cmssmi-10x-x-120'>v</span><span class='cmsmf-12'>) = </span><span class='cmsmfbx-12'>T</span>. Since <img align='middle' alt='fT; Fg' class='left' src='main53x.svg' /><sup><span class='cmssmi-8'>n</span></sup> is a
-      finite set, this list is finite, and we can number these <span class='cmssmi-10x-x-120'>v</span><sub><span class='cmsmf-8'>1</span></sub><span class='cmssmi-10x-x-120'>;…;v</span><sub><span class='cmssmi-8'>r</span></sub>. For each <span class='cmsmf-12'>1 </span><span class='cmsssy-10x-x-120'>ˇ </span><span class='cmssmi-10x-x-120'>i </span><span class='cmsssy-10x-x-120'>ˇ </span><span class='cmssmi-10x-x-120'>r</span>,
+<div class="proof">
+<!--l. 219--><p class="noindent" ><span class="head">
+<span 
+class="ecsi-1200">Proof.</span> </span>Fix some <span 
+class="cmssmi-10x-x-120">n </span><span 
+class="cmsssy-10x-x-120">˘ </span><span 
+class="cmsmf-12">1</span>, and let <span 
+class="cmssmi-10x-x-120">G </span><span 
+class="cmsmf-12">: </span><img 
+src="main50x.svg" alt="fT; Fg"  class="left" align="middle" /><sup><span 
+class="cmssmi-8">n</span></sup> <span 
+class="cmsssy-10x-x-120">!</span><img 
+src="main51x.svg" alt="fT; Fg"  class="left" align="middle" /> be a truth function. We have two cases.
+      </p><dl class="description"><dt class="description">
+<span class="underline"><span 
+class="ecsx-1200">Case 1.</span></span> </dt><dd 
+class="description">
+      <!--l. 222--><p class="noindent" > The first case is a trivial case. There are two trivial truth functions on <span 
+class="cmssmi-10x-x-120">n </span>variables, namely, the
+      constrant truth functions that take the values <span 
+class="cmsmfbx-12">T </span>and <span 
+class="cmsmfbx-12">F </span>for all inputs. Truth is not something
+      encoded ‘naturally’ into the connectives <img 
+src="main52x.svg" alt="f:; ˆ; ˙g"  class="left" align="middle" />, but falsity is: the <span 
+class="cmsssy-10x-x-120">: </span>connective directly
+      has to do with expressing falsity. Therefore, the trivial truth function that we will show can
+      always be expressed in terms of the desired connectives is the one that is always false. We
+      show this rigorously.
+      </p><!--l. 224--><p class="noindent" >Assume that <span 
+class="cmssmi-10x-x-120">G </span>is identically <span 
+class="cmsmfbx-12">F</span>. Then, define the propositional formula <span 
+class="cmssmi-10x-x-120">Œ </span><span 
+class="cmsmf-12">: </span><img 
+src="main53x.svg" alt="(p1 ˆ (:p1))"  class="left" align="middle" />. Even
+      defining it as a formula on <span 
+class="cmssmi-10x-x-120">n </span>variables, it is clear to see that its truth function <span 
+class="cmssmi-10x-x-120">F</span><sub><span 
+class="cmssmi-8">Œ</span></sub> is identically
+                                                                                           
+
+                                                                                           
+      <span 
+class="cmsmfbx-12">F</span>. Therefore, <span 
+class="cmssmi-10x-x-120">G </span><span 
+class="cmsmf-12">= </span><span 
+class="cmssmi-10x-x-120">F</span><sub><span 
+class="cmssmi-8">Œ</span></sub>.<span class="footnote-mark"><a 
+href="main2.html#fn1x2"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-6003f1"></a> 
+      </p></dd><dt class="description">
+<span class="underline"><span 
+class="ecsx-1200">Case 2.</span></span> </dt><dd 
+class="description">
+      <!--l. 226--><p class="noindent" > The second case will be the nontrivial case of when a truth function can take on both values
+      <span 
+class="cmsmfbx-12">T </span>and <span 
+class="cmsmfbx-12">F</span>. The way we will show that <img 
+src="main54x.svg" alt="f:; ˆ;˙g"  class="left" align="middle" /> is adequate is by constructing a propositional
+      formula in <span 
+class="cmssmi-10x-x-120">n </span>variables whose truth function is <span 
+class="cmsmfbx-12">T </span>whenever the one in question is <span 
+class="cmsmfbx-12">T</span>. We will
+      do this by isolating the inputs that yield <span 
+class="cmsmfbx-12">T </span>and manipulating propositional variables in a way
+      that corresponds to these inputs.
+      </p><!--l. 228--><p class="noindent" >Assume that <span 
+class="cmssmi-10x-x-120">G </span>is not identically <span 
+class="cmsmfbx-12">T</span>. Then, list all <span 
+class="cmssmi-10x-x-120">v </span><span 
+class="cmsssy-10x-x-120">2</span><img 
+src="main55x.svg" alt="fT; Fg"  class="left" align="middle" /><sup><span 
+class="cmssmi-8">n</span></sup> such that <span 
+class="cmssmi-10x-x-120">G</span><span 
+class="cmsmf-12">(</span><span 
+class="cmssmi-10x-x-120">v</span><span 
+class="cmsmf-12">) = </span><span 
+class="cmsmfbx-12">T</span>. Since <img 
+src="main56x.svg" alt="fT; Fg"  class="left" align="middle" /><sup><span 
+class="cmssmi-8">n</span></sup>
+      is a finite set, this list is finite, and we can number these <span 
+class="cmssmi-10x-x-120">v</span><sub><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmssmi-10x-x-120">…</span><span 
+class="cmssmi-10x-x-120">;v</span><sub><span 
+class="cmssmi-8">r</span></sub>. For each <span 
+class="cmsmf-12">1 </span><span 
+class="cmsssy-10x-x-120">ˇ </span><span 
+class="cmssmi-10x-x-120">i </span><span 
+class="cmsssy-10x-x-120">ˇ </span><span 
+class="cmssmi-10x-x-120">r</span>,
       denote
+      </p><table 
+class="align-star">
+                                  <tr><td 
+class="align-odd"><span 
+class="cmssmi-10x-x-120">v</span><sub><span 
+class="cmssmi-8">i</span></sub> <span 
+class="cmsmf-12">= </span><img 
+src="main57x.svg" alt="(v  ;:::;v )
+  i1      ir"  class="left" align="middle" /></td>                                  <td 
+class="align-even"></td>                                  <td 
+class="align-label"></td></tr></table>
+      <!--l. 232--><p class="noindent" >where <span 
+class="cmssmi-10x-x-120">v</span><sub><span 
+class="cmssmi-8">ij</span></sub> <span 
+class="cmsssy-10x-x-120">2</span><img 
+src="main58x.svg" alt="fT; Fg"  class="left" align="middle" /> is the <span 
+class="cmssmi-10x-x-120">j</span>th component of <span 
+class="cmssmi-10x-x-120">v</span><sub><span 
+class="cmssmi-8">i</span></sub>. Let <span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmssmi-10x-x-120">…</span><span 
+class="cmssmi-10x-x-120">;p</span><sub><span 
+class="cmssmi-8">n</span></sub> be propositional variables. Define
+      propositional formulae <img 
+src="main59x.svg" alt="(q  )
+  ij"  class="left" align="middle" /> <sub><span 
+class="cmsmf-8">1</span><span 
+class="cmsssy-8">ˇ</span><span 
+class="cmssmi-8">i</span><span 
+class="cmsssy-8">ˇ</span><span 
+class="cmssmi-8">r;</span><span 
+class="cmsmf-8">1</span><span 
+class="cmsssy-8">ˇ</span><span 
+class="cmssmi-8">j</span><span 
+class="cmsssy-8">ˇ</span><span 
+class="cmssmi-8">n</span></sub> by
                                                                                            
 
                                                                                            
-      </p><table class='align-star'>
-                                  <tr><td class='align-odd'><span class='cmssmi-10x-x-120'>v</span><sub><span class='cmssmi-8'>i</span></sub> <span class='cmsmf-12'>= </span><img align='middle' alt='(vi1;:::;vir)' class='left' src='main54x.svg' /></td>                                  <td class='align-even'></td>                                  <td class='align-label'></td></tr></table>
-      <!-- l. 217 --><p class='noindent'>where <span class='cmssmi-10x-x-120'>v</span><sub><span class='cmssmi-8'>ij</span></sub> <span class='cmsssy-10x-x-120'>2</span><img align='middle' alt='fT;Fg' class='left' src='main55x.svg' /> is the <span class='cmssmi-10x-x-120'>j</span>th component of <span class='cmssmi-10x-x-120'>v</span><sub><span class='cmssmi-8'>i</span></sub>. Let <span class='cmssmi-10x-x-120'>p</span><sub><span class='cmsmf-8'>1</span></sub><span class='cmssmi-10x-x-120'>;…;p</span><sub><span class='cmssmi-8'>n</span></sub> be propositional variables. Define the
-      propositional formulae <span id='textcolor2'><span class='ectt-1200'>sorry</span></span></p></dd></dl>
-                                                                                          □
-</div>
-<!-- l. 221 --><p class='noindent'>Here, we make an important definition.
-</p>
-<div class='tcolorbox tcolorbox' id='tcolobox-19'>     
-<div class='tcolorbox-title'>
-</div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 223 --><p class='noindent'><span class='head'>
-<a id='x1-6005r18'></a>
-<span class='ecsx-1200'>Definition 1.1.18 </span>(Disjunctive Normal Form)<span class='ecsx-1200'>.</span>  </span>When a propositional formula is expressed
-only in terms of propositional variables and the set <img align='middle' alt='f:; ˆ;˙g' class='left' src='main56x.svg' /> of connectives, it is said to be
-in <span class='ecsx-1200'>disjunctive normal form</span>, which we abbreviate to <span class='ecsx-1200'>DNF</span>.
-</p>
-</div>
-<!-- l. 225 --><p class='noindent'></p> 
-</div> 
-</div>
-<!-- l. 227 --><p class='noindent'>The point of Theorem <a href='#x1-6002r17'>1.1.17</a> is the following.
+      </p><table 
+class="align-star">
+                               <tr><td 
+class="align-odd"><span 
+class="cmssmi-10x-x-120">q</span><sub><span 
+class="cmssmi-8">ij</span></sub> <span 
+class="cmsmf-12">: </span><img 
+src="main60x.svg" alt="8
+><  pj     if vij = T
+
+>: (:p )  if v = F
+     j      ij"  class="left" align="middle" /></td>                               <td 
+class="align-even"></td>                               <td 
+class="align-label"></td></tr></table>
+      <!--l. 239--><p class="noindent" >Then, <span 
+class="cmssmi-10x-x-120">q</span><sub><span 
+class="cmssmi-8">ij</span></sub> has value <span 
+class="cmsmfbx-12">T </span>if and only if <span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmssmi-8">j</span></sub> has value <span 
+class="cmssmi-10x-x-120">v</span><sub><span 
+class="cmssmi-8">ij</span></sub>. The idea is to now construct a propositional
+      formula that has value <span 
+class="cmsmfbx-12">T </span>if and only if <img 
+src="main61x.svg" alt="(p1;:::;pn)"  class="left" align="middle" /> is one of the <span 
+class="cmssmi-10x-x-120">v</span><sub><span 
+class="cmssmi-8">i</span></sub>.
+      </p><!--l. 241--><p class="noindent" >First, we formalise the notion of the <img 
+src="main62x.svg" alt="(p1;: ::;pn)"  class="left" align="middle" /> taking the value of one of the <span 
+class="cmssmi-10x-x-120">v</span><sub><span 
+class="cmssmi-8">i</span></sub>. The idea
+      is to combine them using the <span 
+class="cmsssy-10x-x-120">ˆ </span>connective. Define propositional formulae <img 
+src="main63x.svg" alt="(  )
+   i"  class="left" align="middle" /> <sub><span 
+class="cmsmf-8">1</span><span 
+class="cmsssy-8">ˇ</span><span 
+class="cmssmi-8">i</span><span 
+class="cmsssy-8">ˇ</span><span 
+class="cmssmi-8">r</span></sub>
+      by
+      </p><table 
+class="align-star">
+                                 <tr><td 
+class="align-odd"><span 
+class="cmssmi-10x-x-120"></span><sub><span 
+class="cmssmi-8">i</span></sub> <span 
+class="cmsmf-12">: </span><img 
+src="main64x.svg" alt="(qi1 ˆ ΔΔΔ ˆ qin)"  class="left" align="middle" /></td>                                 <td 
+class="align-even"></td>                                 <td 
+class="align-label"></td></tr></table>
+      <!--l. 245--><p class="noindent" >Then, we have that for all <span 
+class="cmsmf-12">1 </span><span 
+class="cmsssy-10x-x-120">ˇ </span><span 
+class="cmssmi-10x-x-120">i </span><span 
+class="cmsssy-10x-x-120">ˇ </span><span 
+class="cmssmi-10x-x-120">r </span>and <span 
+class="cmssmi-10x-x-120">v </span><span 
+class="cmsssy-10x-x-120">2</span><img 
+src="main65x.svg" alt="fT; Fg"  class="left" align="middle" /><sup><span 
+class="cmssmi-8">n</span></sup>,
                                                                                            
 
                                                                                            
+      </p><table 
+class="align-star">
+ <tr><td 
+class="align-odd"><span 
+class="cmssmi-10x-x-120">F</span><sub><span 
+class="cmssmi-8"></span><sub><span 
+class="cmssmi-6">i</span></sub></sub><span 
+class="cmsmf-12">(</span><span 
+class="cmssmi-10x-x-120">v</span><span 
+class="cmsmf-12">) = </span><span 
+class="cmsmfbx-12">T</span> <span 
+class="cmssmi-10x-x-120">⟺</span> <span 
+class="cmssmi-10x-x-120">q</span><sub><span 
+class="cmssmi-8">i</span><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmssmi-10x-x-120">…</span><span 
+class="cmssmi-10x-x-120">;q</span><sub><span 
+class="cmssmi-8">in</span></sub> all have value <span 
+class="cmsmfbx-12">T</span> <span 
+class="cmssmi-10x-x-120">⟺</span> Each <span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmssmi-8">j</span></sub> has value <span 
+class="cmssmi-10x-x-120">v</span><sub><span 
+class="cmssmi-8">ij</span></sub> <span 
+class="cmssmi-10x-x-120">⟺</span> <span 
+class="cmssmi-10x-x-120">v </span><span 
+class="cmsmf-12">= </span><span 
+class="cmssmi-10x-x-120">v</span><sub><span 
+class="cmssmi-8">i</span></sub></td> <td 
+class="align-even"></td> <td 
+class="align-label">                 </td></tr></table>
+      <!--l. 255--><p class="noindent" >Next, we combine these <span 
+class="cmssmi-10x-x-120"></span><sub><span 
+class="cmssmi-8">i</span></sub> so that the truth function of the resulting formula is <span 
+class="cmsmfbx-12">T </span>if and only if one
+      of the <span 
+class="cmssmi-10x-x-120"></span><sub><span 
+class="cmssmi-8">i</span></sub> is true, a fact that would be equivalent to the input of the truth function being
+      precisely one of the <span 
+class="cmssmi-10x-x-120">v</span><sub><span 
+class="cmssmi-8">i</span></sub>. We do this using the <span 
+class="cmsssy-10x-x-120">˙ </span>connective. Define the propositional
+      formula
+      </p><table 
+class="align-star">
+                                  <tr><td 
+class="align-odd"><span 
+class="cmssmi-10x-x-120"># </span><span 
+class="cmsmf-12">: </span><img 
+src="main66x.svg" alt="(  1 ˙ ΔΔΔ ˙ r)"  class="left" align="middle" /></td>                                  <td 
+class="align-even"></td>                                  <td 
+class="align-label"></td></tr></table>
+      </dd></dl>
+<!--l. 260--><p class="noindent" >Then, for all <span 
+class="cmssmi-10x-x-120">v </span><span 
+class="cmsssy-10x-x-120">2</span><img 
+src="main67x.svg" alt="fT; Fg"  class="left" align="middle" /><sup><span 
+class="cmssmi-8">n</span></sup>, we have that
+                                                                                           
+
+                                                                                           
+</p><table 
+class="align-star">
+       <tr><td 
+class="align-odd"><span 
+class="cmssmi-10x-x-120">F</span><sub><span 
+class="cmssmi-8">#</span></sub><span 
+class="cmsmf-12">(</span><span 
+class="cmssmi-10x-x-120">v</span><span 
+class="cmsmf-12">) = </span><span 
+class="cmsmfbx-12">T</span> <span 
+class="cmssmi-10x-x-120">⟺</span> One of the <span 
+class="cmssmi-10x-x-120"></span><sub><span 
+class="cmssmi-8">i</span></sub> is true <span 
+class="cmssmi-10x-x-120">⟺</span> <span 
+class="cmssmi-10x-x-120">v</span> is precisely equal to one of the <span 
+class="cmssmi-10x-x-120">v</span><sub><span 
+class="cmssmi-8">i</span></sub></td>       <td 
+class="align-even"></td>       <td 
+class="align-label"> </td></tr></table>
+<!--l. 268--><p class="noindent" >In partiular, we have that <span 
+class="cmssmi-10x-x-120">F</span><sub><span 
+class="cmssmi-8">#</span></sub><span 
+class="cmsmf-12">(</span><span 
+class="cmssmi-10x-x-120">v</span><span 
+class="cmsmf-12">) = </span><span 
+class="cmsmfbx-12">T </span>if and only if <span 
+class="cmssmi-10x-x-120">G</span><span 
+class="cmsmf-12">(</span><span 
+class="cmssmi-10x-x-120">v</span><span 
+class="cmsmf-12">) = </span><span 
+class="cmsmfbx-12">T </span>for all <span 
+class="cmssmi-10x-x-120">v </span><span 
+class="cmsssy-10x-x-120">2</span><img 
+src="main68x.svg" alt="fT; Fg"  class="left" align="middle" /><sup><span 
+class="cmssmi-8">n</span></sup>. Then, by
+Lemma <a 
+href="#x1-5003r6">1.1.6</a>, we are done.                                                                                      □
 </p>
-<div class='tcolorbox tcolorbox' id='tcolobox-20'>     
-<div class='tcolorbox-title'>
+</div>
+<!--l. 271--><p class="noindent" >Before illustrating the point of the above theorem, we make an important definition.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-23">     
+<div class="tcolorbox-title">
 </div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 229 --><p class='noindent'><span class='head'>
-<a id='x1-6006r19'></a>
-<span class='ecsx-1200'>Corollary 1.1.19.</span>  </span><span class='ecsi-1200'>Every propositional formula is expressible in DNF.</span>
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 273--><p class="noindent" ><span class="head">
+<a 
+ id="x1-6005r19"></a>
+<span 
+class="ecsx-1200">Definition 1.1.19 </span>(Disjunctive Normal Form)<span 
+class="ecsx-1200">.</span>  </span>When a propositional formula is expressed
+only in terms of propositional variables and the set <img 
+src="main69x.svg" alt="f:; ˆ;˙g"  class="left" align="middle" /> of connectives, it is said to be
+in <span 
+class="ecsx-1200">disjunctive normal form</span>, which we abbreviate to <span 
+class="ecsx-1200">DNF</span>.
 </p>
 </div>
-<!-- l. 231 --><p class='noindent'></p> 
+<!--l. 275--><p class="noindent" ></p> 
 </div> 
 </div>
-<div class='proof'>
-<!-- l. 233 --><p class='noindent'><span class='head'>
-<span class='ecsi-1200'>Proof.</span> </span>We know that every propositional formula admits a truth function. For any propositional
-formula, we can apply Theorem <a href='#x1-6002r17'>1.1.17</a> to its truth function. Then, unfolding the definition of
-adequacy yields the desired result.                                                                              □
+<!--l. 277--><p class="noindent" >What Theorem <a 
+href="#x1-6002r18">1.1.18</a> then tells us is that every propositional formula is expressible in DNF.
 </p>
-</div>
-<div class='tcolorbox tcolorbox' id='tcolobox-21'>     
-<div class='tcolorbox-title'>
+<div class="tcolorbox tcolorbox" id="tcolobox-24">     
+<div class="tcolorbox-title">
                                                                                            
 
                                                                                            
 </div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 236 --><p class='noindent'><span class='head'>
-<a id='x1-6007r20'></a>
-<span class='ecsx-1200'>Example 1.1.20.</span>  </span>Let <span class='cmssmi-10x-x-120'>p</span><sub><span class='cmsmf-8'>1</span></sub> and <span class='cmssmi-10x-x-120'>p</span><sub><span class='cmsmf-8'>2</span></sub> be propositional variables. Consider the propositional formula
-<span class='cmssmi-10x-x-120'>Ø </span><span class='cmsmf-12'>: </span><img align='middle' alt='((p1 ! p2) !  (:p2))' class='left' src='main57x.svg' />. We can see that <span class='cmssmi-10x-x-120'>F</span><sub><span class='cmssmi-8'>Ø</span></sub><span class='cmsmf-12'>(</span><span class='cmssmi-10x-x-120'>v</span><span class='cmsmf-12'>) = </span><span class='cmsmfbx-12'>T </span>only if <span class='cmssmi-10x-x-120'>v </span><span class='cmsmf-12'>= </span><img align='middle' alt='(T; F)' class='left' src='main58x.svg' /> or <span class='cmssmi-10x-x-120'>v </span><span class='cmsmf-12'>= </span><img align='middle' alt='(F;F)' class='left' src='main59x.svg' />.
-Therefore, the DNF of <span class='cmssmi-10x-x-120'>Ø </span>is
-</p><table class='align-star'>
-                           <tr><td class='align-odd'><img align='middle' alt='((p1 ˆ (:p2)) ˙ ((:p1) ˆ (:p2)))' class='left' src='main60x.svg' /></td>                           <td class='align-even'></td>                           <td class='align-label'></td></tr></table>
-</div>
-<!-- l. 241 --><p class='noindent'></p> 
-</div> 
-</div>
-<!-- l. 243 --><p class='noindent'>Despite the result about DNF, it turns out there are other sets of connectives that are adequate.
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 279--><p class="noindent" ><span class="head">
+<a 
+ id="x1-6006r20"></a>
+<span 
+class="ecsx-1200">Corollary 1.1.20.</span>  </span><span 
+class="ecsi-1200">For every propositional formula in </span><span 
+class="cmssmi-10x-x-120">n </span><span 
+class="ecsi-1200">variables, there exists a logically</span>
+<span 
+class="ecsi-1200">equivalent propositional formula in </span><span 
+class="cmssmi-10x-x-120">n </span><span 
+class="ecsi-1200">variables that is in DNF.</span>
 </p>
-<div class='tcolorbox tcolorbox' id='tcolobox-22'>     
-<div class='tcolorbox-title'>
+</div>
+<!--l. 281--><p class="noindent" ></p> 
+</div> 
+</div>
+<div class="proof">
+<!--l. 283--><p class="noindent" ><span class="head">
+<span 
+class="ecsi-1200">Proof.</span> </span>We know that every propositional formula admits a truth function. For any propositional
+formula in <span 
+class="cmssmi-10x-x-120">n </span>variables, we can apply Theorem <a 
+href="#x1-6002r18">1.1.18</a> to its truth function. Then, unfolding the
+definition of adequacy yields the desired result.                                                              □
+</p>
+</div>
+<div class="tcolorbox tcolorbox" id="tcolobox-25">     
+<div class="tcolorbox-title">
                                                                                            
 
                                                                                            
 </div> 
-<div class='tcolorbox-content'><div class='newtheorem'>
-<!-- l. 245 --><p class='noindent'><span class='head'>
-<a id='x1-6008r21'></a>
-<span class='ecsx-1200'>Lemma 1.1.21.</span>  </span><span class='ecsi-1200'>The following sets of connectives are adequate.</span>
-      </p><dl class='enumerate-enumitem'><dt class='enumerate-enumitem'>
-   <span class='ecsi-1200'>1.</span> </dt><dd class='enumerate-enumitem'><img align='middle' alt='f:; ˙g' class='left' src='main61x.svg' />
-      </dd><dt class='enumerate-enumitem'>
-   <span class='ecsi-1200'>2.</span> </dt><dd class='enumerate-enumitem'><img align='middle' alt='f:; ˆg' class='left' src='main62x.svg' />
-      </dd><dt class='enumerate-enumitem'>
-   <span class='ecsi-1200'>3.</span> </dt><dd class='enumerate-enumitem'><img align='middle' alt='f:; !g' class='left' src='main63x.svg' /></dd></dl>
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 286--><p class="noindent" ><span class="head">
+<a 
+ id="x1-6007r21"></a>
+<span 
+class="ecsx-1200">Example 1.1.21.</span>  </span>Let <span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">1</span></sub> and <span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">2</span></sub> be propositional variables. Consider the propositional formula
+<span 
+class="cmssmi-10x-x-120">Ø </span><span 
+class="cmsmf-12">: </span><img 
+src="main70x.svg" alt="((p1 ! p2) !  (:p2))"  class="left" align="middle" />. We can see that <span 
+class="cmssmi-10x-x-120">F</span><sub><span 
+class="cmssmi-8">Ø</span></sub><span 
+class="cmsmf-12">(</span><span 
+class="cmssmi-10x-x-120">v</span><span 
+class="cmsmf-12">) = </span><span 
+class="cmsmfbx-12">T </span>only if <span 
+class="cmssmi-10x-x-120">v </span><span 
+class="cmsmf-12">= </span><img 
+src="main71x.svg" alt="(T; F)"  class="left" align="middle" /> or <span 
+class="cmssmi-10x-x-120">v </span><span 
+class="cmsmf-12">= </span><img 
+src="main72x.svg" alt="(F;F)"  class="left" align="middle" />.
+Therefore, the DNF of <span 
+class="cmssmi-10x-x-120">Ø </span>is
+</p><table 
+class="align-star">
+                           <tr><td 
+class="align-odd"><img 
+src="main73x.svg" alt="((p1 ˆ (:p2)) ˙ ((:p1) ˆ (:p2)))"  class="left" align="middle" /></td>                           <td 
+class="align-even"></td>                           <td 
+class="align-label"></td></tr></table>
 </div>
-<!-- l. 252 --><p class='noindent'></p> 
+<!--l. 291--><p class="noindent" ></p> 
 </div> 
 </div>
-<!-- l. 38 --><p class='noindent' id='bibliography'>
+<!--l. 293--><p class="noindent" >It turns out that <img 
+src="main74x.svg" alt="f:;ˆ; ˙g"  class="left" align="middle" /> is not the only adequate set of connectives.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-26">     
+<div class="tcolorbox-title">
                                                                                            
 
                                                                                            
-<a id='Q1-1-7'></a>
-</p><!-- l. 52 --><p class='noindent'>For the latest version of these notes, visit <a class='url' href='https://github.com/thefundamentaltheor3m/LieAlgebrasNotes'><span class='ectt-1200'>https://github.com/thefundamentaltheor3m/LieAlgebrasNotes</span></a>.
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 295--><p class="noindent" ><span class="head">
+<a 
+ id="x1-6008r22"></a>
+<span 
+class="ecsx-1200">Example 1.1.22 </span>(Adequate Sets)<span 
+class="ecsx-1200">.</span>  </span>The following sets of connectives are adequate.
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+  (i) </dt><dd 
+class="enumerate-enumitem"><a 
+ id="x1-60091"></a> <img 
+src="main75x.svg" alt="f:; ˙g"  class="left" align="middle" />
+      </dd><dt class="enumerate-enumitem">
+  (ii) </dt><dd 
+class="enumerate-enumitem"><img 
+src="main76x.svg" alt="f:; ˆg"  class="left" align="middle" />
+      </dd><dt class="enumerate-enumitem">
+ (iii) </dt><dd 
+class="enumerate-enumitem"><img 
+src="main77x.svg" alt="f:; !g"  class="left" align="middle" /></dd></dl>
+<!--l. 302--><p class="noindent" >The way we can prove this is by simplifying each case using Theorem <a 
+href="#x1-6002r18">1.1.18</a>. Fix propositional
+variables <span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;p</span><sub><span 
+class="cmsmf-8">2</span></sub>.
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+  (i) </dt><dd 
+class="enumerate-enumitem">It suffices to show that <span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">1</span></sub> <span 
+class="cmsssy-10x-x-120">ˆ </span><span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">2</span></sub> can be expressed using <span 
+class="cmsssy-10x-x-120">: </span>and <span 
+class="cmsssy-10x-x-120">˙</span>. Indeed,
+      <table 
+class="align-star">
+                   <tr><td 
+class="align-odd"><img 
+src="main78x.svg" alt="(p1 ˆ p2)"  class="left" align="middle" />  is logically equivalent to <img 
+src="main79x.svg" alt="(: ((:p1) ˙ (:p2)))"  class="left" align="middle" /></td>                  <td 
+class="align-even"></td>                  <td 
+class="align-label"></td></tr></table>
+      </dd><dt class="enumerate-enumitem">
+  (ii) </dt><dd 
+class="enumerate-enumitem">It suffices to show that <span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">1</span></sub> <span 
+class="cmsssy-10x-x-120">˙ </span><span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">2</span></sub> can be expressed using <span 
+class="cmsssy-10x-x-120">: </span>and <span 
+class="cmsssy-10x-x-120">ˆ</span>. Indeed,
+      <table 
+class="align-star">
+                   <tr><td 
+class="align-odd"><img 
+src="main80x.svg" alt="(p1 ˙ p2)"  class="left" align="middle" />  is logically equivalent to <img 
+src="main81x.svg" alt="(: ((:p1) ˆ (:p2)))"  class="left" align="middle" /></td>                  <td 
+class="align-even"></td>                  <td 
+class="align-label"></td></tr></table>
+      </dd><dt class="enumerate-enumitem">
+ (iii) </dt><dd 
+class="enumerate-enumitem">By Case <a 
+href="#x1-60091">(i)<!--tex4ht:ref: Ch1:Lemma:AdequateSets:Case:1 --></a>, it suffices to show that <span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">1</span></sub> <span 
+class="cmsssy-10x-x-120">˙ </span><span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">2</span></sub> can be expressed in terms of <span 
+class="cmsssy-10x-x-120">: </span>and <span 
+class="cmsssy-10x-x-120">!</span>.
+      Indeed,
+      <table 
+class="align-star">
+                      <tr><td 
+class="align-odd"><img 
+src="main82x.svg" alt="(p1 ˙ p2)"  class="left" align="middle" />  is logically equivalent to <img 
+src="main83x.svg" alt="((:p1) !  p2)"  class="left" align="middle" /></td>                      <td 
+class="align-even"></td>                      <td 
+class="align-label"></td></tr></table>
+      </dd></dl>
+</div>
+<!--l. 319--><p class="noindent" ></p> 
+</div> 
+</div>                                                                                           
+
+                                                                                           
+<!--l. 321--><p class="noindent" >There are also sets of connectives that are not adequate.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-27">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 323--><p class="noindent" ><span class="head">
+<a 
+ id="x1-6015r23"></a>
+<span 
+class="ecsx-1200">Non-Example 1.1.23 </span>(Inadequate Sets)<span 
+class="ecsx-1200">.</span>  </span>The following sets are not adequate.
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+  (i) </dt><dd 
+class="enumerate-enumitem"><img 
+src="main84x.svg" alt="fˆ; ˙g"  class="left" align="middle" />
+      </dd><dt class="enumerate-enumitem">
+  (ii) </dt><dd 
+class="enumerate-enumitem"><img 
+src="main85x.svg" alt="f:; $g"  class="left" align="middle" /></dd></dl>
+<!--l. 329--><p class="noindent" >The way we can prove this is by constructing truth functions that cannot be realised by combining
+propositional variables using only the connectives in the above sets.
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+  (i) </dt><dd 
+class="enumerate-enumitem">No truth function that is identically false can be realised. For that matter, no truth
+      function that maps an input whose every component is <span 
+class="cmsmfbx-12">T </span>to <span 
+class="cmsmfbx-12">F </span>can be realised. Formally,
+      consider any propositional formula <span 
+class="cmssmi-10x-x-120">Œ </span>built exclusively using a finite set of propositional
+      variables and the connectives <span 
+class="cmsssy-10x-x-120">ˆ </span>and <span 
+class="cmsssy-10x-x-120">˙</span>. One can show, by induction on the number of
+      connectives in <span 
+class="cmssmi-10x-x-120">Œ</span>, that <span 
+class="cmssmi-10x-x-120">F</span><sub><span 
+class="cmssmi-8">Œ</span></sub><span 
+class="cmsmf-12">(</span><span 
+class="cmsmfbx-12">T</span><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmssmi-10x-x-120">…</span><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmsmfbx-12">T</span><span 
+class="cmsmf-12">) = </span><span 
+class="cmsmfbx-12">T</span>. Since this is true of any <span 
+class="cmssmi-10x-x-120">Œ</span>, a truth function
+      mapping an input of the form <span 
+class="cmsmf-12">(</span><span 
+class="cmsmfbx-12">T</span><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmssmi-10x-x-120">…</span><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmsmfbx-12">T</span><span 
+class="cmsmf-12">) </span>to <span 
+class="cmsmfbx-12">F </span>is not the truth function of a propositional
+      formula that only includes <span 
+class="cmsssy-10x-x-120">ˆ </span>and <span 
+class="cmsssy-10x-x-120">˙</span>.
+      </dd><dt class="enumerate-enumitem">
+  (ii) </dt><dd 
+class="enumerate-enumitem">No truth function that is identcally true can be realised.</dd></dl>
+</div>
+<!--l. 335--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 337--><p class="noindent" >It turns out that there is one connective with a rather astounding adequacy property.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-28">     
+<div class="tcolorbox-title">
+                                                                                           
+
+                                                                                           
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 339--><p class="noindent" ><span class="head">
+<a 
+ id="x1-6020r24"></a>
+<span 
+class="ecsx-1200">Definition 1.1.24 </span>(The NOR Connective)<span 
+class="ecsx-1200">.</span>  </span>Define the <span 
+class="ecsx-1200">NOR connective</span>, denoted <span 
+class="cmsssy-10x-x-120">#</span>, via the
+following truth table in propositional variables <span 
+class="cmssmi-10x-x-120">p </span>and <span 
+class="cmssmi-10x-x-120">q</span>. </p><div class="table">
+<!--l. 341--><p class="noindent" ></p><figure class="float" 
+> <!--tex4ht:inline--><div class="tabular"> <table id="TBL-3" class="tabular" 
+ 
+><colgroup id="TBL-3-1g"><col 
+id="TBL-3-1" /><col 
+id="TBL-3-2" /></colgroup><colgroup id="TBL-3-3g"><col 
+id="TBL-3-3" /></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-3-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-3-1-1"  
+class="td11"> <span 
+class="cmssmi-10x-x-120">p </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-1-2"  
+class="td11"> <span 
+class="cmssmi-10x-x-120">q  </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-1-3"  
+class="td11"> <img 
+src="main86x.svg" alt="(p # q)"  class="left" align="middle" />  </td>
+</tr><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-3-2-1"  
+class="td11"> <span 
+class="cmsmfbx-12">T  </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-2-2"  
+class="td11"> <span 
+class="cmsmfbx-12">T </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-2-3"  
+class="td11">   <span 
+class="cmsmfbx-12">F     </span></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-3-3-1"  
+class="td11"> <span 
+class="cmsmfbx-12">T </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-3-3-2"  
+class="td11"> <span 
+class="cmsmfbx-12">F </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-3-3-3"  
+class="td11"> <span 
+class="cmsmfbx-12">F</span></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-3-4-1"  
+class="td11"> <span 
+class="cmsmfbx-12">F  </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-4-2"  
+class="td11"> <span 
+class="cmsmfbx-12">T </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-4-3"  
+class="td11">   <span 
+class="cmsmfbx-12">F     </span></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-3-5-1"  
+class="td11"> <span 
+class="cmsmfbx-12">F </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-3-5-2"  
+class="td11"> <span 
+class="cmsmfbx-12">F </span></td> <td  style="white-space:nowrap; text-align:center;" id="TBL-3-5-3"  
+class="td11"> <span 
+class="cmsmfbx-12">T</span></td></tr></table>                                                                        </div>
+</figure>
+</div>
+</div>
+<!--l. 352--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 354--><p class="noindent" >Informally, NOR corresponds to “neither ... nor ...”. Formally, we have the following.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-29">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 356--><p class="noindent" ><span class="head">
+<a 
+ id="x1-6021r25"></a>
+<span 
+class="ecsx-1200">Lemma 1.1.25.</span>  </span><span 
+class="ecsi-1200">For all propositional variables </span><span 
+class="cmssmi-10x-x-120">p </span><span 
+class="ecsi-1200">and </span><span 
+class="cmssmi-10x-x-120">q</span><span 
+class="ecsi-1200">, the DNF of </span><img 
+src="main87x.svg" alt="(p # q)"  class="left" align="middle" /> <span 
+class="ecsi-1200">is given by</span>
+<img 
+src="main88x.svg" alt="((:p)  ˆ (:q))"  class="left" align="middle" /><span 
+class="ecsi-1200">. In particular, we have that </span><img 
+src="main89x.svg" alt="(p # q)"  class="left" align="middle" />  <span 
+class="ecsi-1200">is logically equivalent to</span> <img 
+src="main90x.svg" alt="((:p) ˆ (:q))"  class="left" align="middle" /><span 
+class="ecsi-1200">.</span>
+</p>
+</div>
+<!--l. 358--><p class="noindent" ></p> 
+</div> 
+</div>                                                                                      We do not
+write out a proof, as it merely involves comparing truth tables.
+<div class="tcolorbox tcolorbox" id="tcolobox-30">     
+<div class="tcolorbox-title">
+                                                                                           
+
+                                                                                           
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 361--><p class="noindent" ><span class="head">
+<a 
+ id="x1-6022r26"></a>
+<span 
+class="ecsx-1200">Example 1.1.26 </span>(An Adequate Set with One Connective)<span 
+class="ecsx-1200">.</span>  </span>It turns out that <img 
+src="main91x.svg" alt="f#g"  class="left" align="middle" /> is connective.
+Indeed, for propositional variables <span 
+class="cmssmi-10x-x-120">p </span>and <span 
+class="cmssmi-10x-x-120">q</span>, we have
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+   1. </dt><dd 
+class="enumerate-enumitem"><img 
+src="main92x.svg" alt="(p # p)"  class="left" align="middle" />  is logically equivalent to <img 
+src="main93x.svg" alt="(:p)"  class="left" align="middle" />.
+      </dd><dt class="enumerate-enumitem">
+   2. </dt><dd 
+class="enumerate-enumitem"><img 
+src="main94x.svg" alt="((p # p) # (q # q))"  class="left" align="middle" />  is logically equivalent to <img 
+src="main95x.svg" alt="(p ˆ q)"  class="left" align="middle" />.</dd></dl>
+</div>
+<!--l. 367--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 38--><p class="noindent" >
+                                                                                           
+
+                                                                                           
+<a 
+ id="Q1-1-7"></a>
+</p><!--l. 52--><p class="noindent" >For the latest version of these notes, visit <a 
+href="https://thefundamentaltheor3m.github.io/LogicNotes/LastLocallyCompiled.pdf" class="url" ><span 
+class="ectt-1200">https://thefundamentaltheor3m.github.io/LogicNotes/LastLocallyCompiled.pdf</span></a>.
 For any suggestions or corrections, please feel free to fork and make a pull request to my
 repository.
 </p>
  
 </body> 
 </html>
+                                                                                           
+
+

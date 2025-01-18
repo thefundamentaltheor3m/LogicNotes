@@ -23,7 +23,7 @@ Propositions can be connected to each other using tools known as \textbf{connect
         \item Implication ($\to$)
         \item The Biconditional ($\lr$)
     \end{enumerate}
-    In particular, we will only use the $\implies$ and $\iff$ symbols when reasoning \textbf{informally}. For \textbf{formal} use, we will stick to the $\to$ and $\lr$ symbols.
+    In particular, we will only use the $\implies$ and $\iff$ symbols when reasoning \textbf{informally}. For \textbf{formal} use, we will stick to the $\to$ and $\lr$ symbols. In more precise terms, we will use $\implies$ and $\iff$ when reasoning \textbf{about} the language we are constructing, whereas we will use $\to$ and $\lr$ when reasoning \textbf{within} the language. As we shall see, it will be of paramount importance to distinguish between these two modes of reasoning.
 \end{boxconvention}
 
 We define them exhaustively as follows.
@@ -101,6 +101,15 @@ Throughout this subsection, $n$ will denote an arbitrary natural number.
     \end{align*}
 \end{boxdefinition}
 
+Before discussing the relevance of truth functions, we will mention a very natural fact.
+
+\begin{boxlemma}\label{Ch1:Lemma:TruthFunEq}
+    To show two truth functions are equal, it suffices that they take the value $\T$ on precisely the same inputs or that they take the value $\F$ on precisely the same inputs.
+\end{boxlemma}
+\begin{proof}
+    This is obvious, because any truth function can only take one of two values. If they take one value on precisely the same inputs, they must take the other value on the other inputs. This precisely corresponds to what it means for functions to be equal by extensionality.
+\end{proof}
+
 These are very directly related to propositional formulae.
 
 \begin{boxdefinition}[Truth Function of a Propositional Formula]
@@ -121,28 +130,28 @@ We see something quite remarkable here: the truth function of the propositional 
 
 We can also be more precise about what the biconditional connective actually tells us.
 
-\begin{boxdefinition}[Logical Equivalence]
+\begin{boxdefinition}[Logical Equivalence]\label{Ch1:Def:LogicalEquivalence}
     The propositional formulae $\psi$ and $\chi$ are \textbf{logically equivalent} if the truth function $F_{\psi \lr \chi}$ of their biconditional is a tautology.
 \end{boxdefinition}
 
 We have a fairly basic result about logical equivalence.
 
-\begin{lemma}
+\begin{boxlemma}
     Let $p_1, \ldots, p_n$ be propositional variables and let $\psi$ and $\chi$ be formulae in $p_1, \ldots, p_n$. Then, $\psi$ and $\chi$ are logically equivalent if and only if $F_{\psi} = F_{\chi}$.
-\end{lemma}
+\end{boxlemma}
 
 We omit the proof of this result as it merely involves checking things manually. A computer should be able to do this almost instantaneously.
 
 We can also say something about composing formulae together.
 
-\begin{lemma}
+\begin{boxlemma}
     Suppose that $\phi$ is a propositional formula with variables $p_1, \ldots, p_n$. Let $\phi_1, \ldots, \phi_n$ be propositional formulae. Denote by $\vartheta$ the result of substituting each $p_i$ with $\phi_i$ in $\phi$. Then,
     \begin{enumerate}[label = \normalfont (\roman*), noitemsep]
         \item $\vartheta$ is a propositional formula.
         \item if $\phi$ is a tautology, so is $\vartheta$.
         \item the truth function of $\vartheta$ is the result of composing the truth function of $\phi$ with the Cartesian product of the truth functions of $\phi_1, \ldots, \phi_n$.
     \end{enumerate}
-\end{lemma}
+\end{boxlemma}
 
 We do not prove this result either, as it merely involves manual verification.
 
@@ -184,20 +193,22 @@ We will not explore this further in this module, but we will adopt the conventio
 
 We will end with a combinatorial fact about truth functions.
 
-\begin{lemma}
+\begin{boxlemma}
     There are $2^{2^n}$ possible truth functions on $n$ variables.
-\end{lemma}
+\end{boxlemma}
 \begin{proof}
     A truth function is any function from a the set $\set{\T, \F}^n$ to the set $\set{\T, \F}$, with no further restrictions. The former set has $2^n$ elements and the latter set has $2$ elements. Therefore, there are $2^{2^n}$ possible truth functions.
 \end{proof}
 
-\subsection{More about Connectives}
+\subsection{Adequacy}
 
 We have defined several connectives so far, but we have yet to say anything about whether we will be defining any more connectives going forward. To begin, we will state an important definition.
 
-\begin{boxdefinition}[Adequacy]
+\begin{boxdefinition}[Adequacy]\label{Ch1:Def:Adequacy}
     We say that a set $S$ of connectives is \textbf{adequate} if for every $n \geq 1$, every truth function on $n$ variables can be expressed as the truth function as a propositional formula which only involves connectives from $S$ (and $n$ propositional variables).
 \end{boxdefinition}
+
+The idea that this definition seeks to express is that a set is adequate if and only if for evern $n$, every propositional formula in $n$ variables is logically equivalent to a propositional formula that only contains those $n$ variables and connectives from the set in question. In other words, every propositional formula should admit an equivalent expression that does not contain any connectives apart from those in the set in question. The reason this is expressed in terms of truth functions is that that is how logical equivalence is \textit{defined} (cf. \Cref{Ch1:Def:LogicalEquivalence}).
 
 We now have the first theorem of this module.
 
@@ -208,29 +219,68 @@ We now have the first theorem of this module.
     Fix some $n \geq 1$, and let $G : \set{\T, \F}^n \to \set{\T, \F}$ be a truth function. We have two cases.
 
     \begin{description}
-        \item[\textbf{\underline{Case 1.}}] Assume that $G$ is identically $\F$. Then, define the propositional formula $\phi : \parenth{p_1 \land \parenth{\neg p_1}}$. Even defining it as a formula on $n$ variables, it is clear to see that its truth function $F_{\phi}$ is identically $\F$. Therefore, $G = F_{\phi}$.\footnote{Admittedly, we are using the Axiom of Extensionality here to define what it means for the two functions to be equal. We will ignore this technicality for now.}
+        \item[\textbf{\underline{Case 1.}}] The first case is a trivial case. There are two trivial truth functions on $n$ variables, namely, the constrant truth functions that take the values $\T$ and $\F$ for all inputs. Truth is not something encoded `naturally' into the connectives $\set{\neg, \land, \lor}$, but falsity is: the $\neg$ connective directly has to do with expressing falsity. Therefore, the trivial truth function that we will show can always be expressed in terms of the desired connectives is the one that is always false. We show this rigorously.
         
-        \item[\textbf{\underline{Case 2.}}] Assume the contrary. Then, list all $v \in \set{\T, \F}^n$ such that $G(v) = \T$. Since $\set{\T, \F}^n$ is a finite set, this list is finite, and we can number these $v_1, \ldots, v_r$. For each $1 \leq i \leq r$, denote
+        Assume that $G$ is identically $\F$. Then, define the propositional formula $\phi : \parenth{p_1 \land \parenth{\neg p_1}}$. Even defining it as a formula on $n$ variables, it is clear to see that its truth function $F_{\phi}$ is identically $\F$. Therefore, $G = F_{\phi}$.\footnote{Admittedly, we are using the Axiom of Extensionality here to define what it means for the two functions to be equal. We will ignore this technicality for now.}
+        
+        \item[\textbf{\underline{Case 2.}}] The second case will be the nontrivial case of when a truth function can take on both values $\T$ and $\F$. The way we will show that $\set{\neg, \land, \lor}$ is adequate is by constructing a propositional formula in $n$ variables whose truth function is $\T$ whenever the one in question is $\T$. We will do this by isolating the inputs that yield $\T$ and manipulating propositional variables in a way that corresponds to these inputs.
+        
+        Assume that $G$ is not identically $\T$. Then, list all $v \in \set{\T, \F}^n$ such that $G(v) = \T$. Since $\set{\T, \F}^n$ is a finite set, this list is finite, and we can number these $v_1, \ldots, v_r$. For each $1 \leq i \leq r$, denote
         \begin{align*}
             v_i = \parenth{v_{i1}, \ldots, v_{ir}}
         \end{align*}
-        where $v_{ij} \in \set{\T, \F}$ is the $j$th component of $v_i$. Let $p_1, \ldots, p_n$ be propositional variables. Define the propositional formulae \sorry % Finish using David Ang's notes
+        where $v_{ij} \in \set{\T, \F}$ is the $j$th component of $v_i$. Let $p_1, \ldots, p_n$ be propositional variables. Define propositional formulae $\parenth{q_{ij}}_{1 \leq i \leq r, 1 \leq j \leq n}$ by
+        \begin{align*}
+            q_{ij} : \begin{cases}
+                p_j & \text{if } v_{ij} = \T \\
+                \parenth{\neg p_j} & \text{if } v_{ij} = \F
+            \end{cases}
+        \end{align*}
+        Then, $q_{ij}$ has value $\T$ if and only if $p_j$ has value $v_{ij}$. The idea is to now construct a propositional formula that has value $\T$ if and only if $\parenth{p_1, \ldots, p_n}$ is one of the $v_i$.
+        
+        First, we formalise the notion of the $\parenth{p_1, \ldots, p_n}$ taking the value of one of the $v_i$. The idea is to combine them using the $\land$ connective. Define propositional formulae $\parenth{\psi_i}_{1 \leq i \leq r}$ by
+        \begin{align*}
+            \psi_i : \parenth{q_{i1} \land \cdots \land q_{in}}
+        \end{align*}
+        Then, we have that for all $1 \leq i \leq r$ and $v \in \set{\T, \F}^n$,
+        \begin{align*}
+            F_{\psi_i}(v) = \T
+            \iff
+            q_{i1}, \ldots, q_{in} \text{ all have value } \T
+            \iff
+            \text{Each } p_j \text{ has value } v_{ij}
+            \iff
+            v = v_i
+        \end{align*}
+        Next, we combine these $\psi_i$ so that the truth function of the resulting formula is $\T$ if and only if one of the $\psi_i$ is true, a fact that would be equivalent to the input of the truth function  being precisely one of the $v_i$. We do this using the $\lor$ connective. Define the propositional formula
+        \begin{align*}
+            \vartheta : \parenth{\psi_1 \lor \cdots \lor \psi_r}
+        \end{align*}
     \end{description}
+    Then, for all $v \in \set{\T, \F}^n$, we have that
+    \begin{align*}
+        F_{\vartheta}(v) = \T
+        \iff
+       \text{One of the } \psi_i \text{ is true}
+        \iff
+        v \text{ is precisely equal to one of the } v_i
+    \end{align*}
+    In partiular, we have that $F_{\vartheta}(v) = \T$ if and only if $G(v) = \T$ for all $v \in \set{\T, \F}^n$. Then, by \Cref{Ch1:Lemma:TruthFunEq}, we are done.
 \end{proof}
 
-Here, we make an important definition.
+Before illustrating the point of the above theorem, we make an important definition.
 
 \begin{boxdefinition}[Disjunctive Normal Form]
     When a propositional formula is expressed only in terms of propositional variables and the set $\set{\neg, \land, \lor}$ of connectives, it is said to be in \textbf{disjunctive normal form}, which we abbreviate to \textbf{DNF}.
 \end{boxdefinition}
 
-The point of \Cref{Ch1:Thm:DNFConnectivesAdequate} is the following.
+What \Cref{Ch1:Thm:DNFConnectivesAdequate} then tells us is that every propositional formula is expressible in DNF.
 
 \begin{boxcorollary}
-    Every propositional formula is expressible in DNF.
+    For every propositional formula in $n$ variables, there exists a logically equivalent propositional formula in $n$ variables that is in DNF.
 \end{boxcorollary}
 \begin{proof}
-    We know that every propositional formula admits a truth function. For any propositional formula, we can apply \Cref{Ch1:Thm:DNFConnectivesAdequate} to its truth function. Then, unfolding the definition of adequacy yields the desired result.
+    We know that every propositional formula admits a truth function. For any propositional formula in $n$ variables, we can apply \Cref{Ch1:Thm:DNFConnectivesAdequate} to its truth function. Then, unfolding the definition of adequacy yields the desired result.
 \end{proof}
 
 \begin{boxexample}
@@ -240,13 +290,78 @@ The point of \Cref{Ch1:Thm:DNFConnectivesAdequate} is the following.
     \end{align*}
 \end{boxexample}
 
-Despite the result about DNF, it turns out there are other sets of connectives that are adequate.
+It turns out that $\set{\neg, \land, \lor}$ is not the only adequate set of connectives.
 
-\begin{boxlemma}
+\begin{boxexample}[Adequate Sets]
     The following sets of connectives are adequate.
-    \begin{enumerate}[noitemsep]
-        \item $\set{\neg, \lor}$
+    \begin{enumerate}[noitemsep, label = \normalfont(\roman*)]
+        \item\label{Ch1:Lemma:AdequateSets:Case:1} $\set{\neg, \lor}$
         \item $\set{\neg, \land}$
         \item $\set{\neg, \to}$
     \end{enumerate}
+    The way we can prove this is by simplifying each case using \Cref{Ch1:Thm:DNFConnectivesAdequate}. Fix propositional variables $p_1, p_2$.
+    \begin{enumerate}[label = \normalfont(\roman*)]
+        \item It suffices to show that $p_1 \land p_2$ can be expressed using $\neg$ and $\lor$. Indeed,
+        \begin{align*}
+            \parenth{p_1 \land p_2} \isleto \parenth{\neg\parenth{\parenth{\neg p_1} \lor \parenth{\neg p_2}}}
+        \end{align*}
+        
+        \item It suffices to show that $p_1 \lor p_2$ can be expressed using $\neg$ and $\land$. Indeed,
+        \begin{align*}
+            \parenth{p_1 \lor p_2} \isleto \parenth{\neg\parenth{\parenth{\neg p_1} \land \parenth{\neg p_2}}}
+        \end{align*}
+
+        \item By Case~\ref{Ch1:Lemma:AdequateSets:Case:1}, it suffices to show that $p_1 \lor p_2$ can be expressed in terms of $\neg$ and $\to$. Indeed,
+        \begin{align*}
+            \parenth{p_1 \lor p_2} \isleto \parenth{\parenth{\neg p_1} \to p_2}
+        \end{align*}
+    \end{enumerate}
+\end{boxexample}
+
+There are also sets of connectives that are not adequate.
+
+\begin{boxnexample}[Inadequate Sets]
+    The following sets are not adequate.
+    \begin{enumerate}[label = (\roman*)]
+        \item $\set{\land, \lor}$
+        \item $\set{\neg, \lr}$
+    \end{enumerate}
+    The way we can prove this is by constructing truth functions that cannot be realised by combining propositional variables using only the connectives in the above sets.
+    \begin{enumerate}[label = (\roman*)]
+        \item No truth function that is identically false can be realised. For that matter, no truth function that maps an input whose every component is $\T$ to $\F$ can be realised. Formally, consider any propositional formula $\phi$ built exclusively using a finite set of propositional variables and the connectives $\land$ and $\lor$. One can show, by induction on the number of connectives in $\phi$, that $F_{\phi}(\T, \ldots, \T) = \T$. Since this is true of any $\phi$, a truth function mapping an input of the form $(\T, \ldots, \T)$ to $\F$ is not the truth function of a propositional formula that only includes $\land$ and $\lor$.
+        
+        \item No truth function that is identcally true can be realised.
+    \end{enumerate}
+\end{boxnexample}
+
+It turns out that there is one connective with a rather astounding adequacy property.
+
+\begin{boxdefinition}[The NOR Connective]
+    Define the \textbf{NOR connective}, denoted $\nor$, via the following truth table in propositional variables $p$ and $q$.
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{cc|c}
+            $p$ & $q$ & $\parenth{p \nor q}$ \\ 
+            \hline
+            $\T$ & $\T$ & $\F$ \\
+            $\T$ & $\F$ & $\F$ \\
+            $\F$ & $\T$ & $\F$ \\
+            $\F$ & $\F$ & $\T$
+        \end{tabular}
+    \end{table}
+\end{boxdefinition}
+
+Informally, NOR corresponds to ``neither ... nor ...''. Formally, we have the following.
+
+\begin{boxlemma}
+    For all propositional variables $p$ and $q$, the DNF of $\parenth{p \nor q}$ is given by $\parenth{\parenth{\neg p} \land \parenth{\neg q}}$. In particular, we have that $\parenth{p \nor q} \isleto \parenth{\parenth{\neg p} \land \parenth{\neg q}}$.
 \end{boxlemma}
+We do not write out a proof, as it merely involves comparing truth tables.
+
+\begin{boxexample}[An Adequate Set with One Connective]
+    It turns out that $\set{\nor}$ is connective. Indeed, for propositional variables $p$ and $q$, we have
+    \begin{enumerate}
+        \item $\parenth{p \nor p} \isleto \parenth{\neg p}$.
+        \item $\parenth{\parenth{p \nor p} \nor \parenth{q \nor q}} \isleto \parenth{p \land q}$.
+    \end{enumerate}
+\end{boxexample}
