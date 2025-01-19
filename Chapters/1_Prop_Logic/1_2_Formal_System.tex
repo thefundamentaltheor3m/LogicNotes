@@ -1,0 +1,237 @@
+\section{A Formal System for Propositional Logic}
+
+The motivating idea for everything we shall do in this section is to try and generate \textit{all tautologies} from certain `basic assumptions', known as \textbf{axioms}, using certain \textbf{deduction rules}. Together, these will form a \textbf{formal system for propositional logic}.
+
+\subsection{Formal Deduction Systems}
+
+This subsection gives a very general definition of a formal deduction system, which allows us to construct `proofs' in a sense more general than propositional logic. We will then specialise this to propositional logic. The material here was \textbf{not covered in lectures}, and is based on~\cite[Definition 1.2.1]{2018LecNotes}.
+
+The first ingredient of a formal system is the set of symbols we are allowed to use within it.
+
+\begin{boxdefinition}[Alphabet]
+    An \textbf{alphabet} is a nonempty list of symbols.
+\end{boxdefinition}
+
+For the remainder of this subsection, fix an alphabet $A$. $A$ is not useful on its own: we need to be able to combine elements of $A$ with each other.
+
+\begin{boxdefinition}[Strings]
+    A \textbf{string} is any finite sequence of of elements of $A$.
+\end{boxdefinition}
+
+We do not always want all strings to be useful to us, as we shall see in the case of propositional logic. Our next ingredient in the construction of a formal system is the precise set of strings we are allowed to use.
+
+\begin{boxdefinition}[Formulae]
+    A set of \textbf{formulae} is a non-empty subset of a set of strings in $A$.
+\end{boxdefinition}
+
+For the remainder of this subsection, fix a set $\mathcal{F}$ of formulae. It will be important that to distinguish the formulae that will serve as our most basic assumptions and those that will be derived from them.
+
+\begin{boxdefinition}[Axioms]
+    A set of \textbf{axioms} is a subset of $\mathcal{F}$.
+\end{boxdefinition}
+
+For the remainder of this subsection, fix a set $\mathcal{A}$ of axioms. We now need to be able to generate formulae from the distinguished ones (ie, axioms).
+
+\begin{boxdefinition}[Deduction Rules]
+    A \textbf{deduction rule} is a function that takes in a finite list of formulae in $\mathcal{F}$ and outputs a formula in $\mathcal{F}$.
+\end{boxdefinition}
+
+Together, these ingredients form a \textbf{formal deduction system}.
+
+\begin{boxdefinition}[Formal Deduction System]
+    A \textbf{formal deduction system} $\Sigma$ is a tuple $(A, \mathcal{F}, \mathcal{A}, \mathcal{D})$, where
+    \begin{enumerate}
+        \item $A$ is an alphabet
+        \item $\mathcal{F}$ is a set of formulae in $A$
+        \item $\mathcal{A}$ is a set of axioms contained in $\mathcal{F}$
+        \item $\mathcal{D}$ is a set of deduction rules on $\mathcal{F}$
+    \end{enumerate}
+\end{boxdefinition}
+
+For the remainder of this subsection, fix a formal deduction system $\Sigma = \parenth{A, \mathcal{F}, \mathcal{A}, \mathcal{D}}$. We can now define what it means to reason in this system.
+
+\begin{boxdefinition}[Proof]
+    A \textbf{proof} in $\Sigma$ is a finite sequence of formulae $\phi_1, \ldots, \phi_n \in \mathcal{F}$ such that each $\phi_i$ is either an axiom in $\mathcal{A}$ or is obtained from $\phi_1, \ldots, \phi_{i-1}$ using a deduction rule in $\mathcal{D}$.
+\end{boxdefinition}
+
+We want to be able to isolate the formulae that are `proven' in this manner.
+
+\begin{boxdefinition}[Theorem]\label{Ch1:Def:Thm}
+    The last formula $\phi_i$ that is contained in a proof $\phi_1, \ldots, \phi_n$ is called a \textbf{theorem} of $\Sigma$. We write $\vdash_{\Sigma} \phi$ to denote that $\phi$ is a theorem of $\Sigma$.
+\end{boxdefinition}
+
+There is a direct correspondence between the way we intuitively think about the proofs and the way we view them here.
+
+\begin{boxconvention}
+    We say that proof $P$ in $\Sigma$ is a \textbf{proof of a theorem $\phi$} if $\phi$ is the last formula in the sequence of formulae that make up $P$.
+\end{boxconvention}
+
+Note the following trivial result.
+
+\begin{boxlemma}
+    Any axiom is a theorem.
+\end{boxlemma}
+\begin{proof}
+    An axiom $\phi$ is a finite string of formulae consisting of a single formula, namely, itself. Therefore, the proof consisting only of $\phi$ is a proof of $\phi$.
+\end{proof}
+
+Finally, we mention a condition on formal deduction systems that lends them to computer-based verification.
+
+\begin{boxdefinition}[Recursive Formal Deduction Systems]
+    Suppose there exists an algorithm that can test whether a string is a formula and whether it is an axiom. Then, $\Sigma$ is called a \textbf{recursive formal deduction system}.
+\end{boxdefinition}
+
+The point of the above definition is that in recursive systems, a computer can systematically generate all possible proofs in $\Sigma$ by checking whether every possible formula is an axiom or is derived from axioms using deduction rules. In this case, the validity of any proof can be checked, because each formula in its constituent sequence can be checked.
+
+We now close our discussion on general formal deduction systems. We will now specialise to propositional logic.
+
+\subsection{Constructing a Formal System Propositional Logic}
+
+The objective of this subsection is to define the formal system for propositional logic that we will use in this module. We want this formal system to correspond to our intuition in a very specific manner: we would like the theorems in this system to be precisely the tautologies. In other words, we want to construct a system in which theorems are precisely `statements that are true'.
+
+If we re-examine \Cref{Ch1:Def:Thm}, we observe something rather interesting: \textit{the definition does not mention truth}! The \textit{validity} of a theorem only has to do with the \textit{deduction rules} of the formal system in which it lives. Therefore, we want to define axioms and deduction rules for propositional logic such that the axioms are `true' (ie, are \textit{tautologies}, as defined in \Cref{Ch1:Def:Tautology}) and the deduction rules preserve truth. This is an important motivation not only for the choice of deduction rule but also the chocie of (adequate) set of connectives we use in our formal system.
+
+We begin by defining the alphabet.
+
+\begin{boxdefinition}[Alphabet for Propositional Logic]\label{Ch1:Def:FormalPropAlphabet}
+    The \textbf{alphabet} for propositional logic consists of the following symbols:
+    \begin{enumerate}
+        \item \textbf{Variables} $p_1, p_2, p_3, \ldots$
+        \item \textbf{Connectives} $\neg, \to$
+        \item \textbf{Punctuation} $(, )$
+    \end{enumerate}
+\end{boxdefinition}
+
+Next, we define the formulae of propositional logic.
+
+\begin{boxdefinition}[Formulae of Propositional Logic]\label{Ch1:Def:FormalPropFormulae}
+    We define the \textbf{formulae} of propositional logic in the following manner.
+    \begin{enumerate}
+        \item Any variable $p_i$ is a formula.
+        \item If $\phi$ is a formula, then $\parenth{\neg \phi}$ is a formula.
+        \item If $\phi$ and $\psi$ are formulae, then $\parenth{\phi \to \psi}$ is a formula.
+        \item Any formula arises from a finite number of applications of the above rules.
+    \end{enumerate}
+\end{boxdefinition}
+
+Next, we define the axioms of propositional logic. These do appear to be a bit unusual when expressed purely in symbols, but we can interpret them in plain English as well.
+
+\begin{boxdefinition}[Axioms of Propositional Logic]\label{Ch1:Def:FormalPropAxioms}
+    Let $\phi, \psi, \chi$ be formulae in propositional logic. The \textbf{axioms} of propositional logic in $\phi$, $\psi$ and (where present) $\chi$ are the following.
+    \begin{enumerate}[label = (A\arabic*)]
+        \item\label{Ch1:Def:PLAxiom:1} $\parenth{\phi \to \parenth{\psi \to \phi}}$
+        \item\label{Ch1:Def:PLAxiom:2} $\parenth{\parenth{\phi \to \parenth{\psi \to \chi}} \to \parenth{\parenth{\phi \to \psi} \to \parenth{\phi \to \chi}}}$
+        \item\label{Ch1:Def:PLAxiom:3} $\parenth{\parenth{\parenth{\neg \phi} \to \parenth{\neg \psi}} \to \parenth{\psi \to \phi}}$
+    \end{enumerate}
+\end{boxdefinition}
+
+We can interpret these axioms as follows.
+\begin{enumerate}[label =~\ref{Ch1:Def:PLAxiom:\arabic*}, noitemsep]
+    \item If $\phi$ is true, then $\phi$ is implied by any statement.
+    \item If $\parenth{\psi \to \chi}$ is true (under some assumption $\phi$), then to prove $\chi$ (assuming $\phi$), it suffices to prove $\psi$ (assuming $\phi$).
+    \item An implication $\parenth{\phi \to \psi}$ is implied by its contrapositive $\parenth{\parenth{\neg \phi} \to \parenth{\neg \psi}}$.
+\end{enumerate}
+Indeed, we can see that these axioms are all tautologies: they are always true. This is exactly what we want from axioms.
+
+\begin{remark}
+    It must be stressed that~\ref{Ch1:Def:PLAxiom:1} and~\ref{Ch1:Def:PLAxiom:2} are axioms \textit{in} $\phi, \psi, \chi$ and~\ref{Ch1:Def:PLAxiom:3} is an axiom \textit{in} $\phi, \psi$. There are therefore \underline{infinitely many axioms}, one for each choice of $\phi$, $\psi$, and, where applicable, $\chi$. In fact,~\ref{Ch1:Def:PLAxiom:1}-\ref{Ch1:Def:PLAxiom:3} are sometimes referred to as \textbf{axiom schemes} instead of just \textbf{axioms} to underscore this.
+\end{remark}
+
+Finally, we define the sole deduction rule of propositional logic.
+
+\begin{boxdefinition}[Deduction Rule of Propositional Logic]\label{Ch1:Def:MP}
+    Fix formulae $\phi$ and $\psi$. The \textbf{deduction rule} on $\phi$ and $\psi$ states:
+    \begin{enumerate}[label = (MP)]
+        \item\label{Ch1:Def:PLDedRule:MP}
+        \begin{center}
+            From $\phi$ and $\parenth{\phi \to \psi}$, we can deduce $\psi$.
+        \end{center}
+    \end{enumerate}
+    This rule is known as \textbf{modus ponens}. We will abbreviate this to~\ref{Ch1:Def:PLDedRule:MP}.
+\end{boxdefinition}
+
+We can now define the formal deduction system for propositional logic.
+
+\begin{boxdefinition}[Formal Deduction System for Propositional Logic]
+    The \textbf{formal deduction system for propositional logic} is the tuple $\L = \parenth{A, \mathcal{F}, \mathcal{A}, \mathcal{D}}$, where
+    \begin{enumerate}
+        \item $A$ is the alphabet for propositional logic consisting of countably many propositional variables, as defined in Definition~\ref{Ch1:Def:FormalPropAlphabet}.
+
+        \item $\mathcal{F}$ is the set of formulae of propositional logic constructed in terms of the connectives $\neg$ and $\to$, as defined in Definition~\ref{Ch1:Def:FormalPropFormulae}.
+        
+        \item $\mathcal{A}$ is the set of axioms~\ref{Ch1:Def:PLAxiom:1}-\ref{Ch1:Def:PLAxiom:3} of propositional logic defined in Definition~\ref{Ch1:Def:FormalPropAxioms}.
+        
+        \item $\mathcal{D}$ is the deduction rule~\ref{Ch1:Def:PLDedRule:MP} defined in Definition~\ref{Ch1:Def:MP}.
+    \end{enumerate}
+\end{boxdefinition}
+
+We are now ready to write formal proofs in $\L$.
+
+\begin{boxexample}
+    Suppose $\phi$ is any $\L$-formula. Then, $\parenth{\phi \to \phi}$ is a theorem of $\L$, ie,
+    \begin{align}
+        \vdash_{\L} \parenth{\phi \to \phi}
+        \label{Ch1:Eg:Self_implies_self}
+    \end{align}
+    It is not obvious how to prove this statement using only~\ref{Ch1:Def:PLAxiom:1}-\ref{Ch1:Def:PLAxiom:3} and~\ref{Ch1:Def:PLDedRule:MP}. But it is possible. We present a formal proof that consists of a sequence of five formulas, each either axiomatic or deduced from two previous ones using modus ponens.
+    \begin{proof}[Formal proof in $\L$]\hfill
+        \begin{enumerate}
+            \item $\parenth{\phi \to \parenth{\parenth{\phi \to \phi} \to \phi}}$
+            % \hfill \textit{Call this $\chi$}
+            \newline
+            \textit{\underline{Justification:}
+                We apply~\ref{Ch1:Def:PLAxiom:1} to $\phi, \parenth{\phi \to \phi}, \phi$.
+            }
+
+            \item $\parenth{\parenth{\phi \to \parenth{\parenth{\phi \to \phi} \to \phi}} \to \parenth{\parenth{\phi \to \parenth{\phi \to \phi}} \to \parenth{\phi \to \phi}}}$
+            % \hfill \textit{Call this $\chi$}
+            \newline
+            \textit{\underline{Justification:}
+                We apply~\ref{Ch1:Def:PLAxiom:2} to $\phi, \parenth{\phi \to \phi}, \phi$.
+            }
+
+            \item $\parenth{\parenth{\phi \to \parenth{\phi \to \phi}} \to \parenth{\phi \to \phi}}$
+            \newline
+            \textit{\underline{Justification:}
+            We apply~\ref{Ch1:Def:PLDedRule:MP} to steps 2 and 1. % Following Lean convention of `specialize step_2 step_1`
+            }
+
+            \item $\parenth{\phi \to \parenth{\phi \to \phi}}$
+            \newline
+            \textit{\underline{Justification:}
+                We apply~\ref{Ch1:Def:PLAxiom:1} to $\phi, \phi, \phi$.
+            }
+
+            \item $\parenth{\phi \to \phi}$
+            \newline
+            \textit{\underline{Justification:}
+                We apply~\ref{Ch1:Def:PLDedRule:MP} to steps 3 and 4.
+            }
+        \end{enumerate}
+    \end{proof}
+\end{boxexample}
+
+We need a little more machinery before we can prove that theorems in $\L$ are precisely the tautologies. We will develop this in the next subsection.
+
+\subsection{Deductions in $\L$}
+
+In this subsection, we will develop some machinery as well as notation to deal with the concept of deduction. However, before we proceed any further, we will give a precise definition of what a deduction is.
+
+Throughout this subsection, fix a set of $\L$-formulas $\Gamma$.
+
+\begin{boxdefinition}[Deduction]
+    A \textbf{deduction} from $\Gamma$ is a finite sequence of $\L$-formulae $\phi_1, \ldots, \phi_n$ such that for all $1 \leq i \leq n$, either
+    \begin{itemize}% [label = $-$]
+        \item $\phi_i$ is an axiom of $\L$,
+        \item $\phi_i$ is a formula in $\Gamma$, or
+        \item $\phi_i$ is obtained from $\phi_1, \ldots, \phi_{i-1}$ using modus ponens.
+    \end{itemize}
+\end{boxdefinition}
+
+Deductions end in consequences.
+
+\begin{boxdefinition}[Consequence]
+    We say a formula $\phi$ is a \textbf{consequence} of $\Gamma$ if there exists a deduction from $\Gamma$ ending in $\phi$. In this case, we write $\Gamma \vdash_{\L} \phi$.
+\end{boxdefinition}
+
+Note that $\Gamma$ can be empty. In this case, instead of writing $\emptyset \vdash_{\L} \phi$, we write $\vdash_{\L} \phi$. Therefore, the theorems in $\L$ are precisely those formulae that are not consequences of other formulae.

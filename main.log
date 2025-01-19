@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=latex 2025.1.18)  18 JAN 2025 19:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=latex 2025.1.19)  19 JAN 2025 18:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -58,9 +58,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language72). Reported on input line 105.
+(babel)             (\language20). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language72). Reported on input line 108.
+(babel)             (\language20). Reported on input line 108.
 )) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
@@ -2536,36 +2536,36 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
 5.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) (./main.4ct) [2
-
-] (./Chapters/1_Prop_Logic/1_Prop_Logic.tex [3]
-Chapter 1.
+) (./main.4ct
 LaTeX Font Info:    Trying to load font information for OT1+cmsmf on input line
- 14.
+ 11.
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathfonts/ot1cmsmf.fd
 File: ot1cmsmf.fd 2021/06/22
 )
 LaTeX Font Info:    Trying to load font information for U+ssmsa on input line 1
-4.
+1.
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathfonts/ussmsa.fd
 File: ussmsa.fd 2019/04/04
 )
 LaTeX Font Info:    Trying to load font information for U+ssmsb on input line 1
-4.
+1.
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathfonts/ussmsb.fd
 File: ussmsb.fd 2019/04/04
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 14
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 11
 .
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for OMX+yhex on input line 
-14.
+11.
 (/usr/share/texlive/texmf-dist/tex/latex/yhmath/OMXyhex.fd
 File: OMXyhex.fd 
 File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
-)
+)) [2
+
+] (./Chapters/1_Prop_Logic/1_Prop_Logic.tex [3]
+Chapter 1.
 l. 18 Writing main.idv[1] (main0x.svg)
 l. 18 Writing main.idv[2] (main1x.svg)
 l. 18 Writing main.idv[3] (main2x.svg)
@@ -2697,17 +2697,59 @@ l. 364 Writing main.idv[93] (main92x.svg)
 l. 364 Writing main.idv[94] (main93x.svg)
 l. 365 Writing main.idv[95] (main94x.svg)
 l. 365 Writing main.idv[96] (main95x.svg)
-)) [29] [30]
+[29]) (./Chapters/1_Prop_Logic/1_2_Formal_System.tex
+
+LaTeX Warning: Citation '2018LecNotes' on page 30 undefined on input line 7.
+
+[30] [31] [32]
+l. 51 Writing main.idv[97] (main96x.svg)
+[33] [34] [35] [36]
+l. 111 Writing main.idv[98] (main97x.svg)
+l. 112 Writing main.idv[99] (main98x.svg)
+[37]
+l. 122 Writing main.idv[100] (main99x.svg)
+l. 123 Writing main.idv[101] (main100x.svg)
+l. 124 Writing main.idv[102] (main101x.svg)
+[38]
+l. 131 Writing main.idv[103] (main102x.svg)
+l. 132 Writing main.idv[104] (main103x.svg)
+l. 132 Writing main.idv[105] (main104x.svg)
+[39]
+l. 147 Writing main.idv[106] (main105x.svg)
+l. 156 Writing main.idv[107] (main106x.svg)
+[40]
+l. 171 Writing main.idv[108] (main107x.svg)
+l. 175 Writing main.idv[109] (main108x.svg)
+l. 179 Writing main.idv[110] (main109x.svg)
+l. 184 Writing main.idv[111] (main110x.svg)
+l. 186 Writing main.idv[112] (main111x.svg)
+l. 191 Writing main.idv[113] (main112x.svg)
+l. 193 Writing main.idv[114] (main113x.svg)
+l. 199 Writing main.idv[115] (main114x.svg)
+l. 205 Writing main.idv[116] (main115x.svg)
+[41] [42]
+LaTeX Font Info:    Trying to load font information for TS1+xcmss on input line
+ 225.
+LaTeX Font Info:    No file TS1xcmss.fd. on input line 225.
+
+LaTeX Font Warning: Font shape `TS1/xcmss/m/n' undefined
+(Font)              using `TS1/cmr/m/n' instead
+(Font)              for symbol `textbullet' on input line 225.
+
+[43])) [44] [45]
 
 LaTeX Warning: Empty bibliography on input line 48.
 
-[31] 
+[46] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 
 LaTeX Warning: There were undefined references.
 
@@ -2721,12 +2763,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 61581 strings out of 474223
- 1366271 string characters out of 5748759
- 2437936 words of memory out of 5000000
- 82357 multiletter control sequences out of 15000+600000
- 580273 words of font info for 89 fonts, out of 8000000 for 9000
+ 61911 strings out of 474223
+ 1372340 string characters out of 5748759
+ 2440207 words of memory out of 5000000
+ 82683 multiletter control sequences out of 15000+600000
+ 580610 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  112i,17n,134p,1272b,1790s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (34 pages, 156696 bytes).
+Output written on main.dvi (49 pages, 205248 bytes).

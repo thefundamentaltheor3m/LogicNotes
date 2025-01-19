@@ -43,8 +43,17 @@ href="#x1-40001.1.1" id="QQ2-1-4">Propositions and Connectives</a></span>
 href="#x1-50001.1.2" id="QQ2-1-5">Truth Functions</a></span>
 <br /><span class="subsectionToc" >1.1.3 <a 
 href="#x1-60001.1.3" id="QQ2-1-6">Adequacy</a></span>
+<br /><span class="sectionToc" >1.2 <a 
+href="#x1-70001.2" id="QQ2-1-7">A Formal System for Propositional Logic</a></span>
+<br /><span class="subsectionToc" >1.2.1 <a 
+href="#x1-80001.2.1" id="QQ2-1-8">Formal Deduction Systems</a></span>
+<br /><span class="subsectionToc" >1.2.2 <a 
+href="#x1-90001.2.2" id="QQ2-1-9">Constructing a Formal System Propositional Logic</a></span>
+<br /><span class="subsectionToc" >1.2.3 <a 
+href="#x1-100001.2.3" id="QQ2-1-10">Deductions in <span 
+class="cmsssy-10x-x-120">L</span></a></span>
 <br /><span class="chapterToc" > <a 
-href="#Q1-1-7">Bibliography</a></span>
+href="#Q1-1-11">Bibliography</a></span>
 </div>
 <!--l. 28--><p class="noindent" >
                                                                                            
@@ -670,9 +679,9 @@ class="cmsmfbx-12">T</span>! We have a special term for this.
  id="x1-5006r9"></a>
 <span 
 class="ecsx-1200">Definition 1.1.9 </span>(Tautology)<span 
-class="ecsx-1200">.</span>  </span>A  propositional  formula  <span 
-class="cmssmi-10x-x-120">Œ  </span>is  a  <span 
-class="ecsx-1200">tautology  </span>if  its  truth
+class="ecsx-1200">.</span>  </span> A  propositional  formula  <span 
+class="cmssmi-10x-x-120">Œ </span>is  a  <span 
+class="ecsx-1200">tautology </span>if  its  truth
 function <span 
 class="cmssmi-10x-x-120">F</span><sub><span 
 class="cmssmi-8">Œ</span></sub> maps every possible input to <span 
@@ -1792,12 +1801,892 @@ src="main95x.svg" alt="(p ˆ q)"  class="left" align="middle" />.</dd></dl>
 <!--l. 367--><p class="noindent" ></p> 
 </div> 
 </div>
-<!--l. 38--><p class="noindent" >
+<!--l. 369--><p class="noindent" >So far, we have been studying <span 
+class="ecsi-1200">meaning</span>, in the form of truth functions, but have yet to formally define
+<span 
+class="ecsi-1200">what </span>we are allowed to express that <span 
+class="ecsi-1200">has </span>meaning within the propositional paradigm. In other words, we
+have been studying <span 
+class="ecsx-1200">semantics </span>but have yet to define the <span 
+class="ecsx-1200">syntax </span>of propositional logic. We will do this
+in the next section.
+</p>
+<h3 class="sectionHead"><span class="titlemark">1.2   </span> <a 
+ id="x1-70001.2"></a>A Formal System for Propositional Logic</h3>
+<!--l. 3--><p class="noindent" >The motivating idea for everything we shall do in this section is to try and generate <span 
+class="ecsi-1200">all tautologies </span>from
+certain ‘basic assumptions’, known as <span 
+class="ecsx-1200">axioms</span>, using certain <span 
+class="ecsx-1200">deduction rules</span>. Together, these will form
+a <span 
+class="ecsx-1200">formal system for propositional logic</span>.
+</p><!--l. 5--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">1.2.1   </span> <a 
+ id="x1-80001.2.1"></a>Formal Deduction Systems</h4>
+                                                                                           
+
+                                                                                           
+<!--l. 7--><p class="noindent" >This subsection gives a very general definition of a formal deduction system, which allows us to
+construct ‘proofs’ in a sense more general than propositional logic. We will then specialise
+this to propositional logic. The material here was <span 
+class="ecsx-1200">not covered in lectures</span>, and is based
+on [<span 
+class="ecsx-1200">2018LecNotes</span>].
+</p><!--l. 9--><p class="noindent" >The first ingredient of a formal system is the set of symbols we are allowed to use within
+it.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-31">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 11--><p class="noindent" ><span class="head">
+<a 
+ id="x1-8001r1"></a>
+<span 
+class="ecsx-1200">Definition 1.2.1 </span>(Alphabet)<span 
+class="ecsx-1200">.</span>  </span>An <span 
+class="ecsx-1200">alphabet </span>is a nonempty list of symbols.
+</p>
+</div>
+<!--l. 13--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 15--><p class="noindent" >For the remainder of this subsection, fix an alphabet <span 
+class="cmssmi-10x-x-120">A</span>. <span 
+class="cmssmi-10x-x-120">A </span>is not useful on its own: we need to be able to
+combine elements of <span 
+class="cmssmi-10x-x-120">A </span>with each other.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-32">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 17--><p class="noindent" ><span class="head">
+<a 
+ id="x1-8002r2"></a>
+<span 
+class="ecsx-1200">Definition 1.2.2 </span>(Strings)<span 
+class="ecsx-1200">.</span>  </span>A <span 
+class="ecsx-1200">string </span>is any finite sequence of of elements of <span 
+class="cmssmi-10x-x-120">A</span>.
+</p>
+</div>
+<!--l. 19--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 21--><p class="noindent" >We do not always want all strings to be useful to us, as we shall see in the case of propositional logic. Our
+                                                                                           
+
+                                                                                           
+next ingredient in the construction of a formal system is the precise set of strings we are allowed to
+use.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-33">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 23--><p class="noindent" ><span class="head">
+<a 
+ id="x1-8003r3"></a>
+<span 
+class="ecsx-1200">Definition 1.2.3 </span>(Formulae)<span 
+class="ecsx-1200">.</span>  </span>A set of <span 
+class="ecsx-1200">formulae </span>is a non-empty subset of a set of strings
+in <span 
+class="cmssmi-10x-x-120">A</span>.
+</p>
+</div>
+<!--l. 25--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 27--><p class="noindent" >For the remainder of this subsection, fix a set <span 
+class="cmsssy-10x-x-120">F </span>of formulae. It will be important that to distinguish the
+formulae that will serve as our most basic assumptions and those that will be derived from
+them.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-34">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 29--><p class="noindent" ><span class="head">
+<a 
+ id="x1-8004r4"></a>
+<span 
+class="ecsx-1200">Definition 1.2.4 </span>(Axioms)<span 
+class="ecsx-1200">.</span>  </span>A set of <span 
+class="ecsx-1200">axioms </span>is a subset of <span 
+class="cmsssy-10x-x-120">F</span>.
+</p>
+</div>
+<!--l. 31--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 33--><p class="noindent" >For the remainder of this subsection, fix a set <span 
+class="cmsssy-10x-x-120">A </span>of axioms. We now need to be able to generate formulae
+from the distinguished ones (ie, axioms).
+</p>
+                                                                                           
+
+                                                                                           
+<div class="tcolorbox tcolorbox" id="tcolobox-35">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 35--><p class="noindent" ><span class="head">
+<a 
+ id="x1-8005r5"></a>
+<span 
+class="ecsx-1200">Definition 1.2.5 </span>(Deduction Rules)<span 
+class="ecsx-1200">.</span>  </span>A <span 
+class="ecsx-1200">deduction rule </span>is a function that takes in a finite
+list of formulae in <span 
+class="cmsssy-10x-x-120">F </span>and outputs a formula in <span 
+class="cmsssy-10x-x-120">F</span>.
+</p>
+</div>
+<!--l. 37--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 39--><p class="noindent" >Together, these ingredients form a <span 
+class="ecsx-1200">formal deduction system</span>.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-36">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 41--><p class="noindent" ><span class="head">
+<a 
+ id="x1-8006r6"></a>
+<span 
+class="ecsx-1200">Definition 1.2.6 </span>(Formal Deduction System)<span 
+class="ecsx-1200">.</span>  </span>A <span 
+class="ecsx-1200">formal deduction system </span><span 
+class="cmsmf-12">  </span>is a tuple
+<span 
+class="cmsmf-12">(</span><span 
+class="cmssmi-10x-x-120">A;</span><span 
+class="cmsssy-10x-x-120">F</span><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmsssy-10x-x-120">A</span><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmsssy-10x-x-120">D</span><span 
+class="cmsmf-12">)</span>, where
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+   1. </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmssmi-10x-x-120">A </span>is an alphabet
+      </dd><dt class="enumerate-enumitem">
+   2. </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmsssy-10x-x-120">F </span>is a set of formulae in <span 
+class="cmssmi-10x-x-120">A</span>
+      </dd><dt class="enumerate-enumitem">
+   3. </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmsssy-10x-x-120">A </span>is a set of axioms contained in <span 
+class="cmsssy-10x-x-120">F</span>
+      </dd><dt class="enumerate-enumitem">
+   4. </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmsssy-10x-x-120">D </span>is a set of deduction rules on <span 
+class="cmsssy-10x-x-120">F</span></dd></dl>
+</div>
+<!--l. 49--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 51--><p class="noindent" >For the remainder of this subsection, fix a formal deduction system <span 
+class="cmsmf-12">  = </span><img 
+src="main96x.svg" alt="(A;F ;A; D)"  class="left" align="middle" />. We can now define
+                                                                                           
+
+                                                                                           
+what it means to reason in this system.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-37">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 53--><p class="noindent" ><span class="head">
+<a 
+ id="x1-8011r7"></a>
+<span 
+class="ecsx-1200">Definition 1.2.7 </span>(Proof)<span 
+class="ecsx-1200">.</span>  </span>A <span 
+class="ecsx-1200">proof </span>in <span 
+class="cmsmf-12">  </span>is a finite sequence of formulae <span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmssmi-10x-x-120">…</span><span 
+class="cmssmi-10x-x-120">;Œ</span><sub><span 
+class="cmssmi-8">n</span></sub>  <span 
+class="cmsssy-10x-x-120">2 F</span>
+such that each <span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmssmi-8">i</span></sub> is either an axiom in <span 
+class="cmsssy-10x-x-120">A </span>or is obtained from <span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmssmi-10x-x-120">…</span><span 
+class="cmssmi-10x-x-120">;Œ</span><sub><span 
+class="cmssmi-8">i</span><span 
+class="cmsssy-8">Γ</span><span 
+class="cmsmf-8">1</span></sub> using a deduction
+rule in <span 
+class="cmsssy-10x-x-120">D</span>.
+</p>
+</div>
+<!--l. 55--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 57--><p class="noindent" >We want to be able to isolate the formulae that are ‘proven’ in this manner.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-38">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 59--><p class="noindent" ><span class="head">
+<a 
+ id="x1-8012r8"></a>
+<span 
+class="ecsx-1200">Definition 1.2.8 </span>(Theorem)<span 
+class="ecsx-1200">.</span>  </span> The last formula <span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmssmi-8">i</span></sub> that is contained in a proof <span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmssmi-10x-x-120">…</span><span 
+class="cmssmi-10x-x-120">;Œ</span><sub><span 
+class="cmssmi-8">n</span></sub> is
+called a <span 
+class="ecsx-1200">theorem </span>of <span 
+class="cmsmf-12"> </span>. We write <span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsmf-8"> </span></sub><span 
+class="cmssmi-10x-x-120">Œ </span>to denote that <span 
+class="cmssmi-10x-x-120">Œ </span>is a theorem of <span 
+class="cmsmf-12"> </span>.
+</p>
+</div>
+<!--l. 61--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 63--><p class="noindent" >There is a direct correspondence between the way we intuitively think about the proofs and the way we
+view them here.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-39">     
+<div class="tcolorbox-title">
+                                                                                           
+
+                                                                                           
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 65--><p class="noindent" ><span class="head">
+<span 
+class="ecsx-1200">Convention.</span>  </span>We say that proof <span 
+class="cmssmi-10x-x-120">P </span>in <span 
+class="cmsmf-12">  </span>is a <span 
+class="ecsx-1200">proof of a theorem </span><span 
+class="cmssmi-10x-x-120">Œ </span>if <span 
+class="cmssmi-10x-x-120">Œ </span>is the last formula
+in the sequence of formulae that make up <span 
+class="cmssmi-10x-x-120">P</span>.
+</p>
+</div>
+<!--l. 67--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 69--><p class="noindent" >Note the following trivial result.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-40">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 71--><p class="noindent" ><span class="head">
+<a 
+ id="x1-8013r9"></a>
+<span 
+class="ecsx-1200">Lemma 1.2.9.</span>  </span><span 
+class="ecsi-1200">Any axiom is a theorem.</span>
+</p>
+</div>
+<!--l. 73--><p class="noindent" ></p> 
+</div> 
+</div>
+<div class="proof">
+<!--l. 75--><p class="noindent" ><span class="head">
+<span 
+class="ecsi-1200">Proof.</span> </span>An axiom <span 
+class="cmssmi-10x-x-120">Œ </span>is a finite string of formulae consisting of a single formula, namely, itself.
+Therefore, the proof consisting only of <span 
+class="cmssmi-10x-x-120">Œ </span>is a proof of <span 
+class="cmssmi-10x-x-120">Œ</span>.                                                  □
+</p>
+</div>
+                                                                                           
+
+                                                                                           
+<!--l. 78--><p class="noindent" >Finally, we mention a condition on formal deduction systems that lends them to computer-based
+verification.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-41">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 80--><p class="noindent" ><span class="head">
+<a 
+ id="x1-8014r10"></a>
+<span 
+class="ecsx-1200">Definition 1.2.10 </span>(Recursive Formal Deduction Systems)<span 
+class="ecsx-1200">.</span>  </span>Suppose    there    exists    an
+algorithm that can test whether a string is a formula and whether it is an axiom. Then, <span 
+class="cmsmf-12"> </span>
+is called a <span 
+class="ecsx-1200">recursive formal deduction system</span>.
+</p>
+</div>
+<!--l. 82--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 84--><p class="noindent" >The point of the above definition is that in recursive systems, a computer can systematically generate all
+possible proofs in <span 
+class="cmsmf-12">  </span>by checking whether every possible formula is an axiom or is derived from axioms
+using deduction rules. In this case, the validity of any proof can be checked, because each formula in its
+constituent sequence can be checked.
+</p><!--l. 86--><p class="noindent" >We now close our discussion on general formal deduction systems. We will now specialise to propositional
+logic.
+</p><!--l. 88--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">1.2.2   </span> <a 
+ id="x1-90001.2.2"></a>Constructing a Formal System Propositional Logic</h4>
+<!--l. 90--><p class="noindent" >The objective of this subsection is to define the formal system for propositional logic that we will use in
+this module. We want this formal system to correspond to our intuition in a very specific
+manner: we would like the theorems in this system to be precisely the tautologies. In other
+                                                                                           
+
+                                                                                           
+words, we want to construct a system in which theorems are precisely ‘statements that are
+true’.
+</p><!--l. 92--><p class="noindent" >If we re-examine Definition <a 
+href="#x1-8012r8">1.2.8</a>, we observe something rather interesting: <span 
+class="ecsi-1200">the definition does not</span>
+<span 
+class="ecsi-1200">mention truth</span>! The <span 
+class="ecsi-1200">validity </span>of a theorem only has to do with the <span 
+class="ecsi-1200">deduction rules </span>of the formal system in
+which it lives. Therefore, we want to define axioms and deduction rules for propositional logic
+such that the axioms are ‘true’ (ie, are <span 
+class="ecsi-1200">tautologies</span>, as defined in Definition <a 
+href="#x1-5006r9">1.1.9</a>) and the
+deduction rules preserve truth. This is an important motivation not only for the choice of
+deduction rule but also the chocie of (adequate) set of connectives we use in our formal
+system.
+</p><!--l. 94--><p class="noindent" >We begin by defining the alphabet.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-42">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 96--><p class="noindent" ><span class="head">
+<a 
+ id="x1-9001r11"></a>
+<span 
+class="ecsx-1200">Definition 1.2.11 </span>(Alphabet for Propositional Logic)<span 
+class="ecsx-1200">.</span>  </span> The <span 
+class="ecsx-1200">alphabet </span>for propositional logic
+consists of the following symbols:
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+   1. </dt><dd 
+class="enumerate-enumitem"><span 
+class="ecsx-1200">Variables </span><span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;p</span><sub><span 
+class="cmsmf-8">2</span></sub><span 
+class="cmssmi-10x-x-120">;p</span><sub><span 
+class="cmsmf-8">3</span></sub><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmssmi-10x-x-120">…</span>
+      </dd><dt class="enumerate-enumitem">
+   2. </dt><dd 
+class="enumerate-enumitem"><span 
+class="ecsx-1200">Connectives </span><span 
+class="cmsssy-10x-x-120">:</span><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmsssy-10x-x-120">!</span>
+      </dd><dt class="enumerate-enumitem">
+   3. </dt><dd 
+class="enumerate-enumitem"><span 
+class="ecsx-1200">Punctuation </span><span 
+class="cmsmf-12">(</span><span 
+class="cmssmi-10x-x-120">; </span><span 
+class="cmsmf-12">)</span></dd></dl>
+</div>
+<!--l. 103--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 105--><p class="noindent" >Next, we define the formulae of propositional logic.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-43">     
+<div class="tcolorbox-title">
+                                                                                           
+
+                                                                                           
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 107--><p class="noindent" ><span class="head">
+<a 
+ id="x1-9005r12"></a>
+<span 
+class="ecsx-1200">Definition 1.2.12 </span>(Formulae of Propositional Logic)<span 
+class="ecsx-1200">.</span>  </span> We define the <span 
+class="ecsx-1200">formulae </span>of propositional
+logic in the following manner.
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+   1. </dt><dd 
+class="enumerate-enumitem">Any variable <span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmssmi-8">i</span></sub> is a formula.
+      </dd><dt class="enumerate-enumitem">
+   2. </dt><dd 
+class="enumerate-enumitem">If <span 
+class="cmssmi-10x-x-120">Œ </span>is a formula, then <img 
+src="main97x.svg" alt="(: Œ)"  class="left" align="middle" /> is a formula.
+      </dd><dt class="enumerate-enumitem">
+   3. </dt><dd 
+class="enumerate-enumitem">If <span 
+class="cmssmi-10x-x-120">Œ </span>and <span 
+class="cmssmi-10x-x-120"> </span>are formulae, then <img 
+src="main98x.svg" alt="(Œ !    )"  class="left" align="middle" /> is a formula.
+      </dd><dt class="enumerate-enumitem">
+   4. </dt><dd 
+class="enumerate-enumitem">Any formula arises from a finite number of applications of the above rules.</dd></dl>
+</div>
+<!--l. 115--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 117--><p class="noindent" >Next, we define the axioms of propositional logic. These do appear to be a bit unusual when expressed
+purely in symbols, but we can interpret them in plain English as well.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-44">     
+<div class="tcolorbox-title">
+                                                                                           
+
+                                                                                           
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 119--><p class="noindent" ><span class="head">
+<a 
+ id="x1-9010r13"></a>
+<span 
+class="ecsx-1200">Definition 1.2.13 </span>(Axioms of Propositional Logic)<span 
+class="ecsx-1200">.</span>  </span> Let <span 
+class="cmssmi-10x-x-120">Œ;;Ø </span>be formulae in propositional
+logic. The <span 
+class="ecsx-1200">axioms </span>of propositional logic in <span 
+class="cmssmi-10x-x-120">Œ</span>, <span 
+class="cmssmi-10x-x-120"> </span>and (where present) <span 
+class="cmssmi-10x-x-120">Ø </span>are the following.
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+(A1) </dt><dd 
+class="enumerate-enumitem"><a 
+ id="x1-90111"></a> <img 
+src="main99x.svg" alt="(Œ !  (  !  Œ))"  class="left" align="middle" />
+      </dd><dt class="enumerate-enumitem">
+(A2) </dt><dd 
+class="enumerate-enumitem"><a 
+ id="x1-90122"></a> <img 
+src="main100x.svg" alt="((Œ !  (  !  Ø)) ! ((Œ !    ) ! (Œ !  Ø)))"  class="left" align="middle" />
+      </dd><dt class="enumerate-enumitem">
+(A3) </dt><dd 
+class="enumerate-enumitem"><a 
+ id="x1-90133"></a> <img 
+src="main101x.svg" alt="(((:Œ) !  (:  )) ! (  !  Œ))"  class="left" align="middle" /></dd></dl>
+</div>
+<!--l. 126--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 128--><p class="noindent" >We can interpret these axioms as follows.
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ <a 
+href="#x1-90111">(A1)<!--tex4ht:ref: Ch1:Def:PLAxiom:1 --></a> </dt><dd 
+class="enumerate-enumitem">If <span 
+class="cmssmi-10x-x-120">Œ </span>is true, then <span 
+class="cmssmi-10x-x-120">Œ </span>is implied by any statement.
+      </dd><dt class="enumerate-enumitem">
+ <a 
+href="#x1-90122">(A2)<!--tex4ht:ref: Ch1:Def:PLAxiom:2 --></a> </dt><dd 
+class="enumerate-enumitem">If <img 
+src="main102x.svg" alt="(  !  Ø)"  class="left" align="middle" /> is true (under some assumption <span 
+class="cmssmi-10x-x-120">Œ</span>), then to prove <span 
+class="cmssmi-10x-x-120">Ø </span>(assuming <span 
+class="cmssmi-10x-x-120">Œ</span>), it suffices to
+      prove <span 
+class="cmssmi-10x-x-120"> </span>(assuming <span 
+class="cmssmi-10x-x-120">Œ</span>).
+      </dd><dt class="enumerate-enumitem">
+ <a 
+href="#x1-90133">(A3)<!--tex4ht:ref: Ch1:Def:PLAxiom:3 --></a> </dt><dd 
+class="enumerate-enumitem">An implication <img 
+src="main103x.svg" alt="(Œ !    )"  class="left" align="middle" /> is implied by its contrapositive <img 
+src="main104x.svg" alt="((:Œ) !  (:  ))"  class="left" align="middle" />.</dd></dl>
+<!--l. 134--><p class="noindent" >Indeed, we can see that these axioms are all tautologies: they are always true. This is exactly what we
+want from axioms.
+</p>
+<div class="newtheorem">
+<!--l. 136--><p class="noindent" ><span class="head">
+                                                                                           
+
+                                                                                           
+<span 
+class="ecsi-1200">Remark.</span>  </span>It must be stressed that <a 
+href="#x1-90111">(A1)<!--tex4ht:ref: Ch1:Def:PLAxiom:1 --></a> and <a 
+href="#x1-90122">(A2)<!--tex4ht:ref: Ch1:Def:PLAxiom:2 --></a> are axioms <span 
+class="ecsi-1200">in </span><span 
+class="cmssmi-10x-x-120">Œ;;Ø </span>and <a 
+href="#x1-90133">(A3)<!--tex4ht:ref: Ch1:Def:PLAxiom:3 --></a> is an axiom <span 
+class="ecsi-1200">in</span>
+<span 
+class="cmssmi-10x-x-120">Œ;</span>. There are therefore <span class="underline">infinitely many axioms</span>, one for each choice of <span 
+class="cmssmi-10x-x-120">Œ</span>, <span 
+class="cmssmi-10x-x-120"></span>, and, where applicable,
+<span 
+class="cmssmi-10x-x-120">Ø</span>. In fact, <a 
+href="#x1-90111">(A1)<!--tex4ht:ref: Ch1:Def:PLAxiom:1 --></a>-<a 
+href="#x1-90133">(A3)<!--tex4ht:ref: Ch1:Def:PLAxiom:3 --></a> are sometimes referred to as <span 
+class="ecsx-1200">axiom schemes </span>instead of just <span 
+class="ecsx-1200">axioms </span>to
+underscore this.
+</p>
+</div>
+<!--l. 138--><p class="noindent" >
+</p><!--l. 140--><p class="noindent" >Finally, we define the sole deduction rule of propositional logic.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-45">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 142--><p class="noindent" ><span class="head">
+<a 
+ id="x1-9017r14"></a>
+<span 
+class="ecsx-1200">Definition 1.2.14 </span>(Deduction Rule of Propositional Logic)<span 
+class="ecsx-1200">.</span>  </span> Fix formulae <span 
+class="cmssmi-10x-x-120">Œ </span>and <span 
+class="cmssmi-10x-x-120"></span>. The
+<span 
+class="ecsx-1200">deduction rule </span>on <span 
+class="cmssmi-10x-x-120">Œ </span>and <span 
+class="cmssmi-10x-x-120"> </span>states:
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+(MP) </dt><dd 
+class="enumerate-enumitem"><a 
+ id="x1-90181"></a>
+      <div class="center" 
+>
+<!--l. 146--><p class="noindent" >
+</p><!--l. 147--><p class="noindent" >From <span 
+class="cmssmi-10x-x-120">Œ </span>and <img 
+src="main105x.svg" alt="(Œ !    )"  class="left" align="middle" />, we can deduce <span 
+class="cmssmi-10x-x-120"></span>.</p></div>
+      </dd></dl>
+<!--l. 150--><p class="noindent" >This rule is known as <span 
+class="ecsx-1200">modus ponens</span>. We will abbreviate this to <a 
+href="#x1-90181">(MP)<!--tex4ht:ref: Ch1:Def:PLDedRule:MP --></a>.
+</p>
+</div>
+<!--l. 151--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 153--><p class="noindent" >We can now define the formal deduction system for propositional logic.
+</p>
+                                                                                           
+
+                                                                                           
+<div class="tcolorbox tcolorbox" id="tcolobox-46">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 155--><p class="noindent" ><span class="head">
+<a 
+ id="x1-9019r15"></a>
+<span 
+class="ecsx-1200">Definition 1.2.15 </span>(Formal Deduction System for Propositional Logic)<span 
+class="ecsx-1200">.</span>  </span>The <span 
+class="ecsx-1200">formal deduction</span>
+<span 
+class="ecsx-1200">system for propositional logic </span>is the tuple <span 
+class="cmsssy-10x-x-120">L </span><span 
+class="cmsmf-12">= </span><img 
+src="main106x.svg" alt="(A; F ;A; D)"  class="left" align="middle" />, where
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+   1. </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmssmi-10x-x-120">A </span>is the alphabet for propositional logic consisting of countably many propositional
+      variables, as defined in Definition <a 
+href="#x1-9001r11">1.2.11<!--tex4ht:ref: Ch1:Def:FormalPropAlphabet --></a>.
+      </dd><dt class="enumerate-enumitem">
+   2. </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmsssy-10x-x-120">F </span>is the set of formulae of propositional logic constructed in terms of the connectives
+      <span 
+class="cmsssy-10x-x-120">: </span>and <span 
+class="cmsssy-10x-x-120">!</span>, as defined in Definition <a 
+href="#x1-9005r12">1.2.12<!--tex4ht:ref: Ch1:Def:FormalPropFormulae --></a>.
+      </dd><dt class="enumerate-enumitem">
+   3. </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmsssy-10x-x-120">A </span>is the set of axioms <a 
+href="#x1-90111">(A1)<!--tex4ht:ref: Ch1:Def:PLAxiom:1 --></a>-<a 
+href="#x1-90133">(A3)<!--tex4ht:ref: Ch1:Def:PLAxiom:3 --></a> of propositional logic defined in Definition <a 
+href="#x1-9010r13">1.2.13<!--tex4ht:ref: Ch1:Def:FormalPropAxioms --></a>.
+      </dd><dt class="enumerate-enumitem">
+   4. </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmsssy-10x-x-120">D </span>is the deduction rule <a 
+href="#x1-90181">(MP)<!--tex4ht:ref: Ch1:Def:PLDedRule:MP --></a> defined in Definition <a 
+href="#x1-9017r14">1.2.14<!--tex4ht:ref: Ch1:Def:MP --></a>.</dd></dl>
+</div>
+<!--l. 166--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 168--><p class="noindent" >We are now ready to write formal proofs in <span 
+class="cmsssy-10x-x-120">L</span>.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-47">     
+<div class="tcolorbox-title">
+                                                                                           
+
+                                                                                           
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 170--><p class="noindent" ><span class="head">
+<a 
+ id="x1-9024r16"></a>
+<span 
+class="ecsx-1200">Example 1.2.16.</span>  </span>Suppose <span 
+class="cmssmi-10x-x-120">Œ </span>is any <span 
+class="cmsssy-10x-x-120">L</span>-formula. Then, <img 
+src="main107x.svg" alt="(Œ ! Œ)"  class="left" align="middle" /> is a theorem of <span 
+class="cmsssy-10x-x-120">L</span>,
+ie,
+</p><table 
+class="align">
+                                     <tr><td 
+class="align-odd"> <span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main108x.svg" alt="(Œ !  Œ)"  class="left" align="middle" /></td>                                     <td 
+class="align-even"></td>                                     <td 
+class="align-label"><a 
+ id="x1-9025r1"></a>(1.2.1)                                     </td></tr></table>
+<!--l. 176--><p class="noindent" >It is not obvious how to prove this statement using only <a 
+href="#x1-90111">(A1)<!--tex4ht:ref: Ch1:Def:PLAxiom:1 --></a>-<a 
+href="#x1-90133">(A3)<!--tex4ht:ref: Ch1:Def:PLAxiom:3 --></a> and <a 
+href="#x1-90181">(MP)<!--tex4ht:ref: Ch1:Def:PLDedRule:MP --></a>. But it is possible.
+We present a formal proof that consists of a sequence of five formulas, each either axiomatic or
+deduced from two previous ones using modus ponens.
+</p>
+<div class="proof">
+<!--l. 177--><p class="noindent" ><span class="head">
+<span 
+class="ecsi-1200">Formal proof in </span><span 
+class="cmsssy-10x-x-120">L</span><span 
+class="ecsi-1200">.</span> </span>
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+   1. </dt><dd 
+class="enumerate-enumitem"><img 
+src="main109x.svg" alt="(Œ !  ((Œ !  Œ) ! Œ))"  class="left" align="middle" /> <br 
+class="newline" /><span class="underline"><span 
+class="ecsi-1200">Justification:</span></span> <span 
+class="ecsi-1200">We apply</span><span 
+class="ecsi-1200"> </span><a 
+href="#x1-90111"><span 
+class="ecsi-1200">(A1)</span><!--tex4ht:ref: Ch1:Def:PLAxiom:1 --></a> <span 
+class="ecsi-1200">to </span><span 
+class="cmssmi-10x-x-120">Œ;</span><img 
+src="main110x.svg" alt="(Œ !  Œ)"  class="left" align="middle" /> <span 
+class="cmssmi-10x-x-120">;Œ</span><span 
+class="ecsi-1200">.</span>
+      </dd><dt class="enumerate-enumitem">
+   2. </dt><dd 
+class="enumerate-enumitem"><img 
+src="main111x.svg" alt="((Œ !  ((Œ !  Œ) ! Œ)) !  ((Œ !  (Œ !  Œ)) !  (Œ !  Œ)))"  class="left" align="middle" /> <br 
+class="newline" /><span class="underline"><span 
+class="ecsi-1200">Justification:</span></span> <span 
+class="ecsi-1200">We apply</span><span 
+class="ecsi-1200"> </span><a 
+href="#x1-90122"><span 
+class="ecsi-1200">(A2)</span><!--tex4ht:ref: Ch1:Def:PLAxiom:2 --></a> <span 
+class="ecsi-1200">to </span><span 
+class="cmssmi-10x-x-120">Œ;</span><img 
+src="main112x.svg" alt="(Œ !  Œ)"  class="left" align="middle" /> <span 
+class="cmssmi-10x-x-120">;Œ</span><span 
+class="ecsi-1200">.</span>
+      </dd><dt class="enumerate-enumitem">
+   3. </dt><dd 
+class="enumerate-enumitem"><img 
+src="main113x.svg" alt="((Œ !  (Œ !  Œ)) ! (Œ !  Œ))"  class="left" align="middle" /> <br 
+class="newline" /><span class="underline"><span 
+class="ecsi-1200">Justification:</span></span> <span 
+class="ecsi-1200">We apply</span><span 
+class="ecsi-1200"> </span><a 
+href="#x1-90181"><span 
+class="ecsi-1200">(MP)</span><!--tex4ht:ref: Ch1:Def:PLDedRule:MP --></a> <span 
+class="ecsi-1200">to steps 2 and 1.</span>
+      </dd><dt class="enumerate-enumitem">
+   4. </dt><dd 
+class="enumerate-enumitem"><img 
+src="main114x.svg" alt="(Œ !  (Œ !  Œ))"  class="left" align="middle" /> <br 
+class="newline" /><span class="underline"><span 
+class="ecsi-1200">Justification:</span></span> <span 
+class="ecsi-1200">We apply</span><span 
+class="ecsi-1200"> </span><a 
+href="#x1-90111"><span 
+class="ecsi-1200">(A1)</span><!--tex4ht:ref: Ch1:Def:PLAxiom:1 --></a> <span 
+class="ecsi-1200">to </span><span 
+class="cmssmi-10x-x-120">Œ;Œ;Œ</span><span 
+class="ecsi-1200">.</span>
+      </dd><dt class="enumerate-enumitem">
+   5. </dt><dd 
+class="enumerate-enumitem"><img 
+src="main115x.svg" alt="(Œ !  Œ)"  class="left" align="middle" /> <br 
+class="newline" /><span class="underline"><span 
+class="ecsi-1200">Justification:</span></span> <span 
+class="ecsi-1200">We apply</span><span 
+class="ecsi-1200"> </span><a 
+href="#x1-90181"><span 
+class="ecsi-1200">(MP)</span><!--tex4ht:ref: Ch1:Def:PLDedRule:MP --></a> <span 
+class="ecsi-1200">to steps 3 and 4. </span></dd></dl>
+                                                                                    □
+</div>
+</div>
+<!--l. 212--><p class="noindent" ></p> 
+</div> 
+</div>                                                                                           
+
+                                                                                           
+<!--l. 214--><p class="noindent" >We need a little more machinery before we can prove that theorems in <span 
+class="cmsssy-10x-x-120">L </span>are precisely the tautologies. We
+will develop this in the next subsection.
+</p><!--l. 216--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">1.2.3   </span> <a 
+ id="x1-100001.2.3"></a>Deductions in <span 
+class="cmsssy-10x-x-120">L</span></h4>
+<!--l. 218--><p class="noindent" >In this subsection, we will develop some machinery as well as notation to deal with the concept of
+deduction. However, before we proceed any further, we will give a precise definition of what a deduction
+is.
+</p><!--l. 220--><p class="noindent" >Throughout this subsection, fix a set of <span 
+class="cmsssy-10x-x-120">L</span>-formulas <span 
+class="cmsmf-12"> </span>.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-48">     
+<div class="tcolorbox-title">
+                                                                                           
+
+                                                                                           
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 222--><p class="noindent" ><span class="head">
+<a 
+ id="x1-10001r17"></a>
+<span 
+class="ecsx-1200">Definition 1.2.17 </span>(Deduction)<span 
+class="ecsx-1200">.</span>  </span>A <span 
+class="ecsx-1200">deduction </span>from <span 
+class="cmsmf-12">  </span>is a finite sequence of <span 
+class="cmsssy-10x-x-120">L</span>-formulae <span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmssmi-10x-x-120">…</span><span 
+class="cmssmi-10x-x-120">;Œ</span><sub><span 
+class="cmssmi-8">n</span></sub>
+such that for all <span 
+class="cmsmf-12">1 </span><span 
+class="cmsssy-10x-x-120">ˇ </span><span 
+class="cmssmi-10x-x-120">i </span><span 
+class="cmsssy-10x-x-120">ˇ </span><span 
+class="cmssmi-10x-x-120">n</span>, either </p>
+      <ul class="itemize1">
+      <li class="itemize">
+      <!--l. 225--><p class="noindent" ><span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmssmi-8">i</span></sub> is an axiom of <span 
+class="cmsssy-10x-x-120">L</span>,
+      </p></li>
+      <li class="itemize">
+      <!--l. 226--><p class="noindent" ><span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmssmi-8">i</span></sub> is a formula in <span 
+class="cmsmf-12"> </span>, or
+      </p></li>
+      <li class="itemize">
+      <!--l. 227--><p class="noindent" ><span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmssmi-8">i</span></sub> is obtained from <span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmssmi-10x-x-120">…</span><span 
+class="cmssmi-10x-x-120">;Œ</span><sub><span 
+class="cmssmi-8">i</span><span 
+class="cmsssy-8">Γ</span><span 
+class="cmsmf-8">1</span></sub> using modus ponens.</p></li></ul>
+</div>
+<!--l. 229--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 231--><p class="noindent" >Deductions end in consequences.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-49">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 233--><p class="noindent" ><span class="head">
+<a 
+ id="x1-10002r18"></a>
+<span 
+class="ecsx-1200">Definition 1.2.18 </span>(Consequence)<span 
+class="ecsx-1200">.</span>  </span>We say a formula <span 
+class="cmssmi-10x-x-120">Œ </span>is a <span 
+class="ecsx-1200">consequence </span>of <span 
+class="cmsmf-12">  </span>if there
+exists a deduction from <span 
+class="cmsmf-12">  </span>ending in <span 
+class="cmssmi-10x-x-120">Œ</span>. In this case, we write <span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ</span>.
+</p>
+</div>
+<!--l. 235--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 237--><p class="noindent" >Note that <span 
+class="cmsmf-12">  </span>can be empty. In this case, instead of writing <span 
+class="cmsssy-10x-x-120">;‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ</span>, we write <span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ</span>. Therefore, the theorems
+in <span 
+class="cmsssy-10x-x-120">L </span>are precisely those formulae that are not consequences of other formulae.
+                                                                                           
+
+                                                                                           
+</p><!--l. 38--><p class="noindent" >
                                                                                            
 
                                                                                            
 <a 
- id="Q1-1-7"></a>
+ id="Q1-1-11"></a>
 </p><!--l. 52--><p class="noindent" >For the latest version of these notes, visit <a 
 href="https://thefundamentaltheor3m.github.io/LogicNotes/LastLocallyCompiled.pdf" class="url" ><span 
 class="ectt-1200">https://thefundamentaltheor3m.github.io/LogicNotes/LastLocallyCompiled.pdf</span></a>.

@@ -5,5 +5,9 @@
 \doTocEntry\tocsubsection{1.1.1}{\csname a:TocLink\endcsname{1}{x1-40001.1.1}{QQ2-1-4}{Propositions and Connectives}}{5}\relax 
 \doTocEntry\tocsubsection{1.1.2}{\csname a:TocLink\endcsname{1}{x1-50001.1.2}{QQ2-1-5}{Truth Functions}}{10}\relax 
 \doTocEntry\tocsubsection{1.1.3}{\csname a:TocLink\endcsname{1}{x1-60001.1.3}{QQ2-1-6}{Adequacy}}{19}\relax 
-\doTocEntry\tocchapter{}{\csname a:TocLink\endcsname{1}{Q1-1-7}{}{Bibliography}}{31}\relax 
+\doTocEntry\tocsection{1.2}{\csname a:TocLink\endcsname{1}{x1-70001.2}{QQ2-1-7}{A Formal System for Propositional Logic}}{30}\relax 
+\doTocEntry\tocsubsection{1.2.1}{\csname a:TocLink\endcsname{1}{x1-80001.2.1}{QQ2-1-8}{Formal Deduction Systems}}{30}\relax 
+\doTocEntry\tocsubsection{1.2.2}{\csname a:TocLink\endcsname{1}{x1-90001.2.2}{QQ2-1-9}{Constructing a Formal System Propositional Logic}}{36}\relax 
+\doTocEntry\tocsubsection{1.2.3}{\csname a:TocLink\endcsname{1}{x1-100001.2.3}{QQ2-1-10}{Deductions in $\mathcal  {L}$}}{43}\relax 
+\doTocEntry\tocchapter{}{\csname a:TocLink\endcsname{1}{Q1-1-11}{}{Bibliography}}{46}\relax 
 \par 
