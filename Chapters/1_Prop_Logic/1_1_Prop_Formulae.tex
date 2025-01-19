@@ -124,7 +124,7 @@ We can now construct a truth function for the example we saw at the very beginni
 
 We see something quite remarkable here: the truth function of the propositional formula defined in~\eqref{Ch1:eq:JonesExample} maps every possible input to $\T$! We have a special term for this.
 
-\begin{boxdefinition}[Tautology]
+\begin{boxdefinition}[Tautology]\label{Ch1:Def:Tautology}
     A propositional formula $\phi$ is a \textbf{tautology} if its truth function $F_{\phi}$ maps every possible input to $\T$.
 \end{boxdefinition}
 
@@ -365,3 +365,5 @@ We do not write out a proof, as it merely involves comparing truth tables.
         \item $\parenth{\parenth{p \nor p} \nor \parenth{q \nor q}} \isleto \parenth{p \land q}$.
     \end{enumerate}
 \end{boxexample}
+
+So far, we have been studying \textit{meaning}, in the form of truth functions, but have yet to formally define \textit{what} we are allowed to express that \textit{has} meaning within the propositional paradigm. In other words, we have been studying \textbf{semantics} but have yet to define the \textbf{syntax} of propositional logic. We will do this in the next section.
