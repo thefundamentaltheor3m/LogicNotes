@@ -167,11 +167,11 @@ We can now define the formal deduction system for propositional logic.
 
 We are now ready to write formal proofs in $\L$.
 
-\begin{boxexample}
+\begin{boxexample}\label{Ch1:Eg:Self_implies_self}
     Suppose $\phi$ is any $\L$-formula. Then, $\parenth{\phi \to \phi}$ is a theorem of $\L$, ie,
     \begin{align}
         \vdash_{\L} \parenth{\phi \to \phi}
-        \label{Ch1:Eg:Self_implies_self}
+        \label{Ch1:Eq:Self_implies_self}
     \end{align}
     It is not obvious how to prove this statement using only~\ref{Ch1:Def:PLAxiom:1}-\ref{Ch1:Def:PLAxiom:3} and~\ref{Ch1:Def:PLDedRule:MP}. But it is possible. We present a formal proof that consists of a sequence of five formulas, each either axiomatic or deduced from two previous ones using modus ponens.
     \begin{proof}[Formal proof in $\L$]\hfill
@@ -219,7 +219,7 @@ In this subsection, we will develop some machinery as well as notation to deal w
 
 Throughout this subsection, fix a set of $\L$-formulas $\Gamma$.
 
-\begin{boxdefinition}[Deduction]
+\begin{boxdefinition}[Deduction]\label{Ch1:Def:Deduction}
     A \textbf{deduction} from $\Gamma$ is a finite sequence of $\L$-formulae $\phi_1, \ldots, \phi_n$ such that for all $1 \leq i \leq n$, either
     \begin{itemize}% [label = $-$]
         \item $\phi_i$ is an axiom of $\L$,
@@ -228,10 +228,136 @@ Throughout this subsection, fix a set of $\L$-formulas $\Gamma$.
     \end{itemize}
 \end{boxdefinition}
 
-Deductions end in consequences.
+Essentially, deductions capture the notion of proofs, with an additional layer of flexibility coming from the fact that we are allowed to have assumptions in $\Gamma$ that go beyond merely the axioms of $\L$. Just as proofs end in theorems, deductions end in consequences.
 
 \begin{boxdefinition}[Consequence]
     We say a formula $\phi$ is a \textbf{consequence} of $\Gamma$ if there exists a deduction from $\Gamma$ ending in $\phi$. In this case, we write $\Gamma \vdash_{\L} \phi$.
 \end{boxdefinition}
 
-Note that $\Gamma$ can be empty. In this case, instead of writing $\emptyset \vdash_{\L} \phi$, we write $\vdash_{\L} \phi$. Therefore, the theorems in $\L$ are precisely those formulae that are not consequences of other formulae.
+The relationship between proofs and deductions/theorems and consequences is that the former correspond to the case where $\Gamma$ is empty. In this case, instead of writing $\emptyset \vdash_{\L} \phi$, we write $\vdash_{\L} \phi$. Therefore, the theorems in $\L$ are precisely those formulae that are not consequences of other formulae.
+
+We state a rather trivial fact.
+
+\begin{boxlemma}\label{Ch1:Lemma:SubsetOfGamma}
+    Let $\Delta \subseteq \Gamma$. Then, for all $\L$-formulae $\phi$, if $\Delta \vdash_{\L} \phi$, then $\Gamma \vdash_{\L} \phi$.
+\end{boxlemma}
+
+We do not prove this fact. In fact, we will often use it without mentioning it explicitly.
+
+There is an important theorem that relates the notion of consequence with that of implication and provides us with a framework of reasoning with statements about consequence.
+
+\begin{boxtheorem}[The Deduction Theorem]\label{Ch1:Thm:DeductionThm} % This is essentially the `intro` tactic in Lean.
+    Let $\phi, \psi$ be $\L$-formulae. Then,
+    \begin{align*}
+        \Gamma \cup \set{\psi} \vdash_{\L} \phi
+        \tiff
+        \Gamma \vdash_{\L} \parenth{\psi \to \phi}
+    \end{align*}
+\end{boxtheorem}
+\begin{proof}
+    We begin by showing that $\Gamma \cup \set{\psi} \vdash_{\L} \phi$ implies $\Gamma \vdash_{\L} \parenth{\psi \to \phi}$.
+
+    Assume that $\Gamma \cup \set{\psi} \vdash_{\L} \phi$. This states that there is a deduction from $\Gamma \cup \set{\psi}$ to $\phi$ in the formal system $\L$. By \Cref{Ch1:Def:Deduction}, we know that such a deduction must be finite. We prove that for all $n \in \N$, if $\Gamma \cup \set{\psi} \vdash_{\L} \phi$ is a deduction of length $n$, then $\Gamma \vdash_{\L} \parenth{\psi \to \phi}$. We proceed by induction on $n$.
+
+    \begin{description}
+        \item[\underline{Base Case: $n = 1$.}]
+        We know that $\phi$ is either an axiom or is lies in $\Gamma$ or is $\psi$. In the first two cases, we have
+        \begin{align*}
+            \Gamma \vdash_{\L} \phi
+        \end{align*}
+        in which case the axiom~\ref{Ch1:Def:PLAxiom:1} guarantees that
+        \begin{align*}
+            \Gamma \vdash_{\L} \parenth{\phi \to \parenth{\psi \to \phi}}
+        \end{align*}
+        Applying~\ref{Ch1:Def:PLDedRule:MP} to the deductions above then gives us that
+        \begin{align*}
+            \Gamma \vdash_{\L} \parenth{\psi \to \phi}
+        \end{align*}
+        as required. In the third case, where $\phi$ is $\psi$, we have
+        \begin{align*}
+            \Gamma \vdash_{\L} \parenth{\psi \to \psi}
+        \end{align*}
+        by the same argument as in \Cref{Ch1:Eg:Self_implies_self}.
+    
+    \item[\underline{Inductive Case.}] \sorry
+    \end{description}
+\end{proof}
+
+From this theorem, we can deduce that the implication connective $\to$ is transitive.
+
+\begin{boxcorollary}[Hypothetical Syllogism]
+    Suppose $\phi, \psi, \chi$ are $\L$-formulae such that $\Gamma \vdash_{\L} \parenth{\phi \to \psi}$ and $\Gamma \vdash_{\L} \parenth{\psi \to \chi}$. Then, $\Gamma \vdash_{\L} \parenth{\phi \to \chi}$.
+\end{boxcorollary}
+\begin{proof}
+    We show that there is a deduction of $\chi$ from $\Gamma \cup \set{\phi}$. We give a formal proof in $\L$.
+
+    \begin{enumerate}
+        \item $\Gamma \vdash_{\L} \phi \to \psi$
+        \newline
+        \textit{\underline{Justification:}
+            Assumption.
+        }
+
+        \item $\Gamma \vdash_{\L} \psi \to \chi$
+        \newline
+        \textit{\underline{Justification:}
+            Assumption.
+        }
+
+        \item $\Gamma \cup \set{\phi} \vdash_{\L} \psi$
+        \newline
+        \textit{\underline{Justification:}
+            Applying the Deduction Theorem to Step 1.
+        }
+
+        \item $\Gamma \cup \set{\phi} \vdash_{\L} \psi \to \chi$
+        \newline
+        \textit{\underline{Justification:}
+            Applying \Cref{Ch1:Lemma:SubsetOfGamma} to Step 2.
+        }
+
+        \item $\Gamma \cup \set{\phi} \vdash_{\L} \chi$
+        \newline
+        \textit{\underline{Justification:}
+            Applying~\ref{Ch1:Def:PLDedRule:MP} to Step 4 and Step 3.
+        }
+
+        \item $\Gamma \vdash_{\L} \phi \to \chi$
+        \newline
+        \textit{\underline{Justification:}
+            Applying the Deduction Theorem to Step 5.
+        }
+    \end{enumerate}
+    The last step is the desired deduction.
+\end{proof}
+
+\begin{boxexample}[A Few Theorems in $\L$]
+    Suppose $\phi$ and $\psi$ are $\L$-formulae. Then,
+    \begin{enumerate}[label = \normalfont (\alph*)]
+        \item $\vdash_{\L} \parenth{\parenth{\neg \psi} \to \parenth{\psi \to \phi}}$
+        \item $\set{\parenth{\neg \psi}, \psi} \vdash_{\L} \phi$
+        \item $\vdash_{\L} \parenth{\parenth{\parenth{\neg \phi} \to \phi} \to \phi}$
+    \end{enumerate}
+    are all theorems in $\L$.
+    \begin{proof}
+        \hfill
+        \begin{enumerate}[label = (\alph*)]
+            \item Problem Sheet 1, Question 6. \sorry
+            
+            \item We apply~\ref{Ch1:Def:PLDedRule:MP} to (a) twice, the first time using our assumption $\parenth{\neg \psi}$ and the second time using  our assumption $\psi$.
+            
+            \item Suppose $\chi$ is any formula. Then, from (b), we can see that
+            \begin{align}
+                \set{\parenth{\neg \phi}, \parenth{\parenth{\neg \phi} \to \phi}} \vdash_{\L} \chi
+                \label{Ch1:Eq:ContradictoryDeduction}
+            \end{align}
+            because we would be able to apply~\ref{Ch1:Def:PLDedRule:MP} to the assumptions to deduce both $\phi$ and $\parenth{\neg \phi}$.
+            
+            Now, let $\alpha$ be an axiom and let $\chi$ be $\parenth{\neg \alpha}$. Then,~\eqref{Ch1:Eq:ContradictoryDeduction} tells us that
+            \begin{align*}
+                \set{\parenth{\neg \phi}, \parenth{\parenth{\neg \phi} \to \phi}} \vdash_{\L} \parenth{\neg \alpha}
+            \end{align*}
+            \sorry % The idea is we have a proof of False and can therefore construct a proof of anything. Do some Deduction Theorem stuff.
+        \end{enumerate}
+    \end{proof}
+\end{boxexample}
