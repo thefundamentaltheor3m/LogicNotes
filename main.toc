@@ -8,4 +8,4 @@
 \contentsline {subsection}{\numberline {1.2.1}Formal Deduction Systems}{13}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}Constructing a Formal System Propositional Logic}{16}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Deductions in $\mathcal {L}$}{19}{subsection.1.2.3}%
-\contentsline {chapter}{Bibliography}{20}{theorem.1.2.18}%
+\contentsline {chapter}{Bibliography}{23}{equation.1.2.2}%

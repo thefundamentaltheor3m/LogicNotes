@@ -2467,10 +2467,10 @@ class="cmsssy-10x-x-120">L</span>.
 <a 
  id="x1-9024r16"></a>
 <span 
-class="ecsx-1200">Example 1.2.16.</span>  </span>Suppose <span 
+class="ecsx-1200">Example 1.2.16.</span>  </span> Suppose <span 
 class="cmssmi-10x-x-120">Œ </span>is any <span 
 class="cmsssy-10x-x-120">L</span>-formula. Then, <img 
-src="main107x.svg" alt="(Œ ! Œ)"  class="left" align="middle" /> is a theorem of <span 
+src="main107x.svg" alt="(Œ !  Œ)"  class="left" align="middle" /> is a theorem of <span 
 class="cmsssy-10x-x-120">L</span>,
 ie,
 </p><table 
@@ -2596,17 +2596,17 @@ class="cmsmf-12"> </span>.
  id="x1-10001r17"></a>
 <span 
 class="ecsx-1200">Definition 1.2.17 </span>(Deduction)<span 
-class="ecsx-1200">.</span>  </span>A <span 
+class="ecsx-1200">.</span>  </span> A <span 
 class="ecsx-1200">deduction </span>from <span 
 class="cmsmf-12">  </span>is a finite sequence of <span 
-class="cmsssy-10x-x-120">L</span>-formulae <span 
+class="cmsssy-10x-x-120">L</span>-formulae
+<span 
 class="cmssmi-10x-x-120">Œ</span><sub><span 
 class="cmsmf-8">1</span></sub><span 
 class="cmssmi-10x-x-120">;</span><span 
 class="cmssmi-10x-x-120">…</span><span 
 class="cmssmi-10x-x-120">;Œ</span><sub><span 
-class="cmssmi-8">n</span></sub>
-such that for all <span 
+class="cmssmi-8">n</span></sub> such that for all <span 
 class="cmsmf-12">1 </span><span 
 class="cmsssy-10x-x-120">ˇ </span><span 
 class="cmssmi-10x-x-120">i </span><span 
@@ -2641,7 +2641,11 @@ class="cmsmf-8">1</span></sub> using modus ponens.</p></li></ul>
 <!--l. 229--><p class="noindent" ></p> 
 </div> 
 </div>
-<!--l. 231--><p class="noindent" >Deductions end in consequences.
+<!--l. 231--><p class="noindent" >Essentially, deductions capture the notion of proofs, with an additional layer of flexibility coming from the
+fact that we are allowed to have assumptions in <span 
+class="cmsmf-12">  </span>that go beyond merely the axioms of <span 
+class="cmsssy-10x-x-120">L</span>. Just as proofs
+end in theorems, deductions end in consequences.
 </p>
 <div class="tcolorbox tcolorbox" id="tcolobox-49">     
 <div class="tcolorbox-title">
@@ -2668,20 +2672,456 @@ class="cmssmi-10x-x-120">Œ</span>.
 <!--l. 235--><p class="noindent" ></p> 
 </div> 
 </div>
-<!--l. 237--><p class="noindent" >Note that <span 
-class="cmsmf-12">  </span>can be empty. In this case, instead of writing <span 
+                                                                                           
+
+                                                                                           
+<!--l. 237--><p class="noindent" >The relationship between proofs and deductions/theorems and consequences is that the former
+correspond to the case where <span 
+class="cmsmf-12">  </span>is empty. In this case, instead of writing <span 
 class="cmsssy-10x-x-120">;‘</span><sub><span 
 class="cmsssy-8">L</span></sub><span 
 class="cmssmi-10x-x-120">Œ</span>, we write <span 
 class="cmsssy-10x-x-120">‘</span><sub><span 
 class="cmsssy-8">L</span></sub><span 
-class="cmssmi-10x-x-120">Œ</span>. Therefore, the theorems
-in <span 
-class="cmsssy-10x-x-120">L </span>are precisely those formulae that are not consequences of other formulae.
+class="cmssmi-10x-x-120">Œ</span>.
+Therefore, the theorems in <span 
+class="cmsssy-10x-x-120">L </span>are precisely those formulae that are not consequences of other
+formulae.
+</p><!--l. 239--><p class="noindent" >We state a rather trivial fact.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-50">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 241--><p class="noindent" ><span class="head">
+<a 
+ id="x1-10003r19"></a>
+<span 
+class="ecsx-1200">Lemma 1.2.19.</span>  </span> <span 
+class="ecsi-1200">Let </span><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">` </span><span 
+class="cmsmf-12"> </span><span 
+class="ecsi-1200">. Then, for all </span><span 
+class="cmsssy-10x-x-120">L</span><span 
+class="ecsi-1200">-formulae </span><span 
+class="cmssmi-10x-x-120">Œ</span><span 
+class="ecsi-1200">, if </span><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ</span><span 
+class="ecsi-1200">, then </span><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ</span><span 
+class="ecsi-1200">.</span>
+</p>
+</div>
+<!--l. 243--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 245--><p class="noindent" >We do not prove this fact. In fact, we will often use it without mentioning it explicitly.
+</p><!--l. 247--><p class="noindent" >There is an important theorem that relates the notion of consequence with that of implication and
+provides us with a framework of reasoning with statements about consequence.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-51">     
+<div class="tcolorbox-title">
                                                                                            
 
                                                                                            
-</p><!--l. 38--><p class="noindent" >
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 249--><p class="noindent" ><span class="head">
+<a 
+ id="x1-10004r20"></a>
+<span 
+class="ecsx-1200">Theorem 1.2.20 </span>(The Deduction Theorem)<span 
+class="ecsx-1200">.</span>  </span> <span 
+class="ecsi-1200">Let </span><span 
+class="cmssmi-10x-x-120">Œ; </span><span 
+class="ecsi-1200">be </span><span 
+class="cmsssy-10x-x-120">L</span><span 
+class="ecsi-1200">-formulae. Then,</span>
+</p><table 
+class="align-star">
+                       <tr><td 
+class="align-odd"><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">[</span><img 
+src="main116x.svg" alt="f  g"  class="left" align="middle" /><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ</span> <span 
+class="ecsi-1200">if and only if</span> <span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main117x.svg" alt="(  !  Œ)"  class="left" align="middle" /></td>                       <td 
+class="align-even"></td>                       <td 
+class="align-label"></td></tr></table>
+</div>
+<!--l. 256--><p class="noindent" ></p> 
+</div> 
+</div>
+<div class="proof">
+<!--l. 258--><p class="noindent" ><span class="head">
+<span 
+class="ecsi-1200">Proof.</span> </span>We begin by showing that <span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">[</span><img 
+src="main118x.svg" alt="f  g"  class="left" align="middle" /><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ </span>implies <span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main119x.svg" alt="(  !  Œ)"  class="left" align="middle" />.
+</p><!--l. 260--><p class="noindent" >Assume that <span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">[</span><img 
+src="main120x.svg" alt="f  g"  class="left" align="middle" /><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ</span>. This states that there is a deduction from <span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">[</span><img 
+src="main121x.svg" alt="f  g"  class="left" align="middle" /> to <span 
+class="cmssmi-10x-x-120">Œ </span>in the formal
+system <span 
+class="cmsssy-10x-x-120">L</span>. By Definition <a 
+href="#x1-10001r17">1.2.17</a>, we know that such a deduction must be finite. We prove that
+for all <span 
+class="cmssmi-10x-x-120">n </span><span 
+class="cmsssy-10x-x-120">2 </span><span 
+class="ssmsbm-10x-x-120">N</span>, if <span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">[</span><img 
+src="main122x.svg" alt="f  g"  class="left" align="middle" /><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ </span>is a deduction of length <span 
+class="cmssmi-10x-x-120">n</span>, then <span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main123x.svg" alt="(   ! Œ)"  class="left" align="middle" />. We proceed by
+induction on <span 
+class="cmssmi-10x-x-120">n</span>.
+                                                                                           
+
+                                                                                           
+      </p><dl class="description"><dt class="description">
+<span class="underline">Base Case: <span 
+class="cmssmi-10x-x-120">n </span><span 
+class="cmsmf-12">= 1</span>.</span> </dt><dd 
+class="description">
+      <!--l. 263--><p class="noindent" > We know that <span 
+class="cmssmi-10x-x-120">Œ </span>is either an axiom or is lies in <span 
+class="cmsmf-12">  </span>or is <span 
+class="cmssmi-10x-x-120"></span>. In the first two cases, we
+      have
+      </p><table 
+class="align-star">
+                                       <tr><td 
+class="align-odd"><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ</span></td>                                       <td 
+class="align-even"></td>                                       <td 
+class="align-label"></td></tr></table>
+      <!--l. 268--><p class="noindent" >in which case the axiom <a 
+href="#x1-90111">(A1)<!--tex4ht:ref: Ch1:Def:PLAxiom:1 --></a> guarantees that
+      </p><table 
+class="align-star">
+                                 <tr><td 
+class="align-odd"><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main124x.svg" alt="(Œ !  (  !  Œ))"  class="left" align="middle" /></td>                                 <td 
+class="align-even"></td>                                 <td 
+class="align-label"></td></tr></table>
+      <!--l. 272--><p class="noindent" >Applying <a 
+href="#x1-90181">(MP)<!--tex4ht:ref: Ch1:Def:PLDedRule:MP --></a> to the deductions above then gives us that
+                                                                                           
+
+                                                                                           
+      </p><table 
+class="align-star">
+                                    <tr><td 
+class="align-odd"><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main125x.svg" alt="(  !  Œ)"  class="left" align="middle" /></td>                                    <td 
+class="align-even"></td>                                    <td 
+class="align-label"></td></tr></table>
+      <!--l. 276--><p class="noindent" >as required. In the third case, where <span 
+class="cmssmi-10x-x-120">Œ </span>is <span 
+class="cmssmi-10x-x-120"></span>, we have
+      </p><table 
+class="align-star">
+                                    <tr><td 
+class="align-odd"><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main126x.svg" alt="(  !    )"  class="left" align="middle" /></td>                                    <td 
+class="align-even"></td>                                    <td 
+class="align-label"></td></tr></table>
+      <!--l. 280--><p class="noindent" >by the same argument as in Example <a 
+href="#x1-9024r16">1.2.16</a>.
+      </p></dd><dt class="description">
+<span class="underline">Inductive Case.</span> </dt><dd 
+class="description">
+      <!--l. 282--><p class="noindent" > <span id="textcolor2"><span 
+class="ectt-1200">sorry</span></span></p></dd></dl>
+                                                                                          □
+                                                                                           
+
+                                                                                           
+</div>
+<!--l. 286--><p class="noindent" >From this theorem, we can deduce that the implication connective <span 
+class="cmsssy-10x-x-120">! </span>is transitive.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-52">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 288--><p class="noindent" ><span class="head">
+<a 
+ id="x1-10005r21"></a>
+<span 
+class="ecsx-1200">Corollary 1.2.21 </span>(Hypothetical Syllogism)<span 
+class="ecsx-1200">.</span>  </span><span 
+class="ecsi-1200">Suppose </span><span 
+class="cmssmi-10x-x-120">Œ;;Ø </span><span 
+class="ecsi-1200">are </span><span 
+class="cmsssy-10x-x-120">L</span><span 
+class="ecsi-1200">-formulae such that </span><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span>
+<sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main127x.svg" alt="(Œ !   )"  class="left" align="middle" /> <span 
+class="ecsi-1200">and </span><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main128x.svg" alt="(   ! Ø)"  class="left" align="middle" /><span 
+class="ecsi-1200">. Then, </span><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main129x.svg" alt="(Œ !  Ø)"  class="left" align="middle" /><span 
+class="ecsi-1200">.</span>
+</p>
+</div>
+<!--l. 290--><p class="noindent" ></p> 
+</div> 
+</div>
+<div class="proof">
+<!--l. 292--><p class="noindent" ><span class="head">
+<span 
+class="ecsi-1200">Proof.</span> </span>We show that there is a deduction of <span 
+class="cmssmi-10x-x-120">Ø </span>from <span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">[</span><img 
+src="main130x.svg" alt="fŒg"  class="left" align="middle" />. We give a formal proof in <span 
+class="cmsssy-10x-x-120">L</span>.
+</p><!--l. 295--><p class="noindent" >
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+   1. </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ </span><span 
+class="cmsssy-10x-x-120">! </span><span 
+class="cmssmi-10x-x-120"> </span><br 
+class="newline" /><span class="underline"><span 
+class="ecsi-1200">Justification:</span></span> <span 
+class="ecsi-1200">Assumption.</span>
+      </dd><dt class="enumerate-enumitem">
+   2. </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120"> </span><span 
+class="cmsssy-10x-x-120">! </span><span 
+class="cmssmi-10x-x-120">Ø </span><br 
+class="newline" /><span class="underline"><span 
+class="ecsi-1200">Justification:</span></span> <span 
+class="ecsi-1200">Assumption.</span>
+      </dd><dt class="enumerate-enumitem">
+                                                                                           
+
+                                                                                           
+   3. </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">[</span><img 
+src="main131x.svg" alt="fŒg"  class="left" align="middle" /><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120"> </span><br 
+class="newline" /><span class="underline"><span 
+class="ecsi-1200">Justification:</span></span> <span 
+class="ecsi-1200">Applying the Deduction Theorem to Step 1.</span>
+      </dd><dt class="enumerate-enumitem">
+   4. </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">[</span><img 
+src="main132x.svg" alt="fŒg"  class="left" align="middle" /><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120"> </span><span 
+class="cmsssy-10x-x-120">! </span><span 
+class="cmssmi-10x-x-120">Ø </span><br 
+class="newline" /><span class="underline"><span 
+class="ecsi-1200">Justification:</span></span> <span 
+class="ecsi-1200">Applying Lemma</span><span 
+class="ecsi-1200"> </span><a 
+href="#x1-10003r19"><span 
+class="ecsi-1200">1.2.19</span></a> <span 
+class="ecsi-1200">to Step 2.</span>
+      </dd><dt class="enumerate-enumitem">
+   5. </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">[</span><img 
+src="main133x.svg" alt="fŒg"  class="left" align="middle" /><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Ø </span><br 
+class="newline" /><span class="underline"><span 
+class="ecsi-1200">Justification:</span></span> <span 
+class="ecsi-1200">Applying</span><span 
+class="ecsi-1200"> </span><a 
+href="#x1-90181"><span 
+class="ecsi-1200">(MP)</span><!--tex4ht:ref: Ch1:Def:PLDedRule:MP --></a> <span 
+class="ecsi-1200">to Step 4 and Step 3.</span>
+      </dd><dt class="enumerate-enumitem">
+   6. </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ </span><span 
+class="cmsssy-10x-x-120">! </span><span 
+class="cmssmi-10x-x-120">Ø </span><br 
+class="newline" /><span class="underline"><span 
+class="ecsi-1200">Justification:</span></span> <span 
+class="ecsi-1200">Applying the Deduction Theorem to Step 5. </span></dd></dl>
+<!--l. 331--><p class="noindent" >The last step is the desired deduction.                                                                         □
+</p>
+</div>
+<div class="tcolorbox tcolorbox" id="tcolobox-53">     
+<div class="tcolorbox-title">
+                                                                                           
+
+                                                                                           
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 334--><p class="noindent" ><span class="head">
+<a 
+ id="x1-10012r22"></a>
+<span 
+class="ecsx-1200">Example 1.2.22 </span>(A Few Theorems in <span 
+class="cmsssy-10x-x-120">L</span>)<span 
+class="ecsx-1200">.</span>  </span>Suppose <span 
+class="cmssmi-10x-x-120">Œ </span>and <span 
+class="cmssmi-10x-x-120"> </span>are <span 
+class="cmsssy-10x-x-120">L</span>-formulae. Then,
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+  (a) </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main134x.svg" alt="((:  ) !  (  !  Œ))"  class="left" align="middle" />
+      </dd><dt class="enumerate-enumitem">
+  (b) </dt><dd 
+class="enumerate-enumitem"><img 
+src="main135x.svg" alt="f(:  ) ; g"  class="left" align="middle" /><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ</span>
+      </dd><dt class="enumerate-enumitem">
+  (c) </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main136x.svg" alt="(((: Œ) ! Œ) !  Œ)"  class="left" align="middle" /></dd></dl>
+<!--l. 341--><p class="noindent" >are all theorems in <span 
+class="cmsssy-10x-x-120">L</span>.
+</p>
+<div class="proof">
+<!--l. 343--><p class="noindent" ><span class="head">
+<span 
+class="ecsi-1200">Proof.</span> </span>
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+  (a) </dt><dd 
+class="enumerate-enumitem">Problem Sheet 1, Question 6. <span id="textcolor3"><span 
+class="ectt-1200">sorry</span></span>
+      </dd><dt class="enumerate-enumitem">
+  (b) </dt><dd 
+class="enumerate-enumitem">We apply <a 
+href="#x1-90181">(MP)<!--tex4ht:ref: Ch1:Def:PLDedRule:MP --></a> to (a) twice, the first time using our assumption <img 
+src="main137x.svg" alt="(:  )"  class="left" align="middle" /> and the second
+      time using our assumption <span 
+class="cmssmi-10x-x-120"></span>.
+      </dd><dt class="enumerate-enumitem">
+  (c) </dt><dd 
+class="enumerate-enumitem">Suppose <span 
+class="cmssmi-10x-x-120">Ø </span>is any formula. Then, from (b), we can see that
+      <table 
+class="align">
+                                    <tr><td 
+class="align-odd"><img 
+src="main138x.svg" alt="f(: Œ) ;((: Œ) !  Œ)g"  class="left" align="middle" /><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Ø</span></td>                                <td 
+class="align-even"></td>                                <td 
+class="align-label"><a 
+ id="x1-10019r2"></a>(1.2.2)                                    </td></tr></table>
+      <!--l. 354--><p class="noindent" >because we would be able to apply <a 
+href="#x1-90181">(MP)<!--tex4ht:ref: Ch1:Def:PLDedRule:MP --></a> to the assumptions to deduce both <span 
+class="cmssmi-10x-x-120">Œ </span>and
+      <img 
+src="main139x.svg" alt="(: Œ)"  class="left" align="middle" />.
+      </p><!--l. 356--><p class="noindent" >Now, let <span 
+class="cmssmi-10x-x-120">ff </span>be an axiom and let <span 
+class="cmssmi-10x-x-120">Ø </span>be <img 
+src="main140x.svg" alt="(:ff)"  class="left" align="middle" />. Then, (<a 
+href="#x1-10019r2">1.2.2<!--tex4ht:ref: Ch1:Eq:ContradictoryDeduction --></a>) tells us that
+      </p><table 
+class="align-star">
+                          <tr><td 
+class="align-odd"><img 
+src="main141x.svg" alt="f(:Œ) ;((:Œ) !  Œ)g"  class="left" align="middle" /><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main142x.svg" alt="(: ff)"  class="left" align="middle" /></td>                          <td 
+class="align-even"></td>                          <td 
+class="align-label"></td></tr></table>
+      <!--l. 360--><p class="noindent" ><span id="textcolor4"><span 
+class="ectt-1200">sorry</span></span></p></dd></dl>
+                                                                                    □
+</div>
+</div>
+<!--l. 363--><p class="noindent" ></p> 
+</div> 
+</div>                                                                                           
+
+                                                                                           
+<!--l. 38--><p class="noindent" >
                                                                                            
 
                                                                                            

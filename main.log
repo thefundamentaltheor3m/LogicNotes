@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=latex 2025.1.19)  19 JAN 2025 18:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=latex 2025.1.20)  20 JAN 2025 14:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -58,9 +58,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language20). Reported on input line 105.
+(babel)             (\language10). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language20). Reported on input line 108.
+(babel)             (\language10). Reported on input line 108.
 )) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
@@ -2736,11 +2736,44 @@ LaTeX Font Warning: Font shape `TS1/xcmss/m/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
 (Font)              for symbol `textbullet' on input line 225.
 
-[43])) [44] [45]
+[43] [44]
+l. 255 Writing main.idv[117] (main116x.svg)
+l. 255 Writing main.idv[118] (main117x.svg)
+[45]
+l. 258 Writing main.idv[119] (main118x.svg)
+l. 258 Writing main.idv[120] (main119x.svg)
+l. 260 Writing main.idv[121] (main120x.svg)
+l. 260 Writing main.idv[122] (main121x.svg)
+l. 260 Writing main.idv[123] (main122x.svg)
+l. 260 Writing main.idv[124] (main123x.svg)
+[46]
+l. 271 Writing main.idv[125] (main124x.svg)
+[47]
+l. 275 Writing main.idv[126] (main125x.svg)
+l. 279 Writing main.idv[127] (main126x.svg)
+[48]
+l. 289 Writing main.idv[128] (main127x.svg)
+l. 289 Writing main.idv[129] (main128x.svg)
+l. 289 Writing main.idv[130] (main129x.svg)
+l. 292 Writing main.idv[131] (main130x.svg)
+l. 307 Writing main.idv[132] (main131x.svg)
+[49]
+l. 313 Writing main.idv[133] (main132x.svg)
+l. 319 Writing main.idv[134] (main133x.svg)
+l. 337 Writing main.idv[135] (main134x.svg)
+l. 338 Writing main.idv[136] (main135x.svg)
+l. 339 Writing main.idv[137] (main136x.svg)
+l. 347 Writing main.idv[138] (main137x.svg)
+l. 353 Writing main.idv[139] (main138x.svg)
+l. 354 Writing main.idv[140] (main139x.svg)
+l. 356 Writing main.idv[141] (main140x.svg)
+l. 359 Writing main.idv[142] (main141x.svg)
+l. 359 Writing main.idv[143] (main142x.svg)
+)) [50] [51] [52]
 
 LaTeX Warning: Empty bibliography on input line 48.
 
-[46] 
+[53] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -2763,12 +2796,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 61911 strings out of 474223
- 1372340 string characters out of 5748759
- 2440207 words of memory out of 5000000
- 82683 multiletter control sequences out of 15000+600000
- 580610 words of font info for 90 fonts, out of 8000000 for 9000
+ 61955 strings out of 474223
+ 1373011 string characters out of 5748759
+ 2441206 words of memory out of 5000000
+ 82725 multiletter control sequences out of 15000+600000
+ 582251 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  112i,17n,134p,1272b,1790s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (49 pages, 205248 bytes).
+Output written on main.dvi (56 pages, 228108 bytes).

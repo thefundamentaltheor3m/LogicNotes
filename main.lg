@@ -564,6 +564,48 @@ Css: #tcolobox-48 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-le
 Css: #tcolobox-49 .tcolorbox-title{color: #FFFFFF; background-color: #00B2B2;}
 Css: #tcolobox-49 .tcolorbox-content{color: #000000; background-color: #E5FFFF; border: 1px solid #00B2B2;}
 Css: #tcolobox-49 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
+Css: #tcolobox-50 .tcolorbox-title{color: #FFFFFF; background-color: #FF8000;}
+Css: #tcolobox-50 .tcolorbox-content{color: #000000; background-color: #FFFFD9; border: 1px solid #FF8000;}
+Css: #tcolobox-50 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
+Css: #tcolobox-51 .tcolorbox-title{color: #FFFFFF; background-color: #FF8000;}
+Css: #tcolobox-51 .tcolorbox-content{color: #000000; background-color: #FFFFD9; border: 1px solid #FF8000;}
+Css: #tcolobox-51 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
+--- needs --- main.idv[151] ==> main116x.svg ---
+--- needs --- main.idv[152] ==> main117x.svg ---
+--- needs --- main.idv[154] ==> main118x.svg ---
+--- needs --- main.idv[155] ==> main119x.svg ---
+--- needs --- main.idv[156] ==> main120x.svg ---
+--- needs --- main.idv[157] ==> main121x.svg ---
+--- needs --- main.idv[158] ==> main122x.svg ---
+--- needs --- main.idv[159] ==> main123x.svg ---
+--- needs --- main.idv[161] ==> main124x.svg ---
+--- needs --- main.idv[163] ==> main125x.svg ---
+--- needs --- main.idv[164] ==> main126x.svg ---
+Css: span#textcolor2{color:#FF0000}
+Css: #tcolobox-52 .tcolorbox-title{color: #FFFFFF; background-color: #FF8000;}
+Css: #tcolobox-52 .tcolorbox-content{color: #000000; background-color: #FFFFD9; border: 1px solid #FF8000;}
+Css: #tcolobox-52 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
+--- needs --- main.idv[166] ==> main127x.svg ---
+--- needs --- main.idv[167] ==> main128x.svg ---
+--- needs --- main.idv[168] ==> main129x.svg ---
+--- needs --- main.idv[170] ==> main130x.svg ---
+--- needs --- main.idv[172] ==> main131x.svg ---
+--- needs --- main.idv[173] ==> main132x.svg ---
+--- needs --- main.idv[174] ==> main133x.svg ---
+Css: #tcolobox-53 .tcolorbox-title{color: #FFFFFF; background-color: #004D00;}
+Css: #tcolobox-53 .tcolorbox-content{color: #000000; background-color: #F2F2F2; border: 1px solid #004D00;}
+Css: #tcolobox-53 div{ padding-top:8.5358px; padding-bottom:8.5358px; padding-left:14.22635px; padding-right:14.22635px; }
+--- needs --- main.idv[176] ==> main134x.svg ---
+--- needs --- main.idv[177] ==> main135x.svg ---
+--- needs --- main.idv[178] ==> main136x.svg ---
+Css: span#textcolor3{color:#FF0000}
+--- needs --- main.idv[180] ==> main137x.svg ---
+--- needs --- main.idv[181] ==> main138x.svg ---
+--- needs --- main.idv[182] ==> main139x.svg ---
+--- needs --- main.idv[183] ==> main140x.svg ---
+--- needs --- main.idv[184] ==> main141x.svg ---
+--- needs --- main.idv[185] ==> main142x.svg ---
+Css: span#textcolor4{color:#FF0000}
 tex4ht.c error: 21
 --- characters ---
 Font("ecss","1200","12","100")
@@ -577,6 +619,7 @@ Font("cmssmi","8","8","100")
 Font("cmssmi","6","6","100")
 Font("cmsssy","10","10","120")
 Font("cmsssy","8","8","100")
+Font("ssmsbm","10","10","120")
 Font("yhcmex","10","10","120")
 Font("ecsx","1200","12","100")
 Font("cmsmfbx","12","12","100")
