@@ -1,0 +1,119 @@
+\section{Important Properties of $\L$}
+
+In this section, we prove important properties about $\L$, with our first major goal being to prove that the theorems in $\L$ are precisely the tautologies.
+
+\subsection{Propositional Valuations}
+
+\begin{boxdefinition}[Propositional Valuation]
+    A \textbf{propositional valuation} $\v$ is an assignment of truth values to propositions $p_1, p_2, \ldots$, so that
+    \begin{align*}
+        \vof{p_i} \in \set{\T, \F}
+    \end{align*}
+    for all $i \in \N$.
+\end{boxdefinition}
+
+Using the truth table rules by which we defined the connectives $\to$ and $\neg$ of $\L$ (cf. \Cref{Ch1:Def:Connective}), we can assign a truth value $\vof{\phi}$ to any $\L$-formula $\phi$.
+
+\begin{boxlemma}[Behaviour of Propositional Valuations]\label{Ch1:Lemma:PropValBhv}
+    Let $\phi, \psi$ be $\L$-formulae. Then,
+    \begin{enumerate}
+        \item $\vof{\parenth{\neg \phi}} \neq \vof{\phi}$
+        \item $\vof{\phi \to \psi} = \F$ if and only if $\vof{\phi} = \T$ and $\vof{\psi} = \F$
+    \end{enumerate}
+\end{boxlemma}
+
+We do not prove these results.
+
+We can now be precise about what a tautology is.
+
+\begin{boxdefinition}[Tautology]
+    An $\L$-formula $\phi$ is a \textbf{tautology} if $\vof{\phi} = \T$ for all propositional valuations $\v$.
+\end{boxdefinition}
+
+We are now ready to prove that $\L$ is sound.
+
+\subsection{Soundness}
+
+\begin{boxdefinition}[Soundness]
+    We say a formal system is \textbf{sound} if every theorem in it is a tautology.
+\end{boxdefinition}
+
+Now, the much-awaited result.
+
+\begin{boxtheorem}[Soundness of $\L$]\label{Ch1:Thm:LSoundness}
+    The formal system $\L$ of propositional logic is sound.
+\end{boxtheorem}
+\begin{proof}
+    Let $\phi$ be a theorem in $\L$. We prove that $\phi$ is a tautology by performing induction on the length of $\phi$. The base case involves proving that the axioms~\ref{Ch1:Def:PLAxiom:1}-\ref{Ch1:Def:PLAxiom:3} are tautologies, and the inductive case involves proving that the modus ponens deduction rule~\ref{Ch1:Def:PLDedRule:MP} preserves tautologies.
+
+    While these proofs can be done manually, there is a rather clever trick that can be used in the case of~\ref{Ch1:Def:PLAxiom:2}. This is given in \cite[Proof of 1.3.1]{2018LecNotes}. \sorry % TODO: include proof here
+\end{proof}
+
+We have a more general version of this result.
+
+\begin{boxtheorem}[A Generalisation of Soundness]
+    Let $\Gamma$ be a set of $\L$-formulae, and let $\phi$ be an $\L$-formula such that $\Gamma \vdash_{\L} \phi$. If $\vof{\psi} = \T$ for all $\psi \in \Gamma$, then $\vof{\phi} = \T$.
+\end{boxtheorem}
+\begin{proof}
+    The proof is actually identical to that of \Cref{Ch1:Thm:LSoundness}, but with $\Gamma$ being a part of the base case. In this case, the proof follows from the assumption that $\v$ is true on $\Gamma$.
+\end{proof}
+
+Now that we have shown that $\L$ is sound, we show that $\L$ has other important properties that will enable us to reason in $\L$ the way we would like to.
+
+\subsection{Consistency}
+
+For the remainder of this section, fix a set $\Gamma$ of $\L$-formulae.
+
+\begin{boxdefinition}[Consistency]
+    $\Gamma$ is \textbf{consistent} if there is no $\L$-formula $\phi$ such that $\Gamma \vdash_{\L} \phi$ and $\Gamma \vdash_{\L} \parenth{\neg \phi}$.
+\end{boxdefinition}
+
+Soundness tells us something about the consistency of the empty set in $\L$, which we will refer to more generally as the \textbf{consistency of $\L$}.
+
+\begin{boxtheorem}[Consistency of $\L$]
+    There is no $\L$-formula $\phi$ such that $\vdash_{\L} \phi$ and $\vdash_{\L} \parenth{\neg \phi}$.
+\end{boxtheorem}
+\begin{proof}
+    This follows from \Cref{Ch1:Thm:LSoundness}: if such an $\L$-formula $\phi$ did exist, both $\phi$ and $\parenth{\neg \phi}$ would need to be tautologies, violating \Cref{Ch1:Lemma:PropValBhv}. Therefore, such an $\L$-formula cannot exist.
+\end{proof}
+
+We have a more general result.
+
+\begin{boxproposition}
+    Suppose $\Gamma$ is a consistent set of $\L$-formulae. Let $\phi$ be an $\L$-formula that is \emph{not} a consequence of $\Gamma$. Then, $\Gamma \cup \set{\parenth{\neg \phi}}$ is consistent.
+\end{boxproposition}
+\begin{proof}
+    Suppose that $\Gamma \cup \set{\parenth{\ neg \phi}}$ is not consistent. Then, there exists a formula $\psi$ such that
+    \begin{align}
+        \Gamma \cup \set{\parenth{\neg \phi}} \vdash_{\L} \psi
+        \label{Ch1:Eq:ConsistencyProofEq1} \\
+        \Gamma \cup \set{\parenth{\neg \phi}} \vdash_{\L} \parenth{\neg \psi}
+        \label{Ch1:Eq:ConsistencyProofEq2}
+    \end{align}
+    We can apply the Deduction Theorem (\Cref{Ch1:Thm:DeductionThm}) to~\eqref{Ch1:Eq:ConsistencyProofEq2} to deduce that
+    \begin{align}
+        \Gamma \vdash_{\L} \parenth{\parenth{\neg \phi} \to \parenth{\neg \psi}}
+        \label{Ch1:Eq:ConsistencyProofEq3}
+    \end{align}
+    Then, applying~\ref{Ch1:Def:PLAxiom:3} to~\eqref{Ch1:Eq:ConsistencyProofEq3}, we have
+    \begin{align}
+        \Gamma \vdash_{\L} \parenth{\psi \to \phi}
+        \label{Ch1:Eq:ConsistencyProofEq4}
+    \end{align}
+    In similar fashion, we can apply the Deduction Theorem followed by~\ref{Ch1:Def:PLAxiom:3} to~\eqref{Ch1:Eq:ConsistencyProofEq1} to deduce that
+    \begin{align}
+        \Gamma \vdash_{\L} \parenth{\parenth{\neg \psi} \to \phi}
+        \label{Ch1:Eq:ConsistencyProofEq5}
+    \end{align}
+    \sorry % From this, we can conclude that $\Gamma \vdash_{\L} \phi$, contradicting our assumption. TODO: include reference to something that allows us to do this.
+\end{proof}
+
+\subsection{Completeness}
+
+We begin by making an observation about $\L$: in general, it is not true that for any given $\L$-formula, either it or its negation is a theorem.
+
+\begin{boxdefinition}[Completeness]
+    Let $\Gamma$ be a consistent set of $\L$-formulae. We say $\Gamma$ is \textbf{complete} if for all $\L$-formulae $\phi$, either $\Gamma \vdash_{\L} \phi$ or $\Gamma \vdash_{\L} \parenth{\neg \phi}$.
+\end{boxdefinition}
+
+
