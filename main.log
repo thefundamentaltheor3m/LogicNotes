@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=latex 2025.1.20)  20 JAN 2025 14:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=latex 2025.1.21)  21 JAN 2025 16:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -58,9 +58,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language10). Reported on input line 105.
+(babel)             (\language60). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language10). Reported on input line 108.
+(babel)             (\language60). Reported on input line 108.
 )) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
@@ -2564,7 +2564,7 @@ File: OMXyhex.fd
 File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
 )) [2
 
-] (./Chapters/1_Prop_Logic/1_Prop_Logic.tex [3]
+] [3] (./Chapters/1_Prop_Logic/1_Prop_Logic.tex [4]
 Chapter 1.
 l. 18 Writing main.idv[1] (main0x.svg)
 l. 18 Writing main.idv[2] (main1x.svg)
@@ -2573,7 +2573,7 @@ l. 18 Writing main.idv[3] (main2x.svg)
 LaTeX Font Warning: Font shape `T1/xcmss/b/n' in size <12> not available
 (Font)              Font shape `T1/xcmss/bx/n' tried instead on input line 19.
 
-[4
+[5
 
 ] (./Chapters/1_Prop_Logic/1_1_Prop_Formulae.tex
 
@@ -2584,17 +2584,17 @@ LaTeX Font Warning: Font shape `T1/xcmss/b/n' in size <17.28> not available
 LaTeX Font Warning: Font shape `T1/xcmss/b/n' in size <14.4> not available
 (Font)              Font shape `T1/xcmss/bx/n' tried instead on input line 3.
 
-[5]
+[6]
 l. 26 Writing main.idv[4] (main3x.svg)
 l. 26 Writing main.idv[5] (main4x.svg)
-[6]
+[7]
 l. 35 Writing main.idv[6] (main5x.svg)
 l. 35 Writing main.idv[7] (main6x.svg)
 l. 35 Writing main.idv[8] (main7x.svg)
 l. 35 Writing main.idv[9] (main8x.svg)
 l. 35 Writing main.idv[10] (main9x.svg)
 l. 35 Writing main.idv[11] (main10x.svg)
-[7]
+[8]
 l. 52 Writing main.idv[12] (main11x.svg)
 l. 52 Writing main.idv[13] (main12x.svg)
 l. 52 Writing main.idv[14] (main13x.svg)
@@ -2602,18 +2602,18 @@ l. 52 Writing main.idv[15] (main14x.svg)
 l. 52 Writing main.idv[16] (main15x.svg)
 l. 52 Writing main.idv[17] (main16x.svg)
 l. 52 Writing main.idv[18] (main17x.svg)
-[8] [9]
+[9] [10]
 l. 80 Writing main.idv[19] (main18x.svg)
 l. 84 Writing main.idv[20] (main19x.svg)
 l. 84 Writing main.idv[21] (main20x.svg)
 l. 84 Writing main.idv[22] (main21x.svg)
-[10]
+[11]
 l. 101 Writing main.idv[23] (main22x.svg)
 l. 101 Writing main.idv[24] (main23x.svg)
-[11]
+[12]
 l. 116 Writing main.idv[25] (main24x.svg)
 l. 116 Writing main.idv[26] (main25x.svg)
-[12] [13] [14] [15]
+[13] [14] [15] [16]
 l. 159 Writing main.idv[27] (main26x.svg)
 l. 159 Writing main.idv[28] (main27x.svg)
 l. 165 Writing main.idv[29] (main28x.svg)
@@ -2629,25 +2629,25 @@ l. 181 Writing main.idv[38] (main37x.svg)
 l. 181 Writing main.idv[39] (main38x.svg)
 l. 183 Writing main.idv[40] (main39x.svg)
 l. 183 Writing main.idv[41] (main40x.svg)
-[16]
+[17]
 l. 191 Writing main.idv[42] (main41x.svg)
 l. 191 Writing main.idv[43] (main42x.svg)
 l. 191 Writing main.idv[44] (main43x.svg)
 l. 191 Writing main.idv[45] (main44x.svg)
 l. 191 Writing main.idv[46] (main45x.svg)
 l. 191 Writing main.idv[47] (main46x.svg)
-[17]
+[18]
 l. 200 Writing main.idv[48] (main47x.svg)
 l. 200 Writing main.idv[49] (main48x.svg)
-[18]
-l. 216 Writing main.idv[50] (main49x.svg)
 [19]
+l. 216 Writing main.idv[50] (main49x.svg)
+[20]
 l. 219 Writing main.idv[51] (main50x.svg)
 l. 219 Writing main.idv[52] (main51x.svg)
 l. 222 Writing main.idv[53] (main52x.svg)
 l. 224 Writing main.idv[54] (main53x.svg)
 --- file main2.html ---
-[20]
+[21]
 l. 226 Writing main.idv[55] (main54x.svg)
 l. 228 Writing main.idv[56] (main55x.svg)
 l. 228 Writing main.idv[57] (main56x.svg)
@@ -2655,24 +2655,24 @@ l. 231 Writing main.idv[58] (main57x.svg)
 l. 232 Writing main.idv[59] (main58x.svg)
 l. 232 Writing main.idv[60] (main59x.svg)
 l. 238 Writing main.idv[61] (main60x.svg)
-[21]
+[22]
 l. 239 Writing main.idv[62] (main61x.svg)
 l. 241 Writing main.idv[63] (main62x.svg)
 l. 241 Writing main.idv[64] (main63x.svg)
 l. 244 Writing main.idv[65] (main64x.svg)
 l. 245 Writing main.idv[66] (main65x.svg)
-[22]
+[23]
 l. 258 Writing main.idv[67] (main66x.svg)
 l. 260 Writing main.idv[68] (main67x.svg)
-[23]
+[24]
 l. 268 Writing main.idv[69] (main68x.svg)
 l. 274 Writing main.idv[70] (main69x.svg)
-[24]
+[25]
 l. 287 Writing main.idv[71] (main70x.svg)
 l. 287 Writing main.idv[72] (main71x.svg)
 l. 287 Writing main.idv[73] (main72x.svg)
 l. 290 Writing main.idv[74] (main73x.svg)
-[25]
+[26]
 l. 293 Writing main.idv[75] (main74x.svg)
 l. 298 Writing main.idv[76] (main75x.svg)
 l. 299 Writing main.idv[77] (main76x.svg)
@@ -2683,11 +2683,11 @@ l. 312 Writing main.idv[81] (main80x.svg)
 l. 312 Writing main.idv[82] (main81x.svg)
 l. 317 Writing main.idv[83] (main82x.svg)
 l. 317 Writing main.idv[84] (main83x.svg)
-[26] [27]
+[27] [28]
 l. 326 Writing main.idv[85] (main84x.svg)
 l. 327 Writing main.idv[86] (main85x.svg)
 l. 344 Writing main.idv[87] (main86x.svg)
-[28]
+[29]
 l. 357 Writing main.idv[88] (main87x.svg)
 l. 357 Writing main.idv[89] (main88x.svg)
 l. 357 Writing main.idv[90] (main89x.svg)
@@ -2697,27 +2697,27 @@ l. 364 Writing main.idv[93] (main92x.svg)
 l. 364 Writing main.idv[94] (main93x.svg)
 l. 365 Writing main.idv[95] (main94x.svg)
 l. 365 Writing main.idv[96] (main95x.svg)
-[29]) (./Chapters/1_Prop_Logic/1_2_Formal_System.tex
+[30]) (./Chapters/1_Prop_Logic/1_2_Formal_System.tex
 
-LaTeX Warning: Citation '2018LecNotes' on page 30 undefined on input line 7.
+LaTeX Warning: Citation '2018LecNotes' on page 31 undefined on input line 7.
 
-[30] [31] [32]
+[31] [32] [33]
 l. 51 Writing main.idv[97] (main96x.svg)
-[33] [34] [35] [36]
+[34] [35] [36] [37]
 l. 111 Writing main.idv[98] (main97x.svg)
 l. 112 Writing main.idv[99] (main98x.svg)
-[37]
+[38]
 l. 122 Writing main.idv[100] (main99x.svg)
 l. 123 Writing main.idv[101] (main100x.svg)
 l. 124 Writing main.idv[102] (main101x.svg)
-[38]
+[39]
 l. 131 Writing main.idv[103] (main102x.svg)
 l. 132 Writing main.idv[104] (main103x.svg)
 l. 132 Writing main.idv[105] (main104x.svg)
-[39]
+[40]
 l. 147 Writing main.idv[106] (main105x.svg)
 l. 156 Writing main.idv[107] (main106x.svg)
-[40]
+[41]
 l. 171 Writing main.idv[108] (main107x.svg)
 l. 175 Writing main.idv[109] (main108x.svg)
 l. 179 Writing main.idv[110] (main109x.svg)
@@ -2727,7 +2727,7 @@ l. 191 Writing main.idv[113] (main112x.svg)
 l. 193 Writing main.idv[114] (main113x.svg)
 l. 199 Writing main.idv[115] (main114x.svg)
 l. 205 Writing main.idv[116] (main115x.svg)
-[41] [42]
+[42] [43]
 LaTeX Font Info:    Trying to load font information for TS1+xcmss on input line
  225.
 LaTeX Font Info:    No file TS1xcmss.fd. on input line 225.
@@ -2736,28 +2736,28 @@ LaTeX Font Warning: Font shape `TS1/xcmss/m/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
 (Font)              for symbol `textbullet' on input line 225.
 
-[43] [44]
+[44] [45]
 l. 255 Writing main.idv[117] (main116x.svg)
 l. 255 Writing main.idv[118] (main117x.svg)
-[45]
+[46]
 l. 258 Writing main.idv[119] (main118x.svg)
 l. 258 Writing main.idv[120] (main119x.svg)
 l. 260 Writing main.idv[121] (main120x.svg)
 l. 260 Writing main.idv[122] (main121x.svg)
 l. 260 Writing main.idv[123] (main122x.svg)
 l. 260 Writing main.idv[124] (main123x.svg)
-[46]
-l. 271 Writing main.idv[125] (main124x.svg)
 [47]
+l. 271 Writing main.idv[125] (main124x.svg)
+[48]
 l. 275 Writing main.idv[126] (main125x.svg)
 l. 279 Writing main.idv[127] (main126x.svg)
-[48]
+[49]
 l. 289 Writing main.idv[128] (main127x.svg)
 l. 289 Writing main.idv[129] (main128x.svg)
 l. 289 Writing main.idv[130] (main129x.svg)
 l. 292 Writing main.idv[131] (main130x.svg)
 l. 307 Writing main.idv[132] (main131x.svg)
-[49]
+[50]
 l. 313 Writing main.idv[133] (main132x.svg)
 l. 319 Writing main.idv[134] (main133x.svg)
 l. 337 Writing main.idv[135] (main134x.svg)
@@ -2769,11 +2769,46 @@ l. 354 Writing main.idv[140] (main139x.svg)
 l. 356 Writing main.idv[141] (main140x.svg)
 l. 359 Writing main.idv[142] (main141x.svg)
 l. 359 Writing main.idv[143] (main142x.svg)
-)) [50] [51] [52]
+) (./Chapters/1_Prop_Logic/1_3_Soundness_and_Completeness.tex [51] [52]
+l. 11 Writing main.idv[144] (main143x.svg)
+l. 11 Writing main.idv[145] (main144x.svg)
+[53]
+l. 15 Writing main.idv[146] (main145x.svg)
+l. 20 Writing main.idv[147] (main146x.svg)
+l. 20 Writing main.idv[148] (main147x.svg)
+l. 21 Writing main.idv[149] (main148x.svg)
+l. 21 Writing main.idv[150] (main149x.svg)
+l. 21 Writing main.idv[151] (main150x.svg)
+[54]
+l. 30 Writing main.idv[152] (main151x.svg)
+[55] [56]
+
+LaTeX Warning: Citation '2018LecNotes' on page 57 undefined on input line 49.
+
+l. 55 Writing main.idv[153] (main152x.svg)
+l. 55 Writing main.idv[154] (main153x.svg)
+[57]
+l. 68 Writing main.idv[155] (main154x.svg)
+l. 74 Writing main.idv[156] (main155x.svg)
+[58]
+l. 77 Writing main.idv[157] (main156x.svg)
+l. 83 Writing main.idv[158] (main157x.svg)
+[59]
+l. 86 Writing main.idv[159] (main158x.svg)
+l. 92 Writing main.idv[160] (main159x.svg)
+l. 92 Writing main.idv[161] (main160x.svg)
+l. 92 Writing main.idv[162] (main161x.svg)
+l. 97 Writing main.idv[163] (main162x.svg)
+[60]
+l. 102 Writing main.idv[164] (main163x.svg)
+l. 107 Writing main.idv[165] (main164x.svg)
+[61]
+l. 116 Writing main.idv[166] (main165x.svg)
+)) [62]
 
 LaTeX Warning: Empty bibliography on input line 48.
 
-[53] 
+[63] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -2796,12 +2831,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 61955 strings out of 474223
- 1373011 string characters out of 5748759
- 2441206 words of memory out of 5000000
- 82725 multiletter control sequences out of 15000+600000
+ 62050 strings out of 474223
+ 1374824 string characters out of 5748759
+ 2442559 words of memory out of 5000000
+ 82817 multiletter control sequences out of 15000+600000
  582251 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  112i,17n,134p,1272b,1790s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (56 pages, 228108 bytes).
+Output written on main.dvi (66 pages, 255720 bytes).

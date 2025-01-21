@@ -52,8 +52,22 @@ href="#x1-90001.2.2" id="QQ2-1-9">Constructing a Formal System Propositional Log
 <br /><span class="subsectionToc" >1.2.3 <a 
 href="#x1-100001.2.3" id="QQ2-1-10">Deductions in <span 
 class="cmsssy-10x-x-120">L</span></a></span>
+<br /><span class="sectionToc" >1.3 <a 
+href="#x1-110001.3" id="QQ2-1-11">Important Properties of <span 
+class="cmsssy-10x-x-120">L</span></a></span>
+<br /><span class="subsectionToc" >1.3.1 <a 
+href="#x1-120001.3.1" id="QQ2-1-12">Propositional Valuations</a></span>
+<br /><span class="subsectionToc" >1.3.2 <a 
+href="#x1-130001.3.2" id="QQ2-1-13">Soundness</a></span>
+<br /><span class="subsectionToc" >1.3.3 <a 
+href="#x1-140001.3.3" id="QQ2-1-14">Consistency</a></span>
+<br /><span class="subsectionToc" >1.3.4 <a 
+href="#x1-150001.3.4" id="QQ2-1-15">Completeness</a></span>
 <br /><span class="chapterToc" > <a 
-href="#Q1-1-11">Bibliography</a></span>
+href="#Q1-1-16">Bibliography</a></span>
+                                                                                           
+
+                                                                                           
 </div>
 <!--l. 28--><p class="noindent" >
                                                                                            
@@ -3121,12 +3135,536 @@ class="ectt-1200">sorry</span></span></p></dd></dl>
 </div>                                                                                           
 
                                                                                            
+<h3 class="sectionHead"><span class="titlemark">1.3   </span> <a 
+ id="x1-110001.3"></a>Important Properties of <span 
+class="cmsssy-10x-x-120">L</span></h3>
+<!--l. 3--><p class="noindent" >In this section, we prove important properties about <span 
+class="cmsssy-10x-x-120">L</span>, with our first major goal being to prove that the
+theorems in <span 
+class="cmsssy-10x-x-120">L </span>are precisely the tautologies.
+</p><!--l. 5--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">1.3.1   </span> <a 
+ id="x1-120001.3.1"></a>Propositional Valuations</h4>
+<div class="tcolorbox tcolorbox" id="tcolobox-54">     
+<div class="tcolorbox-title">
+                                                                                           
+
+                                                                                           
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 7--><p class="noindent" ><span class="head">
+<a 
+ id="x1-12001r1"></a>
+<span 
+class="ecsx-1200">Definition 1.3.1 </span>(Propositional Valuation)<span 
+class="ecsx-1200">.</span>  </span>A <span 
+class="ecsx-1200">propositional valuation </span><span 
+class="cmsmfbx-12">v </span>is an assignment of
+truth values to propositions <span 
+class="cmssmi-10x-x-120">p</span><sub><span 
+class="cmsmf-8">1</span></sub><span 
+class="cmssmi-10x-x-120">;p</span><sub><span 
+class="cmsmf-8">2</span></sub><span 
+class="cmssmi-10x-x-120">;</span><span 
+class="cmssmi-10x-x-120">…</span>, so that
+</p><table 
+class="align-star">
+                                   <tr><td 
+class="align-odd"><span 
+class="cmsmfbx-12">v</span><img 
+src="main143x.svg" alt="(pi)"  class="left" align="middle" /> <span 
+class="cmsssy-10x-x-120">2</span><img 
+src="main144x.svg" alt="fT;Fg"  class="left" align="middle" /></td>                                   <td 
+class="align-even"></td>                                   <td 
+class="align-label"></td></tr></table>
+<!--l. 12--><p class="noindent" >for all <span 
+class="cmssmi-10x-x-120">i </span><span 
+class="cmsssy-10x-x-120">2 </span><span 
+class="ssmsbm-10x-x-120">N</span>.
+</p>
+</div>
+<!--l. 13--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 15--><p class="noindent" >Using the truth table rules by which we defined the connectives <span 
+class="cmsssy-10x-x-120">! </span>and <span 
+class="cmsssy-10x-x-120">: </span>of <span 
+class="cmsssy-10x-x-120">L </span>(cf. Definition <a 
+href="#x1-4007r2">1.1.2</a>), we
+can assign a truth value <span 
+class="cmsmfbx-12">v</span><img 
+src="main145x.svg" alt="(Œ)"  class="left" align="middle" /> to any <span 
+class="cmsssy-10x-x-120">L</span>-formula <span 
+class="cmssmi-10x-x-120">Œ</span>.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-55">     
+<div class="tcolorbox-title">
+                                                                                           
+
+                                                                                           
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 17--><p class="noindent" ><span class="head">
+<a 
+ id="x1-12002r2"></a>
+<span 
+class="ecsx-1200">Lemma 1.3.2 </span>(Behaviour of Propositional Valuations)<span 
+class="ecsx-1200">.</span>  </span> <span 
+class="ecsi-1200">Let </span><span 
+class="cmssmi-10x-x-120">Œ; </span><span 
+class="ecsi-1200">be </span><span 
+class="cmsssy-10x-x-120">L</span><span 
+class="ecsi-1200">-formulae. Then,</span>
+      </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+   <span 
+class="ecsi-1200">1.</span> </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmsmfbx-12">v</span><img 
+src="main146x.svg" alt="((:Œ))"  class="left" align="middle" /> <span 
+class="cmssmi-10x-x-120">≠</span><span 
+class="cmsmfbx-12">v</span><img 
+src="main147x.svg" alt="(Œ)"  class="left" align="middle" />
+      </dd><dt class="enumerate-enumitem">
+   <span 
+class="ecsi-1200">2.</span> </dt><dd 
+class="enumerate-enumitem"><span 
+class="cmsmfbx-12">v</span><img 
+src="main148x.svg" alt="(Œ !   )"  class="left" align="middle" /> <span 
+class="cmsmf-12">= </span><span 
+class="cmsmfbx-12">F </span><span 
+class="ecsi-1200">if and only if </span><span 
+class="cmsmfbx-12">v</span><img 
+src="main149x.svg" alt="(Œ)"  class="left" align="middle" /> <span 
+class="cmsmf-12">= </span><span 
+class="cmsmfbx-12">T </span><span 
+class="ecsi-1200">and </span><span 
+class="cmsmfbx-12">v</span><img 
+src="main150x.svg" alt="(  )"  class="left" align="middle" /> <span 
+class="cmsmf-12">= </span><span 
+class="cmsmfbx-12">F</span></dd></dl>
+</div>
+<!--l. 23--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 25--><p class="noindent" >We do not prove these results.
+</p><!--l. 27--><p class="noindent" >We can now be precise about what a tautology is.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-56">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 29--><p class="noindent" ><span class="head">
+<a 
+ id="x1-12005r3"></a>
+<span 
+class="ecsx-1200">Definition 1.3.3 </span>(Tautology)<span 
+class="ecsx-1200">.</span>  </span>An  <span 
+class="cmsssy-10x-x-120">L</span>-formula  <span 
+class="cmssmi-10x-x-120">Œ  </span>is  a  <span 
+class="ecsx-1200">tautology  </span>if  <span 
+class="cmsmfbx-12">v</span><img 
+src="main151x.svg" alt="(Œ)"  class="left" align="middle" />  <span 
+class="cmsmf-12">=  </span><span 
+class="cmsmfbx-12">T  </span>for  all
+propositional valuations <span 
+class="cmsmfbx-12">v</span>.
+</p>
+</div>
+<!--l. 31--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 33--><p class="noindent" >We are now ready to prove that <span 
+class="cmsssy-10x-x-120">L </span>is sound.
+</p><!--l. 35--><p class="noindent" >
+</p>
+                                                                                           
+
+                                                                                           
+<h4 class="subsectionHead"><span class="titlemark">1.3.2   </span> <a 
+ id="x1-130001.3.2"></a>Soundness</h4>
+<div class="tcolorbox tcolorbox" id="tcolobox-57">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 37--><p class="noindent" ><span class="head">
+<a 
+ id="x1-13001r4"></a>
+<span 
+class="ecsx-1200">Definition 1.3.4 </span>(Soundness)<span 
+class="ecsx-1200">.</span>  </span>We say a formal system is <span 
+class="ecsx-1200">sound </span>if every theorem in it is
+a tautology.
+</p>
+</div>
+<!--l. 39--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 41--><p class="noindent" >Now, the much-awaited result.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-58">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 43--><p class="noindent" ><span class="head">
+<a 
+ id="x1-13002r5"></a>
+<span 
+class="ecsx-1200">Theorem 1.3.5 </span>(Soundness of <span 
+class="cmsssy-10x-x-120">L</span>)<span 
+class="ecsx-1200">.</span>  </span> <span 
+class="ecsi-1200">The formal system </span><span 
+class="cmsssy-10x-x-120">L</span><span 
+class="ecsi-1200">of propositional logic is sound.</span>
+</p>
+</div>
+<!--l. 45--><p class="noindent" ></p> 
+</div> 
+</div>
+<div class="proof">
+<!--l. 47--><p class="noindent" ><span class="head">
+<span 
+class="ecsi-1200">Proof.</span> </span>Let <span 
+class="cmssmi-10x-x-120">Œ </span>be a theorem in <span 
+class="cmsssy-10x-x-120">L</span>. We prove that <span 
+class="cmssmi-10x-x-120">Œ </span>is a tautology by performing induction on the
+length of <span 
+class="cmssmi-10x-x-120">Œ</span>. The base case involves proving that the axioms <a 
+href="#x1-90111">(A1)<!--tex4ht:ref: Ch1:Def:PLAxiom:1 --></a>-<a 
+href="#x1-90133">(A3)<!--tex4ht:ref: Ch1:Def:PLAxiom:3 --></a> are tautologies, and the
+                                                                                           
+
+                                                                                           
+inductive case involves proving that the modus ponens deduction rule <a 
+href="#x1-90181">(MP)<!--tex4ht:ref: Ch1:Def:PLDedRule:MP --></a> preserves tautologies.
+</p><!--l. 49--><p class="noindent" >While these proofs can be done manually, there is a rather clever trick that can be used in the case
+of <a 
+href="#x1-90122">(A2)<!--tex4ht:ref: Ch1:Def:PLAxiom:2 --></a>. This is given in [<span 
+class="ecsx-1200">2018LecNotes</span>]. <span id="textcolor5"><span 
+class="ectt-1200">sorry</span></span>                                    □
+</p>
+</div>
+<!--l. 52--><p class="noindent" >We have a more general version of this result.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-59">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 54--><p class="noindent" ><span class="head">
+<a 
+ id="x1-13003r6"></a>
+<span 
+class="ecsx-1200">Theorem 1.3.6 </span>(A Generalisation of Soundness)<span 
+class="ecsx-1200">.</span>  </span><span 
+class="ecsi-1200">Let </span><span 
+class="cmsmf-12">  </span><span 
+class="ecsi-1200">be a set of </span><span 
+class="cmsssy-10x-x-120">L</span><span 
+class="ecsi-1200">-formulae, and let </span><span 
+class="cmssmi-10x-x-120">Œ</span>
+<span 
+class="ecsi-1200">be an </span><span 
+class="cmsssy-10x-x-120">L</span><span 
+class="ecsi-1200">-formula such that </span><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ</span><span 
+class="ecsi-1200">. If </span><span 
+class="cmsmfbx-12">v</span><img 
+src="main152x.svg" alt="( )"  class="left" align="middle" /> <span 
+class="cmsmf-12">= </span><span 
+class="cmsmfbx-12">T </span><span 
+class="ecsi-1200">for all </span><span 
+class="cmssmi-10x-x-120"> </span><span 
+class="cmsssy-10x-x-120">2 </span><span 
+class="cmsmf-12"> </span><span 
+class="ecsi-1200">, then </span><span 
+class="cmsmfbx-12">v</span><img 
+src="main153x.svg" alt="(Œ)"  class="left" align="middle" /> <span 
+class="cmsmf-12">= </span><span 
+class="cmsmfbx-12">T</span><span 
+class="ecsi-1200">.</span>
+</p>
+</div>
+<!--l. 56--><p class="noindent" ></p> 
+</div> 
+</div>
+<div class="proof">
+<!--l. 58--><p class="noindent" ><span class="head">
+<span 
+class="ecsi-1200">Proof.</span> </span>The proof is actually identical to that of Theorem <a 
+href="#x1-13002r5">1.3.5</a>, but with <span 
+class="cmsmf-12">  </span>being a part of the
+base case. In this case, the proof follows from the assumption that <span 
+class="cmsmfbx-12">v </span>is true on <span 
+class="cmsmf-12"> </span>.                  □
+</p>
+</div>
+                                                                                           
+
+                                                                                           
+<!--l. 61--><p class="noindent" >Now that we have shown that <span 
+class="cmsssy-10x-x-120">L </span>is sound, we show that <span 
+class="cmsssy-10x-x-120">L </span>has other important properties that will enable
+us to reason in <span 
+class="cmsssy-10x-x-120">L </span>the way we would like to.
+</p><!--l. 63--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">1.3.3   </span> <a 
+ id="x1-140001.3.3"></a>Consistency</h4>
+<!--l. 65--><p class="noindent" >For the remainder of this section, fix a set <span 
+class="cmsmf-12">  </span>of <span 
+class="cmsssy-10x-x-120">L</span>-formulae.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-60">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 67--><p class="noindent" ><span class="head">
+<a 
+ id="x1-14001r7"></a>
+<span 
+class="ecsx-1200">Definition 1.3.7 </span>(Consistency)<span 
+class="ecsx-1200">.</span>  </span><span 
+class="cmsmf-12">   </span>is  <span 
+class="ecsx-1200">consistent </span>if  there  is  no  <span 
+class="cmsssy-10x-x-120">L</span>-formula  <span 
+class="cmssmi-10x-x-120">Œ </span>such  that
+<span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ </span>and <span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main154x.svg" alt="(:Œ)"  class="left" align="middle" />.
+</p>
+</div>
+<!--l. 69--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 71--><p class="noindent" >Soundness tells us something about the consistency of the empty set in <span 
+class="cmsssy-10x-x-120">L</span>, which we will refer to more
+generally as the <span 
+class="ecsx-1200">consistency of </span><span 
+class="cmsssy-10x-x-120">L</span>.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-61">     
+<div class="tcolorbox-title">
+                                                                                           
+
+                                                                                           
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 73--><p class="noindent" ><span class="head">
+<a 
+ id="x1-14002r8"></a>
+<span 
+class="ecsx-1200">Theorem 1.3.8 </span>(Consistency of <span 
+class="cmsssy-10x-x-120">L</span>)<span 
+class="ecsx-1200">.</span>  </span><span 
+class="ecsi-1200">There is no </span><span 
+class="cmsssy-10x-x-120">L</span><span 
+class="ecsi-1200">-formula </span><span 
+class="cmssmi-10x-x-120">Œ </span><span 
+class="ecsi-1200">such that </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ </span><span 
+class="ecsi-1200">and </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main155x.svg" alt="(:Œ)"  class="left" align="middle" /><span 
+class="ecsi-1200">.</span>
+</p>
+</div>
+<!--l. 75--><p class="noindent" ></p> 
+</div> 
+</div>
+<div class="proof">
+<!--l. 77--><p class="noindent" ><span class="head">
+<span 
+class="ecsi-1200">Proof.</span> </span>This follows from Theorem <a 
+href="#x1-13002r5">1.3.5</a>: if such an <span 
+class="cmsssy-10x-x-120">L</span>-formula <span 
+class="cmssmi-10x-x-120">Œ </span>did exist, both <span 
+class="cmssmi-10x-x-120">Œ </span>and <img 
+src="main156x.svg" alt="(: Œ)"  class="left" align="middle" /> would
+need to be tautologies, violating Lemma <a 
+href="#x1-12002r2">1.3.2</a>. Therefore, such an <span 
+class="cmsssy-10x-x-120">L</span>-formula cannot exist.       □
+</p>
+</div>
+<!--l. 80--><p class="noindent" >We have a more general result.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-62">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 82--><p class="noindent" ><span class="head">
+<a 
+ id="x1-14003r9"></a>
+<span 
+class="ecsx-1200">Proposition 1.3.9.</span>  </span><span 
+class="ecsi-1200">Suppose </span><span 
+class="cmsmf-12">  </span><span 
+class="ecsi-1200">is a consistent set of </span><span 
+class="cmsssy-10x-x-120">L</span><span 
+class="ecsi-1200">-formulae. Let </span><span 
+class="cmssmi-10x-x-120">Œ </span><span 
+class="ecsi-1200">be an </span><span 
+class="cmsssy-10x-x-120">L</span><span 
+class="ecsi-1200">-formula</span>
+<span 
+class="ecsi-1200">that is </span>not <span 
+class="ecsi-1200">a consequence of </span><span 
+class="cmsmf-12"> </span><span 
+class="ecsi-1200">. Then, </span><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">[</span><img 
+src="main157x.svg" alt="f(:Œ)g"  class="left" align="middle" /><span 
+class="ecsi-1200">is consistent.</span>
+</p>
+</div>
+<!--l. 84--><p class="noindent" ></p> 
+</div> 
+</div>
+                                                                                           
+
+                                                                                           
+<div class="proof">
+<!--l. 86--><p class="noindent" ><span class="head">
+<span 
+class="ecsi-1200">Proof.</span> </span>Suppose that <span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">[</span><img 
+src="main158x.svg" alt="f( neg Œ)g"  class="left" align="middle" /> is not consistent. Then, there exists a formula <span 
+class="cmssmi-10x-x-120"> </span>such
+that
+</p><table 
+class="align">
+                                    <tr><td 
+class="align-odd"><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">[</span><img 
+src="main159x.svg" alt="f(: Œ)g"  class="left" align="middle" /><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120"></span></td>                                       <td 
+class="align-even"></td>                                    <td 
+class="align-label"><a 
+ id="x1-14004r1"></a>(1.3.1)
+                                    </td></tr><tr><td 
+class="align-odd"><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">[</span><img 
+src="main160x.svg" alt="f(: Œ)g"  class="left" align="middle" /><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main161x.svg" alt="(:  )"  class="left" align="middle" /></td>                                    <td 
+class="align-even"></td>                                    <td 
+class="align-label"><a 
+ id="x1-14005r2"></a>(1.3.2)                                    </td></tr></table>
+<!--l. 93--><p class="noindent" >We can apply the Deduction Theorem (Theorem <a 
+href="#x1-10004r20">1.2.20</a>) to (<a 
+href="#x1-14005r2">1.3.2<!--tex4ht:ref: Ch1:Eq:ConsistencyProofEq2 --></a>) to deduce that
+                                                                                           
+
+                                                                                           
+</p><table 
+class="align">
+                                   <tr><td 
+class="align-odd"><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main162x.svg" alt="((:Œ) !  (:  ))"  class="left" align="middle" /></td>                                   <td 
+class="align-even"></td>                                   <td 
+class="align-label"><a 
+ id="x1-14006r3"></a>(1.3.3)                                   </td></tr></table>
+<!--l. 98--><p class="noindent" >Then, applying <a 
+href="#x1-90133">(A3)<!--tex4ht:ref: Ch1:Def:PLAxiom:3 --></a> to (<a 
+href="#x1-14006r3">1.3.3<!--tex4ht:ref: Ch1:Eq:ConsistencyProofEq3 --></a>), we have
+</p><table 
+class="align">
+                                       <tr><td 
+class="align-odd"><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main163x.svg" alt="(   !  Œ)"  class="left" align="middle" /></td>                                       <td 
+class="align-even"></td>                                       <td 
+class="align-label"><a 
+ id="x1-14007r4"></a>(1.3.4)                                       </td></tr></table>
+<!--l. 103--><p class="noindent" >In similar fashion, we can apply the Deduction Theorem followed by <a 
+href="#x1-90133">(A3)<!--tex4ht:ref: Ch1:Def:PLAxiom:3 --></a> to (<a 
+href="#x1-14004r1">1.3.1<!--tex4ht:ref: Ch1:Eq:ConsistencyProofEq1 --></a>) to deduce
+that
+                                                                                           
+
+                                                                                           
+</p><table 
+class="align">
+                                     <tr><td 
+class="align-odd"><span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main164x.svg" alt="((:  ) ! Œ)"  class="left" align="middle" /></td>                                     <td 
+class="align-even"></td>                                     <td 
+class="align-label"><a 
+ id="x1-14008r5"></a>(1.3.5)                                     </td></tr></table>
+<!--l. 108--><p class="noindent" ><span id="textcolor6"><span 
+class="ectt-1200">sorry</span></span>                                                                       □
+</p>
+</div>
+<!--l. 111--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">1.3.4   </span> <a 
+ id="x1-150001.3.4"></a>Completeness</h4>
+<!--l. 113--><p class="noindent" >We begin by making an observation about <span 
+class="cmsssy-10x-x-120">L</span>: in general, it is not true that for any given <span 
+class="cmsssy-10x-x-120">L</span>-formula, either
+it or its negation is a theorem.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-63">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 115--><p class="noindent" ><span class="head">
+<a 
+ id="x1-15001r10"></a>
+<span 
+class="ecsx-1200">Definition 1.3.10 </span>(Completeness)<span 
+class="ecsx-1200">.</span>  </span>Let <span 
+class="cmsmf-12">  </span>be a consistent set of <span 
+class="cmsssy-10x-x-120">L</span>-formulae. We say <span 
+class="cmsmf-12">  </span>is
+<span 
+class="ecsx-1200">complete </span>if for all <span 
+class="cmsssy-10x-x-120">L</span>-formulae <span 
+class="cmssmi-10x-x-120">Œ</span>, either <span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ </span>or <span 
+class="cmsmf-12">  </span><span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main165x.svg" alt="(:Œ)"  class="left" align="middle" />.
+</p>
+</div>
+<!--l. 117--><p class="noindent" ></p> 
+</div> 
+</div>
 <!--l. 38--><p class="noindent" >
                                                                                            
 
                                                                                            
 <a 
- id="Q1-1-11"></a>
+ id="Q1-1-16"></a>
 </p><!--l. 52--><p class="noindent" >For the latest version of these notes, visit <a 
 href="https://thefundamentaltheor3m.github.io/LogicNotes/LastLocallyCompiled.pdf" class="url" ><span 
 class="ectt-1200">https://thefundamentaltheor3m.github.io/LogicNotes/LastLocallyCompiled.pdf</span></a>.
