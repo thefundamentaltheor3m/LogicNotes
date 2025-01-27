@@ -1,0 +1,63 @@
+\section*{Problems Class 1}
+\addcontentsline{toc}{section}{Problems Class 1}
+\setcounter{PC}{1}
+
+\begin{boxproblem}
+    Decide whether the following are true or false, giving reasons. Here, $\Gamma$ is a set of $\L$-formulae, as are $\phi$ and $\psi$.
+    \begin{enumerate}[label = \normalfont \arabic*.]
+        \item In every $\L$-formula, the number of opening parentheses $($ is equal to the number of connectives.
+        
+        \item If $\Gamma \vdash_{\L} \phi$ and $\Gamma \vdash_{\L} \parenth{\phi \to \psi}$, then $\Gamma \vdash_{\L} \psi$.
+        
+        \item Suppose $\v$ is a propositional valuation and $\Gamma$ is such that $\vof{\Gamma} = \F$. Then, for all $\phi$ such that $\Gamma \vdash_{\L} \phi$, we have $\vof{\phi} = \F$.
+        
+        \item Suppose $\v$ is a propositional valuation and $\Delta_{\v} = \setst{\phi}{\vof{\phi} = \F}$. Then, $\Delta$ is consistent.
+        
+        \item Suppose $\v$ is a propositional valuation and $\Delta_{\v} = \setst{\phi}{\vof{\phi} = \F}$. Then, $\Delta$ is complete.
+    \end{enumerate}
+\end{boxproblem}
+\begin{solution} \hfill
+    \begin{enumerate}
+        \item TRUE. Every connective in an $\L$-formula is associated with precisely one sub-$\L$-formula that is not a variable, and the number of pairs of parentheses (which is the number of opening parentheses) is precisely the number of sub-$\L$-formulae that are not variables, because every such sub-$\L$-formula is enclosed in parentheses.
+        
+        \item TRUE. This is simply modus ponens generalised to arbitrary (potentially nonempty) $\Gamma$. While the deduction rule~\ref{Ch1:Def:PLDedRule:MP} is technically not something we defined over arbitrary contexts $\Gamma$, we can easily prove that it holds by induction on the length of $\Gamma$. 
+        
+        \item FALSE. Let $\v$ be any propositional valuation and $\phi$ and axiom of $\L$.
+        
+        \item FALSE. Let $\v$ be any propositional valuation and $p$ a propositional variable. Then, we know $\parenth{p \to \parenth{\neg p}} \in \Delta_{\v}$. We also know that $\parenth{p \land \parenth{\neg p}} \in \Delta_{\v}$. But the latter is logically equivalent to the negation of the former, making $\Delta_{\v}$ inconsistent.\footnote{We have actually done something stronger than simply provide a counterexample: we have proved that the statement is false for \textit{any} propositional valuation, not just for \textit{some} propositional valuation}
+        
+        \item TRUE. Let $\v$ be \sorry % idea: proof of false gives proof of everything
+    \end{enumerate}
+\end{solution}
+
+
+\begin{boxproblem}
+    Suppose $\phi$ is an $\L$-formula and $\Gamma$ is a set of $\L$-formulae. Do the following \textbf{syntactically}, ie, without using the Completeness Theorem. You may use theorems of $\L$ we have proved in lectures or the weekly problem sheets.
+    \begin{enumerate}[label = \normalfont (\roman*)]
+        \item Express the `Law of the Excluded Middle' $\parenth{\phi \lor \parenth{\neg \phi}}$ as an $\L$-formula and say why this is a theorem of $\L$.
+        
+        \item \sorry
+    \end{enumerate}
+\end{boxproblem}
+\begin{solution}\hfill
+    \begin{enumerate}[label = (\roman*)]
+        \item Recall that any formula of the form $\parenth{a \lor b}$ is expressed as $\parenth{\parenth{\neg a} \to b}$. Thus, we have that $\parenth{\phi \lor \parenth{\neg \phi}}$ is expressible as
+        \begin{align*}
+            \parenth{\parenth{\neg {\phi}} \to \parenth{\neg \phi}}
+        \end{align*}
+        Indeed, we proved in lectures that in $\L$, any formula implies itself. Therefore, the Law of the Excluded Middle is a theorem of $\L$.
+
+        \item \sorry
+    \end{enumerate}    
+\end{solution}
+
+\begin{boxproblem}
+    Show that the set of connectives $\set{\neg, \lr}$ is not adequate.
+    \begin{hint}
+        See EdStem.
+    \end{hint}
+\end{boxproblem}
+\begin{solution}
+    The idea is to lok at all possible truth functions of two variables $p$ and $q$ that are obtained using formulae involving $\neg$ and $\lr$.
+    \sorry
+\end{solution}

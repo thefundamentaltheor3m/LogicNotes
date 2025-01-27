@@ -231,10 +231,14 @@ Throughout this subsection, fix a set of $\L$-formulas $\Gamma$.
 Essentially, deductions capture the notion of proofs, with an additional layer of flexibility coming from the fact that we are allowed to have assumptions in $\Gamma$ that go beyond merely the axioms of $\L$. Just as proofs end in theorems, deductions end in consequences.
 
 \begin{boxdefinition}[Consequence]
-    We say a formula $\phi$ is a \textbf{consequence} of $\Gamma$ if there exists a deduction from $\Gamma$ ending in $\phi$. In this case, we write $\Gamma \vdash_{\L} \phi$.
+    We say a formula $\phi$ is a \textbf{consequence} of $\Gamma$ if there exists a deduction from $\Gamma$ ending in $\phi$. In this case, we write $\Gamma \vdash_{\L} \phi$. If $\phi$ is not a consequence of $\Gamma$, we write $\Gamma \not\vdash_{\L} \phi$.
 \end{boxdefinition}
 
-The relationship between proofs and deductions/theorems and consequences is that the former correspond to the case where $\Gamma$ is empty. In this case, instead of writing $\emptyset \vdash_{\L} \phi$, we write $\vdash_{\L} \phi$. Therefore, the theorems in $\L$ are precisely those formulae that are not consequences of other formulae.
+The relationship between proofs and deductions/theorems and consequences is that the former correspond to the case where $\Gamma$ is empty.
+\begin{boxconvention}
+    Instead of writing $\emptyset \vdash_{\L} \phi$, we write $\vdash_{\L} \phi$.
+\end{boxconvention}
+Therefore, the theorems in $\L$ are precisely those formulae that are not consequences of other formulae.
 
 We state a rather trivial fact.
 
