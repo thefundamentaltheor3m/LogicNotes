@@ -9,7 +9,8 @@
 \newtheorem{conjecture}[theorem]{Conjecture}
 \newtheorem{algorithm}[theorem]{Algorithm}
 \newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{problem}{Exercise}[section]
+\newcounter{PC}
+\newtheorem{problem}{Exercise}[PC]
 \newenvironment{boxproblem}{
     \begin{tcolorbox}[colback=white!90!black,colframe=black, breakable, enhanced]\begin{problem}
 }{
@@ -39,6 +40,8 @@
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 \newtheorem*{solution}{Solution}
+
+\newtheorem*{hint}{Hint}
 
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}

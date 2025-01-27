@@ -9,9 +9,13 @@
 \doTocEntry\tocsubsection{1.2.1}{\csname a:TocLink\endcsname{1}{x1-80001.2.1}{QQ2-1-8}{Formal Deduction Systems}}{31}\relax 
 \doTocEntry\tocsubsection{1.2.2}{\csname a:TocLink\endcsname{1}{x1-90001.2.2}{QQ2-1-9}{Constructing a Formal System Propositional Logic}}{37}\relax 
 \doTocEntry\tocsubsection{1.2.3}{\csname a:TocLink\endcsname{1}{x1-100001.2.3}{QQ2-1-10}{Deductions in $\mathcal  {L}$}}{44}\relax 
-\doTocEntry\tocsection{1.3}{\csname a:TocLink\endcsname{1}{x1-110001.3}{QQ2-1-11}{Important Properties of $\mathcal  {L}$}}{53}\relax 
-\doTocEntry\tocsubsection{1.3.1}{\csname a:TocLink\endcsname{1}{x1-120001.3.1}{QQ2-1-12}{Propositional Valuations}}{53}\relax 
-\doTocEntry\tocsubsection{1.3.2}{\csname a:TocLink\endcsname{1}{x1-130001.3.2}{QQ2-1-13}{Soundness}}{56}\relax 
-\doTocEntry\tocsubsection{1.3.3}{\csname a:TocLink\endcsname{1}{x1-140001.3.3}{QQ2-1-14}{Consistency}}{58}\relax 
-\doTocEntry\tocsubsection{1.3.4}{\csname a:TocLink\endcsname{1}{x1-150001.3.4}{QQ2-1-15}{Completeness}}{62}\relax 
-\doTocEntry\tocchapter{}{\csname a:TocLink\endcsname{1}{Q1-1-16}{}{Bibliography}}{63}\relax 
+\doTocEntry\tocsection{1.3}{\csname a:TocLink\endcsname{1}{x1-110001.3}{QQ2-1-11}{Important Properties of $\mathcal  {L}$}}{54}\relax 
+\doTocEntry\tocsubsection{1.3.1}{\csname a:TocLink\endcsname{1}{x1-120001.3.1}{QQ2-1-12}{Propositional Valuations}}{54}\relax 
+\doTocEntry\tocsubsection{1.3.2}{\csname a:TocLink\endcsname{1}{x1-130001.3.2}{QQ2-1-13}{Soundness}}{57}\relax 
+\doTocEntry\tocsubsection{1.3.3}{\csname a:TocLink\endcsname{1}{x1-140001.3.3}{QQ2-1-14}{Consistency}}{59}\relax 
+\doTocEntry\tocsubsection{1.3.4}{\csname a:TocLink\endcsname{1}{x1-150001.3.4}{QQ2-1-15}{Completeness}}{63}\relax 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-16000}{QQ2-1-16}{Exercises}}{67}\relax 
+\doTocEntry\tocchapter{}{\csname a:TocLink\endcsname{1}{Q1-1-17}{}{Exercises}}{67}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-17000}{QQ2-1-18}{Problems Class 1}}{67}\relax 
+\doTocEntry\tocsection{}{\csname a:TocLink\endcsname{1}{Q1-1-19}{}{Problems Class 1}}{67}\relax 
+\doTocEntry\tocchapter{}{\csname a:TocLink\endcsname{1}{Q1-1-20}{}{Bibliography}}{73}\relax 

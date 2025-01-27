@@ -64,7 +64,7 @@ Now that we have shown that $\L$ is sound, we show that $\L$ has other important
 
 For the remainder of this section, fix a set $\Gamma$ of $\L$-formulae.
 
-\begin{boxdefinition}[Consistency]
+\begin{boxdefinition}[Consistency]\label{Ch1:Def:Consistent}
     $\Gamma$ is \textbf{consistent} if there is no $\L$-formula $\phi$ such that $\Gamma \vdash_{\L} \phi$ and $\Gamma \vdash_{\L} \parenth{\neg \phi}$.
 \end{boxdefinition}
 
@@ -79,7 +79,7 @@ Soundness tells us something about the consistency of the empty set in $\L$, whi
 
 We have a more general result.
 
-\begin{boxproposition}
+\begin{boxproposition}\label{Ch1:Prop:ConsistencyUnion}
     Suppose $\Gamma$ is a consistent set of $\L$-formulae. Let $\phi$ be an $\L$-formula that is \emph{not} a consequence of $\Gamma$. Then, $\Gamma \cup \set{\parenth{\neg \phi}}$ is consistent.
 \end{boxproposition}
 \begin{proof}
@@ -115,5 +115,32 @@ We begin by making an observation about $\L$: in general, it is not true that fo
 \begin{boxdefinition}[Completeness]
     Let $\Gamma$ be a consistent set of $\L$-formulae. We say $\Gamma$ is \textbf{complete} if for all $\L$-formulae $\phi$, either $\Gamma \vdash_{\L} \phi$ or $\Gamma \vdash_{\L} \parenth{\neg \phi}$.
 \end{boxdefinition}
+
+It turns out that all consistent sets of $\L$-formulae are contained in complete sets of formulae.
+
+\begin{boxtheorem}[Lindenbaum's Lemma]
+    Suppose $\Gamma$ is a consistent set of $\L$-formulae. Then, there exists a complete set of $\L$-formulae $\Gamma^*$ such that $\Gamma \subseteq \Gamma^*$.
+\end{boxtheorem}
+\begin{proof}
+    The idea is to construct $\Gamma^*$ by brute force. We know that the alphabet of $\L$ is countable. Therefore, so is the set of all possible $\L$-formulae. We can list them as $\phi_0, \phi_1, \ldots$. We perform the fomllowing inductive construction: let $\Gamma_0 := \Gamma$ and for all $n \geq 0$, define
+    \begin{align}
+        \Gamma_{n + 1} :=
+        \begin{cases}
+            \Gamma_n & \text{ if } \Gamma_n \vdash_{\L} \phi_n \\
+            \Gamma_{n} \cup \set{\parenth{\neg \phi_n}} & \text{ if } \Gamma_n \not\vdash_{\L} \phi_n
+        \end{cases}
+        \label{Ch1:Eq:LindenbaumConstruction}
+    \end{align}
+    One can perform induction on $n$ to show that for all $n \geq 0$,
+    \begin{itemize}[noitemsep]
+        \item $\Gamma_n \subseteq \Gamma_{n + 1}$ (using purely ~\eqref{Ch1:Eq:LindenbaumConstruction})
+        \item $\Gamma_n$ is consistent (using \Cref{Ch1:Prop:ConsistencyUnion})
+    \end{itemize}
+    Define
+    \begin{align*}
+        \Gamma^* := \bigcup_{n = 0}^{\infty} \Gamma_n
+    \end{align*}
+    We now show that $\Gamma^*$ is consistent (cf. \Cref{Ch1:Def:Consistent}). Indeed, suppose there exists some formula $\phi_i$ such that $\Gamma \vdash_{\L} \phi_i$ and $\Gamma \vdash_{\L} \parenth{\neg \phi_i}$. Then, by the construction of the $\Gamma_i$, we must have $\Gamma_{i + 1} \vdash_{\L} \phi_i$. Then, we must have $\Gamma_{i + 2} = \Gamma_{i + 1}$, meaning $\Gamma_{}$
+\end{proof}
 
 

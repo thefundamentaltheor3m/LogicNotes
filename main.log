@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=latex 2025.1.21)  21 JAN 2025 16:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=latex 2025.1.27)  27 JAN 2025 13:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -58,9 +58,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language60). Reported on input line 105.
+(babel)             (\language32). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language60). Reported on input line 108.
+(babel)             (\language32). Reported on input line 108.
 )) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
@@ -1661,7 +1661,8 @@ Package cleveref Info: `amsthm' support loaded on input line 3026.
 Package cleveref Info: `listings' support loaded on input line 3131.
 )
 \c@theorem=\count524
-\c@problem=\count525
+\c@PC=\count525
+\c@problem=\count526
 ) (./TeX_Setup/shortcuts.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarydecorations.markings.code.tex
@@ -1679,7 +1680,7 @@ version 2024-01-10-14:44
 version 2024-01-23-13:44
 l.870 --- TeX4ht warning --- nonprimitive \everypar ---
 --- needs --- tex4ht main ---
-\tmp:cnt=\count526
+\tmp:cnt=\count527
 \openout15 = `main.tmp'.
 
 (./main.tmp)
@@ -1951,7 +1952,7 @@ version 2022-10-25-13:59
 version 2023-10-09-13:31
 )) (/usr/share/texlive/texmf-dist/tex/generic/tex4ht/tcolorbox.4ht
 version 2024-01-15-13:12
-\c@:tcbcolcount=\count527
+\c@:tcbcolcount=\count528
 (/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
 version 2024-01-30-13:46
 ) (/usr/share/texlive/texmf-dist/tex/generic/tex4ht/unicode.4ht
@@ -2217,8 +2218,8 @@ version 2022-10-25-13:59
 version 2023-10-09-13:31
 )) (/usr/share/texlive/texmf-dist/tex/generic/tex4ht/biblatex.4ht
 version 2023-12-11-13:31
-\sv:sec:cnt=\count528
-\c@bib=\count529
+\sv:sec:cnt=\count529
+\c@bib=\count530
 \blx@unitmark=\skip191
 (/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
 version 2024-01-30-13:46
@@ -2440,7 +2441,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
-\c@lstlisting=\count530
+\c@lstlisting=\count531
 (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
 (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
@@ -2562,9 +2563,9 @@ LaTeX Font Info:    Trying to load font information for OMX+yhex on input line
 (/usr/share/texlive/texmf-dist/tex/latex/yhmath/OMXyhex.fd
 File: OMXyhex.fd 
 File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
-)) [2
+) [2
 
-] [3] (./Chapters/1_Prop_Logic/1_Prop_Logic.tex [4]
+]) [3] (./Chapters/1_Prop_Logic/1_Prop_Logic.tex [4]
 Chapter 1.
 l. 18 Writing main.idv[1] (main0x.svg)
 l. 18 Writing main.idv[2] (main1x.svg)
@@ -2736,79 +2737,109 @@ LaTeX Font Warning: Font shape `TS1/xcmss/m/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
 (Font)              for symbol `textbullet' on input line 225.
 
-[44] [45]
-l. 255 Writing main.idv[117] (main116x.svg)
-l. 255 Writing main.idv[118] (main117x.svg)
-[46]
-l. 258 Writing main.idv[119] (main118x.svg)
-l. 258 Writing main.idv[120] (main119x.svg)
-l. 260 Writing main.idv[121] (main120x.svg)
-l. 260 Writing main.idv[122] (main121x.svg)
-l. 260 Writing main.idv[123] (main122x.svg)
-l. 260 Writing main.idv[124] (main123x.svg)
+[44] [45] [46]
+l. 259 Writing main.idv[117] (main116x.svg)
+l. 259 Writing main.idv[118] (main117x.svg)
 [47]
-l. 271 Writing main.idv[125] (main124x.svg)
+l. 262 Writing main.idv[119] (main118x.svg)
+l. 262 Writing main.idv[120] (main119x.svg)
+l. 264 Writing main.idv[121] (main120x.svg)
+l. 264 Writing main.idv[122] (main121x.svg)
+l. 264 Writing main.idv[123] (main122x.svg)
+l. 264 Writing main.idv[124] (main123x.svg)
 [48]
-l. 275 Writing main.idv[126] (main125x.svg)
-l. 279 Writing main.idv[127] (main126x.svg)
+l. 275 Writing main.idv[125] (main124x.svg)
+l. 279 Writing main.idv[126] (main125x.svg)
+l. 283 Writing main.idv[127] (main126x.svg)
 [49]
-l. 289 Writing main.idv[128] (main127x.svg)
-l. 289 Writing main.idv[129] (main128x.svg)
-l. 289 Writing main.idv[130] (main129x.svg)
-l. 292 Writing main.idv[131] (main130x.svg)
-l. 307 Writing main.idv[132] (main131x.svg)
+l. 293 Writing main.idv[128] (main127x.svg)
+l. 293 Writing main.idv[129] (main128x.svg)
+l. 293 Writing main.idv[130] (main129x.svg)
 [50]
-l. 313 Writing main.idv[133] (main132x.svg)
-l. 319 Writing main.idv[134] (main133x.svg)
-l. 337 Writing main.idv[135] (main134x.svg)
-l. 338 Writing main.idv[136] (main135x.svg)
-l. 339 Writing main.idv[137] (main136x.svg)
-l. 347 Writing main.idv[138] (main137x.svg)
-l. 353 Writing main.idv[139] (main138x.svg)
-l. 354 Writing main.idv[140] (main139x.svg)
-l. 356 Writing main.idv[141] (main140x.svg)
-l. 359 Writing main.idv[142] (main141x.svg)
-l. 359 Writing main.idv[143] (main142x.svg)
-) (./Chapters/1_Prop_Logic/1_3_Soundness_and_Completeness.tex [51] [52]
+l. 296 Writing main.idv[131] (main130x.svg)
+l. 311 Writing main.idv[132] (main131x.svg)
+l. 317 Writing main.idv[133] (main132x.svg)
+l. 323 Writing main.idv[134] (main133x.svg)
+l. 341 Writing main.idv[135] (main134x.svg)
+l. 342 Writing main.idv[136] (main135x.svg)
+l. 343 Writing main.idv[137] (main136x.svg)
+l. 351 Writing main.idv[138] (main137x.svg)
+l. 357 Writing main.idv[139] (main138x.svg)
+l. 358 Writing main.idv[140] (main139x.svg)
+l. 360 Writing main.idv[141] (main140x.svg)
+l. 363 Writing main.idv[142] (main141x.svg)
+l. 363 Writing main.idv[143] (main142x.svg)
+[51]) (./Chapters/1_Prop_Logic/1_3_Soundness_and_Completeness.tex [52] [53]
 l. 11 Writing main.idv[144] (main143x.svg)
 l. 11 Writing main.idv[145] (main144x.svg)
-[53]
+[54]
 l. 15 Writing main.idv[146] (main145x.svg)
 l. 20 Writing main.idv[147] (main146x.svg)
 l. 20 Writing main.idv[148] (main147x.svg)
 l. 21 Writing main.idv[149] (main148x.svg)
 l. 21 Writing main.idv[150] (main149x.svg)
 l. 21 Writing main.idv[151] (main150x.svg)
-[54]
+[55]
 l. 30 Writing main.idv[152] (main151x.svg)
-[55] [56]
+[56] [57]
 
-LaTeX Warning: Citation '2018LecNotes' on page 57 undefined on input line 49.
+LaTeX Warning: Citation '2018LecNotes' on page 58 undefined on input line 49.
 
 l. 55 Writing main.idv[153] (main152x.svg)
 l. 55 Writing main.idv[154] (main153x.svg)
-[57]
+[58]
 l. 68 Writing main.idv[155] (main154x.svg)
 l. 74 Writing main.idv[156] (main155x.svg)
-[58]
+[59]
 l. 77 Writing main.idv[157] (main156x.svg)
 l. 83 Writing main.idv[158] (main157x.svg)
-[59]
+[60]
 l. 86 Writing main.idv[159] (main158x.svg)
 l. 92 Writing main.idv[160] (main159x.svg)
 l. 92 Writing main.idv[161] (main160x.svg)
 l. 92 Writing main.idv[162] (main161x.svg)
 l. 97 Writing main.idv[163] (main162x.svg)
-[60]
+[61]
 l. 102 Writing main.idv[164] (main163x.svg)
 l. 107 Writing main.idv[165] (main164x.svg)
-[61]
+[62]
 l. 116 Writing main.idv[166] (main165x.svg)
-)) [62]
+[63]
+l. 133 Writing main.idv[167] (main166x.svg)
+[64]
+l. 143 Writing main.idv[168] (main167x.svg)
+[65])) (./Chapters/Ex/Ex.tex [66] (./Chapters/Ex/PC1.tex
+l. 10 Writing main.idv[169] (main168x.svg)
+l. 12 Writing main.idv[170] (main169x.svg)
+l. 12 Writing main.idv[171] (main170x.svg)
+l. 14 Writing main.idv[172] (main171x.svg)
+l. 14 Writing main.idv[173] (main172x.svg)
+l. 16 Writing main.idv[174] (main173x.svg)
+l. 16 Writing main.idv[175] (main174x.svg)
+[67
+
+] [68]
+l. 27 Writing main.idv[176] (main175x.svg)
+l. 27 Writing main.idv[177] (main176x.svg)
+--- file main3.html ---
+
+LaTeX Font Warning: Font shape `T1/xcmss/b/it' in size <12> not available
+(Font)              Font shape `T1/xcmss/bx/it' tried instead on input line 35.
+
+
+l. 37 Writing main.idv[178] (main177x.svg)
+[69]
+l. 44 Writing main.idv[179] (main178x.svg)
+l. 44 Writing main.idv[180] (main179x.svg)
+l. 44 Writing main.idv[181] (main180x.svg)
+l. 47 Writing main.idv[182] (main181x.svg)
+[70]
+l. 55 Writing main.idv[183] (main182x.svg)
+[71])) [72]
 
 LaTeX Warning: Empty bibliography on input line 48.
 
-[63] 
+[73] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -2831,12 +2862,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 62050 strings out of 474223
- 1374824 string characters out of 5748759
- 2442559 words of memory out of 5000000
- 82817 multiletter control sequences out of 15000+600000
- 582251 words of font info for 92 fonts, out of 8000000 for 9000
+ 62149 strings out of 474223
+ 1376306 string characters out of 5748759
+ 2443243 words of memory out of 5000000
+ 82906 multiletter control sequences out of 15000+600000
+ 584208 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  112i,17n,134p,1272b,1790s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (66 pages, 255720 bytes).
+Output written on main.dvi (76 pages, 279252 bytes).
