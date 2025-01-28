@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=latex 2025.1.27)  27 JAN 2025 13:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=latex 2025.1.28)  28 JAN 2025 10:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -58,9 +58,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language32). Reported on input line 105.
+(babel)             (\language58). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language32). Reported on input line 108.
+(babel)             (\language58). Reported on input line 108.
 )) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
@@ -2808,38 +2808,45 @@ l. 116 Writing main.idv[166] (main165x.svg)
 l. 133 Writing main.idv[167] (main166x.svg)
 [64]
 l. 143 Writing main.idv[168] (main167x.svg)
-[65])) (./Chapters/Ex/Ex.tex [66] (./Chapters/Ex/PC1.tex
-l. 10 Writing main.idv[169] (main168x.svg)
-l. 12 Writing main.idv[170] (main169x.svg)
-l. 12 Writing main.idv[171] (main170x.svg)
-l. 14 Writing main.idv[172] (main171x.svg)
-l. 14 Writing main.idv[173] (main172x.svg)
-l. 16 Writing main.idv[174] (main173x.svg)
-l. 16 Writing main.idv[175] (main174x.svg)
-[67
+l. 143 Writing main.idv[169] (main168x.svg)
+l. 143 Writing main.idv[170] (main169x.svg)
+[65]
+l. 145 Writing main.idv[171] (main170x.svg)
+l. 145 Writing main.idv[172] (main171x.svg)
+l. 145 Writing main.idv[173] (main172x.svg)
+l. 159 Writing main.idv[174] (main173x.svg)
+[66])) (./Chapters/Ex/Ex.tex [67] (./Chapters/Ex/PC1.tex
+l. 10 Writing main.idv[175] (main174x.svg)
+l. 12 Writing main.idv[176] (main175x.svg)
+l. 12 Writing main.idv[177] (main176x.svg)
+l. 14 Writing main.idv[178] (main177x.svg)
+l. 14 Writing main.idv[179] (main178x.svg)
+l. 16 Writing main.idv[180] (main179x.svg)
+l. 16 Writing main.idv[181] (main180x.svg)
+[68
 
-] [68]
-l. 27 Writing main.idv[176] (main175x.svg)
-l. 27 Writing main.idv[177] (main176x.svg)
+] [69]
+l. 27 Writing main.idv[182] (main181x.svg)
+l. 27 Writing main.idv[183] (main182x.svg)
 --- file main3.html ---
 
 LaTeX Font Warning: Font shape `T1/xcmss/b/it' in size <12> not available
 (Font)              Font shape `T1/xcmss/bx/it' tried instead on input line 35.
 
 
-l. 37 Writing main.idv[178] (main177x.svg)
-[69]
-l. 44 Writing main.idv[179] (main178x.svg)
-l. 44 Writing main.idv[180] (main179x.svg)
-l. 44 Writing main.idv[181] (main180x.svg)
-l. 47 Writing main.idv[182] (main181x.svg)
+l. 37 Writing main.idv[184] (main183x.svg)
 [70]
-l. 55 Writing main.idv[183] (main182x.svg)
-[71])) [72]
+l. 44 Writing main.idv[185] (main184x.svg)
+l. 44 Writing main.idv[186] (main185x.svg)
+l. 44 Writing main.idv[187] (main186x.svg)
+l. 47 Writing main.idv[188] (main187x.svg)
+[71]
+l. 55 Writing main.idv[189] (main188x.svg)
+[72])) [73]
 
 LaTeX Warning: Empty bibliography on input line 48.
 
-[73] 
+[74] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -2862,12 +2869,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 62149 strings out of 474223
- 1376306 string characters out of 5748759
- 2443243 words of memory out of 5000000
- 82906 multiletter control sequences out of 15000+600000
+ 62169 strings out of 474223
+ 1376579 string characters out of 5748759
+ 2443696 words of memory out of 5000000
+ 82926 multiletter control sequences out of 15000+600000
  584208 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 112i,17n,134p,1272b,1790s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 112i,17n,134p,1683b,1790s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (76 pages, 279252 bytes).
+Output written on main.dvi (77 pages, 286236 bytes).

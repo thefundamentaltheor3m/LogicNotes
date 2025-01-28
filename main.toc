@@ -13,6 +13,6 @@
 \contentsline {subsection}{\numberline {1.3.2}Soundness}{23}{subsection.1.3.2}%
 \contentsline {subsection}{\numberline {1.3.3}Consistency}{24}{subsection.1.3.3}%
 \contentsline {subsection}{\numberline {1.3.4}Completeness}{25}{subsection.1.3.4}%
-\contentsline {chapter}{Exercises}{26}{chapter*.5}%
-\contentsline {section}{Problems Class 1}{26}{section*.6}%
-\contentsline {chapter}{Bibliography}{28}{problem.1.3}%
+\contentsline {chapter}{Exercises}{27}{chapter*.5}%
+\contentsline {section}{Problems Class 1}{27}{section*.6}%
+\contentsline {chapter}{Bibliography}{29}{problem.1.3}%

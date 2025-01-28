@@ -3663,7 +3663,7 @@ it or its negation is a theorem.
  id="x1-15001r10"></a>
 <span 
 class="ecsx-1200">Definition 1.3.10 </span>(Completeness)<span 
-class="ecsx-1200">.</span>  </span>Let <span 
+class="ecsx-1200">.</span>  </span> Let <span 
 class="cmsmf-12">  </span>be a consistent set of <span 
 class="cmsssy-10x-x-120">L</span>-formulae. We say <span 
 class="cmsmf-12">  </span>is
@@ -3699,7 +3699,7 @@ class="cmsssy-10x-x-120">L</span>-formulae are contained in complete sets of for
  id="x1-15002r11"></a>
 <span 
 class="ecsx-1200">Theorem 1.3.11 </span>(Lindenbaum’s Lemma)<span 
-class="ecsx-1200">.</span>  </span><span 
+class="ecsx-1200">.</span>  </span> <span 
 class="ecsi-1200">Suppose </span><span 
 class="cmsmf-12">  </span><span 
 class="ecsi-1200">is a consistent set of </span><span 
@@ -3776,7 +3776,7 @@ class="cmssmi-8">n</span></sub> <span
 class="cmsssy-10x-x-120">` </span><span 
 class="cmsmf-12"> </span><sub><span 
 class="cmssmi-8">n</span><span 
-class="cmsmf-8">+1</span></sub> (using purely  (<a 
+class="cmsmf-8">+1</span></sub> (using purely (<a 
 href="#x1-15003r6">1.3.6<!--tex4ht:ref: Ch1:Eq:LindenbaumConstruction --></a>))
       </p></li>
       <li class="itemize">
@@ -3802,44 +3802,194 @@ class="cmsmf-12"> </span><sub>
 class="cmssmi-8">n</span></sub></td>                                        <td 
 class="align-even"></td>                                        <td 
 class="align-label"></td></tr></table>
-<!--l. 143--><p class="noindent" >We now show that <span 
+<!--l. 143--><p class="noindent" >Before we can show that <span 
 class="cmsmf-12"> </span><sup><span 
-class="cmsssy-8">Λ</span></sup> is consistent (cf. Definition <a 
-href="#x1-14001r7">1.3.7</a>). Indeed, suppose there exists some formula <span 
-class="cmssmi-10x-x-120">Œ</span><sub>
+class="cmsssy-8">Λ</span></sup> is complete, we need to show that it is consistent: see Definition <a 
+href="#x1-15001r10">1.3.10</a>. To
+that end, suppose there exists some <span 
+class="cmsssy-10x-x-120">L</span>-formula <span 
+class="cmssmi-10x-x-120">Œ </span>such that <span 
+class="cmsmf-12"> </span><sup><span 
+class="cmsssy-8">Λ</span></sup> <span 
+class="cmsssy-10x-x-120">‘</span><sub>
 <span 
-class="cmssmi-8">i</span></sub>
-such that <span 
-class="cmsmf-12">  </span><span 
-class="cmsssy-10x-x-120">‘</span><sub><span 
 class="cmsssy-8">L</span></sub><span 
-class="cmssmi-10x-x-120">Œ</span><sub><span 
-class="cmssmi-8">i</span></sub> and <span 
-class="cmsmf-12">  </span><span 
-class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmssmi-10x-x-120">Œ </span>and <span 
+class="cmsmf-12"> </span><sup><span 
+class="cmsssy-8">Λ</span></sup> <span 
+class="cmsssy-10x-x-120">‘</span><sub>
+<span 
 class="cmsssy-8">L</span></sub><img 
-src="main167x.svg" alt="(:Œ )
-    i"  class="left" align="middle" />. Then, by the construction of the <span 
-class="cmsmf-12"> </span><sub><span 
-class="cmssmi-8">i</span></sub>, we must have <span 
-class="cmsmf-12"> </span><sub><span 
-class="cmssmi-8">i</span><span 
-class="cmsmf-8">+1</span></sub> <span 
-class="cmsssy-10x-x-120">‘</span><sub><span 
-class="cmsssy-8">L</span></sub><span 
-class="cmssmi-10x-x-120">Œ</span><sub><span 
-class="cmssmi-8">i</span></sub>. Then,
-we must have <span 
-class="cmsmf-12"> </span><sub><span 
-class="cmssmi-8">i</span><span 
-class="cmsmf-8">+2</span></sub> <span 
-class="cmsmf-12">=  </span><sub><span 
-class="cmssmi-8">i</span><span 
-class="cmsmf-8">+1</span></sub>, meaning <span 
-class="cmsmf-12"> </span><sub></sub>                                                                         □
+src="main167x.svg" alt="(:Œ)"  class="left" align="middle" />. This means there is
+a finite sequence of deductions from <span 
+class="cmsmf-12"> </span><sup><span 
+class="cmsssy-8">Λ</span></sup> and the axioms of <span 
+class="cmsssy-10x-x-120">L </span>using only <a 
+href="#x1-90181">(MP)<!--tex4ht:ref: Ch1:Def:PLDedRule:MP --></a> that ends in <span 
+class="cmssmi-10x-x-120">Œ </span>and
                                                                                            
 
                                                                                            
+another one that ends in <img 
+src="main168x.svg" alt="(: Œ)"  class="left" align="middle" />. There exist <span 
+class="cmssmi-10x-x-120">i;j </span><span 
+class="cmsssy-10x-x-120">2 </span><span 
+class="ssmsbm-10x-x-120">N </span>such that these sequences are contained in
+<span 
+class="cmsmf-12"> </span><sub><span 
+class="cmssmi-8">i</span></sub> and <span 
+class="cmsmf-12"> </span><sub><span 
+class="cmssmi-8">j</span></sub> respectively, because the <span 
+class="cmsmf-12"> </span><sub><span 
+class="cmssmi-8">n</span></sub>s represent all possible deductions that can be made
+from <span 
+class="cmsmf-12">  </span>(and the axioms). Since we have a chain of inclusions, we have either <span 
+class="cmsmf-12"> </span><sub><span 
+class="cmssmi-8">i</span></sub> <span 
+class="cmsssy-10x-x-120">` </span><span 
+class="cmsmf-12"> </span><sub><span 
+class="cmssmi-8">j</span></sub> or
+<span 
+class="cmsmf-12"> </span><sub><span 
+class="cmssmi-8">j</span></sub> <span 
+class="cmsssy-10x-x-120">` </span><span 
+class="cmsmf-12"> </span><sub><span 
+class="cmssmi-8">i</span></sub>. In either case, we have a contradiction, because <span 
+class="cmsmf-12"> </span><sub><span 
+class="cmssmi-8">i</span></sub> and <span 
+class="cmsmf-12"> </span><sub><span 
+class="cmssmi-8">j</span></sub> are both consistent, but we
+would be able to deduce both <span 
+class="cmssmi-10x-x-120">Œ </span>and <img 
+src="main169x.svg" alt="(:Œ)"  class="left" align="middle" /> from one of them. Therefore, <span 
+class="cmsmf-12"> </span><sup><span 
+class="cmsssy-8">Λ</span></sup> is consistent
+too.
+</p><!--l. 145--><p class="noindent" >Finally, we show that <span 
+class="cmsmf-12"> </span><sup><span 
+class="cmsssy-8">Λ</span></sup> is complete. Let <span 
+class="cmssmi-10x-x-120">Œ </span>be a formula. By the enumeration above, we know that
+<span 
+class="cmssmi-10x-x-120">Œ </span><span 
+class="cmsmf-12">= </span><span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmssmi-8">n</span></sub> for some <span 
+class="cmssmi-10x-x-120">n </span><span 
+class="cmsssy-10x-x-120">2 </span><span 
+class="ssmsbm-10x-x-120">N</span>. We know either <span 
+class="cmsmf-12"> </span><sub><span 
+class="cmssmi-8">n</span></sub> <span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmssmi-8">n</span></sub> or <span 
+class="cmsmf-12"> </span><sub><span 
+class="cmssmi-8">n</span></sub><span 
+class="cmsmf-12">⊬</span><sub><span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmssmi-8">n</span></sub>. If the former is true, we have that
+<span 
+class="cmsmf-12"> </span><sup><span 
+class="cmsssy-8">Λ</span></sup> <span 
+class="cmsssy-10x-x-120">‘</span><sub>
+<span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ</span><sub><span 
+class="cmssmi-8">n</span></sub> and we are done. Else, by our construction in (<a 
+href="#x1-15003r6">1.3.6<!--tex4ht:ref: Ch1:Eq:LindenbaumConstruction --></a>), we have that <span 
+class="cmsmf-12"> </span><sub><span 
+class="cmssmi-8">n</span><span 
+class="cmsmf-8">+1</span></sub> <span 
+class="cmsssy-10x-x-120">‘</span><sub><span 
+class="cmsssy-8">L</span></sub><img 
+src="main170x.svg" alt="(: Œ)"  class="left" align="middle" />, and
+therefore, <span 
+class="cmsmf-12"> </span><sup><span 
+class="cmsssy-8">Λ</span></sup> <span 
+class="cmsssy-10x-x-120">‘</span><sub>
+<span 
+class="cmsssy-8">L</span></sub><img 
+src="main171x.svg" alt="(: Œ)"  class="left" align="middle" />. Therefore, from <span 
+class="cmsmf-12"> </span><sup><span 
+class="cmsssy-8">Λ</span></sup>, we can deduce either <span 
+class="cmssmi-10x-x-120">Œ </span>or <img 
+src="main172x.svg" alt="(: Œ)"  class="left" align="middle" />, making <span 
+class="cmsmf-12"> </span><sup><span 
+class="cmsssy-8">Λ</span></sup> complete, as
+required.                                                                                                              □
+</p>
+</div>
+<!--l. 148--><p class="noindent" >Going forward, we will adopt the following notation.  </p> <div class="tcolorbox tcolorbox" id="tcolobox-66">     
+<div class="tcolorbox-title">
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 149--><p class="noindent" ><span class="head">
+<span 
+class="ecsx-1200">Convention.</span>  </span>Let <span 
+class="cmsmf-12">  </span>be a consistent set of <span 
+class="cmsssy-10x-x-120">L</span>-formulae. We will denote by <span 
+class="cmsmf-12"> </span><sup><span 
+class="cmsssy-8">Λ</span></sup> the complete
+set of <span 
+class="cmsssy-10x-x-120">L</span>-formulae containing <span 
+class="cmsmf-12">  </span>as given in Theorem <a 
+href="#x1-15002r11">1.3.11</a>.
+</p>
+</div>
+<!--l. 151--><p class="noindent" ></p> 
+</div> 
+</div>
+<!--l. 153--><p class="noindent" >It turns out that the construction allows us to prove the existence of an important kind of
+valuation.
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-67">     
+<div class="tcolorbox-title">
+                                                                                           
+
+                                                                                           
+</div> 
+<div class="tcolorbox-content"><div class="newtheorem">
+<!--l. 155--><p class="noindent" ><span class="head">
+<a 
+ id="x1-15004r12"></a>
+<span 
+class="ecsx-1200">Proposition 1.3.12.</span>  </span><span 
+class="ecsi-1200">Let </span><span 
+class="cmsmf-12">  </span><span 
+class="ecsi-1200">be a consistent set of </span><span 
+class="cmsssy-10x-x-120">L</span><span 
+class="ecsi-1200">-formulae. Then, there exists a propositional</span>
+<span 
+class="ecsi-1200">valuation </span><span 
+class="cmsmfbx-12">v </span><span 
+class="ecsi-1200">such that</span>
+</p><table 
+class="align-star">
+                            <tr><td 
+class="align-odd"><span 
+class="cmsmfbx-12">v</span><img 
+src="main173x.svg" alt="(Œ)"  class="left" align="middle" /> <span 
+class="cmsmf-12">= </span><span 
+class="cmsmfbx-12">T</span> <span 
+class="ecsi-1200">if and only if</span> <span 
+class="cmsmf-12"> </span><sup><span 
+class="cmsssy-8">Λ</span></sup> <span 
+class="cmsssy-10x-x-120">‘</span><sub>
+<span 
+class="cmsssy-8">L</span></sub><span 
+class="cmssmi-10x-x-120">Œ</span></td>                            <td 
+class="align-even"></td>                            <td 
+class="align-label"></td></tr></table>
+</div>
+<!--l. 160--><p class="noindent" ></p> 
+</div> 
+</div>
+<div class="proof">
+<!--l. 162--><p class="noindent" ><span class="head">
+<span 
+class="ecsi-1200">Proof.</span> </span><span id="textcolor7"><span 
+class="ectt-1200">sorry</span></span>                                                                  □
 </p>
 </div>
                                                                                            
@@ -3857,7 +4007,7 @@ only the ones that are ‘interesting’.
  id="x1-17000"></a>Problems Class 1</h3>
 <a 
  id="Q1-1-19"></a>
-<div class="tcolorbox tcolorbox" id="tcolobox-66">     
+<div class="tcolorbox tcolorbox" id="tcolobox-68">     
 <div class="tcolorbox-title">
                                                                                            
 
@@ -3901,7 +4051,7 @@ class="ecsi-1200">and </span><span
 class="cmsmf-12">  </span><span 
 class="cmsssy-10x-x-120">‘</span><sub><span 
 class="cmsssy-8">L</span></sub><img 
-src="main168x.svg" alt="(Œ !    )"  class="left" align="middle" /><span 
+src="main174x.svg" alt="(Œ !    )"  class="left" align="middle" /><span 
 class="ecsi-1200">, then </span><span 
 class="cmsmf-12">  </span><span 
 class="cmsssy-10x-x-120">‘</span><sub><span 
@@ -3917,7 +4067,7 @@ class="ecsi-1200">is a propositional valuation and </span><span
 class="cmsmf-12">  </span><span 
 class="ecsi-1200">is such that </span><span 
 class="cmsmfbx-12">v</span><img 
-src="main169x.svg" alt="(  )"  class="left" align="middle" /> <span 
+src="main175x.svg" alt="(  )"  class="left" align="middle" /> <span 
 class="cmsmf-12">= </span><span 
 class="cmsmfbx-12">F</span><span 
 class="ecsi-1200">. Then, for all </span><span 
@@ -3930,7 +4080,7 @@ class="cmsssy-8">L</span></sub><span
 class="cmssmi-10x-x-120">Œ</span><span 
 class="ecsi-1200">, we have </span><span 
 class="cmsmfbx-12">v</span><img 
-src="main170x.svg" alt="(Œ)"  class="left" align="middle" /> <span 
+src="main176x.svg" alt="(Œ)"  class="left" align="middle" /> <span 
 class="cmsmf-12">= </span><span 
 class="cmsmfbx-12">F</span><span 
 class="ecsi-1200">.</span>
@@ -3943,9 +4093,9 @@ class="ecsi-1200">is  a  propositional  valuation  and  </span><span
 class="cmsmf-12"> </span><sub><span 
 class="cmsmfbx-8">v</span></sub>   <span 
 class="cmsmf-12">=  </span><img 
-src="main171x.svg" alt="fŒ j"  class="left" align="middle" /><span 
+src="main177x.svg" alt="fŒ j"  class="left" align="middle" /><span 
 class="cmsmfbx-12">v</span><img 
-src="main172x.svg" alt="(Œ)"  class="left" align="middle" /> <span 
+src="main178x.svg" alt="(Œ)"  class="left" align="middle" /> <span 
 class="cmsmf-12">= </span><span 
 class="cmsmfbx-12">F</span><span 
 class="cmsssy-10x-x-120">g</span><span 
@@ -3963,9 +4113,9 @@ class="ecsi-1200">is a propositional valuation and </span><span
 class="cmsmf-12"> </span><sub><span 
 class="cmsmfbx-8">v</span></sub> <span 
 class="cmsmf-12">= </span><img 
-src="main173x.svg" alt="fŒ j"  class="left" align="middle" /><span 
+src="main179x.svg" alt="fŒ j"  class="left" align="middle" /><span 
 class="cmsmfbx-12">v</span><img 
-src="main174x.svg" alt="(Œ)"  class="left" align="middle" /> <span 
+src="main180x.svg" alt="(Œ)"  class="left" align="middle" /> <span 
 class="cmsmf-12">= </span><span 
 class="cmsmfbx-12">F</span><span 
 class="cmsssy-10x-x-120">g</span><span 
@@ -4014,11 +4164,11 @@ class="enumerate-enumitem">FALSE. Let <span
 class="cmsmfbx-12">v </span>be any propositional valuation and <span 
 class="cmssmi-10x-x-120">p </span>a propositional variable. Then, we know
       <img 
-src="main175x.svg" alt="(p !  (:p))"  class="left" align="middle" /> <span 
+src="main181x.svg" alt="(p !  (:p))"  class="left" align="middle" /> <span 
 class="cmsssy-10x-x-120">2 </span><span 
 class="cmsmf-12"> </span><sub><span 
 class="cmsmfbx-8">v</span></sub>. We also know that <img 
-src="main176x.svg" alt="(p ˆ (:p))"  class="left" align="middle" /> <span 
+src="main182x.svg" alt="(p ˆ (:p))"  class="left" align="middle" /> <span 
 class="cmsssy-10x-x-120">2 </span><span 
 class="cmsmf-12"> </span><sub><span 
 class="cmsmfbx-8">v</span></sub>. But the latter is logically equivalent
@@ -4030,12 +4180,12 @@ href="main3.html#fn2x2"><sup class="textsuperscript">2</sup></a></span><a
       </dd><dt class="enumerate-enumitem">
    5. </dt><dd 
 class="enumerate-enumitem">TRUE. Let <span 
-class="cmsmfbx-12">v </span>be <span id="textcolor7"><span 
+class="cmsmfbx-12">v </span>be <span id="textcolor8"><span 
 class="ectt-1200">sorry</span></span></dd></dl>
 </div>
 <!--l. 31--><p class="noindent" >
 </p>
-<div class="tcolorbox tcolorbox" id="tcolobox-67">     
+<div class="tcolorbox tcolorbox" id="tcolobox-69">     
 <div class="tcolorbox-title">
                                                                                            
 
@@ -4067,7 +4217,7 @@ class="ecsi-1200">proved in lectures or the weekly problem sheets.</span>
   (i) </dt><dd 
 class="enumerate-enumitem"><span 
 class="ecsi-1200">Express the ‘Law of the Excluded Middle’ </span><img 
-src="main177x.svg" alt="(Œ ˙ (: Œ))"  class="left" align="middle" /> <span 
+src="main183x.svg" alt="(Œ ˙ (: Œ))"  class="left" align="middle" /> <span 
 class="ecsi-1200">as an </span><span 
 class="cmsssy-10x-x-120">L</span><span 
 class="ecsi-1200">-formula and say why</span>
@@ -4077,7 +4227,7 @@ class="cmsssy-10x-x-120">L</span><span
 class="ecsi-1200">.</span>
       </dd><dt class="enumerate-enumitem">
   (ii) </dt><dd 
-class="enumerate-enumitem"><span id="textcolor8"><span 
+class="enumerate-enumitem"><span id="textcolor9"><span 
 class="ecit-1200">sorry</span></span></dd></dl>
 </div>
 <!--l. 41--><p class="noindent" ></p> 
@@ -4090,10 +4240,10 @@ class="ecsi-1200">Solution.</span>  </span>
       </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
   (i) </dt><dd 
 class="enumerate-enumitem">Recall that any formula of the form <img 
-src="main178x.svg" alt="(a ˙ b)"  class="left" align="middle" /> is expressed as <img 
-src="main179x.svg" alt="((:a) !  b)"  class="left" align="middle" />. Thus, we have that
+src="main184x.svg" alt="(a ˙ b)"  class="left" align="middle" /> is expressed as <img 
+src="main185x.svg" alt="((:a) !  b)"  class="left" align="middle" />. Thus, we have that
       <img 
-src="main180x.svg" alt="(Œ ˙ (:Œ))"  class="left" align="middle" /> is expressible as
+src="main186x.svg" alt="(Œ ˙ (:Œ))"  class="left" align="middle" /> is expressible as
                                                                                            
 
                                                                                            
@@ -4101,7 +4251,7 @@ src="main180x.svg" alt="(Œ ˙ (:Œ))"  class="left" align="middle" /> is expres
 class="align-star">
                                                <tr><td 
 class="align-odd"><img 
-src="main181x.svg" alt="((: Œ) !  (:Œ))"  class="left" align="middle" /></td>                                               <td 
+src="main187x.svg" alt="((: Œ) !  (:Œ))"  class="left" align="middle" /></td>                                               <td 
 class="align-even"></td>                                               <td 
 class="align-label"></td></tr></table>
       <!--l. 48--><p class="noindent" >Indeed, we proved in lectures that in <span 
@@ -4110,12 +4260,12 @@ class="cmsssy-10x-x-120">L</span>, any formula implies itself. Therefore, the La
 class="cmsssy-10x-x-120">L</span>.
       </p></dd><dt class="enumerate-enumitem">
   (ii) </dt><dd 
-class="enumerate-enumitem"><span id="textcolor9"><span 
+class="enumerate-enumitem"><span id="textcolor10"><span 
 class="ectt-1200">sorry</span></span></dd></dl>
 </div>
 <!--l. 52--><p class="noindent" >
 </p>
-<div class="tcolorbox tcolorbox" id="tcolobox-68">     
+<div class="tcolorbox tcolorbox" id="tcolobox-70">     
 <div class="tcolorbox-title">
                                                                                            
 
@@ -4128,7 +4278,7 @@ class="ectt-1200">sorry</span></span></dd></dl>
 <span 
 class="ecsx-1200">Exercise 1.3.</span>  </span><span 
 class="ecsi-1200">Show that the set of connectives </span><img 
-src="main182x.svg" alt="f:; $g"  class="left" align="middle" /><span 
+src="main188x.svg" alt="f:; $g"  class="left" align="middle" /><span 
 class="ecsi-1200">is not adequate.</span>
 </p>
 <div class="newtheorem">
@@ -4151,7 +4301,7 @@ class="cmssmi-10x-x-120">p </span>and <span
 class="cmssmi-10x-x-120">q </span>that are obtained
 using formulae involving <span 
 class="cmsssy-10x-x-120">: </span>and <span 
-class="cmsssy-10x-x-120">$</span>. <span id="textcolor10"><span 
+class="cmsssy-10x-x-120">$</span>. <span id="textcolor11"><span 
 class="ectt-1200">sorry</span></span>
 </p>
 </div>
