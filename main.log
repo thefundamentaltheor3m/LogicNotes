@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.1.31)  31 JAN 2025 16:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.1.31)  31 JAN 2025 16:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -45,9 +45,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language76). Reported on input line 105.
+(babel)             (\language16). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language76). Reported on input line 108.
+(babel)             (\language16). Reported on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
@@ -1723,8 +1723,7 @@ LaTeX Font Info:    Trying to load font information for T1+xcmss on input line
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathfonts/t1xcmss.fd
 File: t1xcmss.fd 2021/06/22
-)
-No file main.aux.
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmssm/m/it on input line 15.
@@ -1840,11 +1839,13 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 15.
+(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
+
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
@@ -1888,7 +1889,41 @@ dvips/cm-super/cm-super-t1.enc}]
 LaTeX Font Warning: Font shape `T1/xcmss/b/n' in size <24.88> not available
 (Font)              Font shape `T1/xcmss/bx/n' tried instead on input line 25.
 
-No file main.toc.
+(./main.toc
+
+LaTeX Font Warning: Font shape `T1/xcmss/b/n' in size <12> not available
+(Font)              Font shape `T1/xcmss/bx/n' tried instead on input line 2.
+
+LaTeX Font Info:    Trying to load font information for OT1+cmsmf on input line
+ 3.
+(/usr/share/texlive/texmf-dist/tex/latex/sansmathfonts/ot1cmsmf.fd
+File: ot1cmsmf.fd 2021/06/22
+)
+LaTeX Font Info:    Trying to load font information for U+ssmsa on input line 3
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/sansmathfonts/ussmsa.fd
+File: ussmsa.fd 2019/04/04
+)
+LaTeX Font Info:    Trying to load font information for U+ssmsb on input line 3
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/sansmathfonts/ussmsb.fd
+File: ussmsb.fd 2019/04/04
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 3.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for OMX+yhex on input line 
+3.
+
+(/usr/share/texlive/texmf-dist/tex/latex/yhmath/OMXyhex.fd
+File: OMXyhex.fd 
+File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
+))
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
@@ -1902,44 +1937,6 @@ l.28 \newpage
 
 ] (./Chapters/1_Prop_Logic/1_Prop_Logic.tex
 Chapter 1.
-LaTeX Font Info:    Trying to load font information for OT1+cmsmf on input line
- 14.
-(/usr/share/texlive/texmf-dist/tex/latex/sansmathfonts/ot1cmsmf.fd
-File: ot1cmsmf.fd 2021/06/22
-)
-LaTeX Font Info:    Trying to load font information for U+ssmsa on input line 1
-4.
-
-(/usr/share/texlive/texmf-dist/tex/latex/sansmathfonts/ussmsa.fd
-File: ussmsa.fd 2019/04/04
-)
-LaTeX Font Info:    Trying to load font information for U+ssmsb on input line 1
-4.
-
-(/usr/share/texlive/texmf-dist/tex/latex/sansmathfonts/ussmsb.fd
-File: ussmsb.fd 2019/04/04
-)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 14
-.
-
-(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-LaTeX Font Info:    Trying to load font information for OMX+yhex on input line 
-14.
-
-(/usr/share/texlive/texmf-dist/tex/latex/yhmath/OMXyhex.fd
-File: OMXyhex.fd 
-File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
-)
-
-LaTeX Font Warning: Font shape `T1/xcmss/b/n' in size <12> not available
-(Font)              Font shape `T1/xcmss/bx/n' tried instead on input line 19.
-
-
-LaTeX Warning: Reference `Ch1:eq:JonesExample' on page 2 undefined on input lin
-e 19.
-
 (./Chapters/1_Prop_Logic/1_1_Prop_Formulae.tex
 
 LaTeX Font Warning: Font shape `T1/xcmss/b/n' in size <17.28> not available
@@ -1971,14 +1968,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4]
 
-LaTeX Warning: Reference `Ch1:Def:Connective' on page 1 undefined on input line
- 77.
-
-
-LaTeX Warning: Reference `Ch1:Def:Connective' on page 1 undefined on input line
- 77.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -1987,19 +1976,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [5]
-
-LaTeX Warning: Reference `Ch1:eq:JonesExample' on page 6 undefined on input lin
-e 119.
-
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
 22.
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-
-LaTeX Warning: Reference `Ch1:eq:JonesExample' on page 6 undefined on input lin
-e 125.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2024,10 +2005,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [7]
 
-LaTeX Warning: Reference `Ch1:Def:LogicalEquivalence' on page 1 undefined on in
-put line 211.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -2046,10 +2023,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [9]
 
-LaTeX Warning: Reference `Ch1:Lemma:TruthFunEq' on page 1 undefined on input li
-ne 268.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -2058,22 +2031,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [10]
-
-LaTeX Warning: Reference `Ch1:Thm:DNFConnectivesAdequate' on page 1 undefined o
-n input line 277.
-
-
-LaTeX Warning: Reference `Ch1:Thm:DNFConnectivesAdequate' on page 1 undefined o
-n input line 283.
-
-
-LaTeX Warning: Reference `Ch1:Thm:DNFConnectivesAdequate' on page 1 undefined o
-n input line 302.
-
-
-LaTeX Warning: Reference `Ch1:Lemma:AdequateSets:Case:1' on page 11 undefined o
-n input line 314.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2123,13 +2080,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [15]
 
-LaTeX Warning: Reference `Ch1:Def:Thm' on page 1 undefined on input line 92.
-
-
-LaTeX Warning: Reference `Ch1:Def:Tautology' on page 1 undefined on input line 
-92.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -2138,69 +2088,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [16]
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:1' on page 17 undefined on input line
- 130.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:2' on page 17 undefined on input line
- 131.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:3' on page 17 undefined on input line
- 132.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:1' on page 17 undefined on input line
- 137.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:2' on page 17 undefined on input line
- 137.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:3' on page 17 undefined on input line
- 137.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:1' on page 17 undefined on input line
- 137.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:3' on page 17 undefined on input line
- 137.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLDedRule:MP' on page 17 undefined on input l
-ine 150.
-
-
-LaTeX Warning: Reference `Ch1:Def:FormalPropAlphabet' on page 17 undefined on i
-nput line 158.
-
-
-LaTeX Warning: Reference `Ch1:Def:FormalPropFormulae' on page 17 undefined on i
-nput line 160.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:1' on page 17 undefined on input line
- 162.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:3' on page 17 undefined on input line
- 162.
-
-
-LaTeX Warning: Reference `Ch1:Def:FormalPropAxioms' on page 17 undefined on inp
-ut line 162.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLDedRule:MP' on page 17 undefined on input l
-ine 164.
-
-
-LaTeX Warning: Reference `Ch1:Def:MP' on page 17 undefined on input line 164.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2211,46 +2098,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [17]
 
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:1' on page 18 undefined on input line
- 176.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:3' on page 18 undefined on input line
- 176.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLDedRule:MP' on page 18 undefined on input l
-ine 176.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:1' on page 18 undefined on input line
- 184.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:2' on page 18 undefined on input line
- 191.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLDedRule:MP' on page 18 undefined on input l
-ine 197.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:1' on page 18 undefined on input line
- 203.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLDedRule:MP' on page 18 undefined on input l
-ine 209.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 216.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 216.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -2259,10 +2106,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [18]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 216.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 216.
+
 LaTeX Font Info:    Trying to load font information for TS1+xcmss on input line
  225.
 LaTeX Font Info:    No file TS1xcmss.fd. on input line 225.
-
 
 LaTeX Font Warning: Font shape `TS1/xcmss/m/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
@@ -2278,22 +2132,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [19{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
-LaTeX Warning: Reference `Ch1:Def:Deduction' on page 1 undefined on input line 
-264.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:1' on page 20 undefined on input line
- 272.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLDedRule:MP' on page 20 undefined on input l
-ine 276.
-
-
-LaTeX Warning: Reference `Ch1:Eg:Self_implies_self' on page 1 undefined on inpu
-t line 284.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -2302,26 +2140,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [20]
-
-LaTeX Warning: Reference `Ch1:Lemma:SubsetOfGamma' on page 1 undefined on input
- line 321.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLDedRule:MP' on page 21 undefined on input l
-ine 327.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLDedRule:MP' on page 21 undefined on input l
-ine 351.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLDedRule:MP' on page 21 undefined on input l
-ine 358.
-
-
-LaTeX Warning: Reference `Ch1:Eq:ContradictoryDeduction' on page 21 undefined o
-n input line 360.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2340,10 +2158,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
 
-LaTeX Warning: Reference `Ch1:Def:Connective' on page 1 undefined on input line
- 15.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -2353,27 +2167,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [22]
 
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:1' on page 23 undefined on input line
- 47.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:3' on page 23 undefined on input line
- 47.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLDedRule:MP' on page 23 undefined on input l
-ine 47.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:2' on page 23 undefined on input line
- 49.
-
-
 LaTeX Warning: Citation '2018LecNotes' on page 23 undefined on input line 49.
-
-
-LaTeX Warning: Reference `Ch1:Thm:LSoundness' on page 1 undefined on input line
- 58.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2385,38 +2179,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [23]
 
-LaTeX Warning: Reference `Ch1:Thm:LSoundness' on page 1 undefined on input line
- 77.
-
-
-LaTeX Warning: Reference `Ch1:Lemma:PropValBhv' on page 1 undefined on input li
-ne 77.
-
-
-LaTeX Warning: Reference `Ch1:Thm:DeductionThm' on page 1 undefined on input li
-ne 93.
-
-
-LaTeX Warning: Reference `Ch1:Eq:ConsistencyProofEq2' on page 24 undefined on i
-nput line 93.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:3' on page 24 undefined on input line
- 98.
-
-
-LaTeX Warning: Reference `Ch1:Eq:ConsistencyProofEq3' on page 24 undefined on i
-nput line 98.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLAxiom:3' on page 24 undefined on input line
- 103.
-
-
-LaTeX Warning: Reference `Ch1:Eq:ConsistencyProofEq1' on page 24 undefined on i
-nput line 103.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -2426,22 +2188,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [24]
 
-LaTeX Warning: Reference `Ch1:Eq:LindenbaumConstruction' on page 25 undefined o
-n input line 136.
-
-
-LaTeX Warning: Reference `Ch1:Prop:ConsistencyUnion' on page 1 undefined on inp
-ut line 137.
-
-
-LaTeX Warning: Reference `Ch1:Def:Complete' on page 1 undefined on input line 1
-43.
-
-
-LaTeX Warning: Reference `Ch1:Def:PLDedRule:MP' on page 25 undefined on input l
-ine 143.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -2449,16 +2195,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[25]
-
-LaTeX Warning: Reference `Ch1:Eq:LindenbaumConstruction' on page 26 undefined o
-n input line 145.
-
-
-LaTeX Warning: Reference `Ch1:Thm:Lindenbaum' on page 1 undefined on input line
- 150.
-
-)) (./Chapters/2_Pred_Logic/2_Pred_Logic.tex
+[25])) (./Chapters/2_Pred_Logic/2_Pred_Logic.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2507,12 +2244,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[31] (./Chapters/Ex/PC1.tex
-
-LaTeX Warning: Reference `Ch1:Def:PLDedRule:MP' on page 32 undefined on input l
-ine 23.
-
-[32
+[31] (./Chapters/Ex/PC1.tex [32
 
 ]
 
@@ -2558,17 +2290,8 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  5D32862541C247E3A679CE78923D9FB3;3424.
-
-Package lastpage Warning: Rerun to get the references right on input line 51.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 5D32862541C247E3A679CE78923D9FB3;3424.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                main
@@ -2579,13 +2302,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57027 strings out of 474222
- 1295065 string characters out of 5748733
- 2306016 words of memory out of 5000000
- 78041 multiletter control sequences out of 15000+600000
+ 57061 strings out of 474222
+ 1295543 string characters out of 5748733
+ 2309566 words of memory out of 5000000
+ 78067 multiletter control sequences out of 15000+600000
  603822 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 106i,16n,110p,1176b,1875s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 106i,16n,110p,1172b,1895s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 , replaced by a fixed one
@@ -2620,10 +2343,10 @@ r/sfsx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1728.pfb></usr
 ype1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/sansmathfonts/ssmsbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/yhmath/yhcmex.pfb>
-Output written on main.pdf (35 pages, 458604 bytes).
+Output written on main.pdf (35 pages, 464110 bytes).
 PDF statistics:
- 635 PDF objects out of 1000 (max. 8388607)
- 508 compressed objects within 6 object streams
+ 788 PDF objects out of 1000 (max. 8388607)
+ 660 compressed objects within 7 object streams
  262 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 325 words of extra memory for PDF output out of 10000 (max. 10000000)
 
