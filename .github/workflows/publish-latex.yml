@@ -95,6 +95,7 @@ jobs:
           cp -r TeX_Setup public/
           cd public/
           pdflatex main.tex
+          pdflatex main.tex  # Cleveref uses aux files. Need to compile twice!
           # make4ht main.tex
           # mv main.html index.html
   
