@@ -46,48 +46,83 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Caches texlive-full
-      - name: Cache texlive-full
-        uses: actions/cache@v4
-        id: cache-texlive-full
-        with:
-          path: ~/texlive
-          key: ${{ runner.os }}-texlive-${{ secrets.TEXLIVE_FULL_VERSION }}
-          restore-keys: |
-            ${{ runner.os }}-texlive-
+      # # Caches texlive-full
+      # - name: Cache texlive-full
+      #   uses: actions/cache@v4
+      #   id: cache-texlive-full
+      #   with:
+      #     path: ~/texlive
+      #     key: ${{ runner.os }}-texlive-${{ secrets.TEXLIVE_FULL_VERSION }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-texlive-
 
-      # Caches apt packages
-      - name: Cache apt packages
-        uses: actions/cache@v4
+      # # Caches apt packages
+      # - name: Cache apt packages
+      #   uses: actions/cache@v4
+      #   with:
+      #     path: /var/cache/apt
+      #     key: ${{ runner.os }}-apt-${{ hashFiles('**/apt.txt') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-apt-
+      
+      # ChatGPT Code
+
+      # Cache APT packages
+      - name: Cache APT packages
+        id: cache-apt
+        uses: actions/cache@v3
         with:
-          path: /var/cache/apt
-          key: ${{ runner.os }}-apt-${{ hashFiles('**/apt.txt') }}
+          path: /var/cache/apt/archives
+          key: apt-cache-${{ runner.os }}
           restore-keys: |
-            ${{ runner.os }}-apt-
+            apt-cache-
+
+      - name: Update APT and Install Dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y texlive-full
+
+      # Cache TeX Live installation
+      - name: Cache TeX Live
+        id: cache-texlive
+        uses: actions/cache@v3
+        with:
+          path: /usr/local/texlive
+          key: texlive-2023-${{ runner.os }}
+          restore-keys: |
+            texlive-2023-
+
+      - name: Install TeX Live (if not cached)
+        if: steps.cache-texlive.outputs.cache-hit != 'true'
+        run: |
+          sudo apt install -y texlive-full  # Installs only if cache is missing
+
+      - name: Add TeX Live to PATH
+        run: echo "/usr/local/texlive/2023/bin/x86_64-linux" >> $GITHUB_PATH
       
       # Compiles 
       - name: Build Latex PDF and HTML
         run: |
-          if [ -f /var/cache/apt/pkgcache.bin ]; then
-            echo "Restoring apt packages from cache."
-            sudo cp -r /var/cache/apt/* /var/lib/apt/lists/
-          else
-            echo "Updating apt packages."
-            sudo apt update
-          fi
-          if [ -d ~/texlive ]; then
-          echo "Texlive directory exists."
-            if ! ~/texlive/bin/x86_64-linux/tlmgr --version | grep -q "${{ secrets.TEXLIVE_FULL_VERSION }}"; then
-              echo "Texlive version does not match. Reinstalling..."
-              sudo rm -rf ~/texlive
-              sudo apt install texlive-full
-            else
-              echo "Texlive version matches. Using cached version."
-            fi
-          else
-            echo "Texlive directory does not exist. Installing..."
-            sudo apt install texlive-full
-          fi
+          # if [ -f /var/cache/apt/pkgcache.bin ]; then
+          #   echo "Restoring apt packages from cache."
+          #   sudo cp -r /var/cache/apt/* /var/lib/apt/lists/
+          # else
+          #   echo "Updating apt packages."
+          #   sudo apt update
+          # fi
+          # if [ -d ~/texlive ]; then
+          # echo "Texlive directory exists."
+          #   if ! ~/texlive/bin/x86_64-linux/tlmgr --version | grep -q "${{ secrets.TEXLIVE_FULL_VERSION }}"; then
+          #     echo "Texlive version does not match. Reinstalling..."
+          #     sudo rm -rf ~/texlive
+          #     sudo apt install texlive-full
+          #   else
+          #     echo "Texlive version matches. Using cached version."
+          #   fi
+          # else
+          #   echo "Texlive directory does not exist. Installing..."
+          #   sudo apt install texlive-full
+          # fi
           mkdir ./public
           cp TeX_Outputs/main.pdf public/LastLocallyCompiled.pdf
           cp *.tex public/
