@@ -19,4 +19,4 @@
 \contentsline {subsection}{\numberline {2.1.2}First-Order Languages}{31}{subsection.2.1.2}%
 \contentsline {chapter}{Exercises}{32}{chapter*.5}%
 \contentsline {section}{Problems Class 1}{32}{section*.6}%
-\contentsline {chapter}{References}{34}{chapter*.7}%
+\contentsline {chapter}{References}{34}{problem.1.3}%
