@@ -89,7 +89,7 @@ jobs:
         run: |
           sudo apt update
 
-      # Cache TeX Live installation
+      # Retrieve TeX Live installation from Cache
       - name: Cache TeX Live
         id: cache-texlive
         uses: actions/cache@v3
