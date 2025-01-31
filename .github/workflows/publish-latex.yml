@@ -72,7 +72,7 @@ jobs:
       #       ${{ runner.os }}-apt-
       
       # ChatGPT Code
-
+        
       # Cache APT packages
       - name: Cache APT packages
         id: cache-apt
@@ -83,6 +83,7 @@ jobs:
           restore-keys: |
             apt-cache-
 
+      # Update APT and Install Dependencies
       - name: Update APT and Install Dependencies
         if: steps.cache-apt.outputs.cache-hit != 'true'
         run: |
@@ -98,10 +99,19 @@ jobs:
           restore-keys: |
             texlive-2023-
 
+      # Install TeX Live
       - name: Install TeX Live (if not cached)
         if: steps.cache-texlive.outputs.cache-hit != 'true'
         run: |
           sudo apt install -y texlive-full  # Installs only if cache is missing
+      
+      # Save TeX Live cache AFTER successful installation
+      - name: Save TeX Live Cache
+        if: steps.cache-texlive.outputs.cache-hit != 'true'
+        uses: actions/cache@v3
+        with:
+          path: /usr/local/texlive
+          key: texlive-2023-${{ runner.os }}
 
       - name: Add TeX Live to PATH
         run: echo "/usr/local/texlive/2023/bin/x86_64-linux" >> $GITHUB_PATH
