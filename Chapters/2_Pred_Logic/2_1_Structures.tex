@@ -1,117 +1,158 @@
-\section{Important Definitions and First Examples}
+\section{The Semantics of First-Order Logic}
 
-\subsection{Representations and Modules}
+\subsection{First-Order Structures}
 
-\begin{boxdefinition}[Representation]\label{Ch2:Def:Representation}
-    A \textbf{representation} of $L$ is a Lie algebra homomorpshism $\rho : L \to \gl{V}$ for some finite-dimensional $\C$-vector space $V$.
-\end{boxdefinition}
+We begin by discussing relations and functions of a given arity.
 
-\begin{boxexample}[The Adjoint Representation]
-    The adjoint map $\ad : L \to \gl{L}$ is a representation: \Cref{Ch1:Prop:AdjointLieAlgHom} tells us it is a Lie algebra homomorphism.
-\end{boxexample}
-
-If $\rho : L \to \gl{V}$ is a representation, then we can define a map $\parenth{\ell, v} \mapsto \rho(\ell)(v) : L \times V \to V$. We can use this to define a Lie algebra module, similar to the concept of group modules when defining complex representations thereof.
-
-\begin{boxdefinition}[Lie Module]\label{Ch2:Def:LieAlgModule}
-    A \textbf{Lie module}, or \textbf{$L$-module}, is a finite-dimensional vector space $V$ with a pairing $\rho : L \times V \to V$ such that
-    \begin{enumerate}
-        \item $\rho$ is $\C$-bilinear.
-        \item $\rho(\brac{a, b}, v) = \rho(a, \rho(b, v)) - \rho(b, \rho(a, v))$.
-    \end{enumerate}
-\end{boxdefinition}
-
-Indeed, one can show that any representation $\rho : L \to V$ satisfies the above properties with respect to the pairing $\parenth{\ell, v} \mapsto \rho(\ell)(v)$ and that any Lie algebra module $V$ with pairing $\rho$ admits a uniquely defined representation $\ell \mapsto \rhoof{\ell, \cdot} : L \to \gl{V}$. Thus, the two concepts are equivalent.
-
-\begin{boxconvention}
-    We will abuse notation and not distinguish the notions of representations and modules. Similarly, we will not split hairs about the notation for the two: $\rhoof{\cdot, \cdot}$ should be interpreted as meaning the same thing as $\rho(\cdot)(\cdot)$.
-\end{boxconvention}
-
-Indeed, as with representations of groups and group modules, we have an equivalence of categories between the category of representations of $L$ and that of $L$-modules. One would need to argue a bit more rigorously, by defining the morphisms in each one, but we will not do this and take this as an implicit fact.
-
-\subsection{Homomorphisms, Submodules and Quotient Modules}
-
-Throughout this subsection, we denote by $M$ an $L$-module of finite $\C$-dimension.
-
-\begin{boxdefinition}[Lie Submodule]
-    An \textbf{$L$-submodule} of $M$ is a sub-vector space $N \leq M$ that is invariant under the action of $L$, ie,
+\begin{boxdefinition}[$n$-ary Relation on a Set]
+    Suppose $A$ is a set and $n \geq 1$ is a natural number. An \textbf{$n$-ary relation on $A$} is a subset
     \begin{align*}
-        \forall l \in L, x \in N, \ l \cdot x \in N
+        \Rb \subseteq \setst{\parenth{a_1, \ldots, a_n}}{a_1, \ldots, a_n \in A}
     \end{align*}
 \end{boxdefinition}
 
+We have a similar notion for functions, with the key fact being that $n$-ary functions take in $n$ inputs and return a single output, and all inputs and outputs must come from the set in question.
 
-
-\sorry % Defs of the 3 things above
-
-\subsection{Simple or Irreducibile $L$-Modules}
-
-Throughout this subsection, we denote by $M$ an $L$-module of finite $\C$-dimension.
-
-\begin{boxdefinition}[Irreducibility]\label{Ch2:Def:IrreducibleModule}
-    $M$ is \textbf{irreducible} if it has no proper, non-zero submodules.
+\begin{boxdefinition}[$n$-ary Function on a Set]
+    Given a set $A$, an \textbf{$n$-ary function on $A$} is a function
+    \begin{align*}
+        \fb: A^n \to A
+    \end{align*}
 \end{boxdefinition}
-\begin{remark}
-    We can define a similar notion of irreducibility of representations, which we can show to be equivalent to the irreducibility of the corresponding module. This is why we choose to call a module that is \textbf{simple}, ie, that satisfies \Cref{Ch2:Def:IrreducibleModule}, `irreducible'.
-\end{remark}
-Nevertheless, we use the following convention.
+
+We make a subtle distinction between functions and relations in formal and informal language. This is something that will get clearer as we progress.
+
 \begin{boxconvention}
-    We will use the terms `simple' and `irreducible' interchangeably.
+    The reason why we put bars on top of the symbols is to distinguish functions and relations as they appear in formulae from the way that discuss them.
 \end{boxconvention}
 
-There exist a large number of irreducible modules of any Lie algebra.
+We have special terms when $n = 1, 2, 3$.
 
-\begin{boxexample}\label{Ch2:Eg:1DModuleIrred}
-    Any one-dimensional $L$-module is irreducible.
+\begin{boxconvention}
+    \hfill
+    \begin{enumerate}
+        \item A $1$-ary relation is commonly called a \textbf{unary relation}.
+        \item A $2$-ary relation is commonly called a \textbf{binary relation}.
+        \item A $3$-ary relation is commonly called a \textbf{ternary relation}.
+    \end{enumerate}
+\end{boxconvention}
+
+These notions are not new to us.
+
+\begin{boxexample}[Some Familiar $n$-ary Relations]
+    \hfill
+    \begin{enumerate}
+        \item Equality is a binary relation on any set.
+        \item $\leq$ is a binary relation on $\R$.
+        \item $\setst{x \in \Z}{x \text{ is even}}$ is a unary relation on $\Z$.
+    \end{enumerate}
 \end{boxexample}
 
-We remind the reader of the famed Jordan-Hölder Theorem from commutative algebra. We will mention that all Lie algebra modules admit composition series. We will combine this existence result with the standard formulation of the Jordan-Hölder Theorem into the following theorem.
+Admittedly, the fact that the third example is precisely a set is a little unusual to see. This is because in practice, the following convention is used.
 
-\begin{boxtheorem}[Jordan-Hölder]\label{Ch2:Thm:JordanHolder}
-    If $M \neq 0$, then there exists a sequence
-    \begin{align}
-        0 = M_0 \subset M_1 \subset \ldots \subset M_n = M
-    \end{align}
-    of submodules of $M$ such that $\quotient{M_i}{M_{i-1}}$ is irreducible for all $i$. Furthermore, each $\quotient{M_i}{M_{i-1}}$ is unique up to permutation and isomorphism---that is, they do not depend on the sequence itself, but only on the isomorphism class of $M$.
-\end{boxtheorem}
+\begin{boxconvention}
+    Let $\Rb \subseteq A^n$ be a relation on some set $A$. For all $\parenth{a_1, \ldots, a_n} \in A^n$, we write
+    \begin{align*}
+        \Rbof{a_1, \ldots, a_n}
+    \end{align*}
+    to mean that $\parenth{a_1, \ldots, a_n} \in \Rb$.
+\end{boxconvention}
 
-Finally, we mention some useful results on irreducible representations of nilpotent and solvable Lie algebras that follow from Engel's Theorema and Lie's Theorem respectively.
+We are now ready for the most important definition of this chapter.
 
-\begin{boxproposition}
-    Let $L$ be solvbale. Then, every irreducible $L$-module is one-dimensional over $\C$.
-\end{boxproposition}
-\begin{proof}
-    \sorry 
-\end{proof}
+\begin{boxdefinition}[First-Order Structure]
+    A \textbf{first-order structure} is the following data:
+    \begin{enumerate}
+        \item a non-empty set $A$ called the \textbf{domain} of $\A$.
+        
+        \item a set of \textbf{relations} on $A$
+        \begin{align*}
+            \setst{\ol{R_i} \subseteq A^{n_i}}{i \in I}
+        \end{align*}
 
+        \item a set of \textbf{functions} on $A$
+        \begin{align*}
+            \setst{\ol{f_j} : A^{m_j} \to A}{j \in J}
+        \end{align*}
 
-
-\subsection{Semi-Simple $L$-Modules}
-
-We have yet more parallels with the representation theory of finite groups.
-
-\begin{boxdefinition}[Direct Sum]\label{Ch2:Def:ModuleDirectSum}
-    The \textbf{direct sum} of two $L$-modules $M$ and $N$ is the $L$-module $M \oplus N$ with the action defined by
-    \begin{align}
-        \rho(\ell)(m, n) = \parenth{\rho(\ell)(m), \rho(\ell)(n)}
-    \end{align}
+        \item a set of \textbf{constants} that are elements of $A$
+        \begin{align*}
+            \setst{\ol{c_k} \in A}{k \in K}
+        \end{align*}
+    \end{enumerate}
+    where $I, J, K$ are index sets that can be empty.
 \end{boxdefinition}
 
-We then have a notion of semi-simplicity for $L$-modules, which is essentially the same as that of any module.
+Usually, the index sets of a first-order structure are subsets of $\N$, but in principle, they could be any set. We package the information about the constants and the arity of the functions and relations together in the following manner.
 
-\begin{boxdefinition}[Semi-Simplicity]\label{Ch2:Def:SemiSimpleModule}
-    An $L$-module $M$ is \textbf{semi-simple} if it is a direct sum of simple (irreducible) $L$-modules.
+\begin{boxdefinition}[Signature]
+    Let $\A$ be a first-order structure. The \textbf{signature} of $\A$ is the information
+    \begin{align*}
+        \setst{n_i}{i \in I}
+        \qquad
+        \setst{m_j}{j \in J}
+        \qquad
+        K
+    \end{align*}
+    with the respective sets describing the arity of the relations on $A$, the arity of the functions on $A$, and the index set of the constants in $A$.
 \end{boxdefinition}
 
-The following theorem, which is quite hard to prove, explains the reason we define semi-simplicity of Lie algberas the way we do in \Cref{Ch1:Def:SemiSimple}.
+We use the following notation for first-order structures.
 
-\begin{boxtheorem}\label{Ch2:Thm:SemiSimpleLieToModule}
-    If $L$ is semi-simple, then every finite-dimensional $L$-module is semi-simple.
-\end{boxtheorem}
+\begin{boxconvention}
+    For a first-order structure $\A$ given as above, we wil deonte
+    \begin{align*}
+        \A = \cycl{A; \set{\ol{R_i}}_{i \in I}, \set{\ol{f_j}}_{j \in J}, \set{\ol{c_k}}_{k \in K}}
+    \end{align*}
+    More generally, we use the notation
+    \begin{align*}
+        \text{Structure} = \cycl{\text{Domain}; \text{Relations}, \text{Functions}, \text{Constants}}
+    \end{align*}
+\end{boxconvention}
 
-We do not prove this theorem here, but we will take it for granted going forward.
+We have encountered any number of first-order structures so far. Here are a few examples.
 
-\begin{boxexample}
-    Let $L$ be solvable. \Cref{Ch1:Thm:Lie} (Lie's Theorem) tells us that \sorry % Look at recording of lecture from Oct 24
+The first is a very basic example.
+\begin{boxexample}[Orderings]
+    We can take $A$ to be one of the sets $\N, \Z, \Q, \R$. We can define a first-order structure on $A$ with only one unary relation---that of ordering---and no functions or constants.
+\end{boxexample}
+It is important to note that while the sets $\N, \Z, \Q, \R$ all admit richer structures on them, they are not needed to define ordering. We don't even include equality in this description because a formula that contains an equality symbol is not about ordering.
+
+In the next example, we look at an algebraic structure.
+\begin{boxexample}[Groups]
+    Every group is a first-order structure with the following data.
+    \begin{enumerate}
+        \item The domain is the set of elements of the group.
+        \item The sole relation is the binary relation of equality.
+        \item There is a binary function for the group operation and a unary function for inversion.
+        \item There is a constant for the identity element.
+    \end{enumerate}
+\end{boxexample}
+We can make a similar definition for rings.
+
+We do not even need to talk about objects that we usually deal with as sets. We can also talk about graphs, which, while defined in terms of sets, are usually studied visually.
+\begin{boxexample}[Graphs]
+    Graphs (or, more precisely, their vertices), along with two binary relations---equality and adjacency---and no functions or constants, form a first-order structure.
 \end{boxexample}
 
+\subsection{First-Order Languages}
 
+\begin{boxdefinition}[First-Order Language]
+    A \textbf{first-order language} $\L$ consists of the following data.
+    \begin{enumerate}
+        \item Index sets $I, J, K$ where $I$ is non-empty but $J$ and $K$ can be empty.
+        \item An \textbf{alphabet} of symbols, consisting of
+        \begin{enumerate}[noitemsep]
+            \item \textbf{Variables} $x_1 \ x_2 \cdots$
+            \item \textbf{Connectives} $\neg \ \to$
+            \item \textbf{Punctuation} $( \ ) \ ,$
+            \item The \textbf{Quantifier} $\forall$
+            \item \textbf{Relation symbols} $R_i$ for $i \in I$
+            \item \textbf{Function symbols} $f_j$ for $j \in J$
+            \item \textbf{Constant symbols} $c_k$ for $k \in K$
+        \end{enumerate}
+        \item An \textbf{arity} for every relation and function symbol.
+    \end{enumerate}
+\end{boxdefinition}
+
+% TODO: Finish

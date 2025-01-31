@@ -1,6 +1,6 @@
-\section{Important Properties of $\L$}
+\section{Important Properties of $\bL$}
 
-In this section, we prove important properties about $\L$, with our first major goal being to prove that the theorems in $\L$ are precisely the tautologies.
+In this section, we prove important properties about $\bL$, with our first major goal being to prove that the theorems in $\bL$ are precisely the tautologies.
 
 \subsection{Propositional Valuations}
 
@@ -12,10 +12,10 @@ In this section, we prove important properties about $\L$, with our first major 
     for all $i \in \N$.
 \end{boxdefinition}
 
-Using the truth table rules by which we defined the connectives $\to$ and $\neg$ of $\L$ (cf. \Cref{Ch1:Def:Connective}), we can assign a truth value $\vof{\phi}$ to any $\L$-formula $\phi$.
+Using the truth table rules by which we defined the connectives $\to$ and $\neg$ of $\bL$ (cf. \Cref{Ch1:Def:Connective}), we can assign a truth value $\vof{\phi}$ to any $\bL$-formula $\phi$.
 
 \begin{boxlemma}[Behaviour of Propositional Valuations]\label{Ch1:Lemma:PropValBhv}
-    Let $\phi, \psi$ be $\L$-formulae. Then,
+    Let $\phi, \psi$ be $\bL$-formulae. Then,
     \begin{enumerate}
         \item $\vof{\parenth{\neg \phi}} \neq \vof{\phi}$
         \item $\vof{\phi \to \psi} = \F$ if and only if $\vof{\phi} = \T$ and $\vof{\psi} = \F$
@@ -27,10 +27,10 @@ We do not prove these results.
 We can now be precise about what a tautology is.
 
 \begin{boxdefinition}[Tautology]
-    An $\L$-formula $\phi$ is a \textbf{tautology} if $\vof{\phi} = \T$ for all propositional valuations $\v$.
+    An $\bL$-formula $\phi$ is a \textbf{tautology} if $\vof{\phi} = \T$ for all propositional valuations $\v$.
 \end{boxdefinition}
 
-We are now ready to prove that $\L$ is sound.
+We are now ready to prove that $\bL$ is sound.
 
 \subsection{Soundness}
 
@@ -40,11 +40,11 @@ We are now ready to prove that $\L$ is sound.
 
 Now, the much-awaited result.
 
-\begin{boxtheorem}[Soundness of $\L$]\label{Ch1:Thm:LSoundness}
-    The formal system $\L$ of propositional logic is sound.
+\begin{boxtheorem}[Soundness of $\bL$]\label{Ch1:Thm:LSoundness}
+    The formal system $\bL$ of propositional logic is sound.
 \end{boxtheorem}
 \begin{proof}
-    Let $\phi$ be a theorem in $\L$. We prove that $\phi$ is a tautology by performing induction on the length of $\phi$. The base case involves proving that the axioms~\ref{Ch1:Def:PLAxiom:1}-\ref{Ch1:Def:PLAxiom:3} are tautologies, and the inductive case involves proving that the modus ponens deduction rule~\ref{Ch1:Def:PLDedRule:MP} preserves tautologies.
+    Let $\phi$ be a theorem in $\bL$. We prove that $\phi$ is a tautology by performing induction on the length of $\phi$. The base case involves proving that the axioms~\ref{Ch1:Def:PLAxiom:1}-\ref{Ch1:Def:PLAxiom:3} are tautologies, and the inductive case involves proving that the modus ponens deduction rule~\ref{Ch1:Def:PLDedRule:MP} preserves tautologies.
 
     While these proofs can be done manually, there is a rather clever trick that can be used in the case of~\ref{Ch1:Def:PLAxiom:2}. This is given in \cite[Proof of 1.3.1]{2018LecNotes}. \sorry % TODO: include proof here
 \end{proof}
@@ -52,82 +52,82 @@ Now, the much-awaited result.
 We have a more general version of this result.
 
 \begin{boxtheorem}[A Generalisation of Soundness]
-    Let $\Gamma$ be a set of $\L$-formulae, and let $\phi$ be an $\L$-formula such that $\Gamma \vdash_{\L} \phi$. If $\vof{\psi} = \T$ for all $\psi \in \Gamma$, then $\vof{\phi} = \T$.
+    Let $\Gamma$ be a set of $\bL$-formulae, and let $\phi$ be an $\bL$-formula such that $\Gamma \vdash_{\bL} \phi$. If $\vof{\psi} = \T$ for all $\psi \in \Gamma$, then $\vof{\phi} = \T$.
 \end{boxtheorem}
 \begin{proof}
     The proof is actually identical to that of \Cref{Ch1:Thm:LSoundness}, but with $\Gamma$ being a part of the base case. In this case, the proof follows from the assumption that $\v$ is true on $\Gamma$.
 \end{proof}
 
-Now that we have shown that $\L$ is sound, we show that $\L$ has other important properties that will enable us to reason in $\L$ the way we would like to.
+Now that we have shown that $\bL$ is sound, we show that $\bL$ has other important properties that will enable us to reason in $\bL$ the way we would like to.
 
 \subsection{Consistency}
 
-For the remainder of this section, fix a set $\Gamma$ of $\L$-formulae.
+For the remainder of this section, fix a set $\Gamma$ of $\bL$-formulae.
 
 \begin{boxdefinition}[Consistency]\label{Ch1:Def:Consistent}
-    $\Gamma$ is \textbf{consistent} if there is no $\L$-formula $\phi$ such that $\Gamma \vdash_{\L} \phi$ and $\Gamma \vdash_{\L} \parenth{\neg \phi}$.
+    $\Gamma$ is \textbf{consistent} if there is no $\bL$-formula $\phi$ such that $\Gamma \vdash_{\bL} \phi$ and $\Gamma \vdash_{\bL} \parenth{\neg \phi}$.
 \end{boxdefinition}
 
-Soundness tells us something about the consistency of the empty set in $\L$, which we will refer to more generally as the \textbf{consistency of $\L$}.
+Soundness tells us something about the consistency of the empty set in $\bL$, which we will refer to more generally as the \textbf{consistency of $\bL$}.
 
-\begin{boxtheorem}[Consistency of $\L$]
-    There is no $\L$-formula $\phi$ such that $\vdash_{\L} \phi$ and $\vdash_{\L} \parenth{\neg \phi}$.
+\begin{boxtheorem}[Consistency of $\bL$]
+    There is no $\bL$-formula $\phi$ such that $\vdash_{\bL} \phi$ and $\vdash_{\bL} \parenth{\neg \phi}$.
 \end{boxtheorem}
 \begin{proof}
-    This follows from \Cref{Ch1:Thm:LSoundness}: if such an $\L$-formula $\phi$ did exist, both $\phi$ and $\parenth{\neg \phi}$ would need to be tautologies, violating \Cref{Ch1:Lemma:PropValBhv}. Therefore, such an $\L$-formula cannot exist.
+    This follows from \Cref{Ch1:Thm:LSoundness}: if such an $\bL$-formula $\phi$ did exist, both $\phi$ and $\parenth{\neg \phi}$ would need to be tautologies, violating \Cref{Ch1:Lemma:PropValBhv}. Therefore, such an $\bL$-formula cannot exist.
 \end{proof}
 
 We have a more general result.
 
 \begin{boxproposition}\label{Ch1:Prop:ConsistencyUnion}
-    Suppose $\Gamma$ is a consistent set of $\L$-formulae. Let $\phi$ be an $\L$-formula that is \emph{not} a consequence of $\Gamma$. Then, $\Gamma \cup \set{\parenth{\neg \phi}}$ is consistent.
+    Suppose $\Gamma$ is a consistent set of $\bL$-formulae. Let $\phi$ be an $\bL$-formula that is \emph{not} a consequence of $\Gamma$. Then, $\Gamma \cup \set{\parenth{\neg \phi}}$ is consistent.
 \end{boxproposition}
 \begin{proof}
     Suppose that $\Gamma \cup \set{\parenth{\ neg \phi}}$ is not consistent. Then, there exists a formula $\psi$ such that
     \begin{align}
-        \Gamma \cup \set{\parenth{\neg \phi}} \vdash_{\L} \psi
+        \Gamma \cup \set{\parenth{\neg \phi}} \vdash_{\bL} \psi
         \label{Ch1:Eq:ConsistencyProofEq1} \\
-        \Gamma \cup \set{\parenth{\neg \phi}} \vdash_{\L} \parenth{\neg \psi}
+        \Gamma \cup \set{\parenth{\neg \phi}} \vdash_{\bL} \parenth{\neg \psi}
         \label{Ch1:Eq:ConsistencyProofEq2}
     \end{align}
     We can apply the Deduction Theorem (\Cref{Ch1:Thm:DeductionThm}) to~\eqref{Ch1:Eq:ConsistencyProofEq2} to deduce that
     \begin{align}
-        \Gamma \vdash_{\L} \parenth{\parenth{\neg \phi} \to \parenth{\neg \psi}}
+        \Gamma \vdash_{\bL} \parenth{\parenth{\neg \phi} \to \parenth{\neg \psi}}
         \label{Ch1:Eq:ConsistencyProofEq3}
     \end{align}
     Then, applying~\ref{Ch1:Def:PLAxiom:3} to~\eqref{Ch1:Eq:ConsistencyProofEq3}, we have
     \begin{align}
-        \Gamma \vdash_{\L} \parenth{\psi \to \phi}
+        \Gamma \vdash_{\bL} \parenth{\psi \to \phi}
         \label{Ch1:Eq:ConsistencyProofEq4}
     \end{align}
     In similar fashion, we can apply the Deduction Theorem followed by~\ref{Ch1:Def:PLAxiom:3} to~\eqref{Ch1:Eq:ConsistencyProofEq1} to deduce that
     \begin{align}
-        \Gamma \vdash_{\L} \parenth{\parenth{\neg \psi} \to \phi}
+        \Gamma \vdash_{\bL} \parenth{\parenth{\neg \psi} \to \phi}
         \label{Ch1:Eq:ConsistencyProofEq5}
     \end{align}
-    \sorry % From this, we can conclude that $\Gamma \vdash_{\L} \phi$, contradicting our assumption. TODO: include reference to something that allows us to do this.
+    \sorry % From this, we can conclude that $\Gamma \vdash_{\bL} \phi$, contradicting our assumption. TODO: include reference to something that allows us to do this.
 \end{proof}
 
 \subsection{Completeness}
 
-We begin by making an observation about $\L$: in general, it is not true that for any given $\L$-formula, either it or its negation is a theorem.
+We begin by making an observation about $\bL$: in general, it is not true that for any given $\bL$-formula, either it or its negation is a theorem.
 
 \begin{boxdefinition}[Completeness]\label{Ch1:Def:Complete}
-    Let $\Gamma$ be a consistent set of $\L$-formulae. We say $\Gamma$ is \textbf{complete} if for all $\L$-formulae $\phi$, either $\Gamma \vdash_{\L} \phi$ or $\Gamma \vdash_{\L} \parenth{\neg \phi}$.
+    Let $\Gamma$ be a consistent set of $\bL$-formulae. We say $\Gamma$ is \textbf{complete} if for all $\bL$-formulae $\phi$, either $\Gamma \vdash_{\bL} \phi$ or $\Gamma \vdash_{\bL} \parenth{\neg \phi}$.
 \end{boxdefinition}
 
-It turns out that all consistent sets of $\L$-formulae are contained in complete sets of formulae.
+It turns out that all consistent sets of $\bL$-formulae are contained in complete sets of formulae.
 
 \begin{boxtheorem}[Lindenbaum's Lemma]\label{Ch1:Thm:Lindenbaum}
-    Suppose $\Gamma$ is a consistent set of $\L$-formulae. Then, there exists a complete set of $\L$-formulae $\Gamma^*$ such that $\Gamma \subseteq \Gamma^*$.
+    Suppose $\Gamma$ is a consistent set of $\bL$-formulae. Then, there exists a complete set of $\bL$-formulae $\Gamma^*$ such that $\Gamma \subseteq \Gamma^*$.
 \end{boxtheorem}
 \begin{proof}
-    The idea is to construct $\Gamma^*$ by brute force. We know that the alphabet of $\L$ is countable. Therefore, so is the set of all possible $\L$-formulae. We can list them as $\phi_0, \phi_1, \ldots$. We perform the fomllowing inductive construction: let $\Gamma_0 := \Gamma$ and for all $n \geq 0$, define
+    The idea is to construct $\Gamma^*$ by brute force. We know that the alphabet of $\bL$ is countable. Therefore, so is the set of all possible $\bL$-formulae. We can list them as $\phi_0, \phi_1, \ldots$. We perform the fomllowing inductive construction: let $\Gamma_0 := \Gamma$ and for all $n \geq 0$, define
     \begin{align}
         \Gamma_{n + 1} :=
         \begin{cases}
-            \Gamma_n & \text{ if } \Gamma_n \vdash_{\L} \phi_n \\
-            \Gamma_{n} \cup \set{\parenth{\neg \phi_n}} & \text{ if } \Gamma_n \not\vdash_{\L} \phi_n
+            \Gamma_n & \text{ if } \Gamma_n \vdash_{\bL} \phi_n \\
+            \Gamma_{n} \cup \set{\parenth{\neg \phi_n}} & \text{ if } \Gamma_n \not\vdash_{\bL} \phi_n
         \end{cases}
         \label{Ch1:Eq:LindenbaumConstruction}
     \end{align}
@@ -140,22 +140,22 @@ It turns out that all consistent sets of $\L$-formulae are contained in complete
     \begin{align*}
         \Gamma^* := \bigcup_{n = 0}^{\infty} \Gamma_n
     \end{align*}
-    Before we can show that $\Gamma^*$ is complete, we need to show that it is consistent: see \Cref{Ch1:Def:Complete}. To that end, suppose there exists some $\L$-formula $\phi$ such that $\Gamma^* \vdash_{\L} \phi$ and $\Gamma^* \vdash_{\L} \parenth{\neg \phi}$. This means there is a finite sequence of deductions from $\Gamma^*$ and the axioms of $\L$ using only~\ref{Ch1:Def:PLDedRule:MP} that ends in $\phi$ and another one that ends in $\parenth{\neg \phi}$. There exist $i, j \in \N$ such that these sequences are contained in $\Gamma_i$ and $\Gamma_j$ respectively, because the $\Gamma_n$s represent all possible deductions that can be made from $\Gamma$ (and the axioms). Since we have a chain of inclusions, we have either $\Gamma_i \subseteq \Gamma_j$ or $\Gamma_j \subseteq \Gamma_i$. In either case, we have a contradiction, because $\Gamma_i$ and $\Gamma_j$ are both consistent, but we would be able to deduce both $\phi$ and $\parenth{\neg \phi}$ from one of them. Therefore, $\Gamma^*$ is consistent too.
+    Before we can show that $\Gamma^*$ is complete, we need to show that it is consistent: see \Cref{Ch1:Def:Complete}. To that end, suppose there exists some $\bL$-formula $\phi$ such that $\Gamma^* \vdash_{\bL} \phi$ and $\Gamma^* \vdash_{\bL} \parenth{\neg \phi}$. This means there is a finite sequence of deductions from $\Gamma^*$ and the axioms of $\bL$ using only~\ref{Ch1:Def:PLDedRule:MP} that ends in $\phi$ and another one that ends in $\parenth{\neg \phi}$. There exist $i, j \in \N$ such that these sequences are contained in $\Gamma_i$ and $\Gamma_j$ respectively, because the $\Gamma_n$s represent all possible deductions that can be made from $\Gamma$ (and the axioms). Since we have a chain of inclusions, we have either $\Gamma_i \subseteq \Gamma_j$ or $\Gamma_j \subseteq \Gamma_i$. In either case, we have a contradiction, because $\Gamma_i$ and $\Gamma_j$ are both consistent, but we would be able to deduce both $\phi$ and $\parenth{\neg \phi}$ from one of them. Therefore, $\Gamma^*$ is consistent too.
 
-    Finally, we show that $\Gamma^*$ is complete. Let $\phi$ be a formula. By the enumeration above, we know that $\phi = \phi_n$ for some $n \in \N$. We know either $\Gamma_n \vdash_{\L} \phi_n$ or $\Gamma_n \not\vdash_{\L} \phi_n$. If the former is true, we have that $\Gamma^* \vdash_{\L} \phi_n$ and we are done. Else, by our construction in~\eqref{Ch1:Eq:LindenbaumConstruction}, we have that $\Gamma_{n+1} \vdash_{\L} \parenth{\neg \phi}$, and therefore, $\Gamma^* \vdash_{\L} \parenth{\neg \phi}$. Therefore, from $\Gamma^*$, we can deduce either $\phi$ or $\parenth{\neg \phi}$, making $\Gamma^*$ complete, as required.
+    Finally, we show that $\Gamma^*$ is complete. Let $\phi$ be a formula. By the enumeration above, we know that $\phi = \phi_n$ for some $n \in \N$. We know either $\Gamma_n \vdash_{\bL} \phi_n$ or $\Gamma_n \not\vdash_{\bL} \phi_n$. If the former is true, we have that $\Gamma^* \vdash_{\bL} \phi_n$ and we are done. Else, by our construction in~\eqref{Ch1:Eq:LindenbaumConstruction}, we have that $\Gamma_{n+1} \vdash_{\bL} \parenth{\neg \phi}$, and therefore, $\Gamma^* \vdash_{\bL} \parenth{\neg \phi}$. Therefore, from $\Gamma^*$, we can deduce either $\phi$ or $\parenth{\neg \phi}$, making $\Gamma^*$ complete, as required.
 \end{proof}
 
 Going forward, we will adopt the following notation.
 \begin{boxconvention}
-    Let $\Gamma$ be a consistent set of $\L$-formulae. We will denote by $\Gamma^*$ the complete set of $\L$-formulae containing $\Gamma$ as given in \Cref{Ch1:Thm:Lindenbaum}.
+    Let $\Gamma$ be a consistent set of $\bL$-formulae. We will denote by $\Gamma^*$ the complete set of $\bL$-formulae containing $\Gamma$ as given in \Cref{Ch1:Thm:Lindenbaum}.
 \end{boxconvention}
 
 It turns out that the construction allows us to prove the existence of an important kind of valuation.
 
 \begin{boxproposition}
-    Let $\Gamma$ be a consistent set of $\L$-formulae. Then, there exists a propositional valuation $\v$ such that
+    Let $\Gamma$ be a consistent set of $\bL$-formulae. Then, there exists a propositional valuation $\v$ such that
     \begin{align*}
-        \vof{\phi} = \T \text{ if and only if } \Gamma^* \vdash_{\L} \phi
+        \vof{\phi} = \T \text{ if and only if } \Gamma^* \vdash_{\bL} \phi
     \end{align*}
 \end{boxproposition}
 \begin{proof}
