@@ -94,7 +94,7 @@ jobs:
           cp -r Chapters public/
           cp -r TeX_Setup public/
           cd public/
-          pdflatex main.tex
+          # pdflatex main.tex
           make4ht main.tex
           mv main.html index.html
   
