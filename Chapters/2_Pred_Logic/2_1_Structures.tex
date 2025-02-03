@@ -145,7 +145,7 @@ We are now ready to formally define the notion of first-order languages.
         \item Index sets $I, J, K$ where $I$ is non-empty but $J$ and $K$ can be empty.
         \item An \textbf{alphabet} of symbols, consisting of
         \begin{enumerate}[noitemsep]
-            \item \textbf{Variables} $x_1 \ x_2 \ \cdots$
+            \item \textbf{Variables} $x_0 \ x_1 \ x_2 \ \cdots$
             \item \textbf{Connectives} $\neg \ \to$
             \item \textbf{Punctuation} $( \ ) \ ,$
             \item The \textbf{Quantifier} $\forall$
@@ -306,15 +306,16 @@ Throughout this subsection, we will fix a first-order language $\L$ with signatu
     \qquad
     \setst{m_j}{j \in J}
     \qquad
-    L
+    K
 \end{align*}
 where the $n_i$s are the arities of the relation symbols $R_i$, the $m_j$ are the arities of the function symbols $f_j$, and $K$ is the index set of the constants $c_k$.
 
 \begin{boxdefinition}[First-Order Structures in First-Order Languages]\label{Ch2:Def:First-Order_Structure_in_First-Order_Language}
     A \textbf{structure} in $\L$, or an \textbf{$\L$-structure}, is a first-order structure
-    \begin{align*}
+    \begin{align}
         \A = \cycl{A; \set{\ol{R_i}}_{i \in I}, \set{\ol{f_j}}_{j \in J}, \set{\ol{c_k}}_{k \in K}}
-    \end{align*}
+        \label{Ch2:Eq:FOS_Generic}
+    \end{align}
     such that the signature of $\A$ is the same as that of $\L$, ie, the arities of the relations and functions in $\A$ are the same as those in $\L$.
 \end{boxdefinition}
 
@@ -323,6 +324,8 @@ If one takes a closer look at the definitions of first-order structures and firs
 \begin{boxconvention}
     The reason why we put bars on top of the symbols is to distinguish functions and relations as they appear in first-order structures---\textit{with} bars on top---from the way we express them in the ambient first-order language.
 \end{boxconvention}
+
+For the remainder of this subsection, fix a \fos\ $\A$. Denote its domain, relations, functions and constants as in~\eqref{Ch2:Eq:FOS_Generic}, with bars above as per our convention for this module. We now discuss the significance of first-order structures and underscore the power and versatility of first-order languages.
 
 When we say, in \Cref{Ch2:Def:First-Order_Structure_in_First-Order_Language}, that the signature of an $\L$-structure is the same as that of the first-order language $\L$, we mean that the arities of the relations in the structure must match up with the arities of the relation symbols in the language, and similarly for functions and constants. More precisely, we have the following.
 
@@ -359,3 +362,23 @@ We have a special term for the ``$\L$ to $\A$'' direction of this correspondence
         where $\ol{f}$ is the interpretation of $f$ in $\A$.
     \end{enumerate}
 \end{boxdefinition}
+
+The idea is that a first-order language gives a purely symbolic way of expressing relationships between objects and their properties. When studying statements expressed in first-order languages, one must purely view them symbolically, as formal expressions that do not carry any \textit{meaning} per se. The `meaning' comes from valuations that allow us to interpret symbols in first-order languages as ideas in first-order structures.
+
+We have an existence and uniqueness result.
+\begin{boxlemma}
+    \letal\ with domain $A$. Fix elements $a_0, a_1, a_2, \ldots \in A$. There exists a unique valuation $\v$ of $\L$ in $\A$ such that $\vof{x_i} = a_i$ for all $i \in \N$.
+\end{boxlemma}
+\begin{proof}
+    We begin by showing existence. We can define $\v$ explicitly for all terms of $\L$ by performing recursion on their length. For terms of length $1$, we deal with the variables and the distinguished constants separately.
+    \begin{enumerate}
+        \item $\vof{x_i} := a_i$ for all $i \in \N$
+        \item $\vof{c_k} := \ol{c_k}$ for all $k \in K$
+    \end{enumerate}
+    We can then define $\v$ for terms arising from functions and relations of arity $\geq 2$ by setting
+    \begin{align*}
+        \vof{\fof{t_1, \ldots, t_m}} &:= \fbof{\vof{t_1}, \ldots, \vof{t_m}} \\
+        \vof{\Rof{t_1, \ldots, t_n}} &:= \Rbof{\vof{t_1}, \ldots, \vof{t_n}}
+    \end{align*}
+    for all terms $t_i$, $m$-ary function symbols $f$, and $n$-ary relation symbols $R$ in $\L$ with respective interpretations $\ol{f}$ and $\ol{R}$ in $\A$.
+\end{proof}

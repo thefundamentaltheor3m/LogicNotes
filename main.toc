@@ -18,6 +18,6 @@
 \contentsline {subsection}{\numberline {2.1.1}First-Order Structures}{29}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}First-Order Languages}{32}{subsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.1.3}First-Order Structures Revisited}{36}{subsection.2.1.3}%
-\contentsline {chapter}{Exercises}{39}{chapter*.5}%
-\contentsline {section}{Problems Class 1}{39}{section*.6}%
-\contentsline {chapter}{References}{41}{problem.1.3}%
+\contentsline {chapter}{Exercises}{40}{chapter*.5}%
+\contentsline {section}{Problems Class 1}{40}{section*.6}%
+\contentsline {chapter}{References}{42}{problem.1.3}%

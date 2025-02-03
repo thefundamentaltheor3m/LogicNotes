@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.3)  3 FEB 2025 02:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.3)  3 FEB 2025 12:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -45,9 +45,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language86). Reported on input line 105.
+(babel)             (\language38). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language86). Reported on input line 108.
+(babel)             (\language38). Reported on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
@@ -1928,7 +1928,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.23 ...ine {chapter}{References}{40}{problem.1.3}
+l.23 ...ine {chapter}{References}{41}{problem.1.3}
                                                   % [1
 
 ])
@@ -2290,7 +2290,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[37])) (./Chapters/Ex/Ex.tex
+[37]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2299,7 +2299,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[38] (./Chapters/Ex/PC1.tex [39
+[38])) (./Chapters/Ex/Ex.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[39] (./Chapters/Ex/PC1.tex [40
 
 ]
 
@@ -2316,7 +2325,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[40]
+[41]
 
 LaTeX Warning: Empty bibliography on input line 46.
 
@@ -2326,7 +2335,7 @@ Overfull \hbox (34.18303pt too wide) in paragraph at lines 48--49
 /m/n/12 https : / / thefundamentaltheor3m . github . io / LogicNotes /
  []
 
-[41] 
+[42] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -2355,10 +2364,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57131 strings out of 474222
- 1296547 string characters out of 5748734
- 2310170 words of memory out of 5000000
- 78100 multiletter control sequences out of 15000+600000
+ 57139 strings out of 474222
+ 1296646 string characters out of 5748734
+ 2310301 words of memory out of 5000000
+ 78103 multiletter control sequences out of 15000+600000
  603822 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  106i,16n,110p,1172b,2305s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2397,10 +2406,10 @@ ype1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/sansmathfonts/ssmsam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/sansmathfonts/ssmsbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /yhmath/yhcmex.pfb>
-Output written on main.pdf (42 pages, 490274 bytes).
+Output written on main.pdf (43 pages, 492906 bytes).
 PDF statistics:
- 872 PDF objects out of 1000 (max. 8388607)
- 734 compressed objects within 8 object streams
- 299 named destinations out of 1000 (max. 500000)
+ 883 PDF objects out of 1000 (max. 8388607)
+ 744 compressed objects within 8 object streams
+ 304 named destinations out of 1000 (max. 500000)
  333 words of extra memory for PDF output out of 10000 (max. 10000000)
 
