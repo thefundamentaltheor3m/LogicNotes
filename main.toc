@@ -14,10 +14,11 @@
 \contentsline {subsection}{\numberline {1.3.3}Consistency}{25}{subsection.1.3.3}%
 \contentsline {subsection}{\numberline {1.3.4}Completeness}{26}{subsection.1.3.4}%
 \contentsline {chapter}{\numberline {2}First-Order Logic}{28}{chapter.2}%
-\contentsline {section}{\numberline {2.1}The Semantics of First-Order Logic}{29}{section.2.1}%
+\contentsline {section}{\numberline {2.1}Languages, Structures and Interpretations}{29}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}First-Order Structures}{29}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}First-Order Languages}{32}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}First-Order Structures Revisited}{36}{subsection.2.1.3}%
-\contentsline {chapter}{Exercises}{40}{chapter*.5}%
-\contentsline {section}{Problems Class 1}{40}{section*.6}%
-\contentsline {chapter}{References}{42}{problem.1.3}%
+\contentsline {subsection}{\numberline {2.1.3}First-Order Structures Revisited}{37}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}A Bridge between Propositional and First-Order Logic}{40}{section.2.2}%
+\contentsline {chapter}{Exercises}{42}{chapter*.5}%
+\contentsline {section}{Problems Class 1}{42}{section*.6}%
+\contentsline {chapter}{References}{44}{problem.1.3}%

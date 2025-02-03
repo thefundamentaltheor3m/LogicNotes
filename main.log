@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.3)  3 FEB 2025 12:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.3)  3 FEB 2025 16:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -45,9 +45,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language38). Reported on input line 105.
+(babel)             (\language71). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language38). Reported on input line 108.
+(babel)             (\language71). Reported on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
@@ -1463,7 +1463,7 @@ File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
 de.tex
 File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)))) (/usr/share/texlive/texmf-dist/tex/latex/qtree/qtree.sty
+))) (/usr/share/texlive/texmf-dist/tex/latex/qtree/qtree.sty
 Package: 2008/12/12 v.3.1bQtree: tree-drawing for linguistics
 Package: qtree 2008/12/12 v.3.1bQtree: tree-drawing for linguistics
 (/usr/share/texlive/texmf-dist/tex/latex/pict2e/pict2e.sty
@@ -1592,6 +1592,23 @@ File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 \qroofx=\count521
 \qroofy=\count522
 \@qrscratchbox=\box120
+))
+(/usr/share/texlive/texmf-dist/tex/latex/todonotes/todonotes.sty
+Package: todonotes 2024/01/05 v1.1.7 Todonotes source and documentation.
+Package: todonotes 2024/01/05
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks62
+\XKV@tempa@toks=\toks63
+)
+\XKV@depth=\count523
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\c@@todonotes@numberoftodonotes=\count524
 )
 (./TeX_Setup/format.tex
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathfonts/sansmathfonts.sty
@@ -1668,7 +1685,7 @@ MM)
 
 (/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpagemodern.sty
 Package: lastpagemodern 2023-10-14 v2.0e Refers to last page's name (HMM; JPG)
-\c@lastpagecount=\count523
+\c@lastpagecount=\count525
 ) 
 )) (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
@@ -1679,15 +1696,15 @@ Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
 (./TeX_Setup/environments.tex
 (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks62
-\thm@bodyfont=\toks63
-\thm@headfont=\toks64
-\thm@notefont=\toks65
-\thm@headpunct=\toks66
+\thm@style=\toks64
+\thm@bodyfont=\toks65
+\thm@headfont=\toks66
+\thm@notefont=\toks67
+\thm@headpunct=\toks68
 \thm@preskip=\skip187
 \thm@postskip=\skip188
 \thm@headsep=\skip189
-\dth@everypar=\toks67
+\dth@everypar=\toks69
 )
 (/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
@@ -1705,9 +1722,9 @@ LaTeX Info: Redefining \labelcpageref on input line 2370.
 Package cleveref Info: `amsthm' support loaded on input line 3026.
 Package cleveref Info: `listings' support loaded on input line 3131.
 )
-\c@theorem=\count524
-\c@PC=\count525
-\c@problem=\count526
+\c@theorem=\count526
+\c@PC=\count527
+\c@problem=\count528
 )
 (./TeX_Setup/shortcuts.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
@@ -1770,17 +1787,17 @@ LaTeX Font Info:    ... okay on input line 15.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count527
+\scratchcounter=\count529
 \scratchdimen=\dimen355
 \scratchbox=\box121
-\nofMPsegments=\count528
-\nofMParguments=\count529
-\everyMPshowfont=\toks68
-\MPscratchCnt=\count530
+\nofMPsegments=\count530
+\nofMParguments=\count531
+\everyMPshowfont=\toks70
+\MPscratchCnt=\count532
 \MPscratchDim=\dimen356
-\MPnumerator=\count531
-\makeMPintoPDFobject=\count532
-\everyMPtoPDFconversion=\toks69
+\MPnumerator=\count533
+\makeMPintoPDFobject=\count534
+\everyMPtoPDFconversion=\toks71
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1790,7 +1807,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count533
+\c@lstlisting=\count535
 
 (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
@@ -1869,6 +1886,12 @@ ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into
 your preamble.
  on input line 15.
 
+
+Package todonotes Warning: The length marginparwidth is less than 2cm and will 
+most likely cause issues with the appearance of inserted todonotes. The issue c
+an be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to 
+loading the todonotes package. on input line 15.
+
 LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 15.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `normal'
 (Font)                  U/msa/m/n --> U/ssmsa/m/n on input line 15.
@@ -1928,7 +1951,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.23 ...ine {chapter}{References}{41}{problem.1.3}
+l.24 ...ine {chapter}{References}{43}{problem.1.3}
                                                   % [1
 
 ])
@@ -2299,7 +2322,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[38])) (./Chapters/Ex/Ex.tex
+[38]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2308,7 +2331,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[39] (./Chapters/Ex/PC1.tex [40
+[39]) (./Chapters/2_Pred_Logic/2_2_Prop_Logic.tex
+Overfull \hbox (7.63272pt too wide) in paragraph at lines 1--1
+[]\T1/xcmss/bx/n/17.28 A Bridge be-tween Propo-si-tional and First-Order Logic 
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[40])) (./Chapters/Ex/Ex.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[41] (./Chapters/Ex/PC1.tex [42
 
 ]
 
@@ -2325,7 +2371,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[41]
+[43]
 
 LaTeX Warning: Empty bibliography on input line 46.
 
@@ -2335,7 +2381,7 @@ Overfull \hbox (34.18303pt too wide) in paragraph at lines 48--49
 /m/n/12 https : / / thefundamentaltheor3m . github . io / LogicNotes /
  []
 
-[42] 
+[44] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -2353,7 +2399,7 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 77580C22A17CD68E081C4B13C75DCC82;3653.
+(rerunfilecheck)             Checksum: 4DDF3F0008F3836119B927B7D309B0B2;4018.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                main
@@ -2364,13 +2410,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57139 strings out of 474222
- 1296646 string characters out of 5748734
- 2310301 words of memory out of 5000000
- 78103 multiletter control sequences out of 15000+600000
+ 57634 strings out of 474222
+ 1307052 string characters out of 5748734
+ 2321334 words of memory out of 5000000
+ 78570 multiletter control sequences out of 15000+600000
  603822 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 106i,16n,110p,1172b,2305s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 106i,16n,110p,1172b,2264s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 , replaced by a fixed one
@@ -2406,10 +2452,10 @@ ype1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/sansmathfonts/ssmsam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/sansmathfonts/ssmsbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /yhmath/yhcmex.pfb>
-Output written on main.pdf (43 pages, 492906 bytes).
+Output written on main.pdf (45 pages, 500334 bytes).
 PDF statistics:
- 883 PDF objects out of 1000 (max. 8388607)
- 744 compressed objects within 8 object streams
- 304 named destinations out of 1000 (max. 500000)
- 333 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 909 PDF objects out of 1000 (max. 8388607)
+ 768 compressed objects within 8 object streams
+ 315 named destinations out of 1000 (max. 500000)
+ 341 words of extra memory for PDF output out of 10000 (max. 10000000)
 

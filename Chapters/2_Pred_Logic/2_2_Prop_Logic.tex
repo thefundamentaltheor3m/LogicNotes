@@ -1,0 +1,19 @@
+\section{A Bridge between Propositional and First-Order Logic}
+
+The purpose of this section is to discuss how ideas in propositional logic can be expressed in first-order logic. As we might expect from \Cref{Ch2:Def:First-Order_Language}, first-order logic is a generalisation of propositional logic. We will use this section to make this precise.
+
+We will begin by making rigorous the notion of \textbf{logical validity}. We will see a connection with tautologies, which, as we know, are precisely the theorems of propositional logic. We will explore notions like satisfaction and substitution to make this precise. We will then study free and bounded variables, discussing the notion of closed formulae in first-order languages.
+
+\begin{comment}
+\begin{boxexample}
+    Let $\L$ have one binary relation. Consider the atomic formula
+    \begin{align}
+        \parenth{\forall x_1}\parenth{\exists x_2} \Rof{x_1, x_2}
+        \label{Ch2:Eq:Forall_Exists_Rel}
+    \end{align}
+    This formula is true in structures like $\cycl{\N; <}$, $\cycl{\Z, <}$, and $\cycl{\Z, >}$.
+\end{boxexample}
+\begin{boxnexample}
+    Let $\L$ be as above. The formula~\eqref{Ch2:Eq:Forall_Exists_Rel} above is NOT true in $\cycl{\N; >}$, because $0$ does not have a predecessor in $\N$. The reason for this is that relation inputs are \textit{ordered} (ie, relations are not, in general, symmetric).
+\end{boxnexample}
+\end{comment}

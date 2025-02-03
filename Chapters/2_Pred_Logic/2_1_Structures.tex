@@ -1,4 +1,8 @@
-\section{The Semantics of First-Order Logic}
+\section{Languages, Structures and Interpretations}
+
+In this section, we discuss the notion of first-order languages and their interpretations in first-order structures. While this is primarily a study of semantics, the definition of languages is syntactic in nature. Yet, we consider this section to be a study of semantics because the purpose is to give some sort of meaning to the syntactic expressions we have in first-order languages.
+
+We begin by studying first-order structures in an abstract sense. We then take a syntactic detour into the study of first-order languages, before examining what it means for structures to exist inside (and give interpretations for) first-order languages.
 
 \subsection{First-Order Structures}
 
@@ -343,7 +347,7 @@ When we say, in \Cref{Ch2:Def:First-Order_Structure_in_First-Order_Language}, th
 
 We have a special term for the ``$\L$ to $\A$'' direction of this correspondence.
 
-\begin{boxdefinition}[Valuation]
+\begin{boxdefinition}[Valuation]\label{Ch2:Def:Valuation}
     Let $\A$ be an $\L$-structure. A \textbf{valuation} in $\A$ is a function
     \begin{align*}
         \v : \set{\text{Terms of } \L} \to A
@@ -366,7 +370,7 @@ We have a special term for the ``$\L$ to $\A$'' direction of this correspondence
 The idea is that a first-order language gives a purely symbolic way of expressing relationships between objects and their properties. When studying statements expressed in first-order languages, one must purely view them symbolically, as formal expressions that do not carry any \textit{meaning} per se. The `meaning' comes from valuations that allow us to interpret symbols in first-order languages as ideas in first-order structures.
 
 We have an existence and uniqueness result.
-\begin{boxlemma}
+\begin{boxlemma}\label{Ch2:Lemma:Valuation_Existence_Uniqueness}
     \letal\ with domain $A$. Fix elements $a_0, a_1, a_2, \ldots \in A$. There exists a unique valuation $\v$ of $\L$ in $\A$ such that $\vof{x_i} = a_i$ for all $i \in \N$.
 \end{boxlemma}
 \begin{proof}
@@ -377,8 +381,43 @@ We have an existence and uniqueness result.
     \end{enumerate}
     We can then define $\v$ for terms arising from functions and relations of arity $\geq 2$ by setting
     \begin{align*}
-        \vof{\fof{t_1, \ldots, t_m}} &:= \fbof{\vof{t_1}, \ldots, \vof{t_m}} \\
-        \vof{\Rof{t_1, \ldots, t_n}} &:= \Rbof{\vof{t_1}, \ldots, \vof{t_n}}
+        \vof{\fof{t_1, \ldots, t_m}} &:= \fbof{\vof{t_1}, \ldots, \vof{t_m}}
     \end{align*}
-    for all terms $t_i$, $m$-ary function symbols $f$, and $n$-ary relation symbols $R$ in $\L$ with respective interpretations $\ol{f}$ and $\ol{R}$ in $\A$.
+    for all terms $t_1, \ldots, t_m$ and $m$-ary function symbols $f$ in $\L$ with interpretation $\ol{f}$ in $\A$. Such a valuation is unique because if there are two valuations satisfying the condition on the variables, then they agree on \underline{all} terms of length $1$ (because they must agree on all constants---see \Cref{Ch2:Def:Valuation}). The fact that they obey the recursion relation by definition then gives us the result.
 \end{proof}
+
+\begin{boxexample}[A Formula in Groups]
+    Let $\L$ have the following data.
+    \begin{enumerate}
+        \item Function symbols: a binary symbol $m$ and a unary symbol $i$.
+        \item Relation symbols: a binary symbol $R$.
+        \item Constant symbols: a constant symbol $e$.
+    \end{enumerate}
+    The following is an $\L$-formula:
+    \begin{align*}
+        m\of{m\of{x_0, x_1}, i\of{x_0}}
+    \end{align*}
+    Consider the first-order structure $\A$, meant to represent a group, with the underlying data.
+    \begin{enumerate}
+        \item Domain: $G$, a set.
+        \item Functions: the binary function $\ol{m}$ of multplication (the group operation) and the unary function $\ol{i}$ of inversion.
+        \item Relations: the binary relation $\Rb$ of equality.
+        \item Constants: the identity element $\ol{e}$.
+    \end{enumerate}
+    Fix arbitrary group elements $g, h \in G$. We know, from \Cref{Ch2:Lemma:Valuation_Existence_Uniqueness}, that there exists a unique valuation $\v$ of $\L$ in $\A$ such that $\vof{x_0} = g$ and $\vof{x_1} = h$. This valuation will allow us to interpret the formula above as a statement about the group elements $g$ and $h$:
+    \begin{align*}
+        \vof{m\of{m\of{x_0, x_1}, i\of{x_0}}}
+        &= \ol{m}\of{\vof{m\of{x_0, x_1}}, \vof{i\of{x_0}}} \\
+        &= \ol{m}\of{\ol{m}\of{\vof{x_0}, \vof{x_1}}, \ol{i}\of{\vof{x_0}}} \\
+        &= \ol{m}\of{\ol{m}\of{g, h}, \ol{i}\of{g}} \\
+        &= \ol{m}\of{g \cdot h, g\inv} \\
+        &= ghg\inv
+    \end{align*}
+    If we had defined the structure $\A$ a little differently---for example, if we had defined $\ol{m}\of{g, h} := hg$ instead---then the interpretation of the formula in $\A$ would have been different, despite the formula itself being exactly the same in $\L$. This illustrates the role of valuations and interpretations in moving between purely formal, syntactic expressions in first-order languages to meaningful expressions or statements in first-order structures.
+\end{boxexample}
+
+\begin{remark}
+    It is worth remarking that in the above example, we use the $=$ symbol somewhat frivolously. On the one hand, left- and right-hand sides of each equation lie in $G$, and $=$ can be understood as equality in $\A$. However, one can also view these as being a \textit{syntactic} equalities in $\A$, since the properties we use to manipulate the above expressions are independent of the group structure of $\A$. The only simplifications we make come from the \textit{definitions} of  $\v$, $\ol{m}$, and $\ol{i}$ (for that matter, we can even view $\cdot$ and $\inv$ as notation for $\ol{m}$ and $\ol{i}$ instead of viewing $\ol{m}$ and $\ol{i}$ as notation for $\cdot$ and $\inv$). We sidestep these syntactic nuances in this module, but we do mention that a more syntax-heavy treatment is necessary for a computer-scientific study of first-order logic.
+\end{remark}
+
+With this, we have studied first-order languages and structures in sufficient detail to be able to talk about how we can express and implement ideas from propositional logic in first-order logic.
