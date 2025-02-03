@@ -60,7 +60,7 @@ Admittedly, the fact that the third example is precisely a set is a little unusu
 
 We are now ready for the most important definition of this chapter.
 
-\begin{boxdefinition}[First-Order Structure]
+\begin{boxdefinition}[First-Order Structure]\label{Ch2:Def:First-Order_Structure}
     A \textbf{first-order structure} is the following data:
     \begin{enumerate}
         \item a non-empty set $A$ called the \textbf{domain} of $\A$.
@@ -137,13 +137,15 @@ We do not even need to talk about objects that we usually deal with as sets. We 
 
 \subsection{First-Order Languages}
 
-\begin{boxdefinition}[First-Order Language]
+We are now ready to formally define the notion of first-order languages.
+
+\begin{boxdefinition}[First-Order Language]\label{Ch2:Def:First-Order_Language}
     A \textbf{first-order language} $\L$ consists of the following data.
     \begin{enumerate}
         \item Index sets $I, J, K$ where $I$ is non-empty but $J$ and $K$ can be empty.
         \item An \textbf{alphabet} of symbols, consisting of
         \begin{enumerate}[noitemsep]
-            \item \textbf{Variables} $x_1 \ x_2 \cdots$
+            \item \textbf{Variables} $x_1 \ x_2 \ \cdots$
             \item \textbf{Connectives} $\neg \ \to$
             \item \textbf{Punctuation} $( \ ) \ ,$
             \item The \textbf{Quantifier} $\forall$
@@ -155,4 +157,205 @@ We do not even need to talk about objects that we usually deal with as sets. We 
     \end{enumerate}
 \end{boxdefinition}
 
-% TODO: Finish
+The arity and cardinality information of a first-order language is encoded in the following manner.
+
+\begin{boxdefinition}[Signature]
+    Let $\L$ be a first-order language with index sets $I, J, K$ such that $I$ is non-empty and
+    \begin{enumerate}
+        \item The relations $\setst{R_i}{i \in I}$ have arities $\setst{n_i}{i \in I}$
+        \item The functions $\setst{f_j}{j \in J}$ have arities $\setst{m_j}{j \in J}$
+        \item The constants are given by $\setst{c_k}{k \in K}$
+    \end{enumerate}
+    The information
+    \begin{align*}
+        \setst{n_i}{i \in I}
+        \qquad
+        \setst{m_j}{j \in J}
+        \qquad
+        K
+    \end{align*}
+    is called the \textbf{signature} of $\L$.
+\end{boxdefinition}
+
+In principle, one should very precisely define punctuation rules and the general notation for expressing formulae in a first-order language. Indeed, what this means is that one should define what it means for a string of symbols to be `well-formed'. This is somewhat laborious, so we simply adopt the following convention.
+
+\begin{boxconvention}
+    We use the punctuation symbols
+    \begin{align*}
+        ( \quad ) \quad ,
+    \end{align*}
+    in the following manner.
+    \begin{itemize}
+        \item We enclose all expressions involving connectives in parentheses, barring those involving a single variable or a single constant.
+        \item We enclose statements of the form ``$\forall x$'' in parentheses.
+        \item We denote applications functions $f$ by $f(\cdots)$ and relations $R$ by $R(\cdots)$.
+        \item We use commas to separate the arguments of functions and relations.
+    \end{itemize}
+\end{boxconvention}
+
+There are numerous symbols in first-order languages. It makes sense to isolate the ones that form the `objects' with which we `reason' in this language.
+
+\begin{boxdefinition}[Terms]
+    Let $\L$ be a first-order language. The set of \textbf{terms} of $\L$ is the smallest set such that
+    \begin{enumerate}
+        \item Every variable is a term.
+        \item Every constant is a term.
+        \item If $t_1, \ldots, t_n$ are terms and $f$ is an $n$-ary function symbol, then $\fof{t_1, \ldots, t_n}$ is a term.
+    \end{enumerate}
+    Moreover, we shall stipulate that every term arises in this manner.
+\end{boxdefinition}
+
+We can define very basic first order languages.
+
+\begin{boxexample}\label{Ch2:Eg:Terms_FO_Logic}
+    Let $\L$ be a first-order language such that
+    \begin{enumerate}
+        \item There are no relations
+        \item There is a binary function $f$
+        \item There are two constants $c_1, c_2$
+    \end{enumerate}
+    Some terms of $\L$ are
+    \begin{align*}
+        c_1 \quad c_2 \quad x_1 \quad \fof{c_1, c_2} \quad \fof{x_1, c_1} \quad \fof{x_1, \fof{c_1, c_2}} \quad \fof{\fof{c_1, x_1}, c_2}
+    \end{align*}
+    There are many other terms. Note that we automatically assumed the existence of variables $x_1, x_2, \ldots$, which is consistent with \Cref{Ch2:Def:First-Order_Language}. 
+\end{boxexample}
+\begin{boxnexample}
+    Let $\L$ be the \fola\ given in \Cref{Ch2:Eg:Terms_FO_Logic}. A string of symbols from the alphabet of $\L$ that is \textbf{not} a term is
+    \begin{align*}
+        f f x_1
+    \end{align*}
+    The reason for this is that $x_1$ is not applied to $f$, and even if we were to ignore the punctuation convention of writing function arguments inside parentheses, we would have that the arity of $f$ is violated, because a function of two variables is being applied (twice) to a single input (or the leftmost $f$ is being applied to both $f$ and $x_1$, which contradicts the fact that $f$ takes inputs that are both terms, and $f$ alone is not a term). It is precisely to avoid ambiguities of this sort that we have punctuation conventions; either way, in this case, there are too many errors for $f f x_1$ to be a term in $\L$.
+\end{boxnexample}
+
+We now define a way of using the quantifiers and connectives of \fola~s to build \textit{formulae}. The idea is to define a fundamental notion of formulae using purely the relations of the language and then define how more complex formulae can be built from them.
+
+\begin{boxdefinition}[Atomic Formula]
+    \letla. An \textbf{atomic formula} of $\L$, or an \textbf{$\L$-atomic formula}, is an expression of the form
+    \begin{align*}
+        R\!\parenth{t_1, \ldots, t_n}
+    \end{align*}
+    where $R$ is an $n$-ary relation symbol in $\L$ and $t_1, \ldots, t_n$ are terms.
+\end{boxdefinition}
+
+Note that in the above definition, we do not require the inputs $t_1, \ldots, t_n$ to be variables or constants. We merely require them to be \textit{terms}. This means they could be variables, constants, or outputs of functions applied to other terms. Being `atomic' has only to do with being the output of a relation symbol. We can now define what a formula is in a broader sense.
+
+\begin{boxdefinition}[Formula]
+    \letla. The \textbf{formulae} of $\L$, or the \textbf{$\L$-formulae}, are defined as follows.
+    \begin{enumerate}
+        \item Every atomic formula is a formula.
+        \item If $\phi$ is a formula, then so is $\parenth{\neg \phi}$.
+        \item If $\phi$ and $\psi$ are formulae, then so is $\parenth{\phi \to \psi}$.
+        \item If $\phi$ is a formula, then so is $\parenth{\forall x} \phi$.
+    \end{enumerate}
+    Moreover, we stipulate that every formula arises in this manner.
+\end{boxdefinition}
+
+We can define very simple formulae in very simple \fola~s.
+
+\begin{boxexample}
+    \letla\ with
+    \begin{enumerate}
+        \item One unary relation symbol $P$ and one binary relation symbol $R$
+        \item One binary function symbol $f$
+        \item Two constants $c_1$ and $c_2$
+    \end{enumerate}
+    Then, the following are all atomic formulae:
+    \begin{align*}
+        P\!\parenth{x_1} \quad R\!\parenth{c_1, x_1} \quad R\!\parenth{\fof{x_1, c_1}, c_2}
+    \end{align*}
+    Similarly, the following are all formulae:
+    \begin{align*}
+        \neg P\!\parenth{x_1} \quad \parenth{P\!\parenth{x_1} \to R\!\parenth{c_1, x_1}} \quad \parenth{\forall x} R\!\parenth{x, c_1}
+    \end{align*}
+\end{boxexample}
+
+There is a reason why we only allowed \fola~s to have connectives $\to$ and $\neg$ and quantifier $\forall$: we can build the other connectives ($\land, \lor, \lr, \ldots$) and the other quantifier ($\exists$) from these.
+
+\begin{boxdefinition}[The Existential Quantifier]
+    \letla\ and let $\phi$ be an $\L$-formula. Then, we define
+    \begin{align*}
+        \parenth{\exists x} \phi
+    \end{align*}
+    to be shorthand for the formula
+    \begin{align*}
+        \parenth{\neg\parenth{\forall x}\parenth{\neg \phi}}
+    \end{align*}
+\end{boxdefinition}
+
+We also define the other connectives as in propositional logic.
+
+\begin{boxdefinition}[Connectives]
+    \letla. Let $\phi$ and $\psi$ be $\L$-formulae. We define the connectives $\land, \lor, \lr, \uparrow, \downarrow$ as follows:
+    \begin{align*}
+        \parenth{\phi \land \psi} &\text{ is shorthand for } \parenth{\neg (\phi \to \neg \psi)} \\
+        \parenth{\phi \lor \psi} &\text{ is shorthand for } \parenth{\parenth{\neg \phi} \to \psi} \\
+        \parenth{\phi \lr \psi} &\text{ is shorthand for } \parenth{(\phi \to \psi) \land (\psi \to \phi)} \\
+        \parenth{\phi \uparrow \psi} &\text{ is shorthand for } \parenth{\neg (\phi \land \psi)} \\
+        \parenth{\phi \downarrow \psi} &\text{ is shorthand for } \parenth{\neg (\phi \lor \psi)}
+    \end{align*}
+\end{boxdefinition}
+
+We are now ready to explore the utility of first-order logic in the study of mathematics, where we relate the study of first-order structures to first-order languages.
+
+\subsection{First-Order Structures Revisited}
+
+Throughout this subsection, we will fix a first-order language $\L$ with signature
+\begin{align*}
+    \setst{n_i}{i \in I}
+    \qquad
+    \setst{m_j}{j \in J}
+    \qquad
+    L
+\end{align*}
+where the $n_i$s are the arities of the relation symbols $R_i$, the $m_j$ are the arities of the function symbols $f_j$, and $K$ is the index set of the constants $c_k$.
+
+\begin{boxdefinition}[First-Order Structures in First-Order Languages]\label{Ch2:Def:First-Order_Structure_in_First-Order_Language}
+    A \textbf{structure} in $\L$, or an \textbf{$\L$-structure}, is a first-order structure
+    \begin{align*}
+        \A = \cycl{A; \set{\ol{R_i}}_{i \in I}, \set{\ol{f_j}}_{j \in J}, \set{\ol{c_k}}_{k \in K}}
+    \end{align*}
+    such that the signature of $\A$ is the same as that of $\L$, ie, the arities of the relations and functions in $\A$ are the same as those in $\L$.
+\end{boxdefinition}
+
+If one takes a closer look at the definitions of first-order structures and first-order languages (resp. \Cref{Ch2:Def:First-Order_Structure} and \Cref{Ch2:Def:First-Order_Language}), one notices that the former involves \textbf{actual} relations and functions, which are defined as subsets of certain sets, whereas the latter merely involves function and relation \textbf{symbols}. This is a crucial distinction.
+
+\begin{boxconvention}
+    The reason why we put bars on top of the symbols is to distinguish functions and relations as they appear in first-order structures---\textit{with} bars on top---from the way we express them in the ambient first-order language.
+\end{boxconvention}
+
+When we say, in \Cref{Ch2:Def:First-Order_Structure_in_First-Order_Language}, that the signature of an $\L$-structure is the same as that of the first-order language $\L$, we mean that the arities of the relations in the structure must match up with the arities of the relation symbols in the language, and similarly for functions and constants. More precisely, we have the following.
+
+\begin{boxdefinition}[Interpretation]
+    \letal. The correspondence
+    \begin{align*}
+        \ol{R_i} \lrsquig R_i
+        \qquad
+        \ol{f_j} \lrsquig f_j
+        \qquad
+        \ol{c_k} \lrsquig c_k
+    \end{align*}
+    between relations, functions and constants in $\A$ and relation symbols, function symbols and constant symbols in $\L$ is called an \textbf{interpretation of $\L$}.
+\end{boxdefinition}
+
+We have a special term for the ``$\L$ to $\A$'' direction of this correspondence.
+
+\begin{boxdefinition}[Valuation]
+    Let $\A$ be an $\L$-structure. A \textbf{valuation} in $\A$ is a function
+    \begin{align*}
+        \v : \set{\text{Terms of } \L} \to A
+    \end{align*}
+    that assigns terms of $\L$ to their interpretations in $\A$ in the following manner.
+    \begin{enumerate}
+        \item For all constant symbols $c_k$ in $\L$, we have
+        \begin{align*}
+            \vof{c_k} = \ol{c_k}
+        \end{align*}
+        
+        \item For all terms $t_1, \ldots, t_m$ and $m$-ary function symbols $f$ in $\L$, we have
+        \begin{align*}
+            \vof{\fof{t_1, \ldots, t_m}} = \ol{f}\!\parenth{\vof{t_1}, \ldots, \vof{t_m}}
+        \end{align*}
+        where $\ol{f}$ is the interpretation of $f$ in $\A$.
+    \end{enumerate}
+\end{boxdefinition}
