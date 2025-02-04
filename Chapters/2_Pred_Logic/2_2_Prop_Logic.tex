@@ -2,9 +2,9 @@
 
 The purpose of this section is to discuss how ideas in propositional logic can be expressed in first-order logic. As we might expect from \Cref{Ch2:Def:First-Order_Language}, first-order logic is a generalisation of propositional logic. We will use this section to make this precise.
 
-We will begin by making rigorous the notion of \textbf{logical validity}. We will see a connection with tautologies, which, as we know, are precisely the theorems of propositional logic. We will explore notions like satisfaction and substitution to make this precise. We will then study free and bounded variables, discussing the notion of closed formulae in first-order languages.
+We will begin by making rigorous the notion of \textbf{logical validity}. We will see a connection with tautologies, which, as we know, are precisely the theorems of propositional logic. We will explore notions like satisfaction and substitution to make this precise.
 
-\subsection{Satisfaction}
+\subsection{Valuations Satisfying Formulae}
 
 For the remainder of this subection, fix some \fola\ $\L$ and some $\L$-structure $\A$. We begin by defining a notion of equivalence for valuations that is weaker than equality.
 
@@ -19,22 +19,33 @@ We are now ready to define precisely what it means for a valuation to satisfy a 
 \begin{boxdefinition}[Satisfaction]
     Let $\phi$ be an $\L$-formula and $\v$ a valuation of $\L$ in $\A$. We can define what it means for \textbf{$\v$ satisfies $\phi$ in $\A$} recursively on the number of connectives or quantifiers in $\phi$.
     \begin{enumerate}
-        \item If $\phi$ is an \underline{atomic formula}, ie, has \underline{no connectives or quantifiers}, then we know $\phi$ is of the form $\Rof{t_1, \ldots, t_n}$ for some $n$-ary relation $R$ and terms $t_1, \ldots, t_n$ in $\L$. In this case, we say that \textbf{$\v$ satisfies $\phi$ in $\A$} if
+        \item If $\phi$ is an \underline{atomic formula}, ie, has no connectives or quantifiers, then we know $\phi$ is of the form $\Rof{t_1, \ldots, t_n}$ for some $n$-ary relation $R$ and terms $t_1, \ldots, t_n$ in $\L$. In this case, we say that \textbf{$\v$ satisfies $\phi$ in $\A$} if the relation
         \begin{align*}
             \Rbof{\vof{t_1}, \ldots, \vof{t_n}}
         \end{align*}
         holds in $\A$, ie, if $\parenth{\vof{t_1}, \ldots, \vof{t_n}} \in \Rb \subseteq A^n$.
-$
+
         \item If $\phi$ is \underline{not an atomic formula} in $\L$, then we know $\phi$ is of one of the following forms.
         \begin{enumerate}
             \item If $\phi$ is of the form $\parenth{\neg \psi}$ for some $\L$-formula $\psi$, then we say that \textbf{$\v$ satisfies $\phi$ in $\A$} if $\v$ does not satisfy $\psi$ in $\A$.
             
-            \item 
+            \item If $\phi$ is of the form $\parenth{\psi \to \chi}$ for $\L$-formulae $\psi$ and $\chi$, then we say that \textbf{$\v$ satisfies $\phi$ in $\A$} if it is not the case that $\v$ satisfies $\psi$ in $\A$ and $\v$ does not satisfy $\chi$ in $\A$.
+            
+            \item If $\phi$ is of the form $\parenth{\forall x}\psi$ for some $\L$-formula $\psi$, we say \textbf{$\v$ satisfies $\phi$ in $\A$} if for all variables $x$, if $\w$ is a valuation of $\L$ in $\A$ that is $x$-equivalent to $\v$, then $\w$ satisfies $\psi$ in $\A$.
         \end{enumerate}
+        In all three cases, we have define what it means for $\v$ to satisfy $\phi$ in terms of what it means for $\v$ to satisfy formulae with one fewer connectives or quantifiers than $\phi$, making the recursion well-defined.
     \end{enumerate}
+    If $\v$ satisfies $\phi$ in $\A$, we write $\vbrac{\phi} = \T$, and if $\v$ does not satisfy $\phi$ in $\A$, we write $\vbrac{\phi} = \F$.
 \end{boxdefinition}
 
-\begin{comment}
+This notion of a valuation satisfying a formula tells us what it means for a formula to hold true in a structure for a \textit{given} assignment of meaning to the first-order language symbols in the formula. We can define a more absolute notion of truth.
+
+\begin{boxdefinition}[Truth of a First-Order Formula in a First-Order Structure]
+    Let $\phi$ be an $\L$-formula. We say \textbf{$\phi$ is true in $\A$}, or that \textbf{$\A$ is a model of $\phi$}, if $\vbrac{\phi} = \T$ for all valuations $\v$ of $\L$ in $\A$. We denote this by $\A \models \phi$.
+\end{boxdefinition}
+
+A first-order formula true in one structure might not be true in another.
+
 \begin{boxexample}
     Let $\L$ have one binary relation. Consider the atomic formula
     \begin{align}
@@ -46,4 +57,76 @@ $
 \begin{boxnexample}
     Let $\L$ be as above. The formula~\eqref{Ch2:Eq:Forall_Exists_Rel} above is NOT true in $\cycl{\N; >}$, because $0$ does not have a predecessor in $\N$. The reason for this is that relation inputs are \textit{ordered} (ie, relations are not, in general, symmetric).
 \end{boxnexample}
-\end{comment}
+
+Despite being valuation-indepentent, given that the truth of formulae is structure-dependent, it is still not the strongest notion of truth we can define in first-order logic. We want theorems to be stronger and more `absolute' notions of truth. To that end, we define logical validity, a \textit{structure-independent notion of truth}.
+
+\begin{boxdefinition}[Logical Validity]
+    Let $\phi$ be an $\L$-formula. We say that $\phi$ is logically valid if $\A \models \phi$ for all $\L$-structures $\A$.
+\end{boxdefinition}
+
+Logically valid formulae in first-order logic are meant to be analogues of tautologies in propositional logic. An important difference, though, is that in propositional logic, there is an algorithm that \textit{decides} whether a given formula is a tautology. In first-order logic, this is not usually the case, as we shall see when we study Gödel's Incompleteness Theorem.
+
+\begin{boxexample}
+    For all $\L$-formulae $\phi$, the formula
+    \begin{align*}
+        \parenth{\parenth{\exists x_1}\parenth{\forall x_2}\phi \to \parenth{\forall x_2}\parenth{\exists x_1}\phi}
+    \end{align*}
+    is logically valid.
+    \begin{proof}
+        \sorry
+    \end{proof}
+\end{boxexample}
+
+\begin{boxnexample}
+    Given an $\L$-formulae $\phi$, the formula
+    \begin{align*}
+        \parenth{\parenth{\forall x_1}\parenth{\exists x_2}\phi \to \parenth{\exists x_2}\parenth{\forall x_1}\phi}
+    \end{align*}
+    is not necessarily logically valid.
+    \begin{proof}
+        \sorry
+    \end{proof}
+\end{boxnexample}
+
+\subsection{Substitution}
+
+In this section, we will discuss how replacing propositional variables in propositional formulae with first-order formulae gives a bridge between the two kinds of logic. For the remainder of this subection, fix
+\begin{itemize}
+    \item a natural number $n$
+    \item a \fola\ $\L$
+    \item $\L$-formulae $\phi_1, \ldots, \phi_n$
+    \item propositional variables $p_1, \ldots, p_n$
+    \item a propositional formula $\chi$ with propositional variables $p_1, \ldots, p_n$ (cf. \Cref{Ch1:Def:PropFormula})
+\end{itemize}
+
+We have a name for replacing the $p_i$ $\chi$ with $\phi_i$.
+
+\begin{boxdefinition}[Substitution Instance]
+    The \textbf{substitution instance of $\chi$ with $\phi_1, \ldots, \phi_n$} is the $\L$-formula obtained by replacing each propositional variable $p_i$ in $\chi$ with the $\L$-formula $\phi_i$.
+\end{boxdefinition}
+\begin{remark}
+    We underscore here that a substitution instance is a formula in $\L$, not a propositional formula, because the terms of which it is made are all $\L$-formulae rather than propositional variables.
+\end{remark}
+
+For the remainder of this subsection, denote by $\theta$ the substitution instance of $\chi$ with $\phi_1, \ldots, \phi_n$.
+
+Substitution is our gateway for `embedding' propositional logic into first-order logic. This `embedding' preserves `truth' in the following manner.
+
+\begin{boxtheorem}
+    If $\chi$ is a tautology, then $\theta$ is logically valid.
+\end{boxtheorem}
+\begin{proof}
+    Assume that $\chi$ is a tautology (cf. \Cref{Ch1:Def:Tautology}). To show that $\theta$ is logically valid, we need to show that $\A \models \theta$ for all $\L$-structures $\A$. To that end, \letal\ and \vola. We need to show that $\vbrac{\theta} = \T$. \sorry
+\end{proof}
+
+It is tempting to ask whether all logically valid formulae are substitution instances of tautologies. Such a fact would truly make the above result a two-way bridge. Unfortunately, this is not true, as shown by the following counterexample.
+
+\begin{boxcexample}
+    For all $\L$-formulae $\phi$, the $\L$-formula
+    \begin{align*}
+        \parenth{\parenth{\exists x_2}\parenth{\forall x_1}\phi \to \parenth{\forall x_1}\parenth{\exists x_2}\phi}
+    \end{align*}
+    is logically valid. However, it is not a substitution instance of any propositional formula, because there is no notion of quantification in propositional logic.
+\end{boxcexample}
+
+This tells us that first-order logic is not only stronger than propositional logic, it is \textbf{strictly} stronger.
