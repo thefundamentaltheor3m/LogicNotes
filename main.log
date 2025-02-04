@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.3)  3 FEB 2025 16:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.4)  4 FEB 2025 14:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -45,9 +45,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language71). Reported on input line 105.
+(babel)             (\language66). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language71). Reported on input line 108.
+(babel)             (\language66). Reported on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
@@ -1951,7 +1951,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.24 ...ine {chapter}{References}{43}{problem.1.3}
+l.25 ... and Free Variables}{44}{subsection.2.3.1}
                                                   % [1
 
 ])
@@ -2345,7 +2345,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[40])) (./Chapters/Ex/Ex.tex
+[40]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2354,7 +2354,43 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[41] (./Chapters/Ex/PC1.tex [42
+[41]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[42]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[43]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[44]) (./Chapters/2_Pred_Logic/2_3_Var.tex)) (./Chapters/Ex/Ex.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[45] (./Chapters/Ex/PC1.tex [46
 
 ]
 
@@ -2371,7 +2407,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[43]
+[47]
 
 LaTeX Warning: Empty bibliography on input line 46.
 
@@ -2381,7 +2417,7 @@ Overfull \hbox (34.18303pt too wide) in paragraph at lines 48--49
 /m/n/12 https : / / thefundamentaltheor3m . github . io / LogicNotes /
  []
 
-[44] 
+[48] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -2399,7 +2435,7 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4DDF3F0008F3836119B927B7D309B0B2;4018.
+(rerunfilecheck)             Checksum: FC95D9550BE8034381FBA1BD84F17C50;5273.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                main
@@ -2410,13 +2446,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57634 strings out of 474222
- 1307052 string characters out of 5748734
- 2321334 words of memory out of 5000000
- 78570 multiletter control sequences out of 15000+600000
+ 57697 strings out of 474222
+ 1308075 string characters out of 5748734
+ 2322550 words of memory out of 5000000
+ 78603 multiletter control sequences out of 15000+600000
  603822 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 106i,16n,110p,1172b,2264s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 106i,16n,110p,1172b,2284s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 , replaced by a fixed one
@@ -2452,10 +2488,10 @@ ype1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/sansmathfonts/ssmsam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/sansmathfonts/ssmsbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /yhmath/yhcmex.pfb>
-Output written on main.pdf (45 pages, 500334 bytes).
+Output written on main.pdf (49 pages, 520348 bytes).
 PDF statistics:
- 909 PDF objects out of 1000 (max. 8388607)
- 768 compressed objects within 8 object streams
- 315 named destinations out of 1000 (max. 500000)
- 341 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 983 PDF objects out of 1000 (max. 8388607)
+ 837 compressed objects within 9 object streams
+ 342 named destinations out of 1000 (max. 500000)
+ 389 words of extra memory for PDF output out of 10000 (max. 10000000)
 
