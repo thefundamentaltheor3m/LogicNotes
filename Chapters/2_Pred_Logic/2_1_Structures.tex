@@ -55,11 +55,15 @@ These notions are not new to us.
 Admittedly, the fact that the third example is precisely a set is a little unusual to see. This is because in practice, the following convention is used.
 
 \begin{boxconvention}
-    Let $\Rb \subseteq A^n$ be a relation on some set $A$. For all $\parenth{a_1, \ldots, a_n} \in A^n$, we write
+    Let $\Rb \subseteq A^n$ be a relation on some set $A$. For all $\parenth{a_1, \ldots, a_n} \in A^n$, when we write
     \begin{align*}
         \Rbof{a_1, \ldots, a_n}
     \end{align*}
-    to mean that $\parenth{a_1, \ldots, a_n} \in \Rb$.
+    or say that
+    \begin{align*}
+        \Rbof{a_1, \ldots, a_n} \text{ holds}
+    \end{align*}
+    we mean that $\parenth{a_1, \ldots, a_n} \in \Rb$.
 \end{boxconvention}
 
 We are now ready for the most important definition of this chapter.
@@ -235,7 +239,7 @@ We can define very basic first order languages.
 We now define a way of using the quantifiers and connectives of \fola~s to build \textit{formulae}. The idea is to define a fundamental notion of formulae using purely the relations of the language and then define how more complex formulae can be built from them.
 
 \begin{boxdefinition}[Atomic Formula]
-    \letla. An \textbf{atomic formula} of $\L$, or an \textbf{$\L$-atomic formula}, is an expression of the form
+    \Letla. An \textbf{atomic formula} of $\L$, or an \textbf{$\L$-atomic formula}, is an expression of the form
     \begin{align*}
         R\!\parenth{t_1, \ldots, t_n}
     \end{align*}
@@ -245,7 +249,7 @@ We now define a way of using the quantifiers and connectives of \fola~s to build
 Note that in the above definition, we do not require the inputs $t_1, \ldots, t_n$ to be variables or constants. We merely require them to be \textit{terms}. This means they could be variables, constants, or outputs of functions applied to other terms. Being `atomic' has only to do with being the output of a relation symbol. We can now define what a formula is in a broader sense.
 
 \begin{boxdefinition}[Formula]
-    \letla. The \textbf{formulae} of $\L$, or the \textbf{$\L$-formulae}, are defined as follows.
+    \Letla. The \textbf{formulae} of $\L$, or the \textbf{$\L$-formulae}, are defined as follows.
     \begin{enumerate}
         \item Every atomic formula is a formula.
         \item If $\phi$ is a formula, then so is $\parenth{\neg \phi}$.
@@ -258,7 +262,7 @@ Note that in the above definition, we do not require the inputs $t_1, \ldots, t_
 We can define very simple formulae in very simple \fola~s.
 
 \begin{boxexample}
-    \letla\ with
+    \Letla\ with
     \begin{enumerate}
         \item One unary relation symbol $P$ and one binary relation symbol $R$
         \item One binary function symbol $f$
@@ -277,7 +281,7 @@ We can define very simple formulae in very simple \fola~s.
 There is a reason why we only allowed \fola~s to have connectives $\to$ and $\neg$ and quantifier $\forall$: we can build the other connectives ($\land, \lor, \lr, \ldots$) and the other quantifier ($\exists$) from these.
 
 \begin{boxdefinition}[The Existential Quantifier]
-    \letla\ and let $\phi$ be an $\L$-formula. Then, we define
+    \Letla\ and let $\phi$ be an $\L$-formula. Then, we define
     \begin{align*}
         \parenth{\exists x} \phi
     \end{align*}
@@ -290,7 +294,7 @@ There is a reason why we only allowed \fola~s to have connectives $\to$ and $\ne
 We also define the other connectives as in propositional logic.
 
 \begin{boxdefinition}[Connectives]
-    \letla. Let $\phi$ and $\psi$ be $\L$-formulae. We define the connectives $\land, \lor, \lr, \uparrow, \downarrow$ as follows:
+    \Letla. Let $\phi$ and $\psi$ be $\L$-formulae. We define the connectives $\land, \lor, \lr, \uparrow, \downarrow$ as follows:
     \begin{align*}
         \parenth{\phi \land \psi} &\text{ is shorthand for } \parenth{\neg (\phi \to \neg \psi)} \\
         \parenth{\phi \lor \psi} &\text{ is shorthand for } \parenth{\parenth{\neg \phi} \to \psi} \\
@@ -334,7 +338,7 @@ For the remainder of this subsection, fix a \fos\ $\A$. Denote its domain, relat
 When we say, in \Cref{Ch2:Def:First-Order_Structure_in_First-Order_Language}, that the signature of an $\L$-structure is the same as that of the first-order language $\L$, we mean that the arities of the relations in the structure must match up with the arities of the relation symbols in the language, and similarly for functions and constants. More precisely, we have the following.
 
 \begin{boxdefinition}[Interpretation]
-    \letal. The correspondence
+    \Letal. The correspondence
     \begin{align*}
         \ol{R_i} \lrsquig R_i
         \qquad
@@ -371,7 +375,7 @@ The idea is that a first-order language gives a purely symbolic way of expressin
 
 We have an existence and uniqueness result.
 \begin{boxlemma}\label{Ch2:Lemma:Valuation_Existence_Uniqueness}
-    \letal\ with domain $A$. Fix elements $a_0, a_1, a_2, \ldots \in A$. There exists a unique valuation $\v$ of $\L$ in $\A$ such that $\vof{x_i} = a_i$ for all $i \in \N$.
+    \Letal\ with domain $A$. Fix elements $a_0, a_1, a_2, \ldots \in A$. There exists a unique valuation $\v$ of $\L$ in $\A$ such that $\vof{x_i} = a_i$ for all $i \in \N$.
 \end{boxlemma}
 \begin{proof}
     We begin by showing existence. We can define $\v$ explicitly for all terms of $\L$ by performing recursion on their length. For terms of length $1$, we deal with the variables and the distinguished constants separately.

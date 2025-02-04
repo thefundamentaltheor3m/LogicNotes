@@ -4,6 +4,36 @@ The purpose of this section is to discuss how ideas in propositional logic can b
 
 We will begin by making rigorous the notion of \textbf{logical validity}. We will see a connection with tautologies, which, as we know, are precisely the theorems of propositional logic. We will explore notions like satisfaction and substitution to make this precise. We will then study free and bounded variables, discussing the notion of closed formulae in first-order languages.
 
+\subsection{Satisfaction}
+
+For the remainder of this subection, fix some \fola\ $\L$ and some $\L$-structure $\A$. We begin by defining a notion of equivalence for valuations that is weaker than equality.
+
+\begin{boxdefinition}[Equivalence with respect to a Variable]
+    Suppose $x_l$ is a variable in $\L$ and valuations $\v, \w$ of $\L$ in $\A$. We say that $\v$ and $\w$ are \textbf{$x_l$-equivalent} if for all $i \in \N \setminus \set{l}$, we have $\vof{x_i} = \wof{x_i}$.
+\end{boxdefinition}
+
+One way to see that this notion is weaker than equality of valuations is that if valuations agree on all variables, then by \Cref{Ch2:Lemma:Valuation_Existence_Uniqueness}, they must be equal. The fact that there is one variable on which they \textit{may} differ is what makes this notion weaker. We also emphasise that we only stipulate that $x_l$-equivalent valuations \textit{need not} agree on $x_l$, not that they \textit{must not} agree on $x_l$. In particular, \textit{equal valuations are equivalent with respect to all variables}.
+
+We are now ready to define precisely what it means for a valuation to satisfy a formula. The idea is that in a general setting---ie, in a \fola---formulae do not express any properties, and without an interpretation in a \fos, it is not very meaningful to talk about what it means for a formula to be `true'. A valuation translates formulae into `meaningful statements', and therefore, informally, we can think of a valuation satisfying a formula as meaning that it translates a general formula into some interpretation that we know to be `true' in some sense.
+
+\begin{boxdefinition}[Satisfaction]
+    Let $\phi$ be an $\L$-formula and $\v$ a valuation of $\L$ in $\A$. We can define what it means for \textbf{$\v$ satisfies $\phi$ in $\A$} recursively on the number of connectives or quantifiers in $\phi$.
+    \begin{enumerate}
+        \item If $\phi$ is an \underline{atomic formula}, ie, has \underline{no connectives or quantifiers}, then we know $\phi$ is of the form $\Rof{t_1, \ldots, t_n}$ for some $n$-ary relation $R$ and terms $t_1, \ldots, t_n$ in $\L$. In this case, we say that \textbf{$\v$ satisfies $\phi$ in $\A$} if
+        \begin{align*}
+            \Rbof{\vof{t_1}, \ldots, \vof{t_n}}
+        \end{align*}
+        holds in $\A$, ie, if $\parenth{\vof{t_1}, \ldots, \vof{t_n}} \in \Rb \subseteq A^n$.
+$
+        \item If $\phi$ is \underline{not an atomic formula} in $\L$, then we know $\phi$ is of one of the following forms.
+        \begin{enumerate}
+            \item If $\phi$ is of the form $\parenth{\neg \psi}$ for some $\L$-formula $\psi$, then we say that \textbf{$\v$ satisfies $\phi$ in $\A$} if $\v$ does not satisfy $\psi$ in $\A$.
+            
+            \item 
+        \end{enumerate}
+    \end{enumerate}
+\end{boxdefinition}
+
 \begin{comment}
 \begin{boxexample}
     Let $\L$ have one binary relation. Consider the atomic formula
