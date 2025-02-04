@@ -4,9 +4,127 @@ The purpose of this section is to understand how to work with variables and the 
 
 \subsection{Bound and Free Variables}
 
+Consider the formula
+\begin{align}
+    \psi_1 : \parenth{R_1\of{x_1, x_2} \to \parenth{\forall x_3}R_2\of{x_1, x_3}}
+    \label{Ch2:Eq:Free_Bound_Motivation}
+\end{align}
+where $R_1, R_2$ are relation symbols in $\L$ and $x_1, x_2, x_3$ are variables in $\L$. Intuitively, we do not want $x_3$ to `exist', or be `known' or `accessible', outside of the sub-formula\footnote{When we say sub-formula, we mean exactly what it sounds like: since formulae are built from smaller formulae using connectives and the quantifier, when we say sub-formula, we mean a formula that arose at an intermediate step in this inductive construction of the formula of which it is a sub-formula.} $\parenth{\forall x_3}R_2\of{x_1, x_3}$. We can mae this notion precise.
 
+\begin{boxdefinition}[Scope of a Quantifier]
+    Suppose $\phi$ and $\psi$ are $\L$-formulae. If $\parenth{\forall x_i}\phi$ occurs as a sub-formula of $\psi$, we say that $\phi$ is the  \textbf{scope of $\parenth{\forall x_i}$ in $\psi$}.
+\end{boxdefinition}
+\begin{boxexample}
+    In~\eqref{Ch2:Eq:Free_Bound_Motivation}, $R_2\of{x_1, x_3}$ is the scope of the quantifier $\parenth{\forall x_3}$.
+\end{boxexample}
+
+We use the existence of a scope to characterise variables.
+
+\begin{boxdefinition}[Bound Variables]
+    Let $\psi$ be an $\L$-formula and let $x_j$ be a variable that appears in $\psi$. We say that $x_j$ is \textbf{bound in $\psi$} if it is within the scope of a quantifier.
+\end{boxdefinition}
+
+\begin{boxexample}
+    In~\eqref{Ch2:Eq:Free_Bound_Motivation}, the variable $x_3$ is bound, because it lies in the scope $R_2\of{x_1, x_3}$ of the quantifier $\parenth{\forall x_3}$.
+\end{boxexample}
+
+We also have a special name for variables that are not bound.
+
+\begin{boxdefinition}[Free Variables]
+    Let $\psi$ be an $\L$-formula and let $x_j$ be a variable that appears in $\psi$. We say that $x_j$ is \textbf{free in $\psi$} if it is not bound in $\psi$.
+\end{boxdefinition}
+
+\begin{boxexample}
+    In~\eqref{Ch2:Eq:Free_Bound_Motivation}, the variable $x_1$ is bound, because it does not lie in the scope of any quantifiers, meaning it is not bound.
+\end{boxexample}
+
+The same variable can have both free and bound occurrences within a given formula.
+
+\begin{boxexample}
+    In the formula
+    \begin{align*}
+        \parenth{\parenth{\forall x_1}R_1\of{x_1, x_2} \to R_2\of{x_1, x_2}}
+    \end{align*}
+    the variable $x_1$ is bound in the expression
+    \begin{align*}
+        \parenth{\forall x_1}\underbrace{R_1\of{x_1, x_2}}_{\text{scope of } \parenth{\forall x_1}}
+    \end{align*}
+    but free in the expression
+    \begin{align*}
+        R_2\of{x_1, x_2}
+    \end{align*}
+\end{boxexample}
+
+We can also show that existentially quantified variables are bound.
+
+\begin{boxlemma}
+    Let $\psi$ and $\phi$ be an $\L$-formulae. If $\psi$ contains
+    \begin{align*}
+        \parenth{\exists x_1}\phi
+    \end{align*}
+    as a sub-formula, then $x_1$ is bound in $\psi$.
+\end{boxlemma}
+\begin{proof}
+    This follows immediately from the definition of the existential quantifier. \sorry
+\end{proof}
+
+The occurrence of free variables inside a formula means that it is very general, as the variables in it are purely formal symbols that we have no machinery to reason with. We give a special term to, and have a special interest in, formulae with no free variables.
+
+\begin{boxdefinition}[Closed Formulae]
+    An $\L$-formula with no free variables is called a \textbf{closed formula} or a \textbf{sentence}.
+\end{boxdefinition}
+
+Formulae that are not closed can be thought of as being `dependent' on their free variables, in the sense that we would intuitively want to only define a notion of substitution only for free variables. To that end, we adopt some notation.
+
+\begin{boxconvention}
+    Let $\psi$ be an $\L$-formula. If $\L$ has free variables $x_1, \ldots, x_n$, then we denote $\psi$ by 
+    \begin{align*}
+        \psi\of{x_1, \ldots, x_n}
+    \end{align*}
+    when we wish to underscore the dependence of $\psi$ on $x_1, \ldots, x_n$ or the fact that $x_1, \ldots x_n$ are free in $\psi$ or perform a substitution.
+\end{boxconvention}
+
+We now define substitution.
+
+\begin{boxdefinition}[Substitution]
+    Let $t_1, \ldots, t_n$ be terms in $\L$ and $\psi\of{x_1, \ldots, x_n}$ an $\L$-formula with free variables $x_1, \ldots, x_n$\footnote{By the aforementioned convention, we would ordinarily not mention that $x_1, \ldots, x_n$ are free in $\psi$.}. We define the formula obtained by \textbf{substituting the $t_i$ for the $x_i$} to be the $\L$-formula obtained by replacing each occurrence of $x_i$ in $\psi$ with an occurrence of the corresponding $t_i$. We denote this formula
+    \begin{align*}
+        \psi\of{t_1, \ldots, t_n}
+    \end{align*}
+\end{boxdefinition}
 
 \subsection{An Analogue of Completeness}
+
+Throughout this subsection, fix an $\L$-formula $\phi$ and an $\L$-structure $\A$.
+
+We begin by mentioning a result about valuations.
+
+\begin{boxtheorem}
+    Fix $n \in \N \cup \set{0}$. If $\phi$ has free variables $x_1, \ldots, x_n$ and $\v, \w$ are valuations of $\L$ in $\A$ with $\vof{x_i} = \wof{x_i}$ for all $1 \leq i \leq n$, then
+    \begin{align*}
+        \vbrac{\phi} = \T \tiff \wbrac{\phi} = \T
+    \end{align*}
+    In other words, we have $\vbrac{\phi} = \wbrac{\phi}$.
+\end{boxtheorem}
+\begin{proof}
+    Fix valuations $\v$ and $\w$ of $\L$ in $\A$ that agree on all the free variables of $\phi$. We argue that $\vbrac{\phi} = \wbrac{\phi}$ by performing induction on the total number connectives and quantifiers in $\phi$.
+
+    The base case is when $\phi$ has no connectives or quantifiers, ie, when $\phi$ is atomic in terms that contain no quantifiers. In this case, we have that $\phi$ is of the form
+    \begin{align*}
+        \Rof{t_1, \ldots, t_m}
+    \end{align*}
+    where $t_1, \ldots, t_m$ are terms that contain no quantifiers. In this case, each $t_i$ is either a constant or a variable. Since $\phi$ is assumed not to contain any quantifiers, the $t_i$ that are variables must be free variables, and the rest must be constants. Since $\v$ and $\w$ agree on all constants by definition and on all free variables by assumption, we must have
+    $\vof{t_i} = \wof{t_i}$ for all $i$. Then, \sorry
+\end{proof}
+
+This gives us a completeness-like result about closed formulae.
+
+\begin{boxcorollary}
+    If $\phi$ is closed, then either $\A \models \phi$ or $\A \models \parenth{\neg \phi}$.
+\end{boxcorollary}
+\begin{proof}
+    If $\phi$ is closed, $\phi$ has no free variables. Then, any two valuations of $\L$ in $\A$ agree vacuously on the set of all free variables of $\phi$. Therefore, there cannot be two distinct valuations such that one satisfies $\phi$ and one does not. In other words, either $\phi$ is true in $\A$ or $\phi$ is not true in $\A$. Equivalently, either $\phi$ or $\parenth{\neg \phi}$ is true in $\A$.
+\end{proof}
 
 % Main Thm: 2.3.3 (David Ang's notes)
 

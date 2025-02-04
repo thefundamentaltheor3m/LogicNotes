@@ -38,6 +38,23 @@ We are now ready to define precisely what it means for a valuation to satisfy a 
     If $\v$ satisfies $\phi$ in $\A$, we write $\vbrac{\phi} = \T$, and if $\v$ does not satisfy $\phi$ in $\A$, we write $\vbrac{\phi} = \F$.
 \end{boxdefinition}
 
+We remark that the notation $\vbrac{\phi} = \T$ is merely shorthand for a statement of fact. It does not actually represent an equality in some setting where both $\T$ and $\vbrac{\phi}$ are defined. The same goes for $\vbrac{\phi} = \F$. However, it is often convenient to abuse notation.
+
+\begin{boxconvention}
+    Given valuations $\v, \w$ of $\L$ in $\A$, we write
+    \begin{align*}
+        \vbrac{\phi} = \wbrac{\phi}
+    \end{align*}
+    to denote the condition that
+    \begin{align*}
+        \vbrac{\phi} = \T \tiff \wbrac{\phi} = \T
+    \end{align*}
+    or the equivalent condition that
+    \begin{align*}
+        \vbrac{\phi} = \F \tiff \wbrac{\phi} = \F
+    \end{align*}
+\end{boxconvention}
+
 This notion of a valuation satisfying a formula tells us what it means for a formula to hold true in a structure for a \textit{given} assignment of meaning to the first-order language symbols in the formula. We can define a more absolute notion of truth.
 
 \begin{boxdefinition}[Truth of a First-Order Formula in a First-Order Structure]
