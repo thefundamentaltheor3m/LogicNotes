@@ -1,0 +1,93 @@
+\section*{Problems Class 2}
+\addcontentsline{toc}{section}{Problems Class 2}
+\setcounter{PC}{2}
+
+\begin{boxproblem}
+    In \Cref{Ch2:Eg:Language_and_Formula_for_Groups}, we introduced a first-order language $\L$ that is appropriate for groups. In this question, we will use the notation defined in \Cref{Ch2:Eg:Language_and_Formula_for_Groups}. Define the $\L$-structures
+    \begin{align*}
+        \A &:= \cycl{\Z; =, +, -, 0} \\
+        \B &:= \cycl{\Q; =, +, -, 0}
+    \end{align*}
+    \begin{enumerate}[label = \normalfont \arabic*.]
+        \item True or false? Give reasons.
+        \begin{enumerate}[label = \normalfont (\alph*)]
+            \item Every $\L$-structure is a group.
+            \item $\parenth{\neg m\of{x_2, m\of{e, x_1}}}$ is a term of $\L$.
+            \item $\parenth{\neg m\of{x_2, m\of{e, x_1}}}$ is a formula of $\L$.
+            \item $\Rof{e, m\of{x_1, i\of{x_1}}}$ is a formula of $\L$.
+            \item $\parenth{\exists x_1}\parenth{\neg\Rof{e, m\of{x_1, i\of{x_1}}}}$ is a formula of $\L$.
+            \item $\parenth{\exists x_1}\parenth{\parenth{\neg\Rof{e, m\of{x_1, i\of{x_1}}}}}$ is a formula of $\L$.
+        \end{enumerate}
+
+        \item Suppose $\v$ is a valuation of $\L$ in $\A$ such that
+        \begin{align*}
+            \vof{x_1} &= 2 \\
+            \vof{x_2} &= 4 \\
+            \vof{x_j} &= 0 \text{ for } j \neq 1, 2
+        \end{align*}
+        \begin{enumerate}
+            \item Compute
+            \begin{align*}
+                \vof{m\of{x_2, m\of{e, x_1}}}
+            \end{align*}
+            \item Find a term $t$ of $\L$ such that $\vof{t} = -6$.
+            \item Is there a term $t'$ of $\L$ such that $\vof{t'} = 7$?
+        \end{enumerate}
+
+        \item Find a closed $\L$-formula $\phi$ such that $\A \models \phi$ but $\B \not\models \phi$.
+    \end{enumerate}
+\end{boxproblem}
+\begin{solution}\hfill
+    \begin{enumerate}
+        \item % True or false
+        \begin{enumerate}
+            \item FALSE. The first-order language $\L$ is syntactic. There is nothing that tells us that the unary function symbol for inversion must actually correspond to a function that undoes the binary function to get the constant. For example,
+            \begin{align*}
+                \cycl{\Z; \times, -, 0}
+            \end{align*}
+            is, as per \Cref{Ch2:Def:First-Order_Structure_in_First-Order_Language}, an $\L$-structure, because it has the same signature as $\L$.
+
+            \item FALSE. As per \Cref{Ch2:Def:Terms_FO_Logic}, a term cannot have a connective. Since the expression
+            \begin{align*}
+                \parenth{\neg m\of{x_2, m\of{e, x_1}}}
+            \end{align*}
+            has a connective, it cannot be a term.
+
+            \item FALSE. As per \Cref{Ch2:Def:Formula_FO_Logic}, any formula must contain an atomic formula, which contains a relation symbol. Since the expression
+            \begin{align*}
+                \parenth{\neg m\of{x_2, m\of{e, x_1}}}
+            \end{align*}
+            has no relation symbols, it cannot be a formula.
+
+            \item TRUE. Both $e$ and $m\of{x_1, i\of{x_1}}$ are terms, as they satisfy \Cref{Ch2:Def:Terms_FO_Logic}. Then, since $R$ is a relation symbol, we have that the expression
+            \begin{align*}
+                \Rof{e, m\of{x_1, i\of{x_1}}}
+            \end{align*}
+            is, in fact, an \textit{atomic} formula (cf. \Cref{Ch2:Def:AtomicFormula_FO_Logic}). Therefore, by \Cref{Ch2:Def:Formula_FO_Logic}, it is also a formula.
+
+            \item TRUE. This is easily checked.
+
+            \item FALSE. It looks the same as the previous one, but there are two brackets too many! So, the formula is \textbf{not well-formed}. (In practice, we only use brackets to disambiguate. In this module, though, we've defined them as an integral part of our syntax. Therefore, in this module, we have to be careful when dealing with brackets!)
+        \end{enumerate}
+        \item
+        \begin{enumerate}
+            \item In $\A$, the (additive) group of integers, this corresponds to the expression
+            \begin{align*}
+                4 + 2
+            \end{align*}
+            which we can evaluate to $6$.
+
+            \item The following is such a term.
+            \begin{align*}
+                m\of{i\of{2}, m\of{i\of{2}, i\of{2}}}
+            \end{align*}
+            It corresponds to the expression
+            \begin{align*}
+                \parenth{-2} + \parenth{\parenth{-2} + \parenth{-2}}
+            \end{align*}
+            which we can simplify, using the properties of $\A$, to $-6$.
+
+            \item We cannot, because as per our definition of $\v$, the valuation of any term must be an even number.
+        \end{enumerate}
+    \end{enumerate}    
+\end{solution}

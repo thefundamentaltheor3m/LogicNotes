@@ -119,6 +119,7 @@ We begin by mentioning a result about valuations.
 
 This gives us a completeness-like result about closed formulae.
 
+% Main Thm: 2.3.3 (David Ang's notes)
 \begin{boxcorollary}
     If $\phi$ is closed, then either $\A \models \phi$ or $\A \models \parenth{\neg \phi}$.
 \end{boxcorollary}
@@ -126,8 +127,15 @@ This gives us a completeness-like result about closed formulae.
     If $\phi$ is closed, $\phi$ has no free variables. Then, any two valuations of $\L$ in $\A$ agree vacuously on the set of all free variables of $\phi$. Therefore, there cannot be two distinct valuations such that one satisfies $\phi$ and one does not. In other words, either $\phi$ is true in $\A$ or $\phi$ is not true in $\A$. Equivalently, either $\phi$ or $\parenth{\neg \phi}$ is true in $\A$. 
 \end{proof}
 
-% Main Thm: 2.3.3 (David Ang's notes)
 
 \subsection{Understanding the Universal Quantifier}
+
+The purpose of this section is to discuss the relationship between the syntax and the semantics of the universal quantifier $\forall$. We have not been too precise so far about what it \textit{means} to write an expression like
+\begin{align*}
+    \parenth{\forall x_1}\phi
+\end{align*}
+for some formula $\phi$ with a bound variable $x_1$. We particularly delve into nuances that arise due to the fact that in our strict syntactic definition of $\L$-formulae (\Cref{Ch2:Def:Formula_FO_Logic}, we only allow the quantifier to be succeeded by a \textbf{variable} in $\L$, which must be one of $x_1, x_2, \ldots$. The really confusing thing about this syntactic definition of the universal quantifier is the fact that it is not obvious that this quantifier means ``for all'': instead of saying ``for all variables $x_1$, we have $\phi$'', on a strictly syntactic level, the expression $\parenth{\forall x_1}\phi$ is using the \textit{specific variable} $x_1$.
+
+What we would want---say, in an interactive theorem prover like Lean---is a mechanism to be able to \textit{remove} the quantifier and instead \textit{introduce} a free variable into our formula and label that variable differently from all other free and bound variables in our formula.
 
 % Main Thm: 2.3.6 (David Ang's notes)

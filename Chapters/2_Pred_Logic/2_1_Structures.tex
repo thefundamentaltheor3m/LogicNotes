@@ -116,6 +116,15 @@ We use the following notation for first-order structures.
     \begin{align*}
         \text{Structure} = \cycl{\text{Domain}; \text{Relations}, \text{Functions}, \text{Constants}}
     \end{align*}
+    Often, we even drop the $\set{\ }$ when describing first-order structures: for instance, we would simply write
+    \begin{align*}
+        \cycl{\Z; =, +, -, 0}
+    \end{align*}
+    as opposed to
+    \begin{align*}
+        \cycl{\Z; \set{=}, \set{+, -}, \set{0}}
+    \end{align*}
+    to describe the group of integers along with the relation of equality, the binary function of addition, the unary function of inversion by sign chance, and the identity $0$.
 \end{boxconvention}
 
 We have encountered any number of first-order structures so far. Here are a few examples.
@@ -203,7 +212,7 @@ In principle, one should very precisely define punctuation rules and the general
 
 There are numerous symbols in first-order languages. It makes sense to isolate the ones that form the `objects' with which we `reason' in this language.
 
-\begin{boxdefinition}[Terms]
+\begin{boxdefinition}[Terms]\label{Ch2:Def:Terms_FO_Logic}
     Let $\L$ be a first-order language. The set of \textbf{terms} of $\L$ is the smallest set such that
     \begin{enumerate}
         \item Every variable is a term.
@@ -238,7 +247,7 @@ We can define very basic first order languages.
 
 We now define a way of using the quantifiers and connectives of \fola~s to build \textit{formulae}. The idea is to define a fundamental notion of formulae using purely the relations of the language and then define how more complex formulae can be built from them.
 
-\begin{boxdefinition}[Atomic Formula]
+\begin{boxdefinition}[Atomic Formula]\label{Ch2:Def:AtomicFormula_FO_Logic}
     \Letla. An \textbf{atomic formula} of $\L$, or an \textbf{$\L$-atomic formula}, is an expression of the form
     \begin{align*}
         R\!\parenth{t_1, \ldots, t_n}
@@ -248,7 +257,7 @@ We now define a way of using the quantifiers and connectives of \fola~s to build
 
 Note that in the above definition, we do not require the inputs $t_1, \ldots, t_n$ to be variables or constants. We merely require them to be \textit{terms}. This means they could be variables, constants, or outputs of functions applied to other terms. Being `atomic' has only to do with being the output of a relation symbol. We can now define what a formula is in a broader sense.
 
-\begin{boxdefinition}[Formula]
+\begin{boxdefinition}[Formula]\label{Ch2:Def:Formula_FO_Logic}
     \Letla. The \textbf{formulae} of $\L$, or the \textbf{$\L$-formulae}, are defined as follows.
     \begin{enumerate}
         \item Every atomic formula is a formula.
@@ -390,7 +399,7 @@ We have an existence and uniqueness result.
     for all terms $t_1, \ldots, t_m$ and $m$-ary function symbols $f$ in $\L$ with interpretation $\ol{f}$ in $\A$. Such a valuation is unique because if there are two valuations satisfying the condition on the variables, then they agree on \underline{all} terms of length $1$ (because they must agree on all constants---see \Cref{Ch2:Def:Valuation}). The fact that they obey the recursion relation by definition then gives us the result.
 \end{proof}
 
-\begin{boxexample}[A Formula in Groups]
+\begin{boxexample}[Interpreting a Term in Groups]\label{Ch2:Eg:Language_and_Formula_for_Groups}
     Let $\L$ have the following data.
     \begin{enumerate}
         \item Function symbols: a binary symbol $m$ and a unary symbol $i$.

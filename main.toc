@@ -16,7 +16,7 @@
 \contentsline {chapter}{\numberline {2}First-Order Logic}{28}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Languages, Structures and Interpretations}{29}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}First-Order Structures}{29}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}First-Order Languages}{32}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.2}First-Order Languages}{33}{subsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.1.3}First-Order Structures Revisited}{37}{subsection.2.1.3}%
 \contentsline {section}{\numberline {2.2}A Bridge between Propositional and First-Order Logic}{41}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Valuations Satisfying Formulae}{41}{subsection.2.2.1}%
@@ -25,6 +25,7 @@
 \contentsline {subsection}{\numberline {2.3.1}Bound and Free Variables}{46}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}An Analogue of Completeness}{48}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Understanding the Universal Quantifier}{49}{subsection.2.3.3}%
-\contentsline {chapter}{Exercises}{50}{chapter*.5}%
-\contentsline {section}{Problems Class 1}{50}{section*.6}%
-\contentsline {chapter}{References}{52}{problem.1.3}%
+\contentsline {chapter}{Exercises}{51}{chapter*.5}%
+\contentsline {section}{Problems Class 1}{51}{section*.6}%
+\contentsline {section}{Problems Class 2}{53}{section*.7}%
+\contentsline {chapter}{References}{56}{Item.174}%
