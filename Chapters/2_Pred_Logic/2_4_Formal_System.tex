@@ -1,0 +1,60 @@
+\section{A Formal System for First-Order Logic}
+
+The purpose of this section is to define, for any first-order language $\L$, a \textbf{formal deduction system $\KL$} in which we can do \textbf{first-order logic}.
+
+Throughout this section, fix a first-order language $\L$.
+
+\subsection{The Formal Deduction System $\KL$}
+
+Recall \Cref{Ch1:Def:Formal_Deduction_System}, in which we define a \textbf{formal deduction system}. Informally, this is meant to be a system in which we can perform \textbf{deductions}. The purpose of this subsection is to define a \textbf{formal deduction system for $\L$}.
+
+\begin{boxdefinition}[A Formal Deduction System for First-Order Logic]
+    Define $\KL$ to be the \textbf{formal deduction system} consisting of the following alphabet, formulae, axioms and deduction rules.
+    \begin{enumerate}
+        \item \textbf{\underline{Alphabet.}} The \textbf{alphabet} of $\KL$ is the alphabet of $\L$ (cf. \Cref{Ch2:Def:First-Order_Language}).
+        
+        \item \textbf{\underline{Formulae.}} The \textbf{formulae} of $\KL$ are the formulae of $\L$ (cf. \Cref{Ch2:Def:Formula_FO_Logic}).
+        
+        \item \textbf{\underline{Axioms.}} For any $\L$-formulae $\phi, \psi, \chi$ and $i \in \N$, the \textbf{axioms} of $\KL$ in $\phi, \psi, \chi$ and $x_i$ are the following distinguished $\L$-formulae:
+        \begin{enumerate}[label = \normalfont (A\arabic*)]
+            \item\label{FO:A1}
+            $\displaystyle \parenth{\phi \to \parenth{\psi \to \phi}}$
+            \item\label{FO:A2}
+            $\displaystyle \parenth{\parenth{\phi \to \parenth{\psi \to \chi}} \to \parenth{\parenth{\phi \to \psi} \to \parenth{\phi \to \chi}}}$
+            \item\label{FO:A3}
+            $\displaystyle \parenth{\parenth{\parenth{\neg \phi} \to \parenth{\neg \psi}} \to \parenth{\psi \to \chi}}$
+        \end{enumerate}
+        \begin{enumerate}[label = \normalfont (K\arabic*)]
+            \item\label{FO:K1}
+            $\displaystyle \parenth{\parenth{\forall x_i}\phiof{x_i} \to \phiof{t}}$
+            where $t$ is a term free for $x_i$ in $\phi$ (cf. \sorry) and $\phi$ can have other free variables.
+            \item\label{FO:K2}
+            $\displaystyle \parenth{\parenth{\forall x_i}\parenth{\phi \to \psi} \to \parenth{\phi \to \parenth{\forall x_i}\psi}}$
+            if $x_i$ is not free in $\phi$.
+        \end{enumerate}
+
+        \item \textbf{\underline{Deduction Rules.}} For any $\L$-formulae $\phi, \psi$ and $i \in \N$, the \textbf{deduction rules} for $\KL$ in $\phi, \psi, x_i$ are
+        \begin{enumerate}[label = \normalfont (MP)]
+            \item\label{FO:MP}
+            \underline{Modus Ponens:} From $\phi$ and $\parenth{\phi \to \psi}$, deduce $\psi$.
+        \end{enumerate}
+        \begin{enumerate}[label = \normalfont (Gen)]
+            \item\label{FO:Gen}
+            \underline{Generalisation:} From $\phi$, deduce $\parenth{\forall x_i}\phi$.
+        \end{enumerate}
+    \end{enumerate}
+\end{boxdefinition}
+
+\sorry % Finish everything till Theorem 2.4.4 in David Ang's notes.
+
+\subsection{Tools for Deduction}
+
+\subsection{Soundness}
+
+\subsection{Consistency}
+
+% Up to Prop. 2.5.2 in David Ang's notes
+
+\subsection{Completeness}
+
+\subsection{Compactness}
