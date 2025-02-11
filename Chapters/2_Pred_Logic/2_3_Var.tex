@@ -127,15 +127,63 @@ This gives us a completeness-like result about closed formulae.
     If $\phi$ is closed, $\phi$ has no free variables. Then, any two valuations of $\L$ in $\A$ agree vacuously on the set of all free variables of $\phi$. Therefore, there cannot be two distinct valuations such that one satisfies $\phi$ and one does not. In other words, either $\phi$ is true in $\A$ or $\phi$ is not true in $\A$. Equivalently, either $\phi$ or $\parenth{\neg \phi}$ is true in $\A$. 
 \end{proof}
 
-
 \subsection{Understanding the Universal Quantifier}
 
-The purpose of this section is to discuss the relationship between the syntax and the semantics of the universal quantifier $\forall$. We have not been too precise so far about what it \textit{means} to write an expression like
+The purpose of this subsection is to discuss the relationship between the syntax and the semantics of the universal quantifier $\forall$. We have not been too precise so far about what it \textit{means} to write an expression like
 \begin{align*}
     \parenth{\forall x_1}\phi
 \end{align*}
 for some formula $\phi$ with a bound variable $x_1$. We particularly delve into nuances that arise due to the fact that in our strict syntactic definition of $\L$-formulae (\Cref{Ch2:Def:Formula_FO_Logic}, we only allow the quantifier to be succeeded by a \textbf{variable} in $\L$, which must be one of $x_1, x_2, \ldots$. The really confusing thing about this syntactic definition of the universal quantifier is the fact that it is not obvious that this quantifier means ``for all'': instead of saying ``for all variables $x_1$, we have $\phi$'', on a strictly syntactic level, the expression $\parenth{\forall x_1}\phi$ is using the \textit{specific variable} $x_1$.
 
 What we would want---say, in an interactive theorem prover like Lean---is a mechanism to be able to \textit{remove} the quantifier and instead \textit{introduce} a free variable into our formula and label that variable differently from all other free and bound variables in our formula.
+
+In this subsection, we will make this notion precise. Throughout, fix a \fola\ $\L$ and a \fos\ $\A$ in $\L$. Denote the domain of $\A$ by $A$.
+
+We begin by describing what it means for a structure to model a formula under a valuation.
+
+\begin{boxdefinition}
+    Let $\psi\of{x_1, \ldots, x_n}$ be an $\L$-formula whose free variables are $x_1, \ldots, x_n$. Let $a_1, \ldots, a_n \in A$ be constants. We say that \textbf{$\A$ models $\psi\of{a_1, \ldots, a_n}$}, denoted
+    \begin{align*}
+        \A \models \psi\of{a_1, \ldots, a_n}
+    \end{align*}
+    if $\vbrac{\psi} = \T$ for every valuation $\v$ of $\L$ in $\A$.
+\end{boxdefinition}
+Note that by \Cref{Ch2:Lemma:Valuation_Existence_Uniqueness}, to prove that $\A \models \psi\of{a_1, \ldots, a_n}$, it suffices to prove that $\vbrac{\psi} = \T$ for \textit{some} valuation $\v$ of $\L$ in $\A$.
+
+We would want to be able to use the quantifier $\forall$ in the way that we are used to using it. In other words, from a hypothesis
+\begin{align*}
+    \parenth{\forall x_1} \phi\of{x_1}
+\end{align*}
+we would want to be able to deduce
+\begin{align*}
+    \phi\of{t}
+\end{align*}
+for any term $t$ in $\L$. Unfortunately, given that $x_1$ is \textit{itself} a term in $\L$, and $\parenth{\forall x_1} \phi\of{x_1}$ is does not involve some `general variable' but the very concrete variable $x_1$, \underline{this deduction is simply not true!}\footnote{It is at times like this that it is particularly important to distinguish semantics and syntax. When we say ``simply not true'', that is an inherently semantic statement: syntactic reasoning is not a reasoning of \textit{truth}, but one of \textit{provability}. What we are really attempting to do is establish \textit{motivation} for the axioms of the formal deduction system for a first-order language. We will see that in our formal system, we will not allow this type of deduction. This section underscores that it is actually \textit{sensible} to disallow this explicitly, because even in an `intuitive' sense of reasoning, this would not `make sense'.}
+
+\begin{boxcexample}[Indiscriminate specialisation is not a good idea]
+    We provide a counterexample that disproves the claim that we can indiscriminately specialise a formula $\parenth{\forall x_1} \phi\of{x_1}$ to \textit{any} $\L$-term $t$ to obtain a true statement $\phi\of{t}$. More precisely, we give
+    \begin{itemize}
+        \item a first-order language $\L$
+        \item an $\L$-structure $\A$
+        \item an $\L$-formula $\phi\of{x_1}$ with a free variable $x_1$
+        \item an $\L$-term $t$
+        \item a valuation $\v$ of $\L$ in $\A$
+    \end{itemize}
+    such that
+    \begin{align*}
+        \A \models \parenth{\forall x_1}\phiof{x_1}
+    \end{align*}
+    but
+    \begin{align*}
+        \vbrac{\phiof{t}} = \F
+    \end{align*}
+    Let $\L$ have one binary relation $R$ and one unary relation $S$. Let
+    \begin{align*}
+        \phiof{x_1} : \parenth{\parenth{\forall x_2}\Rof{x_1, x_2} \to S\of{x_1}}
+    \end{align*}
+    \sorry
+\end{boxcexample}
+
+\sorry
 
 % Main Thm: 2.3.6 (David Ang's notes)
