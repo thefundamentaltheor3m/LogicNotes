@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.11)  11 FEB 2025 00:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.11)  11 FEB 2025 16:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -45,9 +45,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language15). Reported on input line 105.
+(babel)             (\language43). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language15). Reported on input line 108.
+(babel)             (\language43). Reported on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
@@ -2427,6 +2427,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [49]
+Underfull \hbox (badness 10000) in paragraph at lines 187--189
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2435,7 +2439,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[50]) (./Chapters/2_Pred_Logic/2_4_Formal_System.tex
+[50]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2444,7 +2448,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[51]
+[51]) (./Chapters/2_Pred_Logic/2_4_Formal_System.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 7.
@@ -2457,7 +2461,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 7.
 
-) (./Chapters/2_Pred_Logic/2_5_Eg.tex)) (./Chapters/Ex/Ex.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2475,7 +2478,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[53] (./Chapters/Ex/PC1.tex [54
+[53]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[54]) (./Chapters/2_Pred_Logic/2_5_Eg.tex)) (./Chapters/Ex/Ex.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[55] (./Chapters/Ex/PC1.tex [56
 
 ]
 
@@ -2492,25 +2513,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[55]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[56]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[57]))
+[57]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2521,6 +2524,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [58]
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[59]))
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[60]
+
 LaTeX Warning: Empty bibliography on input line 48.
 
 
@@ -2529,7 +2550,7 @@ Overfull \hbox (34.18303pt too wide) in paragraph at lines 50--51
 /m/n/12 https : / / thefundamentaltheor3m . github . io / LogicNotes /
  []
 
-[59] 
+[61] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -2558,10 +2579,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57850 strings out of 474222
- 1310433 string characters out of 5748733
- 2324954 words of memory out of 5000000
- 78668 multiletter control sequences out of 15000+600000
+ 57870 strings out of 474222
+ 1310782 string characters out of 5748733
+ 2325280 words of memory out of 5000000
+ 78682 multiletter control sequences out of 15000+600000
  605423 words of font info for 174 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  106i,16n,110p,1172b,2284s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2597,27 +2618,28 @@ st/fonts/type1/public/sansmathfonts/cmssmi10.pfb></usr/share/texlive/texmf-dist
 nts/type1/public/sansmathfonts/cmssmi7.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/sansmathfonts/cmssmi8.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/sansmathfonts/cmsssy10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/sansmathfonts/cmsssy8.pfb></usr/share/texmf/fonts/type1/public/cm-supe
-r/sfit1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr
-/share/texmf/fonts/type1/public/cm-super/sfsi0700.pfb></usr/share/texmf/fonts/t
-ype1/public/cm-super/sfsi0800.pfb></usr/share/texmf/fonts/type1/public/cm-super
-/sfsi1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsi1200.pfb></usr/
-share/texmf/fonts/type1/public/cm-super/sfso1200.pfb></usr/share/texmf/fonts/ty
-pe1/public/cm-super/sfss0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/
-sfss0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/s
-hare/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/typ
-e1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
-fss2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1200.pfb></usr/sh
-are/texmf/fonts/type1/public/cm-super/sfsx1440.pfb></usr/share/texmf/fonts/type
-1/public/cm-super/sfsx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
-sx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/sansmathfonts/ssmsam10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/sansmathfonts/ssmsbm10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
-Output written on main.pdf (60 pages, 582236 bytes).
+1/public/sansmathfonts/cmsssy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/sansmathfonts/cmsssy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
+fit1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/sh
+are/texmf/fonts/type1/public/cm-super/sfsi0700.pfb></usr/share/texmf/fonts/type
+1/public/cm-super/sfsi0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
+si1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsi1200.pfb></usr/sha
+re/texmf/fonts/type1/public/cm-super/sfso1200.pfb></usr/share/texmf/fonts/type1
+/public/cm-super/sfss0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfs
+s0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/shar
+e/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/
+public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss
+2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1200.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sfsx1440.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sfsx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx2
+488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/sansmathfonts/ssmsam10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/sansmathfonts/ssmsbm10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
+Output written on main.pdf (62 pages, 598044 bytes).
 PDF statistics:
- 1178 PDF objects out of 1200 (max. 8388607)
- 1013 compressed objects within 11 object streams
- 416 named destinations out of 1000 (max. 500000)
+ 1209 PDF objects out of 1440 (max. 8388607)
+ 1040 compressed objects within 11 object streams
+ 422 named destinations out of 1000 (max. 500000)
  461 words of extra memory for PDF output out of 10000 (max. 10000000)
 

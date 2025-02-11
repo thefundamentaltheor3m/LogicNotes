@@ -25,15 +25,15 @@
 \contentsline {subsection}{\numberline {2.3.1}Bound and Free Variables}{46}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}An Analogue of Completeness}{48}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Understanding the Universal Quantifier}{49}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}A Formal System for First-Order Logic}{51}{section.2.4}%
+\contentsline {section}{\numberline {2.4}A Formal System for First-Order Logic}{52}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}The Formal Deduction System $\mathbf {K}_{\mathcal {L}}$}{52}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Tools for Deduction}{53}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Soundness}{53}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Consistency}{53}{subsection.2.4.4}%
-\contentsline {subsection}{\numberline {2.4.5}Completeness}{53}{subsection.2.4.5}%
-\contentsline {subsection}{\numberline {2.4.6}Compactness}{53}{subsection.2.4.6}%
-\contentsline {section}{\numberline {2.5}Important Examples}{53}{section.2.5}%
-\contentsline {chapter}{Exercises}{54}{chapter*.5}%
-\contentsline {section}{Problems Class 1}{54}{section*.6}%
-\contentsline {section}{Problems Class 2}{56}{section*.7}%
-\contentsline {chapter}{References}{59}{Item.185}%
+\contentsline {subsection}{\numberline {2.4.2}Tools for Deduction}{54}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Soundness}{54}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Consistency}{55}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}Completeness}{55}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.4.6}Compactness}{55}{subsection.2.4.6}%
+\contentsline {section}{\numberline {2.5}Important Examples}{55}{section.2.5}%
+\contentsline {chapter}{Exercises}{56}{chapter*.5}%
+\contentsline {section}{Problems Class 1}{56}{section*.6}%
+\contentsline {section}{Problems Class 2}{58}{section*.7}%
+\contentsline {chapter}{References}{61}{Item.185}%
