@@ -45,12 +45,67 @@ Recall \Cref{Ch1:Def:Formal_Deduction_System}, in which we define a \textbf{form
     \end{enumerate}
 \end{boxdefinition}
 
-\sorry % Finish everything till Theorem 2.4.4 in David Ang's notes.
+We define deductions identically to how we did for arbitrary formal deduction systems.
+
+\begin{boxdefinition}[Deductions in $\KL$]\label{Ch2:Def:Deductions_in_KL}
+    A \textbf{deduction} in $\KL$ is a finite sequence of $\KL$-formulae such that each either is one of the following:
+    \begin{itemize}
+        \item an axiom of $\KL$.
+        \item a formula in $\Sigma$.
+        \item deduced from a previous formula in the sequence via the deduction rule~\ref{FO:MP}.
+        \item deduced from a previous formula in the sequence via the deduction rule~\ref{FO:Gen} with the restriction that when \ref{FO:Gen} is applied to deduce $\parenth{\forall x_i}\phi$ from $\phi$, $x_i$ does not appear as a free variable in any formula of $\Sigma$ that is used in the deduction of $\phi$.
+    \end{itemize}
+     We write
+    \begin{align*}
+        \Sigma \vkl \psi
+    \end{align*}
+    to mean that a $\KL$-formula $\psi$ occurs at the end of a deduction from $\Sigma$.
+\end{boxdefinition}
+
+We can similarly define proofs.
+
+\begin{boxdefinition}[Proofs in $\KL$]
+    A \textbf{proof} in $\KL$ is a finite sequence of deductions made from the empty set.
+\end{boxdefinition}
+
+Theorems are the results deduced in proofs.
+
+\begin{boxdefinition}[Theorems in $\KL$]
+    A \textbf{theorem} of $\KL$ is a $\KL$-formula that occurs at the end of a proof. We write
+    \begin{align*}
+        \vkl \psi
+    \end{align*}
+    to mean that $\psi$ is a theorem of $\KL$.
+\end{boxdefinition}
+
+There is a very deep reason why we restrict the use of \ref{FO:Gen} to deduce $\parenth{\forall x_i}\phi$ from $\phi$ in \Cref{Ch2:Def:Deductions_in_KL} and the subsequent definitions of proofs and theorems in $\KL$. Unfortunately, we are not yet in a position to discuss it. But we will in due course: see \Cref{Ch2:CEg:Gen_Restriction}.
 
 \subsection{Tools for Deduction}
 
 \subsection{Soundness}
 
+We are now in a position to comment on the restriction we impose on the use of the deduction rule~\ref{FO:Gen} in \Cref{Ch2:Def:Deductions_in_KL} and the subsequent definitions of proofs and theorems in $\KL$. We want our formal system to be \textbf{sound}, but it turns out that if we did not have this restriction, we would be able to construct a counterexample disproving soundness.
+\begin{boxcexample}[Disproving soundness when we allow unrestricted use of \ref{FO:Gen}]\label{Ch2:CEg:Gen_Restriction}
+    If we allowed \ref{FO:Gen} to deduce $\parenth{\forall x_i}\phi$ from formulae in which $x_i$ occurs freely, in a language $\L$ with a unary relation $R$, we would have
+    \begin{align*}
+        \set{\Rof{x_1}} \vkl \parenth{\forall x_1}\Rof{x_1}
+    \end{align*}
+    In structures, such a statement makes no sense, as it says that we can deduce a fact about all constants from a fact about a single constant. Indeed, by the deduction theorem, if $\set{\Rof{x_i=1}} \vkl \parenth{\forall x_1}\Rof{x_1}$, then
+    \begin{align*}
+        \vkl \parenth{\Rof{x_1} \to \parenth{\forall x_1}\Rof{x_1}}
+    \end{align*}
+    However, in an $\L$-structure like $\A = \cycl{\N; \parenth{= 0}}$, with domain $\N$ and unary relation being the condition that an element be equal to $0$, we have
+    \begin{align*}
+        \A \not\models \parenth{\Rof{x_1} \to \parenth{\forall x_1}\Rof{x_1}}
+    \end{align*}
+    because if you take the valuation $\v$ that maps $x_1$ to $0 \in \N$, we have that
+    \begin{align*}
+        \vof{\parenth{\Rof{x_1} \to \parenth{\forall x_1}\Rof{x_1}}} = \F
+    \end{align*}
+    because indeed, \sorry
+\end{boxcexample}
+
+\sorry
 \subsection{Consistency}
 
 % Up to Prop. 2.5.2 in David Ang's notes

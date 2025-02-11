@@ -86,7 +86,7 @@ Formulae that are not closed can be thought of as being `dependent' on their fre
 
 We now define substitution.
 
-\begin{boxdefinition}[Substitution]
+\begin{boxdefinition}[Substitution]\label{Ch2:Def:Substitution}
     Let $t_1, \ldots, t_n$ be terms in $\L$ and $\psi\of{x_1, \ldots, x_n}$ an $\L$-formula with free variables $x_1, \ldots, x_n$\footnote{By the aforementioned convention, we would ordinarily not mention that $x_1, \ldots, x_n$ are free in $\psi$.}. We define the formula obtained by \textbf{substituting the $t_i$ for the $x_i$} to be the $\L$-formula obtained by replacing each occurrence of $x_i$ in $\psi$ with an occurrence of the corresponding $t_i$. We denote this formula
     \begin{align*}
         \psi\of{t_1, \ldots, t_n}
@@ -181,6 +181,23 @@ for any term $t$ in $\L$. Unfortunately, given that $x_1$ is \textit{itself} a t
     \begin{align*}
         \phiof{x_1} : \parenth{\parenth{\forall x_2}\Rof{x_1, x_2} \to S\of{x_1}}
     \end{align*}
+    We can specialise this formula $\phi$ via a \textbf{substitution instance} (cf. \Cref{Ch2:Def:Substitution}). Let $t$ be the term $x_2$. Since \Cref{Ch2:Def:Substitution} imposes \textbf{no conditions} on what can be substituted for a free variable, we can substitute $t$ for $x_1$ in $\phi$. Then, we have that $\phiof{t}$ is the formula
+    \begin{align*}
+        \parenth{\forall x_2}\Rof{x_2, x_2} \to S\of{x_2}
+    \end{align*}
+    The problem with this substitution is that the $x_1$ that served as the first argument of $R$ prior to substitution was free, whereas the $x_2$ was bound to the quantifier $\parenth{\forall x_2}$ that preceded $\Rof{x_1, x_2}$. After substitution, both arguments of $R$ are now bound to the quantifier $\parenth{\forall x_2}$. We can see this in the following model. \newline
+
+    Let $\A = \cycl{\N; \le, \parenth{= 0}}$. That is, $\A$ is the $\L$-structure with the following data.
+    \begin{itemize}
+        \item The domain of $\A$ is $\N$.
+        \item The binary relation in $\A$ is the ordering $\le$.
+        \item The unary relation on $\A$ is the condition that the argument be equal to zero.
+    \end{itemize}
+    In this case, we can certainly see that
+    \begin{align*}
+        \A \models \parenth{\forall x_1}\phiof{x_1}
+    \end{align*}
+    because for any natural number $x_1$, if $x_1 \leq x_2$ for all natural numbers $x_2$, then $x_1 = 0$.
     \sorry
 \end{boxcexample}
 
