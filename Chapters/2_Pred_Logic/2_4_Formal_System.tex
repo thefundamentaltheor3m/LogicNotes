@@ -225,9 +225,70 @@ We state a few more consistency results that are analogous to propositional logi
     \sorry % Use an enumeration again
 \end{proof}
 
+The above results have important consequences that we will discuss in the next section. These will be instrumental in proving a converse result for \Cref{Ch2:Thm:KLSoundness}.
 
 % Up to Prop. 2.5.2 in David Ang's notes
 
 \subsection{Completeness}
+
+In this subsection, we prove a converse of the Soundness Theorem for $\KL$, known as the Completeness Theorem. First, we introduce some notation.
+
+\begin{boxconvention}
+    Let $\A$ be an $\L$-structure and $\Sigma$ a set of $\L$-formulae. We write
+    \begin{align*}
+        \A \models \Sigma
+    \end{align*}
+    if for all $\sigma \in \Sigma$, $\A \models \sigma$.
+\end{boxconvention}
+
+We begin with an existence result for a model for any consistent set of closed formulae.
+
+\begin{boxtheorem}
+    Suppose $\L$ is a \textit{countable} \fola\ and $\Sigma$ is a consistent set of $\L$-formulae. Then, there is a countable $\L$-structure $\A$ such that $\A \models \Sigma$.
+\end{boxtheorem}
+\begin{proof}
+    \sorry % Appendix in David Ang's notes?
+\end{proof}
+
+We now introduce more notation.
+
+\begin{boxconvention}
+    Let $\Sigma$ a set of $\L$-formulae and $\phi$ an $\L$-formula. We write
+    \begin{align*}
+        \Sigma \models \phi
+    \end{align*}
+    if every model of $\Sigma$ is a model of $\phi$. That is, $\Sigma \models \phi$ if for every $\L$-structure $\A$, it holds that if $\A \models \Sigma$, then $\A \models \phi$.
+\end{boxconvention}
+
+We are now in a position to prove the converse of the Soundness Theorem for $\KL$.
+
+\begin{boxtheorem}\label{Ch2:Thm:Generalised_KLCompleteness_Closed_Formulae}
+    Let $\Sigma$ be a set of closed $\L$-formulae and $\phi$ a closed $\L$-formula. If $\Sigma \models \phi$, then $\Sigma \vkl \phi$.
+\end{boxtheorem}
+\begin{proof}
+    \sorry
+\end{proof}
+
+The case when $\Sigma = \emptyset$ gives us a converse of the Soundness Theorem for $\KL$ for closed formulae.
+
+\begin{boxcorollary}[A Partial Converse of Soundness]\label{Ch2:Cor:KLCompleteness_Closed_Formulae}
+    Let $\phi$ be a closed $\L$-formula. If $\models \phi$, then $\vkl \phi$.
+\end{boxcorollary}
+\begin{proof}
+    When $\Sigma = \emptyset$, we do, indeed have that $\Sigma \models \phi$ is the same as $\models \phi$: for any $\L$-structure $\A$, since $\A$ vacuously models every element of $\Sigma$, the condition that if $\A \models \sigma$ for all $\sigma \in \Sigma$ then $\A \models \phi$ is precisely the condition that $\A \models \phi$. \Cref{Ch2:Thm:Generalised_KLCompleteness_Closed_Formulae} then gives us that $\vkl \phi$.
+\end{proof}
+
+\Cref{Ch2:Cor:KLCompleteness_Closed_Formulae} gives us a converse of the Soundness Theorem for closed formulae. But it turns out we can do better.
+
+\begin{boxtheorem}[Gödel's Completeness Theorem for $\KL$]\label{Ch2:Thm:Godel_Completeness}
+    Let $\phi$ be any $\L$-formula. If $\phi$ is logically valid, then $\phi$ is a theorem of $\L$. That is, if $\models \phi$, then $\vkl \phi$.
+\end{boxtheorem}
+\begin{proof}
+    By \Cref{Ch2:Cor:KLCompleteness_Closed_Formulae}, it suffices to consider the case where $\phi$ is not closed, that is, where $\phi$ has free variables.
+    \sorry
+\end{proof}
+
+\subsection{Completeness}
+
 
 \subsection{Compactness}
