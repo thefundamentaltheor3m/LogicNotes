@@ -1,4 +1,4 @@
-\section{A Bridge between Propositional and First-Order Logic}
+\section{A Bridge between Propositional and First-Order Logic}\label{Ch2:Sec:Prop_Logic}
 
 The purpose of this section is to discuss how ideas in propositional logic can be expressed in first-order logic. As we might expect from \Cref{Ch2:Def:First-Order_Language}, first-order logic is a generalisation of propositional logic. We will use this section to make this precise.
 
@@ -77,7 +77,7 @@ A first-order formula true in one structure might not be true in another.
 
 Despite being valuation-indepentent, given that the truth of formulae is structure-dependent, it is still not the strongest notion of truth we can define in first-order logic. We want theorems to be stronger and more `absolute' notions of truth. To that end, we define logical validity, a \textit{structure-independent notion of truth}.
 
-\begin{boxdefinition}[Logical Validity]
+\begin{boxdefinition}[Logical Validity]\label{Ch2:Def:Logical_Validity}
     Let $\phi$ be an $\L$-formula. We say that $\phi$ is logically valid if $\A \models \phi$ for all $\L$-structures $\A$.
 \end{boxdefinition}
 
@@ -129,7 +129,7 @@ For the remainder of this subsection, denote by $\theta$ the substitution instan
 
 Substitution is our gateway for `embedding' propositional logic into first-order logic. This `embedding' preserves `truth' in the following manner.
 
-\begin{boxtheorem}
+\begin{boxtheorem}\label{Ch2:Thm:Tauto_Logic_Valid}
     If $\chi$ is a tautology, then $\theta$ is logically valid.
 \end{boxtheorem}
 \begin{proof}
