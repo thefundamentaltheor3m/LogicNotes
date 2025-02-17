@@ -30,11 +30,11 @@
 \contentsline {subsection}{\numberline {2.4.2}Tools for Deduction}{54}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}Soundness}{55}{subsection.2.4.3}%
 \contentsline {subsection}{\numberline {2.4.4}Consistency}{57}{subsection.2.4.4}%
-\contentsline {subsection}{\numberline {2.4.5}Completeness}{58}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.4.5}Model Existence}{58}{subsection.2.4.5}%
 \contentsline {subsection}{\numberline {2.4.6}Completeness}{60}{subsection.2.4.6}%
-\contentsline {subsection}{\numberline {2.4.7}Compactness}{60}{subsection.2.4.7}%
-\contentsline {section}{\numberline {2.5}Important Examples}{60}{section.2.5}%
-\contentsline {chapter}{Exercises}{61}{chapter*.6}%
-\contentsline {section}{Problems Class 1}{61}{section*.7}%
-\contentsline {section}{Problems Class 2}{63}{section*.8}%
-\contentsline {chapter}{References}{66}{Item.187}%
+\contentsline {subsection}{\numberline {2.4.7}Compactness}{62}{subsection.2.4.7}%
+\contentsline {section}{\numberline {2.5}Important Examples}{62}{section.2.5}%
+\contentsline {chapter}{Exercises}{63}{chapter*.6}%
+\contentsline {section}{Problems Class 1}{63}{section*.7}%
+\contentsline {section}{Problems Class 2}{65}{section*.8}%
+\contentsline {chapter}{References}{68}{Item.193}%

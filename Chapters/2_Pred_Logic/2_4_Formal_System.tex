@@ -218,8 +218,8 @@ We state a few more consistency results that are analogous to propositional logi
     \sorry % Analogous to propositional logic.
 \end{proof}
 
-\begin{boxproposition}[Analogue of Lindenbaum's Lemma]
-    Suppose $\Sigma$ consists entirely of closed $\KL$formulae. There is a consistent set $\Sigma^*$ of closed $\KL$-formulae such that $\Sigma \subseteq \Sigma^*$.
+\begin{boxproposition}[Analogue of Lindenbaum's Lemma]\label{Ch2:Prop:Lindenbaum_FO}
+    Suppose $\Sigma$ consists entirely of closed $\KL$-formulae. There is a consistent set $\Sigma^*$ of closed $\KL$-formulae such that $\Sigma \subseteq \Sigma^*$.
 \end{boxproposition}
 \begin{proof}
     \sorry % Use an enumeration again
@@ -229,9 +229,11 @@ The above results have important consequences that we will discuss in the next s
 
 % Up to Prop. 2.5.2 in David Ang's notes
 
-\subsection{Completeness}
+\subsection{Model Existence}
 
-In this subsection, we prove a converse of the Soundness Theorem for $\KL$, known as the Completeness Theorem. First, we introduce some notation.
+In this subsection, we state and sketch the proof of an important result that will serve as a stepping-stone towards proving converse of the Soundness Theorem for $\KL$, known as the Completeness Theorem.
+
+First, we introduce some notation.
 
 \begin{boxconvention}
     Let $\A$ be an $\L$-structure and $\Sigma$ a set of $\L$-formulae. We write
@@ -241,16 +243,81 @@ In this subsection, we prove a converse of the Soundness Theorem for $\KL$, know
     if for all $\sigma \in \Sigma$, $\A \models \sigma$.
 \end{boxconvention}
 
-We begin with an existence result for a model for any consistent set of closed formulae.
+We have a rather surprising existence result for a model for any consistent set of closed formulae.
 
-\begin{boxtheorem}
+\begin{boxtheorem}[Model Existence Theorem]\label{Ch2:Thm:Model_Existence}
     Suppose $\L$ is a \textit{countable} \fola\ and $\Sigma$ is a consistent set of $\L$-formulae. Then, there is a countable $\L$-structure $\A$ such that $\A \models \Sigma$.
 \end{boxtheorem}
-\begin{proof}
-    \sorry % Appendix in David Ang's notes?
+\begin{proof}[Proof Sketch]
+    This is quite a lengthy proof, so we do not give more than a sketch here. The details can be found in~\cite[Appendix A.2]{LecNotes2018}. There are several steps.
+
+    \begin{enumerate}[label = \underline{\textbf{Step \arabic*.}}]
+        \item \textbf{Extending our Language.}
+        
+        We define a new language $\L^+$ that is an extension of $\L$ with countably many constant symbols. That is, the constants in $\L^+$ are the constants in $\L$ together with countably many new constants $b_0, b_1, b_2, \ldots$. Note that $\L^+$ is also countable because $\L$ is, and we only add countably many new constants.
+        
+        \item \textbf{Adding Witnesses.}
+        
+        We can regard $\Sigma$ as a set of closed $\L^+$-formulae. It is possible to prove that $\Sigma$ is still consistent as a set of $\L^+$-formulae. In fact, we can extend $\Sigma$ to a set $\Sigma_{\infty} \supseteq \Sigma$ such that
+        \begin{itemize}
+            \item every formula in $\Sigma_{\infty}$ is closed
+            \item for every $\L^+$-formula $\theta\of{x_i}$ with one free variable $x_i$, there exists some constant $b_j$ in $\L^+$ such that
+            \begin{align*}
+                \Sigma_{\infty} \vdash_{\K_{\L^+}}
+                \parenth{
+                    \parenth{
+                        \neg\parenth{\forall x_i}\theta\of{x_i}
+                    }
+                    \to
+                    \parenth{
+                        \neg \theta\of{b_j}
+                    }
+                }
+            \end{align*}
+            This formula essentially says
+            \begin{align*}
+                \Sigma_{\infty} \vdash_{\K_{\L^+}}
+                \parenth{
+                    \parenth{
+                        \parenth{\exists x_i}\parenth{\neg\theta\of{x_i}}
+                    }
+                    \to
+                    \parenth{
+                        \neg \theta\of{b_j}
+                    }
+                }
+            \end{align*}
+            and we say ``$b_j$ \textbf{witnesses} the existence of $x_i$ satisfying $\parenth{\neg\theta\of{x_i}}$''.
+        \end{itemize}
+        We say that this process of constructing $\Sigma_{\infty}$ ``\textbf{adds witnesses}.''
+
+        \item \textbf{Constructing a Complete Set of Formulae.}
+        
+        We can now apply Lindenbaum's Lemma (\Cref{Ch2:Prop:Lindenbaum_FO}) to $\Sigma_{\infty}$: there exists a consistent set $\Sigma^*$ of closed $\L^+$-formulae such that for every closed $L^+$-formula $\phi$, we have either $\Sigma^* \vdash_{\K_{\L^+}} \phi$ or $\Sigma^* \vdash_{\K_{\L^+}} \parenth{\neg \phi}$. We will not use $\Sigma^*$ right away, but it will soon become clear what the relevance of this set is.
+        
+        \item \textbf{Constructing an $\L^+$-structure.}
+        
+        \sorry
+        
+        \item\label{Ch2:Thm:Model_Existence:Step:Result_on_L_plus} \textbf{A Result on $L^+$.}
+        
+        \sorry
+
+        \item \textbf{Restricting \ref{Ch2:Thm:Model_Existence:Step:Result_on_L_plus} to $\L$.}
+        
+        \sorry
+    \end{enumerate}
 \end{proof}
 
-We now introduce more notation.
+What's more surprising than the actual existence result is the accompanying countability result: the model we constructed above is countable!
+
+We are now ready for the converse of the Soundness Theorem.
+
+\subsection{Completeness}
+
+Our strategy will be to first prove the result for closed formulae and then prove it in general.
+
+We begin by introducing some notation.
 
 \begin{boxconvention}
     Let $\Sigma$ a set of $\L$-formulae and $\phi$ an $\L$-formula. We write
@@ -260,7 +327,7 @@ We now introduce more notation.
     if every model of $\Sigma$ is a model of $\phi$. That is, $\Sigma \models \phi$ if for every $\L$-structure $\A$, it holds that if $\A \models \Sigma$, then $\A \models \phi$.
 \end{boxconvention}
 
-We are now in a position to prove the converse of the Soundness Theorem for $\KL$.
+We are now in a position to prove the converse of the Soundness Theorem for $\KL$ for closed formulae. It turns out to be a consequence of the following important theorem.
 
 \begin{boxtheorem}\label{Ch2:Thm:Generalised_KLCompleteness_Closed_Formulae}
     Let $\Sigma$ be a set of closed $\L$-formulae and $\phi$ a closed $\L$-formula. If $\Sigma \models \phi$, then $\Sigma \vkl \phi$.
@@ -278,7 +345,7 @@ The case when $\Sigma = \emptyset$ gives us a converse of the Soundness Theorem 
     When $\Sigma = \emptyset$, we do, indeed have that $\Sigma \models \phi$ is the same as $\models \phi$: for any $\L$-structure $\A$, since $\A$ vacuously models every element of $\Sigma$, the condition that if $\A \models \sigma$ for all $\sigma \in \Sigma$ then $\A \models \phi$ is precisely the condition that $\A \models \phi$. \Cref{Ch2:Thm:Generalised_KLCompleteness_Closed_Formulae} then gives us that $\vkl \phi$.
 \end{proof}
 
-\Cref{Ch2:Cor:KLCompleteness_Closed_Formulae} gives us a converse of the Soundness Theorem for closed formulae. But it turns out we can do better.
+It turns out that \Cref{Ch2:Cor:KLCompleteness_Closed_Formulae}, a converse of the Soundness Theorem for closed formulae, gives us everything we need to prove the result in general.
 
 \begin{boxtheorem}[Gödel's Completeness Theorem for $\KL$]\label{Ch2:Thm:Godel_Completeness}
     Let $\phi$ be any $\L$-formula. If $\phi$ is logically valid, then $\phi$ is a theorem of $\L$. That is, if $\models \phi$, then $\vkl \phi$.
@@ -287,8 +354,5 @@ The case when $\Sigma = \emptyset$ gives us a converse of the Soundness Theorem 
     By \Cref{Ch2:Cor:KLCompleteness_Closed_Formulae}, it suffices to consider the case where $\phi$ is not closed, that is, where $\phi$ has free variables.
     \sorry
 \end{proof}
-
-\subsection{Completeness}
-
 
 \subsection{Compactness}

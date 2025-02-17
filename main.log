@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.17)  17 FEB 2025 12:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.17)  17 FEB 2025 13:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -45,9 +45,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language16). Reported on input line 105.
+(babel)             (\language25). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language16). Reported on input line 108.
+(babel)             (\language25). Reported on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
@@ -2537,14 +2537,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [58]
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+LaTeX Warning: Citation 'LecNotes2018' on page 59 undefined on input line 252.
 
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[59]) (./Chapters/2_Pred_Logic/2_5_Eg.tex)) (./Chapters/Ex/Ex.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2553,7 +2547,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[60] (./Chapters/Ex/PC1.tex [61
+[59]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[60]) (./Chapters/2_Pred_Logic/2_5_Eg.tex)) (./Chapters/Ex/Ex.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[61]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[62] (./Chapters/Ex/PC1.tex [63
 
 ]
 
@@ -2570,25 +2591,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[62]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[63]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[64]))
+[64]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2599,6 +2602,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [65]
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[66]))
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[67]
+
 LaTeX Warning: Empty bibliography on input line 48.
 
 
@@ -2607,7 +2628,7 @@ Overfull \hbox (34.18303pt too wide) in paragraph at lines 50--51
 /m/n/12 https : / / thefundamentaltheor3m . github . io / LogicNotes /
  []
 
-[66] 
+[68] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -2625,7 +2646,7 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 31E8D063A0FC63E73251ED2FD15DC72F;6786.
+(rerunfilecheck)             Checksum: A978CB6070B23ACE94AFB42A6F3C726E;6804.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                main
@@ -2636,10 +2657,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57991 strings out of 474222
- 1313332 string characters out of 5748733
- 2326265 words of memory out of 5000000
- 78781 multiletter control sequences out of 15000+600000
+ 58005 strings out of 474222
+ 1313601 string characters out of 5748733
+ 2326573 words of memory out of 5000000
+ 78787 multiletter control sequences out of 15000+600000
  605423 words of font info for 174 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  106i,16n,110p,1172b,2284s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2693,10 +2714,10 @@ ublic/cm-super/sfsx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx2
 texlive/texmf-dist/fonts/type1/public/sansmathfonts/ssmsam10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/sansmathfonts/ssmsbm10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
-Output written on main.pdf (67 pages, 614460 bytes).
+Output written on main.pdf (69 pages, 619935 bytes).
 PDF statistics:
- 1276 PDF objects out of 1440 (max. 8388607)
- 1101 compressed objects within 12 object streams
- 444 named destinations out of 1000 (max. 500000)
+ 1294 PDF objects out of 1440 (max. 8388607)
+ 1117 compressed objects within 12 object streams
+ 452 named destinations out of 1000 (max. 500000)
  469 words of extra memory for PDF output out of 10000 (max. 10000000)
 
