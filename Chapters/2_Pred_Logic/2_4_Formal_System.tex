@@ -82,7 +82,59 @@ There is a very deep reason why we restrict the use of \ref{FO:Gen} to deduce $\
 
 \subsection{Tools for Deduction}
 
+An important objective of our discussion on the formal system $\KL$ is to show that the theorems of $\KL$ are precisely the logically valid formulae. In \Cref{Ch2:Sec:Prop_Logic}, we established a bridge between Propositional and First-Order Logic. In particular, we showed that the theorems in the formal system $\bL$---that is, the tautologies---are all logically valid (see \Cref{Ch2:Thm:Tauto_Logic_Valid}). We can actually show something stronger.
+
+\begin{boxtheorem}\label{Ch2:Thm:L_Tauto_Thm_FO}
+    Let $\phi$ be an $\KL$-formula that is a substitution instance of a tautology in propositional logic. Then, $\vkl \phi$.
+\end{boxtheorem}
+\begin{proof}
+    \sorry % Apply completeness of prop logic to turn into a proof in L. Then perform same substitution as phi in all steps.
+\end{proof}
+
+While the above gives us a way of dealing with formulae that come from first-order logic, we also have a way of getting access to the first of two formulae linked by a $\to$ connective.
+
+\begin{boxtheorem}[Deduction Theorem for $\KL$]\label{Ch2:Thm:Deduction}
+    Let $\Sigma$ be a set of $\L$-formulae and let $\phi$ and $\psi$ be $\L$-formulae. If $\Sigma \cup \set{\phi} \vkl \psi$, then $\Sigma \vkl \parenth{\phi \to \psi}$.
+\end{boxtheorem}
+\begin{proof}
+    \sorry % Follows the proof of the deduction theorem for prop logic. Goes by induction on length of deduction.
+\end{proof}
+
+
+
 \subsection{Soundness}
+
+In this subsection, we show one direction of our claim that the theorems of $\KL$ are precisely the logically valid formulae (cf. \Cref{Ch2:Def:Logical_Validity}).
+
+\begin{boxtheorem}[Soundness Theorem for $\KL$]\label{Ch2:Thm:KLSoundness}
+    Let $\phi$ be a $\KL$-formula. If $\vkl \phi$, then $\models \phi$. In other words, if $\phi$ is a theorem of $\KL$, then $\phi$ is logically valid.
+\end{boxtheorem}
+\begin{proof}
+    As with the proof of the Deduction Theorem (\Cref{Ch2:Thm:Deduction}), we follow the proof of the Soundness Theorem for $\bL$ (\Cref{Ch1:Thm:LSoundness}). Our strategy for showing that all formulae deduced from the empty set are logically valid will be to prove the following.
+    \begin{enumerate}
+        \item \underline{The axioms of $\KL$ are logically valid.}
+
+        We do not need to worry about the axioms~\ref{FO:A1}, \ref{FO:A2} and \ref{FO:A3}, because they are substitution instances of propositional tautologies, making them logically valid by \Cref{Ch2:Thm:Tauto_Logic_Valid}. Furthermore, the axiom~\ref{FO:K1} is logically valid by \sorry % Thm 2.3.5 in David Ang's notes - we haven't got it in our notes yet!
+        Finally, the axiom~\ref{FO:K2} is logically valid by \sorry % Finish from David Ang's notes.
+
+        \item \underline{Deductions preserve logical validity.}
+
+        \sorry % Left as an exercise in David Ang's notes. We need to think about how to do it.
+    \end{enumerate}
+\end{proof}
+
+We have an important corollary that mirrors \sorry % Thing from prop logic that was in coursework 1 - we really gotta complete that part of the notes! Aarghhhh
+
+\begin{boxcorollary}
+    Let $\Sigma$ be a set of $\KL$-formulae and let $\psi$ be a $\KL$-formula. Suppose that
+    \begin{align*}
+        \Sigma \vkl \psi
+    \end{align*}
+    Then, for any $\L$-structure $\A$ and valuation $\v$ of $\L$ in $\A$, if $\vbrac{\sigma} = \T$ for every $\sigma \in \Sigma$, then $\vbrac{\phi} = \T$.
+\end{boxcorollary}
+\begin{proof}
+    \sorry % Left as an exercise in David Ang's notes.
+\end{proof}
 
 We are now in a position to comment on the restriction we impose on the use of the deduction rule~\ref{FO:Gen} in \Cref{Ch2:Def:Deductions_in_KL} and the subsequent definitions of proofs and theorems in $\KL$. We want our formal system to be \textbf{sound}, but it turns out that if we did not have this restriction, we would be able to construct a counterexample disproving soundness.
 \begin{boxcexample}[Disproving soundness when we allow unrestricted use of \ref{FO:Gen}]\label{Ch2:CEg:Gen_Restriction}
@@ -90,7 +142,7 @@ We are now in a position to comment on the restriction we impose on the use of t
     \begin{align*}
         \set{\Rof{x_1}} \vkl \parenth{\forall x_1}\Rof{x_1}
     \end{align*}
-    In structures, such a statement makes no sense, as it says that we can deduce a fact about all constants from a fact about a single constant. Indeed, by the deduction theorem, if $\set{\Rof{x_i=1}} \vkl \parenth{\forall x_1}\Rof{x_1}$, then
+    In structures, such a statement would make no sense, as it would say that we can deduce a fact about all constants from a fact about a single constant. Indeed, by the Deduction Theorem (\Cref{Ch2:Thm:Deduction}), if $\set{\Rof{x_1}} \vkl \parenth{\forall x_1}\Rof{x_1}$, then we would have
     \begin{align*}
         \vkl \parenth{\Rof{x_1} \to \parenth{\forall x_1}\Rof{x_1}}
     \end{align*}
@@ -102,11 +154,77 @@ We are now in a position to comment on the restriction we impose on the use of t
     \begin{align*}
         \vof{\parenth{\Rof{x_1} \to \parenth{\forall x_1}\Rof{x_1}}} = \F
     \end{align*}
-    because indeed, \sorry
+    because indeed, it is the case that $x_1 = 0$ and $\vbrac{\parenth{\forall x_1}\Rof{x_1}} = \F$ for any valuation that maps $x_1$ to $0$. In particular, we would have that
+    \begin{align*}
+        \not\models \parenth{\Rof{x_1} \to \parenth{\forall x_1}\Rof{x_1}}
+    \end{align*}
+    In other words, despite having the deduction
+    \begin{align*}
+        \vkl \parenth{\Rof{x_1} \to \parenth{\forall x_1}\Rof{x_1}}
+    \end{align*}
+    the formula
+    \begin{align*}
+        \parenth{\Rof{x_1} \to \parenth{\forall x_1}\Rof{x_1}}
+    \end{align*}
+    would not be a valid theorem in $\L$. This is a direct contradiction of the Soundness Theorem (\Cref{Ch2:Thm:KLSoundness}). Therefore, the restriction on the use of \ref{FO:Gen} \textbf{is necessary} for soundness.
 \end{boxcexample}
 
-\sorry
+Apart from offering an explanation for the restriction on the use of the deduction rule~\ref{FO:Gen} in first-order logic, the Soundness Theorem gives us more properties we can use to make deductions. It brings us an important step closer to proving that the theorems of first-order logic are precisely the logically valid formulae.
+
 \subsection{Consistency}
+
+Again, there is some overlap with propositional logic.
+
+\begin{boxdefinition}[Consistency]
+    A set $\Sigma$ of $\KL$-formulae is \textbf{consistent} if there is no formula $\phi$ such that
+    \begin{align*}
+        \Sigma \vkl \phi
+        \qquad \text{ and } \qquad
+        \Sigma \vkl \parenth{\neg\phi}
+    \end{align*}
+\end{boxdefinition}
+
+The Soundness Theorem allows us to prove an important result.
+
+\begin{boxtheorem}[The Consistency Theorem]
+    The empty set $\emptyset$ of $\KL$-formulae is consistent.
+\end{boxtheorem}
+\begin{proof}
+    \sorry
+\end{proof}
+
+\begin{boxconvention}
+    We say \textbf{$\KL$ is consistent}.
+\end{boxconvention}
+
+For the remainder of this subsection, fix a set $\Sigma$ of $\KL$-formulae. We mention an analogue of the intuitive idea that `a proof of False yields anything'.
+
+\begin{boxproposition}
+    If $\Sigma$ is inconsistent, then for all $\KL$-formulae $\chi$, we have
+    \begin{align*}
+        \Sigma \vkl \chi
+    \end{align*}
+\end{boxproposition}
+\begin{proof}
+    \sorry % See Remark after Def 2.5.1 in David Ang's notes.
+\end{proof}
+
+We state a few more consistency results that are analogous to propositional logic.\todo{Give cross references!}
+
+\begin{boxproposition}
+    Suppose $\Sigma$ is consistent and consists entirely of closed $\KL$formulae. Let $\phi$ be a closed $\KL$-formula. If $\Sigma \not\vkl \phi$, then $\Sigma \cup \set{\parenth{\neg \phi}}$ is consistent.
+\end{boxproposition}
+\begin{proof}
+    \sorry % Analogous to propositional logic.
+\end{proof}
+
+\begin{boxproposition}[Analogue of Lindenbaum's Lemma]
+    Suppose $\Sigma$ consists entirely of closed $\KL$formulae. There is a consistent set $\Sigma^*$ of closed $\KL$-formulae such that $\Sigma \subseteq \Sigma^*$.
+\end{boxproposition}
+\begin{proof}
+    \sorry % Use an enumeration again
+\end{proof}
+
 
 % Up to Prop. 2.5.2 in David Ang's notes
 
