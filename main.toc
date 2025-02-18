@@ -31,10 +31,14 @@
 \contentsline {subsection}{\numberline {2.4.3}Soundness}{55}{subsection.2.4.3}%
 \contentsline {subsection}{\numberline {2.4.4}Consistency}{57}{subsection.2.4.4}%
 \contentsline {subsection}{\numberline {2.4.5}Model Existence}{58}{subsection.2.4.5}%
-\contentsline {subsection}{\numberline {2.4.6}Completeness}{60}{subsection.2.4.6}%
-\contentsline {subsection}{\numberline {2.4.7}Compactness}{62}{subsection.2.4.7}%
-\contentsline {section}{\numberline {2.5}Important Examples}{62}{section.2.5}%
-\contentsline {chapter}{Exercises}{63}{chapter*.6}%
-\contentsline {section}{Problems Class 1}{63}{section*.7}%
-\contentsline {section}{Problems Class 2}{65}{section*.8}%
-\contentsline {chapter}{References}{68}{Item.193}%
+\contentsline {subsection}{\numberline {2.4.6}Compactness}{61}{subsection.2.4.6}%
+\contentsline {subsection}{\numberline {2.4.7}Completeness}{61}{subsection.2.4.7}%
+\contentsline {section}{\numberline {2.5}First-Order Languages with Equality}{62}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}The Axioms of Equality}{63}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Normal Structures}{63}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Normal Models}{64}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Important Examples}{64}{section.2.6}%
+\contentsline {chapter}{Exercises}{65}{chapter*.7}%
+\contentsline {section}{Problems Class 1}{65}{section*.8}%
+\contentsline {section}{Problems Class 2}{67}{section*.9}%
+\contentsline {chapter}{References}{70}{Item.198}%

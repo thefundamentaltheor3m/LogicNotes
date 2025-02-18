@@ -1,0 +1,87 @@
+\section{First-Order Languages with Equality}
+
+In this section, we address a special type of first-order language: one that expresses the notion of equality.
+
+\begin{boxconvention}
+    Denote by $\LE$ a first-order language with a distinguished binary relation symbol $E$.
+\end{boxconvention}
+
+We begin with a discussion on the concept of equality.
+
+\subsection{The Axioms of Equality}
+
+We begin by syntactically defining the axioms we want our symbol $E$ to obey for it to be considered as representing a notion of equality.
+
+\begin{boxdefinition}[The Axioms of Equality]\label{Ch2:Def:Eq_Axioms}
+    The \textbf{Axioms of Equality} are collected in a set $\Sigma_{E}$ consisting of the following $\LE$-formulae.
+    \begin{enumerate}[label = \normalfont (E\arabic*)]
+        \item\label{FO:E1} $\parenth{\forall x_1}E\of{x_1, x_1}$
+        \item\label{FO:E2} $\parenth{\forall x_1}\parenth{\forall x_2}\parenth{E\of{x_1, x_2} \to E\of{x_2, x_1}}$
+        \item\label{FO:E3} $\parenth{\forall x_1}\parenth{\forall x_2}\parenth{\forall x_3}\parenth{E\of{x_1, x_2} \to \parenth{E\of{x_2, x_3} \to E\of{x_1, x_3}}}$
+        \item\label{FO:E4} For each $n$-ary relation symbol $R$ in $\LE$,
+        \begin{align*}
+            \parenth{\forall x_1}\cdots\parenth{\forall x_{2n}}
+            \parenth{
+                \Rof{x_1, \ldots, x_n} \land
+                E\of{x_1, x_{n+1}} \land
+                \cdots \land
+                E\of{x_n, x_{2n}}
+            } \to \parenth{
+                \Rof{x_{n+1}, \ldots, x_{2n}}
+            }
+        \end{align*}
+        \item\label{FO:E5} For each $n$-ary function symbol $f$ in $\LE$,
+        \begin{align*}
+            \parenth{\forall x_1}\cdots\parenth{\forall x_{2n}}
+            \parenth{\parenth{
+                E\of{x_1, x_{n+1}} \land
+                \cdots \land
+                E\of{x_n, x_{2n}}
+            } \to E\of{
+                f\of{x_1, \ldots, x_n},
+                f\of{x_{n+1}, \ldots, x_{2n}}
+            }}
+        \end{align*}
+    \end{enumerate}
+\end{boxdefinition}
+
+We know these axioms by more familiar names: \ref{FO:E1} is called \textbf{reflexivity}; \ref{FO:E2} is called \textbf{symmetry}; \ref{FO:E3} is called \textbf{transitivity}; \ref{FO:E4} is called \textbf{congruence of relations}; and \ref{FO:E5} is called \textbf{congruence of functions}.
+
+We now discuss models of equality.
+
+\subsection{Normal Structures}
+
+We have a special name for first-order structures that have a notion of equality.
+
+\begin{boxdefinition}[Normal $\LE$-Structures]
+    An $\LE$-structure is \textbf{normal} if the symbol $E$ is interpreted in it as equality.
+\end{boxdefinition}
+
+\sorry % Till Lemma 2.6.3 in David Ang's notes.
+
+\subsection{Normal Models}
+
+In this subsection, we state and prove important results closed $\LE$-formulae. Throughout, fix a set $\Delta$ of closed $\LE$-formulae.
+
+\begin{boxdefinition}[Normal Models]
+    A \textbf{normal model} of $\Delta$ is an $\LE$-structure $\B$ such that $\B \models \sigma$ for all $\sigma \in \Delta$.
+\end{boxdefinition}
+In other words, a normal model is precisely a model that is normal.
+
+Recall that $\Sigma_E$ is the set of $\LE$-formulae consisting of the Axioms of Equality (cf. \Cref{Ch2:Def:Eq_Axioms}). We have an equivalent condition for a model to be normal.
+
+\begin{boxlemma}\label{Ch2:Lemma:Equiv_Def_Normal_Model}
+    $\Delta$ has a normal model if and only if $\Sigma_E \cup \Delta$ has a model.
+\end{boxlemma}
+\begin{proof}
+    \sorry
+\end{proof}
+
+We have a compactness result for normal structures.
+
+\begin{boxtheorem}[The Compactness Theorem for Normal Structures]
+    Assume that $\LE$ is countable. If every finite subset of $\Delta$ has a normal model, then $\Delta$ has a normal model.
+\end{boxtheorem}
+\begin{proof}
+    By definition, every normal $\LE$-sturcture is a model of $\Sigma_E$. Assuming that every finite subset of $\Delta$ admits a normal model, then every finite subset of $\Delta \cup \Sigma_{E}$ has a model, because any normal model of every finite subset of $\Delta$ is both a model of $\Delta$ and a normal $\LE$-structure, and therefore, model of $\Sigma_E$. Then, by the standard version of the Compactness Theorem (\Cref{Ch2:Thm:Compactness}), $\Delta \cup \Sigma_E$ has a model. Then, by \Cref{Ch2:Lemma:Equiv_Def_Normal_Model}, $\Delta$ has a normal model.
+\end{proof}
