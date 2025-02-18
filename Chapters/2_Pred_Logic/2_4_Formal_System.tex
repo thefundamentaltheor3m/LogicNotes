@@ -311,6 +311,21 @@ We have a rather surprising existence result for a model for any consistent set 
 
 What's more surprising than the actual existence result is the accompanying countability result: the model we constructed above is countable!
 
+It turns out that the Model Existence Theorem has a very important consequence. So important is this consequence that we shall give it its own subsection.
+
+\subsection{Compactness}
+
+We now state and prove one of the most important theorems of first-order logic, known as the Compactness Theorem.
+
+\begin{boxtheorem}[The Compactness Theorem for First-Order Logic]\label{Ch2:Thm:Compactness}
+    Assume that $\L$ is a \textit{countable} first-order language. Let $\Sigma$ be a set of closed $\L$-formulae. If every finite subset of $\Sigma$ has a model, then $\Sigma$ has a model.
+\end{boxtheorem}
+\begin{proof}
+    Suppose $\Sigma$ has no model. Then, by the Model Existence Theorem (\Cref{Ch2:Thm:Model_Existence}), $\Sigma$ must be inconsistent (because if it is consistent, \Cref{Ch2:Thm:Model_Existence} tells us it must have a model).
+    
+    If $\Sigma$ is inconsistent, there exists an $\L$-formula $\chi$ such that $\Sigma \vkl \chi$ and $\Sigma \vkl \parenth{\neg \chi}$. Since deductions in $\KL$ are finite, there is a finite subset $\Sigma_{0} \subseteq \Sigma$ such that $\Sigma_{0} \vkl \chi$ and $\Sigma_0 \vkl \parenth{\neg \chi}$. This makes $\Sigma_0$ inconsistent. However, by our assumption that every finite subset of $\Sigma$ has a model, we have that $\Sigma_0$ has a model. This contradicts the Soundness Theorem (\Cref{Ch2:Thm:KLSoundness}), because it tells us that we then have a model of both $\chi$ and $\parenth{\neg \chi}$, which the Soundness Theorem does not allow\todo{prove this as a corollary in the soundness section}. Therefore, $\Sigma$ must have a model.
+\end{proof}
+
 We are now ready for the converse of the Soundness Theorem.
 
 \subsection{Completeness}
@@ -354,5 +369,3 @@ It turns out that \Cref{Ch2:Cor:KLCompleteness_Closed_Formulae}, a converse of t
     By \Cref{Ch2:Cor:KLCompleteness_Closed_Formulae}, it suffices to consider the case where $\phi$ is not closed, that is, where $\phi$ has free variables.
     \sorry
 \end{proof}
-
-\subsection{Compactness}
