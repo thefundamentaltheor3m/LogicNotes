@@ -1,0 +1,25 @@
+\section*{Problems Class 3}
+\addcontentsline{toc}{section}{Problems Class 3}
+\addtocounter{PC}{1}
+
+\begin{boxproblem}
+    Let $\LE$ be the usual first-order language for rings, with a binary relation symbol for equality ($=$), three binary function symbols for addition ($+$), subtraction ($-$) and multiplication ($\cdot$), and two constant symbols for the additive and multiplicative identities ($0$, $1$). Let $\Phi$ contain the axioms of a field, expressed in $\LE$. So, any field is a normal model of $\Phi$. \newline
+
+    Use the compactness theorem for noaml models to prove that for all closed $\LE$-formulae $\phi$, if there are infinitely many primes $p$ such that $\FF_p \models \phi$, then there is a field $F$ of characteristic $0$ such that $F \models \phi$.
+\end{boxproblem}
+\begin{proof}[Solution]
+    For all $n \in \N$, define the $\LE$-formula
+    \begin{align*}
+        \sigma_n &: \parenth{\exists x_1}\cdots\parenth{\exists x_n}\parenth{\bigwedge_{1 \leq i < j \leq n} \parenth{x_i \neq x_j}} \\
+        \tau_{n} &: \parenth{\neg \parenth{\underbrace{1 + \cdots + 1}_{n \text{ times}} = 0}}
+    \end{align*}
+    Let 
+    \begin{align*}
+        \Sigma := \set{\phi} \cup \Phi \cup \bigcup_{n \in \N} \set{\sigma_n, \tau_n}
+    \end{align*}
+    Then, applying the compactness theorem for normal models, if there is a normal model for every finite subset of $\Sigma$, then there is a normal model for $\Sigma$.
+
+    Let $\Delta$ be a finite subset of $\Sigma$. If $\phi \notin \Delta$, then $\Q \models \Delta$, because $\Q \models \Sigma \setminus \set{\phi}$. So, we can assume $\phi \in \Delta$. Then, let $n$ be the largest natural number such that $\sigma_n, \tau_n \in \Delta$. Such an $n$ exists because $\Delta$ is finite. In this case, since there are infinitely many primes $p$ such that $\FF_p \models \phi$, pick some $p$ such that $p > n$. In this case, we have $\FF_p \models \phi$.
+
+    Therefore, by the Compactness Theorem for Normal Models (\Cref{Ch2:Thm:Compactness_Normal_Models}), there exists a field $F$ of characteristic $0$ such that $F \models \phi$.
+\end{proof}
