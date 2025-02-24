@@ -54,8 +54,10 @@ We now discuss models of equality.
 We have a special name for first-order structures that have a notion of equality.
 
 \begin{boxdefinition}[Normal $\LE$-Structures]
-    An $\LE$-structure is \textbf{normal} if the symbol $E$ is interpreted in it as equality.
+    An $\LE$-structure $\A$ is \textbf{normal} if $\A \models \sigma$ for all $\sigma \in \Sigma_{E}$.
 \end{boxdefinition}
+
+In other words, an $\LE$-structure is \textbf{normal} if the symbol $E$ is interpreted in it as equality.
 
 \sorry % Till Lemma 2.6.3 in David Ang's notes.
 
@@ -64,9 +66,9 @@ We have a special name for first-order structures that have a notion of equality
 In this subsection, we state and prove important results closed $\LE$-formulae. Throughout, fix a set $\Delta$ of closed $\LE$-formulae.
 
 \begin{boxdefinition}[Normal Models]
-    A \textbf{normal model} of $\Delta$ is an $\LE$-structure $\B$ such that $\B \models \sigma$ for all $\sigma \in \Delta$.
+    A \textbf{normal model} of $\Delta$ is a normal $\LE$-structure $\B$ such that $\B \models \sigma$ for all $\sigma \in \Delta$.
 \end{boxdefinition}
-In other words, a normal model is precisely a model that is normal.
+In other words, a normal model of $\Delta$ is precisely a model of $\Delta$ that is normal in $\LE$.
 
 Recall that $\Sigma_E$ is the set of $\LE$-formulae consisting of the Axioms of Equality (cf. \Cref{Ch2:Def:Eq_Axioms}). We have an equivalent condition for a model to be normal.
 
