@@ -1,0 +1,14 @@
+\section{Linear Orders}
+
+In this section, we discuss results on ordered sets. Throughout, denote by $\LE$ a first-order language with a binary relation symbol $=$ (for `equality') and another binary symbol $\le$ (for `comparisons').
+
+We begin by defining what a linear order is.
+
+\begin{boxdefinition}[Linear Order]
+    A \textbf{linear order} is a normal $\LE$-structure $\A = \cycl{A; \le_{A}}$ that models the following $\LE$-formulae:
+    \begin{align*}
+        \phi_1 &: \parenth{\forall x_1}\parenth{\forall x_2}\parenth{\parenth{\parenth{x_1 \le x_2} \land \parenth{x_2 \le x_1}} \lr \parenth{x_1 = x_2}} \\
+        \phi_2 &: \parenth{\forall x_1}\parenth{\forall x_2}\parenth{\forall x_3}\parenth{\parenth{\parenth{x_1 \le x_2} \land \parenth{x_2 \le x_3}} \to \parenth{x_1 \to x_3}} \\
+        \phi_3 &: \parenth{\forall x_1} \parenth{\forall x_2} \parenth{\parenth{x_1 \le x_2} \lor \parenth{x_2 \le x_1}}
+    \end{align*}
+\end{boxdefinition}
