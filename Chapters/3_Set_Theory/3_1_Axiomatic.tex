@@ -1,11 +1,102 @@
 \section{Axiomatic Set Theory}
 
+We begin by discussing the reasons why set theory was axiomatised, as well as a few basic axioms that will already allow us to do a non-trivial amount of mathematics, following which we will motivate, state and explore the more nuanced axioms.
+
 \subsection{Familiar Set-Theoretic Constructions}
+
+There are five important notions from naïve set theory with which we are already quite familiar:
+\begin{enumerate}
+    \item Extensionality
+    \item The Natural Numbers
+    \item \sorry % Lectures but not David Ang
+    \item Ordered Pairs
+    \item Functions
+\end{enumerate}
+
+
+
+
 
 % Naïve Set Theory
 
 \subsection{The Concept of Cardinality}
 
+Informally, the cardinality of a set is the number of elements it has. We briefly explore this notion in more detail in this section.
+
+\begin{boxdefinition}[Equinumerosity]
+    We say sets $A$ and $B$ are \textbf{equinumerous}, or that $A$ and $B$ \textbf{have the same cardniality}, if there is a bijection between $A$ and $B$.
+\end{boxdefinition}
+
+There are two ways by which we will denote this.
+
+\begin{boxconvention}
+    If $A$ and $B$ are equinumerous, we write
+    \begin{align*}
+        A \approx B \text{ or } \abs{A} = \abs{B}
+    \end{align*}
+    (regardless of the actual cardinalities of $A$ and $B$).
+\end{boxconvention}
+
+We also define finiteness and countability.
+
+\begin{boxdefinition}[Finiteness]
+    A set $A$ is \textbf{finite} if it is equinumerous with some element of $\N$.
+\end{boxdefinition}
+
+The idea is that we view any element $n \in \N$ as a set with $b$ elements. Ie, for all $n \in \N$,
+\begin{align*}
+    n = \set{0, 1, \ldots, n-1}
+\end{align*}
+with $0 = \emptyset$, $1 = \set{\emptyset}$, and so on.
+
+Admittedly, this is not the soundest thing to do, since we have yet to define things like $\emptyset$, $\cup$, and $\N$. However, since the purpose of this section is to offer motivation, we do not make anything of it. We now define countable infiniteness.
+
+\begin{boxdefinition}[Countable Infiniteness]
+    A set $A$ is \textbf{countably infinite} if it is equinumerous with all of $\N$.
+\end{boxdefinition}
+
+We adopt the following definition for countability.
+
+\begin{boxdefinition}[Countability and Uncountability]
+    A set $A$ is \textbf{countable} if it is either finite or countably infinite; similarly, we say $A$ \textbf{uncountable} if it is neither (ie, not countable).
+\end{boxdefinition}
+
+We have many conditions for countability. We recall some of them.
+
+\begin{boxproposition}\label{Ch3:Prop:Countable_Conditions}
+    Let $A$ and $B$ be countable sets.
+    \begin{enumerate}[label = \normalfont \arabic*.]
+        \item Every subset of $A$ (and of $B$) is countable.
+        \item $A \times B$ is countable.
+        \item $A \cup B$ is countable.
+        \item $A \sqcup B$ is countable.
+    \end{enumerate}
+\end{boxproposition}
+
+The above basic facts do not warrant proving in this module.
+
+We even have a somewhat surprising result about countable unions of countable sets.
+
+\begin{boxproposition}
+    Let $A_0, A_1, A_2, \ldots$ all be countable sets. Then, the countable union
+    \begin{align*}
+        \bigcup_{n \in \N} A_n
+    \end{align*}
+    is countable.
+\end{boxproposition}
+
+We do not prove this fact either, but we do mention that \textbf{every proof of it uses the Axiom of Chocie\todo{add reference}}.
+
+\begin{boxexample}
+    
+\end{boxexample}
+
+
+
 % Include a word on Russel's Paradox
 
 \subsection{The Zermelo-Fraenkel Axioms}
+
+% \begin{baxiom}\label{trial}
+%     Hi
+% \end{baxiom}
