@@ -75,5 +75,15 @@
     \end{cexample}\end{tcolorbox}
 }
 
+\newcounter{ZF}
+\setcounter{ZF}{0}
+\newtheorem{zfaxiom}[ZF]{ZF Axiom}
+\newenvironment{baxiom}{
+    \begin{tcolorbox}[colback=cyan!10!white,colframe=cyan!70!black, breakable, enhanced]\begin{zfaxiom}
+}{
+    \end{zfaxiom}\end{tcolorbox}
+    % \addtocounter{ZF}{1}
+}
+
 % \def\SMALLCOLWIDTH{1.5cm}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
