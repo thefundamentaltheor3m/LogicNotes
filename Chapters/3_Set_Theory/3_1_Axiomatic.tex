@@ -47,9 +47,51 @@ The idea is that we view any element $n \in \N$ as a set with $b$ elements. Ie, 
 \begin{align*}
     n = \set{0, 1, \ldots, n-1}
 \end{align*}
-with $0 = \emptyset$, $1 = \setlength{emptyset}$, and so on.
+with $0 = \emptyset$, $1 = \set{\emptyset}$, and so on.
 
-Admittedly, this is not the soundest thing to do, since we have yet to define things like $\emptyset$, $\cup$, and $\N$. However, since the purpose of this section is to offer motivation, we do not make anything of it.
+Admittedly, this is not the soundest thing to do, since we have yet to define things like $\emptyset$, $\cup$, and $\N$. However, since the purpose of this section is to offer motivation, we do not make anything of it. We now define countable infiniteness.
+
+\begin{boxdefinition}[Countable Infiniteness]
+    A set $A$ is \textbf{countably infinite} if it is equinumerous with all of $\N$.
+\end{boxdefinition}
+
+We adopt the following definition for countability.
+
+\begin{boxdefinition}[Countability and Uncountability]
+    A set $A$ is \textbf{countable} if it is either finite or countably infinite; similarly, we say $A$ \textbf{uncountable} if it is neither (ie, not countable).
+\end{boxdefinition}
+
+We have many conditions for countability. We recall some of them.
+
+\begin{boxproposition}\label{Ch3:Prop:Countable_Conditions}
+    Let $A$ and $B$ be countable sets.
+    \begin{enumerate}[label = \normalfont \arabic*.]
+        \item Every subset of $A$ (and of $B$) is countable.
+        \item $A \times B$ is countable.
+        \item $A \cup B$ is countable.
+        \item $A \sqcup B$ is countable.
+    \end{enumerate}
+\end{boxproposition}
+
+The above basic facts do not warrant proving in this module.
+
+We even have a somewhat surprising result about countable unions of countable sets.
+
+\begin{boxproposition}
+    Let $A_0, A_1, A_2, \ldots$ all be countable sets. Then, the countable union
+    \begin{align*}
+        \bigcup_{n \in \N} A_n
+    \end{align*}
+    is countable.
+\end{boxproposition}
+
+We do not prove this fact either, but we do mention that \textbf{every proof of it uses the Axiom of Chocie\todo{add reference}}.
+
+\begin{boxexample}
+    
+\end{boxexample}
+
+
 
 % Include a word on Russel's Paradox
 
