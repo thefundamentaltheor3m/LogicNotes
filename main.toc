@@ -30,14 +30,14 @@
 \contentsline {subsection}{\numberline {2.4.2}Tools for Deduction}{55}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}Soundness}{56}{subsection.2.4.3}%
 \contentsline {subsection}{\numberline {2.4.4}Consistency}{58}{subsection.2.4.4}%
-\contentsline {subsection}{\numberline {2.4.5}Model Existence}{59}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.4.5}Model Existence}{60}{subsection.2.4.5}%
 \contentsline {subsection}{\numberline {2.4.6}Compactness}{62}{subsection.2.4.6}%
 \contentsline {subsection}{\numberline {2.4.7}Completeness}{62}{subsection.2.4.7}%
 \contentsline {section}{\numberline {2.5}First-Order Languages with Equality}{63}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}The Axioms of Equality}{64}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Normal Structures}{64}{subsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.5.3}Normal Models}{65}{subsection.2.5.3}%
-\contentsline {section}{\numberline {2.6}Linear Orders}{65}{section.2.6}%
+\contentsline {section}{\numberline {2.6}Linear Orders}{66}{section.2.6}%
 \contentsline {chapter}{\numberline {3}Set Theory}{67}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Naïve Set Theory}{67}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Familiar Set-Theoretic Constructions}{67}{subsection.3.1.1}%
