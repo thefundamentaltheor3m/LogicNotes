@@ -1,0 +1,80 @@
+\section{The Zermelo-Fraenkel Axioms}
+
+In this section, we define the \textbf{Zermelo-Fraenkel Axioms} on which most of modern mathematics is built.\footnote{I personally prefer the Calculus of Inductive Constructions, but what do I know...}
+
+We will begin by mentioning what we \textit{mean} be a Zerlemo-Fraenkel Axiom. This is not a formal definition per se, but a convention we adopt for our own convenience.
+
+\begin{boxconvention}
+    The Zermelo-Fraenkel Axioms are first-order formulae in some first-order language $\L$ that contains
+    \begin{itemize}
+        \item Variable symbols representing sets
+        \item A binary relation symbol $=$ representing equality
+        \item A binary relation symbol $\in$ representing membership
+    \end{itemize}
+    The Zermelo-Fraenkel Axioms are contained in a set of formulae $\Delta_{\ZF}$ that is modelled by all modern mathematics that does not use the Axiom of Choice. When we discuss the Axiom of Choice, we will consider the set $\Delta_{\ZFC}$ instead, which consists of all elements of $\Delta_{\ZF}$ as well as the Axiom of Choice. All structures in modern mathematics are models of $\Delta_{\ZFC}$.
+\end{boxconvention}
+
+% Also need to include a convention that says that a statement like ``$A$ is a set in which (some formula in $A$)'' means that $A$ is a model of that statement/that statement holds in $A$ (we defined holding in $A$ in Chapter 2).
+
+We are now ready to begin stating the Zermelo-Fraenkel Axioms.
+
+\begin{baxiom}
+    \sorry
+\end{baxiom}
+
+\begin{baxiom}
+    \sorry
+\end{baxiom}
+
+\begin{baxiom}
+    \sorry
+\end{baxiom}
+
+\begin{baxiom}
+    \sorry
+\end{baxiom}
+
+\begin{baxiom}
+    \sorry
+\end{baxiom}
+
+\begin{baxiom}
+    \sorry
+\end{baxiom}
+
+\sorry
+
+% 3 March, 2025
+
+\subsection{The Axiom of Infinity}
+
+The seventh axiom posits the existence of a notion of infinity. Before we can state it, we need to define a notion of \textit{inductive sets}.
+
+\begin{boxdefinition}[The Successor]\label{Ch3:Def:succ_dg}
+    Let $a$ be an arbitrary set. The \textbf{successor} of $a$ is the set
+    \begin{align*}
+        a\dg := a \cup \set{a}
+    \end{align*}
+\end{boxdefinition}
+
+The construction of the natural numbers, with which we expect the reader to be familiar, involves applying the successor function repeatedly to the empty set.
+
+We can now define what it means for a set to be inductive. There is an important difference between the definition below and the notion of inductive types in programming languages like Lean that are built using the Calculus of Inductive Constructions: here, we have \textit{specified} a successor \textit{operation} that takes in a \textit{set} and gives out another \textit{set}, whereas when constructing $\N$ in Lean, we have two \textit{constructors}: the distinguished number \texttt{0} and the \textit{function} \texttt{succ~:~$\N \to \N$}
+
+\begin{boxdefinition}[Inductivity]
+    A set $A$ is said to be \textbf{inductive} if
+    \begin{align*}
+        \Ind(A) : \parenth{\parenth{\emptyset \in A} \land \parenth{\forall x}\parenth{\parenth{x \in A} \to \parenth{x\dg \in A}}}
+    \end{align*}
+    holds in $A$.
+\end{boxdefinition}
+
+The idea behind the Axiom of Infinity is that by our informal understanding of infinity, an inductive set cannot be finite.
+
+\begin{baxiom}[The Axiom of Infinity]\label{ZF:Infinity}
+    The Axiom of Infinity posits the existence of an inductive set. Ie, it is the first-order formula
+    \begin{align*}
+        \parenth{\exists A}\parenth{\Ind(A)}
+    \end{align*}
+\end{baxiom}
+
