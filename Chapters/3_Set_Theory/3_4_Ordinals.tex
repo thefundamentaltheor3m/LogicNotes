@@ -1,0 +1,101 @@
+\section{Introduction to Ordinals}
+
+Broadly speaking, ordinals are nice well-ordered sets that mimic the properties of the natural numbers. The idea is to try and replicate the property in $\N$---at least, when $\N$ is defined using the successor $\dg$ (cf. \Cref{Ch3:Def:succ_dg})---that the ordering comes from both membership and inclusion.
+
+\subsection{Transitive Sets}
+
+We begin by defining the notion of transitive sets.
+
+\begin{boxdefinition}[Transitivity]
+    A set $X$ is \textbf{transitive} if every element of $X$ is also a subset of $X$, that is, if
+    \begin{align*}
+        \parenth{\forall y}\parenth{\parenth{y \subset x} \to \parenth{y \in X}}
+    \end{align*}
+    holds in $X$.
+    % NOTE TO SELF: Include convention for \subset symbol
+\end{boxdefinition}
+
+We have examples of transitive sets that come from the set of natural numbers.
+
+\begin{boxexample}\label{Ch3:Eg:3_trans}
+    The set $3 = \set{0, 1, 2} = \set{\emptyset, \set{\emptyset}, \set{\emptyset, \set{\emptyset}}}$ is transitive. For example, $2 \in 3$ and $2 \subset 3$ both hold.
+\end{boxexample}
+
+However, not all subsets of the naturals are transitive.
+
+\begin{boxnexample}
+    $\set{0, 2}$ is not a transitive set. $2 \in \set{0, 2}$ but $2 \not\subset \set{0, 2}$.
+\end{boxnexample}
+
+The reason why \Cref{Ch3:Eg:3_trans} works is the following.
+
+\begin{boxlemma}\label{Ch2:Lemma:succ_trans}
+    If $X$ is a transitive set, then so is $X\dg = X \cup \set{X}$.
+\end{boxlemma}
+\begin{proof}
+    \sorry
+\end{proof}
+
+It does, of course, remain to show that $2$ (and by recursion, $1$ and $0$) are all transitive to show that $3$ is, indeed, transitive, but this is easily done. In fact, we can go one step further.
+
+\begin{boxtheorem}\label{Ch3:Thm:Nat_trans}
+    $\N$ is transitive.
+\end{boxtheorem}
+\begin{proof}
+    \sorry % Induction - but use the definition of \N instead of induction as we know it!!!!!!!!
+\end{proof}
+
+We are now ready to define ordinals.
+
+\subsection{Ordinals: The Fundamentals}
+
+The idea is for an ordinal to be a transitive set in which the ordering and membership relations are related. This is true in the natural numbers, for example, provided we define the successor function the way we have defined the $\dg$ operation (cf. \Cref{Ch3:Def:succ_dg}).
+
+\begin{boxdefinition}[Ordinal]\label{Ch3:Def:Ordinal}
+    A set $\alpha$ is an \textbf{ordinal} if
+    \begin{enumerate}
+        \item $\alpha$ is a transitive set
+        \item The relation $<$ on $\alpha$ given by
+        \begin{align*}
+            x < y \iff x \in y
+        \end{align*}
+        for all $x, y \in \alpha$ is a strict well-ordering on $\alpha$.
+    \end{enumerate}
+\end{boxdefinition}
+
+Here, we pause to make an important observation. In \Cref{Ch3:Def:Ordinal}, we \textbf{explicitly disallow $\alpha \in \alpha$}. The reason for this is that if we had $\alpha \in \alpha$, we would have $\alpha < \alpha$, which contradicts strictness. It is therefore supremely important that the strictness of the well-ordering be included in the definition of an ordinal.
+
+We now relate ordinals and the successor $\dg$.
+
+\begin{boxlemma}
+    If $\alpha$ is an ordinal, then $\alpha\dg = \alpha \cup \set{\alpha}$ is also an ordinal.
+\end{boxlemma}
+\begin{proof}
+    \sorry
+\end{proof}
+
+We can, in fact, show that $\N$ is an ordinal. However, we are not yet ready to do this. We need more machinery.
+
+We have the following properties of ordinals that follow from the definition.
+
+\begin{boxproposition}[Relationships between Ordinals]
+    Let $\alpha$ and $\beta$ be sets.
+    \begin{enumerate}
+        \item If $\alpha$ is an ordinal and $\beta \in \alpha$, then $\beta$ is an ordinal.
+        \item If $\alpha$ and $\beta$ are both ordinals and $\alpha \subsetneq \beta$, then $\alpha \in \beta$.
+    \end{enumerate}
+\end{boxproposition}
+\begin{proof}\hfill
+    \begin{enumerate}
+        \item \sorry
+
+        \item \sorry
+    \end{enumerate}
+\end{proof}
+
+It turns out the above properties allow us to compare ordinals and define a notion of ordering between them.
+
+\subsection{Ordering Ordinals}
+
+While there are too many ordinals for there to be a \textit{set} of all ordinals, we can reason collectively about the \textbf{class of all ordinals}, where the word ``class'' is used in the category theoretic sense.  In fact, one can show that this class is well-ordered.
+
