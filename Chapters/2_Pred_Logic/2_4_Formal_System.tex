@@ -125,12 +125,20 @@ In this subsection, we show one direction of our claim that the theorems of $\KL
 
 We have an important corollary that mirrors \sorry % Thing from prop logic that was in coursework 1 - we really gotta complete that part of the notes! Aarghhhh
 
-\begin{boxcorollary}
-    Let $\Sigma$ be a set of $\KL$-formulae and let $\psi$ be a $\KL$-formula. Suppose that
+Before we can generalise the Soundness Theorem for first-order logic (just like we did the Soundness Theorem for propositional logic), we define the following notation.
+
+\begin{boxconvention}
+    Let $\Sigma$ be a set of $\L$-formulae and $\phi$ an $\L$-formula. We say
     \begin{align*}
-        \Sigma \vkl \psi
+        \Sigma \models \phi
     \end{align*}
-    Then, for any $\L$-structure $\A$ and valuation $\v$ of $\L$ in $\A$, if $\vbrac{\sigma} = \T$ for every $\sigma \in \Sigma$, then $\vbrac{\phi} = \T$.
+    if for every $\L$-structure $\A$ and every valuation $\v$ of $\L$ in $\A$, if $\vbrac{\sigma} = \T$ for every $\sigma \in \Sigma$, then $\vbrac{\phi} = \T$.
+\end{boxconvention}
+
+We can now generalise the Soundness Theorem, and express it in a similar notation to what we used in \Cref{Ch2:Thm:KLSoundness}.
+
+\begin{boxcorollary}
+    Let $\Sigma$ be a set of $\KL$-formulae and let $\psi$ be a $\KL$-formula. If $\Sigma \vkl \psi$, then $\Sigma \models \phi$.
 \end{boxcorollary}
 \begin{proof}
     \sorry % Left as an exercise in David Ang's notes.
