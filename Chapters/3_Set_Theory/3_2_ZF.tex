@@ -14,6 +14,8 @@ We will begin by mentioning what we \textit{mean} be a Zerlemo-Fraenkel Axiom. T
     The Zermelo-Fraenkel Axioms are contained in a set of formulae $\Delta_{\ZF}$ that is modelled by all modern mathematics that does not use the Axiom of Choice. When we discuss the Axiom of Choice, we will consider the set $\Delta_{\ZFC}$ instead, which consists of all elements of $\Delta_{\ZF}$ as well as the Axiom of Choice. All structures in modern mathematics are models of $\Delta_{\ZFC}$.
 \end{boxconvention}
 
+We also now 
+
 % Also need to include a convention that says that a statement like ``$A$ is a set in which (some formula in $A$)'' means that $A$ is a model of that statement/that statement holds in $A$ (we defined holding in $A$ in Chapter 2).
 
 We are now ready to begin stating the Zermelo-Fraenkel Axioms.
@@ -78,3 +80,36 @@ The idea behind the Axiom of Infinity is that by our informal understanding of i
     \end{align*}
 \end{baxiom}
 
+\subsection{The Axiom of Replacement}
+
+The primary motivation for this axiom comes from the study of ordinals. In particular, we will see it used in the proof of \sorry, where without the axiom of replacement, the constructions in the argument become dubious. \textbf{It is not a bad idea to read \sorry\ before reading this section, because that is where we find the motivation.} Indeed, in lectures, too, the material on ordinals was convered \textbf{before} the material in this section.
+
+We begin by defining an operation on sets.
+
+\begin{boxdefinition}[Operation on Sets]
+    We say an $\L$-formula $F\of{x, y, z_1, z_2, z_3, \ldots, z_r}$ is an \textbf{operation on sets} if it satisfies the property that whenever $s_1, \ldots, s_r$ are sets and $a$ is a set, there is a \textit{unique} set $b$ such that $F\of{a, b, s_1, \ldots, s_r}$ holds.
+\end{boxdefinition}
+
+We can think of an operation of sets as mapping the set $a$ to the set $b$ given \textbf{parameters} $s_1, \ldots, s_r$. Indeed, the variables $z_1, \ldots, z_r$ are sometimes referred to as the \textbf{parameter variables of $F$}.
+
+We are no stranger to the concept of an operation on sets. Indeed, endofunctors in the category of sets are all operations on sets, though these are not the only examples.
+
+\begin{boxexample}[Familiar Operations on Sets]
+     We give two examples, one without parameters and one with one parameter.
+     \begin{enumerate}
+         \item Define $F\of{a, b}$ to mean `$b$ is the power set of $a$.'
+         % \item Define $F\of{a, b}$ to mean `if $a$ is a well-ordered set, then $b$ is an ordinal similar to $a$; else, $b$ is $\emptyset$.'\footnote{This example will make sense once we state the Axiom of Regularity and }
+         \item Define $F\of{a, b, s}$, with \underline{parameter $s$}, to mean `$b$ is the set of functions from $a$ to $s$.'
+     \end{enumerate}
+\end{boxexample}
+
+We are now ready to state the Axiom of Replacement. Technically, we don't have an \textit{axiom} but an \textit{axiom scheme}, which means we have \textit{several axioms indexed by formulae}.
+
+\begin{baxiom}[The Axiom Scheme of Replacemenet]
+    Suppose $F\of{x, y, z_1, \ldots, z_r}$ is an operation on sets. Let $A, s_1, \ldots, s_r$ be sets. Then, there is a set $B$ given by
+    \begin{align*}
+        B = \setst{b}{\parenth{\exists a}\parenth{\parenth{a \in A} \land F\of{a, b, s_1, \ldots, s_r}}}
+    \end{align*}
+\end{baxiom}
+
+This axiom scheme gets its name from the fact that $B$ is constructed by ``replacing'' every $a \in A$ with the corresponding set $b$ given by the operation $F$ and parameters $s_1, \ldots, s_r$.
