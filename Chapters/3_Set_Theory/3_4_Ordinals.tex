@@ -99,3 +99,41 @@ It turns out the above properties allow us to compare ordinals and define a noti
 
 While there are too many ordinals for there to be a \textit{set} of all ordinals, we can reason collectively about the \textbf{class of all ordinals}, where the word ``class'' is used in the category theoretic sense.  In fact, one can show that this class is well-ordered.
 
+\sorry
+
+\subsection{Transfinite Induction}
+
+In this subsection, we explore a proof strategy that resembles mathematical induction but that works on ordinals instead of the natural numbers. Note that at first glance, it appears that we have ignored the ``base case'' analogue for ordinals, but observe that \eqref{Ch3:Eq:Transfinite_Induction_Condition} includes the case where $\alpha = \emptyset$.
+
+\begin{boxtheorem}[The Principle of Transfinite Induction]\label{Ch3:Thm:Transfinite_Induction}
+    Suppose $P(\cdot)$ is a first-order formula in the language $\L$ of sets with a free variable. If, for all ordinals $\alpha$, we have the property that
+    \begin{align}
+        \text{If } P(\beta) \text{ holds for all ordinals } \beta < \alpha \text{, then } P(\alpha) \text{ holds.}
+        \label{Ch3:Eq:Transfinite_Induction_Condition}
+        \tag{\ding{37}}
+    \end{align}
+\end{boxtheorem}
+\begin{proof}
+    \sorry
+\end{proof}
+
+There are many results that can be proven using transfinite induction. Here is one example.
+
+\begin{boxtheorem}
+    If $\alpha$ is an infinite ordinal, then $\abs{\alpha \times \alpha} = \abs{\alpha}$. That is, there is a bijection between $\alpha \times \alpha$ and $\alpha$.
+\end{boxtheorem}
+\begin{proof}
+    First, observe that if $\alpha$ is countably infinite, then the result holds, because we know that the Cartesian product of countably infinite sets is countably infinite. We focus our attention on the case where $\alpha$ is uncountably infinite.
+
+    \sorry
+\end{proof}
+
+\begin{boxcorollary}
+    If $\parenth{A; \le}$ is an infinite well-ordered set, then $\abs{A \times A} = \abs{A}$.
+\end{boxcorollary}
+\begin{proof}
+    By \sorry, we know that there is an ordinal $\alpha$ with $\parenth{A; \le} \simeq \parenth{\alpha; \in}$. Therefore,
+    \begin{align*}
+        \abs{A \times A} = \abs{\alpha \times \alpha} = \abs{\alpha} = \abs{A}
+    \end{align*}
+\end{proof}

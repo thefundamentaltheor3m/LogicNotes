@@ -48,7 +48,7 @@ Recall \Cref{Ch1:Def:Formal_Deduction_System}, in which we define a \textbf{form
 We define deductions identically to how we did for arbitrary formal deduction systems.
 
 \begin{boxdefinition}[Deductions in $\KL$]\label{Ch2:Def:Deductions_in_KL}
-    A \textbf{deduction} in $\KL$ is a finite sequence of $\KL$-formulae such that each either is one of the following:
+    Let $\Sigma$ be a set of $\KL$-formulae. A \textbf{deduction in $\KL$ from $\Sigma$} is a finite sequence of $\KL$-formulae such that each is one of the following:
     \begin{itemize}
         \item an axiom of $\KL$.
         \item a formula in $\Sigma$.
@@ -59,7 +59,7 @@ We define deductions identically to how we did for arbitrary formal deduction sy
     \begin{align*}
         \Sigma \vkl \psi
     \end{align*}
-    to mean that a $\KL$-formula $\psi$ occurs at the end of a deduction from $\Sigma$.
+    to mean that a $\KL$-formula $\psi$ occurs at the end of a deduction in $\KL$ from $\Sigma$.
 \end{boxdefinition}
 
 We can similarly define proofs.

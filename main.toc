@@ -44,15 +44,17 @@
 \contentsline {subsection}{\numberline {3.1.2}The Concept of Cardinality}{68}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}The Zermelo-Fraenkel Axioms}{70}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}The Axiom of Infinity}{71}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}Well-Ordered Sets}{72}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Products and Sums}{72}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Segments}{72}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Introduction to Ordinals}{72}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Transitive Sets}{72}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Ordinals: The Fundamentals}{73}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Ordering Ordinals}{74}{subsection.3.4.3}%
-\contentsline {chapter}{Exercises}{75}{chapter*.8}%
-\contentsline {section}{Problems Class 1}{75}{section*.9}%
-\contentsline {section}{Problems Class 2}{77}{section*.10}%
-\contentsline {section}{Problems Class 3}{79}{section*.11}%
-\contentsline {chapter}{References}{81}{problem.3.5}%
+\contentsline {subsection}{\numberline {3.2.2}The Axiom of Replacement}{72}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Well-Ordered Sets}{73}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Products and Sums}{73}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Segments}{73}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Introduction to Ordinals}{73}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Transitive Sets}{73}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Ordinals: The Fundamentals}{74}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Ordering Ordinals}{76}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Transfinite Induction}{76}{subsection.3.4.4}%
+\contentsline {chapter}{Exercises}{78}{chapter*.10}%
+\contentsline {section}{Problems Class 1}{78}{section*.11}%
+\contentsline {section}{Problems Class 2}{80}{section*.12}%
+\contentsline {section}{Problems Class 3}{82}{section*.13}%
+\contentsline {chapter}{References}{84}{problem.3.5}%
