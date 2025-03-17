@@ -1,0 +1,70 @@
+\section{The Axiom of Choice and its Consequences}
+
+\sorry
+
+\begin{boxlemma}
+    Assume all the ZFC Axioms, that is, \sorry. Suppose $A$ and $B$ are non-empty sets. Then, there is an injective function from $A$ to $B$ if and only if there is a surjective function from $B$ to $A$.
+\end{boxlemma}
+\begin{proof}
+    We need the Axiom of Choice to construct an injection given a surjection, but we do not need it to construct a surjection given an injection.
+
+    \begin{description}
+        \item[$\parenth{\implies}$]
+        Assume that there exists an injection $f : A \inj B$. Since $A$ is non-empty, there exists some element $a_0 \in A$. Define $h : B \to A$ in the following manner:
+        \begin{align*}
+            \forall b \in B, \qquad
+            h(b) =
+            \begin{cases}
+                f\inv(b) &\text{ if } b \in f(A) \\
+                a_0 &\text{ if } b \notin f(A)
+            \end{cases}
+        \end{align*}
+        where $f\inv(b)$ is the unique $a \in A$ such that $f(a) = b$, as guaranteed by the injectivity of $f$. It is easily seen that $h$ is surjective, because every $a \in A$ is the image of $f(a)$ in $h$.
+
+        \item[$\parenth{\impliedby}$] \sorry
+    \end{description}
+\end{proof}
+
+\subsection{Cardinality}
+
+Throughout this subsection, assume \textbf{all} the ZFC Axioms.
+
+We remarked, at the beginning of our discussion of ordinals, that the cardinal numbers are the numbers of size and the ordinal numbers are the numbers of ordering. In this section, we will discuss what the `numbers of size' actually represent.
+
+We begin by defining our primary object of study in this section.
+
+\begin{boxdefinition}[Cardinal]
+    An ordinal $\alpha$ is a \textbf{cardinal} if for all ordinals $\beta < \alpha$, $\alpha$ is not equinumerous with $\beta$.
+\end{boxdefinition}
+
+Informally, cardinals are merely sets with a well-understood notion of cardinality. There are many examples.
+
+\begin{boxexample}[Familiar Cardinals]
+    Every natural number is a cardinal. Furthermore, the set of all natural numbers is a cardinal.
+\end{boxexample}
+
+We can also see that infinite ordinals do not behave nicely with the notion of cardinality, in the sense that they might be too large.
+
+\begin{boxnexample}
+    If $\gamma$ is an infinite ordinal, then $\gamma\dg$ is \textit{not} a cardinal, because $\gamma\dg$ and $\gamma$ are equinumerous, but $\gamma < \gamma\dg$.
+\end{boxnexample}
+
+\subsection{The Sequence of Alephs}
+
+In this subsection, we define the cardinals $\aleph_{\alpha}$, indexed by ordinals $\alpha$, using the Principle of Transfinite Recursion (cf. \Cref{Ch3:Thm:Transfinite_Recursion}).
+
+\begin{boxdefinition}[The Sequence of Alephs]\label{Ch3:Def:Alephs}
+    Define $\aleph_0 := \omega$, and for all 
+    \sorry
+\end{boxdefinition}
+
+\sorry
+
+\subsection{Cardinal Arithmetic}
+
+In this section, we essentially generalise the operations of addition, subtraction and exponentiation in $\N$ to arbitrary cardinals.
+
+\begin{boxdefinition}[Cardinal Arithmetic]
+    Suppose $A$ and $B$ are disjoint sets. Let them be cardinals, with $\abs{A} = \alpha$ and $\abs{B} = \beta$ for ordinals $\alpha$ and $\beta$. We define the operations of addition, multiplication and exponentiation in the following manner:
+    \sorry
+\end{boxdefinition}
