@@ -53,8 +53,13 @@
 \contentsline {subsection}{\numberline {3.4.2}Ordinals: The Fundamentals}{74}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Ordering Ordinals}{76}{subsection.3.4.3}%
 \contentsline {subsection}{\numberline {3.4.4}Transfinite Induction}{76}{subsection.3.4.4}%
-\contentsline {chapter}{Exercises}{78}{chapter*.10}%
-\contentsline {section}{Problems Class 1}{78}{section*.11}%
-\contentsline {section}{Problems Class 2}{80}{section*.12}%
-\contentsline {section}{Problems Class 3}{82}{section*.13}%
-\contentsline {chapter}{References}{84}{problem.3.5}%
+\contentsline {subsection}{\numberline {3.4.5}Transfinite Recursion}{77}{subsection.3.4.5}%
+\contentsline {section}{\numberline {3.5}The Axiom of Choice and its Consequences}{78}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Cardinality}{79}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}The Sequence of Alephs}{79}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Cardinal Arithmetic}{80}{subsection.3.5.3}%
+\contentsline {chapter}{Exercises}{81}{chapter*.10}%
+\contentsline {section}{Problems Class 1}{81}{section*.11}%
+\contentsline {section}{Problems Class 2}{83}{section*.12}%
+\contentsline {section}{Problems Class 3}{85}{section*.13}%
+\contentsline {chapter}{References}{87}{problem.3.5}%

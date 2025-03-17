@@ -1,5 +1,7 @@
 \section{Introduction to Ordinals}
 
+As children, we are introduced to two notions of counting: the \textit{cardinal numbers} and the \textit{ordinal numbers}. We are taught that the \textit{cardinal numbers} are the numbers of \textit{quantity}---that is, ``one'', ``two'', ``three'', and so on---whereas the \textit{ordinal numbers} are the numbers of \textit{ordering}---that is, ``first'', ``second'', ``third'', and so on. It turns out there is a reason for this. While the cardinal numbers represent different possible \textit{cardinalities} of finite sets, it turns out that the ordinal numbers represent a broader notion of ordering that is not limited to the set of natural numbers.
+
 Broadly speaking, ordinals are nice well-ordered sets that mimic the properties of the natural numbers. The idea is to try and replicate the property in $\N$---at least, when $\N$ is defined using the successor $\dg$ (cf. \Cref{Ch3:Def:succ_dg})---that the ordering comes from both membership and inclusion.
 
 \subsection{Transitive Sets}
@@ -137,3 +139,40 @@ There are many results that can be proven using transfinite induction. Here is o
         \abs{A \times A} = \abs{\alpha \times \alpha} = \abs{\alpha} = \abs{A}
     \end{align*}
 \end{proof}
+
+\subsection{Transfinite Recursion}
+
+In the natural numbers, there is more than one use of Peano's Fifth Axiom: it is used not only to prove results by induction, but it is also used to construct things inductively. In this subsection, we explore the notion of transfinite recursion, which provides us with a similar framework that works over ordinals instead of just natural numbers.
+
+The objective of transfinite recursion is to allow us to construct, for ordinals $\alpha$, sets $G(\alpha$ that are obtained from $G(\beta)$ (for $\beta < \alpha$) by applying some operation $F$ (cf. \Cref{Ch3:Def:Op_on_Sets}). In other words, we want to find an operation on sets $F$ that allows us to construct a family of sets $G(\cdot)$, indexed by ordinals, such that $F$, when applied to the sets $G(0), G(1), \ldots, G(\beta), \ldots$ indexed by ordinals that are less than $\alpha$, gives $G(\alpha)$.
+
+
+
+\begin{boxtheorem}[The Principle of Transfinite Recursion]\label{Ch3:Thm:Transfinite_Recursion}
+    Let $F$ be an operation on sets. Then, there is an operation $G$ such that for all ordinals $\alpha$, we have
+    \begin{align*}
+        G(\alpha) = F\of{G \tfr \alpha}
+    \end{align*}
+    Furthermore, $G$ is unique on ordinals, in the sense that if $G'$ is another operation such that
+    \begin{align*}
+        G'(\alpha) = F\of{G' \tfr \alpha}
+    \end{align*}
+    for all ordinals $\alpha$, then for all ordinals $\alpha$,
+    \begin{align*}
+        G(\alpha) = G'(\alpha)
+    \end{align*}
+\end{boxtheorem}
+
+The proof is quite technical, and was omitted from lectures. It can be found in \cite[Appendix A.4]{LecNotes2025}.
+
+Note that the operation $G$ given in the statement of \Cref{Ch3:Thm:Transfinite_Recursion} is \underline{not unique in an absolute sense}: we have no control over how $G$ behaves on sets that are not ordinals. \Cref{Ch3:Thm:Transfinite_Recursion} only tells us that $G$ is unique \underline{on ordinals}.
+
+An interesting application of the principle of transfinite recursion is the following proof of the Lindenbaum Lemma (cf. \Cref{Ch2:Prop:Lindenbaum_FO}) for languages whose alphabet is well-ordered.
+
+\begin{boxcorollary}[Lindenbaum Lemma for Well-Ordered Languages]
+    Let $\L$ be a first-order language whose alphabet of symbols is well-ordered (cf. \sorry). If $\Sigma$ is a set of closed $\KL$-formulae, then there is a consistent set $\Sigma^*$ of closed $\KL$-formulae such that $\Sigma \subseteq \Sigma^*$.
+\end{boxcorollary}
+\begin{proof}
+    \sorry
+\end{proof}
+
