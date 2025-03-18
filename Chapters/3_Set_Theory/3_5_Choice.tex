@@ -1,4 +1,6 @@
-\section{The Axiom of Choice and its Consequences}
+\section{The Theory of Cardinals}
+
+\subsection{The Axiom of Choice}
 
 \sorry
 
@@ -25,7 +27,7 @@
     \end{description}
 \end{proof}
 
-\subsection{Cardinality}
+\subsection{The Notion of Cardinality}
 
 Throughout this subsection, assume \textbf{all} the ZFC Axioms.
 
@@ -64,7 +66,78 @@ In this subsection, we define the cardinals $\aleph_{\alpha}$, indexed by ordina
 
 In this section, we essentially generalise the operations of addition, subtraction and exponentiation in $\N$ to arbitrary cardinals.
 
-\begin{boxdefinition}[Cardinal Arithmetic]
+\begin{boxdefinition}[Cardinal Arithmetic]\label{Ch3:Def:CardArith}
     Suppose $A$ and $B$ are disjoint sets. Let them be cardinals, with $\abs{A} = \alpha$ and $\abs{B} = \beta$ for ordinals $\alpha$ and $\beta$. We define the operations of addition, multiplication and exponentiation in the following manner:
     \sorry
 \end{boxdefinition}
+
+\sorry
+
+Below, we give an example where we use \sorry\ result\todo{we really gotta complete our notes} to compute cardinalities.
+
+\begin{boxexample}
+    Suppose $X$ is an infinite set. That is, suppose $\abs{X} = \lambda$ for some ordinal $\lambda \geq \omega$. Let $S$ be the set of finite sequences of elements of $X$. That is,
+    \begin{align*}
+        S = \bigcup_{n \in \Omega}X^n
+    \end{align*}
+    We claim that the cardinality of $S$ is also $\lambda$.
+\end{boxexample}
+
+We have more concrete applications as well.
+
+\begin{boxexample}[Showing that $\dim_{\Q}\of{\R} = \abs{\R}$]
+    Consider $\R$ as a $\Q$-vector space. Suppose $X \subseteq \R$ spans $\R$: that is, suppose that for all $r \in \R$, there exists some $s \in \N$, $q_1, \ldots, q_s \in \Q$, and $x_1, \ldots, x_s \in X$ such that
+    \begin{align*}
+        r = q_1 x_1 + \cdots + q_s x_s
+    \end{align*}
+    We claim that $\abs{X} = \abs{\R}$. We know already that $\abs{X} \leq \abs{\R}$, because $X \subseteq \R$, so it only remains to show that $\abs{\R} \leq \abs{X}$. We do this by applying transitivity. \newline
+
+    Let $P$ be the set of pairs
+    \begin{align*}
+        P &= \setst{\Big({\parenth{q_1, \ldots, q_s}, \parenth{x_1, \ldots, x_s}}\Big)}{s \in \N, \ q_i \in \Q, \ x_i \in X} \\
+        &\subseteq \parenth{\bigcup_{n \in \omega} \Q^n} \times \parenth{\bigcup_{n \in \omega} X^n}
+    \end{align*}
+    Then, by \sorry, we have that
+    \begin{align*}
+        \abs{P} \leq \abs{\Q}\abs{X} = \omega \cdot \abs{X} = \abs{X}
+    \end{align*}
+    where the $\cdot$ is the notion of multiplication seen in \Cref{Ch3:Def:CardArith}. If we can show that $\abs{\R} \leq \abs{P}$, then we can show that $\abs{\R} \leq \abs{X}$, from which it will follow, as argued earlier, that $\abs{\R} = \abs{X}$. \sorry
+\end{boxexample}
+
+\subsection{Zorn's Lemma}
+
+We have already seen the power of the Axiom of Choice. But as the reader might be aware, the mysterious assumption about the nature of mathematics that underlies it takes many equivalent forms, the best known of which are the Axiom of Choice itself, the Well-Ordering Principle, and Zorn's Lemma. Indeed, there is the following well-known mathematical adage:
+\begin{quote}
+    \textit{The Axiom of Choice is obviously true; the Well-Ordering Principle is obviously false; and as for Zorn's Lemma, who can say?}
+\end{quote}
+In this subsection, we explore Zorn's Lemma and some of its consequences. Most readers would have encountered Zorn's Lemma when studying other areas of mathematics---particularly algebraic ones---but we will not assume any familiarity with these applications of this strange form of the Axiom of Choice.
+
+\sorry % Begin by defining partially ordered sets.
+
+\sorry % Then, state Zorn's Lemma.
+
+We now come to the most important theorem of this section.
+\begin{boxtheorem}[An Equivalence between the Axiom of Choice and Zorn's Lemma]
+    Assume all the Zermelo-Fraenkel Axioms. Then, the Axiom of Choice is true if and only if Zorn's Lemma is true. That is,
+    \begin{align*}
+        \ZF \vklem \parenth{\text{Axiom of Choice} \lr \text{Zorn's Lemma}}
+    \end{align*}
+\end{boxtheorem}
+\begin{proof}
+    Assume that all the Zermelo-Freankel Axioms hold.
+\end{proof}
+
+\sorry % Then, prove that ZF ⊢ Zorn ↔︎ Choice
+
+We now come to an important consequence of Zorn's Lemma: every vector space has a basis. In particular, this applies to infinite-dimensional vector spaces as well.
+
+\begin{boxtheorem}
+    Let $F$ be a field and $V$ an $F$-vector space. Then, $V$ has an $F$-basis.
+\end{boxtheorem}
+\begin{proof}
+    Let $\AA$ be the set of all linearly independent subsets of $V$, partially ordered by inclusion $\subseteq$. The idea is to apply Zorn's Lemma to show that $\AA$ contains a maximal element $\B$, which we will then show to be an $F$-basis of $V$.
+
+    In order to apply Zorn's Lemma, we first need to show that if $\parenth{C_i}_{i \in \I} \subseteq \AA$ is a chain, indexed by some set $\I$ ordered by inclusions, then $\bigcup_{i \in \I} C_i \in \AA$ as well.
+    
+    \sorry
+\end{proof}

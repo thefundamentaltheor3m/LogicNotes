@@ -48,18 +48,20 @@
 \contentsline {section}{\numberline {3.3}Well-Ordered Sets}{73}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Products and Sums}{73}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Segments}{73}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Introduction to Ordinals}{73}{section.3.4}%
+\contentsline {section}{\numberline {3.4}The Theory of Ordinals}{73}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Transitive Sets}{73}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Ordinals: The Fundamentals}{74}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Ordering Ordinals}{76}{subsection.3.4.3}%
 \contentsline {subsection}{\numberline {3.4.4}Transfinite Induction}{76}{subsection.3.4.4}%
 \contentsline {subsection}{\numberline {3.4.5}Transfinite Recursion}{77}{subsection.3.4.5}%
-\contentsline {section}{\numberline {3.5}The Axiom of Choice and its Consequences}{78}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Cardinality}{79}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}The Sequence of Alephs}{79}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Cardinal Arithmetic}{80}{subsection.3.5.3}%
-\contentsline {chapter}{Exercises}{81}{chapter*.10}%
-\contentsline {section}{Problems Class 1}{81}{section*.11}%
-\contentsline {section}{Problems Class 2}{83}{section*.12}%
-\contentsline {section}{Problems Class 3}{85}{section*.13}%
-\contentsline {chapter}{References}{87}{problem.3.5}%
+\contentsline {section}{\numberline {3.5}The Theory of Cardinals}{78}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}The Axiom of Choice}{78}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}The Notion of Cardinality}{79}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}The Sequence of Alephs}{80}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Cardinal Arithmetic}{80}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.5}Zorn's Lemma}{81}{subsection.3.5.5}%
+\contentsline {chapter}{Exercises}{83}{chapter*.11}%
+\contentsline {section}{Problems Class 1}{83}{section*.12}%
+\contentsline {section}{Problems Class 2}{85}{section*.13}%
+\contentsline {section}{Problems Class 3}{87}{section*.14}%
+\contentsline {chapter}{References}{89}{problem.3.5}%
